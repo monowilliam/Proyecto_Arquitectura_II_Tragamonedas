@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Fri Oct 19 18:29:11 2018
+Fri Oct 19 18:56:22 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,16 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 12. lpm_mult Parameter Settings by Entity Instance
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -45,20 +36,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 19 18:29:11 2018           ;
+; Analysis & Synthesis Status        ; Failed - Fri Oct 19 18:56:22 2018               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 65                                              ;
-;     Total combinational functions  ; 65                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 50                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 2                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -158,241 +149,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-; ALU.vhd                          ; yes             ; User VHDL File               ; D:/Escritorio/ALU/ALU.vhd                                         ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_l8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/Escritorio/ALU/db/mult_l8t.tdf                                 ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 65    ;
-;                                             ;       ;
-; Total combinational functions               ; 65    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 32    ;
-;     -- 3 input functions                    ; 30    ;
-;     -- <=2 input functions                  ; 3     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 35    ;
-;     -- arithmetic mode                      ; 30    ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 50    ;
-; Embedded Multiplier 9-bit elements          ; 2     ;
-; Maximum fan-out node                        ; S[1]  ;
-; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 272   ;
-; Average fan-out                             ; 2.32  ;
-+---------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-; |ALU                            ; 65 (65)           ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 50   ; 0            ; |ALU                                        ; work         ;
-;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ALU|lpm_mult:Mult0                         ; work         ;
-;       |mult_l8t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ALU|lpm_mult:Mult0|mult_l8t:auto_generated ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 1           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 2           ;
-; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 1           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ALU|OUTPUT[0]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 16         ; Untyped             ;
-; LPM_WIDTHB                                     ; 16         ; Untyped             ;
-; LPM_WIDTHP                                     ; 32         ; Untyped             ;
-; LPM_WIDTHR                                     ; 32         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_l8t   ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 16             ;
-;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 32             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 19 18:29:09 2018
+    Info: Processing started: Fri Oct 19 18:56:20 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-ALU_arq
-    Info (12023): Found entity 1: ALU
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Info (10041): Inferred latch for "OUTPUT[0]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[1]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[2]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[3]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[4]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[5]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[6]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[7]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[8]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[9]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[10]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[11]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[12]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[13]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[14]" at ALU.vhd(37)
-Info (10041): Inferred latch for "OUTPUT[15]" at ALU.vhd(37)
-Warning (14026): LATCH primitive "OUTPUT[0]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[1]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[2]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[3]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[4]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[5]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[6]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[7]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[8]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[9]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[10]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[11]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[12]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[13]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[14]$latch" is permanently enabled
-Warning (14026): LATCH primitive "OUTPUT[15]$latch" is permanently enabled
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0"
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "16"
-    Info (12134): Parameter "LPM_WIDTHB" = "16"
-    Info (12134): Parameter "LPM_WIDTHP" = "32"
-    Info (12134): Parameter "LPM_WIDTHR" = "32"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_l8t.tdf
-    Info (12023): Found entity 1: mult_l8t
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 65 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4666 megabytes
-    Info: Processing ended: Fri Oct 19 18:29:11 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Error (10500): VHDL syntax error at ALU.vhd(23) near text ‘ File: D:/Escritorio/Proyecto_Arquitectura_II_Tragamonedas/ALU_VHDL/ALU/ALU.vhd Line: 23
+Error (10500): VHDL syntax error at ALU.vhd(23) near text "‘";  expecting ":", or "," File: D:/Escritorio/Proyecto_Arquitectura_II_Tragamonedas/ALU_VHDL/ALU/ALU.vhd Line: 23
+Error (10523): Ignored construct ALU at ALU.vhd(22) due to previous errors File: D:/Escritorio/Proyecto_Arquitectura_II_Tragamonedas/ALU_VHDL/ALU/ALU.vhd Line: 22
+Info (12021): Found 0 design units, including 0 entities, in source file alu.vhd
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 4646 megabytes
+    Error: Processing ended: Fri Oct 19 18:56:22 2018
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
 
 

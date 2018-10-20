@@ -1,9 +1,9 @@
 -----------------------------------------
--- Actividad : Creación de la primera ALU en vhdl
--- Autores: GRUPO 04 
---				Jhoan Lozano
+-- Actividad : Creación de la primera ALU del proyecto
+-- Autores: GRUPO 03 
+--				Jose Danilo Melgarejo
+--				Juan Camilo Vanegas
 --				William Aguirre
---				Xavier Garzon
 --				Hector Amature
 -- Fecha : 19/10/2018
 -- Curso : Arquitectura de Computadores II
