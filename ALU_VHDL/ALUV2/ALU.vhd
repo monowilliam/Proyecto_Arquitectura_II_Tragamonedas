@@ -20,7 +20,7 @@ use ieee.numeric_std.all;
 
 --DEFINICIÓN DE LA ENTIDAD
 Entity ALU is generic(
-	Wide : natural := 16 ); 
+	Wide : natural := 14 ); 
 port(
 	S : in std_logic_vector(1 downto 0);
 	A : in std_logic_vector(Wide-1 downto 0);
