@@ -1,2 +1,2 @@
-# Tragamonedas
-Código en MIPS para MARS con Syscall para Arquitectura de Computadores 2
+# Tragamonedas Proyecto de Arquitectura de Computadores II
+Repositorio de archivos de todo el proyecto de la asignatura Arquitectura II 2018-2
