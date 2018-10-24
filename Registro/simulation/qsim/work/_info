@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\VHDL\Registro\simulation\qsim
+vRegistro
+Z1 !s100 2dNk`O=dhekmmi@FnlQP20
+Z2 I<cSFThFIRUW^mD0GkhT_O3
+Z3 V@oIz<BSPDaTPjRTAaAkJm3
+Z4 dC:\VHDL\Registro\simulation\qsim
+Z5 w1540418033
+Z6 8Registro.vo
+Z7 FRegistro.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Registro.vo|
+Z10 o-work work -O0
+Z11 n@registro
+!i10b 1
+!s85 0
+Z12 !s108 1540418034.462000
+Z13 !s107 Registro.vo|
+!s101 -O0
+vRegistro_vlg_check_tst
+!i10b 1
+Z14 !s100 RnNLdITe?1c;fV[QSnCNA1
+Z15 IgSDP5kjm_hBi2ONl@c7V51
+Z16 VEn`ZVYO==3AcnTkg5W:Ml1
+R4
+Z17 w1540418032
+Z18 8Registro.vt
+Z19 FRegistro.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z20 !s108 1540418034.670000
+Z21 !s107 Registro.vt|
+Z22 !s90 -work|work|Registro.vt|
+!s101 -O0
+R10
+Z23 n@registro_vlg_check_tst
+vRegistro_vlg_sample_tst
+!i10b 1
+Z24 !s100 aQIdQ4Jh=J<X:X?YZn`_n0
+Z25 Ij5F^W?>i@]M4HJAFco7:I1
+Z26 VXYjIdB7@CXaiCIfn^9bn<2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@registro_vlg_sample_tst
+vRegistro_vlg_vec_tst
+!i10b 1
+!s100 kc4gGR:[g03PhegB::nio0
+ImdY@aLNHRB^nRTXRZHcM70
+Z28 VkZVT1;MlzNHk0bmQ]8CV;3
+R4
+R17
+R18
+R19
+Z29 L0 387
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@registro_vlg_vec_tst

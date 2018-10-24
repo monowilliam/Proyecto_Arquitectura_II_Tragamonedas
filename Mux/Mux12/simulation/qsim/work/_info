@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\VHDL\Mux12\simulation\qsim
+vMux12
+Z1 !s100 MGYl:h6jAkMe]lM9LPFmL2
+Z2 ICNk91^85M7K`zYomgXjN^2
+Z3 VBW_klfMmAYJfOUBW<G^5@1
+Z4 dC:\VHDL\Mux12\simulation\qsim
+Z5 w1540417420
+Z6 8Mux12.vo
+Z7 FMux12.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Mux12.vo|
+Z10 o-work work -O0
+Z11 n@mux12
+!i10b 1
+!s85 0
+Z12 !s108 1540417421.574000
+Z13 !s107 Mux12.vo|
+!s101 -O0
+vMux12_vlg_check_tst
+!i10b 1
+Z14 !s100 o;NG86FXg;Niie?hf_=J83
+Z15 I_2o]bX;18hPYAKG2>X`2B2
+Z16 VR<>`z:EJ?MU[9DoKNlZm`0
+R4
+Z17 w1540417419
+Z18 8Mux12.vt
+Z19 FMux12.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1540417421.783000
+Z21 !s107 Mux12.vt|
+Z22 !s90 -work|work|Mux12.vt|
+!s101 -O0
+R10
+Z23 n@mux12_vlg_check_tst
+vMux12_vlg_sample_tst
+!i10b 1
+Z24 !s100 mbXETQjHV;egK:f293LZn0
+Z25 IeQ6nU^ifTeN7JflJ4OBEz2
+Z26 Va=zHfh?D7M1260YbIDj373
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@mux12_vlg_sample_tst
+vMux12_vlg_vec_tst
+!i10b 1
+!s100 ]cmGj6lY9Ne::h<aL76b>3
+IPfQM`a7UOOb]JoLQ4I:W73
+Z28 VkV4K89_8?2=3kJUYT4E1;2
+R4
+R17
+R18
+R19
+Z29 L0 353
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@mux12_vlg_vec_tst

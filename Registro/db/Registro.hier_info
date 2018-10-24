@@ -1,0 +1,45 @@
+|Registro
+clk => Output[0]~reg0.CLK
+clk => Output[1]~reg0.CLK
+clk => Output[2]~reg0.CLK
+clk => Output[3]~reg0.CLK
+clk => Output[4]~reg0.CLK
+clk => Output[5]~reg0.CLK
+clk => Output[6]~reg0.CLK
+clk => Output[7]~reg0.CLK
+clk => Output[8]~reg0.CLK
+clk => Output[9]~reg0.CLK
+clk => Output[10]~reg0.CLK
+clk => Output[11]~reg0.CLK
+clk => Output[12]~reg0.CLK
+clk => Output[13]~reg0.CLK
+A[0] => Output[0]~reg0.DATAIN
+A[1] => Output[1]~reg0.DATAIN
+A[2] => Output[2]~reg0.DATAIN
+A[3] => Output[3]~reg0.DATAIN
+A[4] => Output[4]~reg0.DATAIN
+A[5] => Output[5]~reg0.DATAIN
+A[6] => Output[6]~reg0.DATAIN
+A[7] => Output[7]~reg0.DATAIN
+A[8] => Output[8]~reg0.DATAIN
+A[9] => Output[9]~reg0.DATAIN
+A[10] => Output[10]~reg0.DATAIN
+A[11] => Output[11]~reg0.DATAIN
+A[12] => Output[12]~reg0.DATAIN
+A[13] => Output[13]~reg0.DATAIN
+Output[0] <= Output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[1] <= Output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[2] <= Output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[3] <= Output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[4] <= Output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[5] <= Output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[6] <= Output[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[7] <= Output[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[8] <= Output[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[9] <= Output[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[10] <= Output[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[11] <= Output[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[12] <= Output[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Output[13] <= Output[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

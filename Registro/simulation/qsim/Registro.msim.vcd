@@ -1,0 +1,619 @@
+$comment
+	File created using the following command:
+		vcd file Registro.msim.vcd -direction
+$end
+$date
+	Wed Oct 24 16:53:55 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Registro_vlg_vec_tst $end
+$var reg 14 ! A [13:0] $end
+$var reg 1 " clk $end
+$var wire 1 # Output [13] $end
+$var wire 1 $ Output [12] $end
+$var wire 1 % Output [11] $end
+$var wire 1 & Output [10] $end
+$var wire 1 ' Output [9] $end
+$var wire 1 ( Output [8] $end
+$var wire 1 ) Output [7] $end
+$var wire 1 * Output [6] $end
+$var wire 1 + Output [5] $end
+$var wire 1 , Output [4] $end
+$var wire 1 - Output [3] $end
+$var wire 1 . Output [2] $end
+$var wire 1 / Output [1] $end
+$var wire 1 0 Output [0] $end
+$var wire 1 1 sampler $end
+$scope module i1 $end
+$var wire 1 2 gnd $end
+$var wire 1 3 vcc $end
+$var wire 1 4 unknown $end
+$var tri1 1 5 devclrn $end
+$var tri1 1 6 devpor $end
+$var tri1 1 7 devoe $end
+$var wire 1 8 clk~combout $end
+$var wire 1 9 clk~clkctrl_outclk $end
+$var wire 1 : Output[0]~reg0feeder_combout $end
+$var wire 1 ; Output[0]~reg0_regout $end
+$var wire 1 < Output[1]~reg0feeder_combout $end
+$var wire 1 = Output[1]~reg0_regout $end
+$var wire 1 > Output[2]~reg0feeder_combout $end
+$var wire 1 ? Output[2]~reg0_regout $end
+$var wire 1 @ Output[3]~reg0feeder_combout $end
+$var wire 1 A Output[3]~reg0_regout $end
+$var wire 1 B Output[4]~reg0feeder_combout $end
+$var wire 1 C Output[4]~reg0_regout $end
+$var wire 1 D Output[5]~reg0_regout $end
+$var wire 1 E Output[6]~reg0feeder_combout $end
+$var wire 1 F Output[6]~reg0_regout $end
+$var wire 1 G Output[7]~reg0feeder_combout $end
+$var wire 1 H Output[7]~reg0_regout $end
+$var wire 1 I Output[8]~reg0feeder_combout $end
+$var wire 1 J Output[8]~reg0_regout $end
+$var wire 1 K Output[9]~reg0_regout $end
+$var wire 1 L Output[10]~reg0feeder_combout $end
+$var wire 1 M Output[10]~reg0_regout $end
+$var wire 1 N Output[11]~reg0feeder_combout $end
+$var wire 1 O Output[11]~reg0_regout $end
+$var wire 1 P Output[12]~reg0feeder_combout $end
+$var wire 1 Q Output[12]~reg0_regout $end
+$var wire 1 R Output[13]~reg0feeder_combout $end
+$var wire 1 S Output[13]~reg0_regout $end
+$var wire 1 T A~combout [13] $end
+$var wire 1 U A~combout [12] $end
+$var wire 1 V A~combout [11] $end
+$var wire 1 W A~combout [10] $end
+$var wire 1 X A~combout [9] $end
+$var wire 1 Y A~combout [8] $end
+$var wire 1 Z A~combout [7] $end
+$var wire 1 [ A~combout [6] $end
+$var wire 1 \ A~combout [5] $end
+$var wire 1 ] A~combout [4] $end
+$var wire 1 ^ A~combout [3] $end
+$var wire 1 _ A~combout [2] $end
+$var wire 1 ` A~combout [1] $end
+$var wire 1 a A~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+1"
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+x1
+02
+13
+x4
+15
+16
+17
+18
+19
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+$end
+#20000
+0"
+08
+09
+01
+#40000
+b1 !
+1"
+1a
+18
+19
+11
+1:
+#60000
+0"
+08
+09
+01
+#80000
+b11 !
+b10 !
+1"
+0a
+1`
+18
+19
+11
+0:
+1<
+1;
+10
+#100000
+0"
+08
+09
+01
+#120000
+b11 !
+1"
+1a
+18
+19
+11
+1:
+1=
+0;
+1/
+00
+#140000
+0"
+08
+09
+01
+#160000
+b111 !
+b101 !
+b100 !
+1"
+0a
+0`
+1_
+18
+19
+11
+0:
+0<
+1>
+1;
+10
+#180000
+0"
+08
+09
+01
+#200000
+b101 !
+1"
+1a
+18
+19
+11
+1:
+1?
+0=
+0;
+1.
+0/
+00
+#220000
+0"
+08
+09
+01
+#240000
+b111 !
+b110 !
+1"
+0a
+1`
+18
+19
+11
+0:
+1<
+1;
+10
+#260000
+0"
+08
+09
+01
+#280000
+b111 !
+1"
+1a
+18
+19
+11
+1:
+1=
+0;
+1/
+00
+#300000
+0"
+08
+09
+01
+#320000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+1"
+0a
+0`
+0_
+1^
+18
+19
+11
+0:
+0<
+0>
+1@
+1;
+10
+#340000
+0"
+08
+09
+01
+#360000
+b1001 !
+1"
+1a
+18
+19
+11
+1:
+1A
+0?
+0=
+0;
+1-
+0.
+0/
+00
+#380000
+0"
+08
+09
+01
+#400000
+b1011 !
+b1010 !
+1"
+0a
+1`
+18
+19
+11
+0:
+1<
+1;
+10
+#420000
+0"
+08
+09
+01
+#440000
+b1011 !
+1"
+1a
+18
+19
+11
+1:
+1=
+0;
+1/
+00
+#460000
+0"
+08
+09
+01
+#480000
+b1111 !
+b1101 !
+b1100 !
+1"
+0a
+0`
+1_
+18
+19
+11
+0:
+0<
+1>
+1;
+10
+#500000
+0"
+08
+09
+01
+#520000
+b1101 !
+1"
+1a
+18
+19
+11
+1:
+1?
+0=
+0;
+1.
+0/
+00
+#540000
+0"
+08
+09
+01
+#560000
+b1111 !
+b1110 !
+1"
+0a
+1`
+18
+19
+11
+0:
+1<
+1;
+10
+#580000
+0"
+08
+09
+01
+#600000
+b1111 !
+1"
+1a
+18
+19
+11
+1:
+1=
+0;
+1/
+00
+#620000
+0"
+08
+09
+01
+#640000
+b11111 !
+b10111 !
+b10011 !
+b10001 !
+b10000 !
+1"
+0a
+0`
+0_
+0^
+1]
+18
+19
+11
+0:
+0<
+0>
+0@
+1B
+1;
+10
+#660000
+0"
+08
+09
+01
+#680000
+b10001 !
+1"
+1a
+18
+19
+11
+1:
+1C
+0A
+0?
+0=
+0;
+1,
+0-
+0.
+0/
+00
+#700000
+0"
+08
+09
+01
+#720000
+b10011 !
+b10010 !
+1"
+0a
+1`
+18
+19
+11
+0:
+1<
+1;
+10
+#740000
+0"
+08
+09
+01
+#760000
+b10011 !
+1"
+1a
+18
+19
+11
+1:
+1=
+0;
+1/
+00
+#780000
+0"
+08
+09
+01
+#800000
+b10111 !
+b10101 !
+b10100 !
+1"
+0a
+0`
+1_
+18
+19
+11
+0:
+0<
+1>
+1;
+10
+#820000
+0"
+08
+09
+01
+#840000
+b10101 !
+1"
+1a
+18
+19
+11
+1:
+1?
+0=
+0;
+1.
+0/
+00
+#860000
+0"
+08
+09
+01
+#880000
+b10111 !
+b10110 !
+1"
+0a
+1`
+18
+19
+11
+0:
+1<
+1;
+10
+#900000
+0"
+08
+09
+01
+#920000
+b10111 !
+1"
+1a
+18
+19
+11
+1:
+1=
+0;
+1/
+00
+#940000
+0"
+08
+09
+01
+#960000
+b11111 !
+b11011 !
+b11001 !
+b11000 !
+1"
+0a
+0`
+0_
+1^
+18
+19
+11
+0:
+0<
+0>
+1@
+1;
+10
+#980000
+0"
+08
+09
+01
+#1000000
