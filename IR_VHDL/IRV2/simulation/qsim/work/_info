@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\monowilliam\Downloads\Proyecto_Arquitectura_II_Tragamonedas-master\Proyecto_Arquitectura_II_Tragamonedas-master\IR_VHDL\IR\simulation\qsim
+vIR
+Z1 I8iMEWHDkoEg>O=8hzlk5P2
+Z2 VS[8?UNX]f@@<Mb<IBOG9H1
+Z3 dC:\Users\monowilliam\Downloads\Proyecto_Arquitectura_II_Tragamonedas-master\Proyecto_Arquitectura_II_Tragamonedas-master\IR_VHDL\IR\simulation\qsim
+Z4 w1540418274
+Z5 8IR.vo
+Z6 FIR.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+n@i@r
+!i10b 1
+Z9 !s100 z9E77A:=9I62PnmY?MoFW0
+!s85 0
+Z10 !s108 1540418277.354000
+Z11 !s107 IR.vo|
+Z12 !s90 -work|work|IR.vo|
+!s101 -O0
+vIR_vlg_check_tst
+!i10b 1
+!s100 F0?gRfz3g;99gX[[Nd_R83
+I[WDN;FDWAeXL]9b1l_`KP0
+Va>O086f0XUm^Sn71_nb`V0
+R3
+Z13 w1540418272
+Z14 8IR.vt
+Z15 FIR.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z16 !s108 1540418277.649000
+Z17 !s107 IR.vt|
+Z18 !s90 -work|work|IR.vt|
+!s101 -O0
+R8
+n@i@r_vlg_check_tst
+vIR_vlg_sample_tst
+!i10b 1
+!s100 E]`e7A9h>9lGMFkQm<Q^83
+IAX7YF=RcC;9HaQO_RJ8no0
+V?BVg]hOL;SlZUhfI22R3m1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@i@r_vlg_sample_tst
+vIR_vlg_vec_tst
+!i10b 1
+!s100 __hCH3GYEnk?IEeZmG=ij3
+I6aZaNZID:e3eE6=zI^gR[0
+VkTdQ<?DT4>?T10lj`m^El2
+R3
+R13
+R14
+R15
+L0 629
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@i@r_vlg_vec_tst

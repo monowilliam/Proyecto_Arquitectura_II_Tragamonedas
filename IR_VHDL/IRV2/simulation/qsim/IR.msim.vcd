@@ -1,0 +1,729 @@
+$comment
+	File created using the following command:
+		vcd file IR.msim.vcd -direction
+$end
+$date
+	Wed Oct 24 16:58:00 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module IR_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 26 " instruccion [25:0] $end
+$var reg 1 # WIR $end
+$var wire 1 $ const [13] $end
+$var wire 1 % const [12] $end
+$var wire 1 & const [11] $end
+$var wire 1 ' const [10] $end
+$var wire 1 ( const [9] $end
+$var wire 1 ) const [8] $end
+$var wire 1 * const [7] $end
+$var wire 1 + const [6] $end
+$var wire 1 , const [5] $end
+$var wire 1 - const [4] $end
+$var wire 1 . const [3] $end
+$var wire 1 / const [2] $end
+$var wire 1 0 const [1] $end
+$var wire 1 1 const [0] $end
+$var wire 1 2 opcode [3] $end
+$var wire 1 3 opcode [2] $end
+$var wire 1 4 opcode [1] $end
+$var wire 1 5 opcode [0] $end
+$var wire 1 6 rs [3] $end
+$var wire 1 7 rs [2] $end
+$var wire 1 8 rs [1] $end
+$var wire 1 9 rs [0] $end
+$var wire 1 : rt [3] $end
+$var wire 1 ; rt [2] $end
+$var wire 1 < rt [1] $end
+$var wire 1 = rt [0] $end
+$var wire 1 > sampler $end
+$scope module i1 $end
+$var wire 1 ? gnd $end
+$var wire 1 @ vcc $end
+$var wire 1 A unknown $end
+$var tri1 1 B devclrn $end
+$var tri1 1 C devpor $end
+$var tri1 1 D devoe $end
+$var wire 1 E clk~combout $end
+$var wire 1 F clk~clkctrl_outclk $end
+$var wire 1 G WIR~combout $end
+$var wire 1 H rs[0]~reg0_regout $end
+$var wire 1 I rs[1]~reg0feeder_combout $end
+$var wire 1 J rs[1]~reg0_regout $end
+$var wire 1 K rs[2]~reg0feeder_combout $end
+$var wire 1 L rs[2]~reg0_regout $end
+$var wire 1 M rs[3]~reg0_regout $end
+$var wire 1 N rt[0]~reg0feeder_combout $end
+$var wire 1 O rt[0]~reg0_regout $end
+$var wire 1 P rt[1]~reg0_regout $end
+$var wire 1 Q rt[2]~reg0feeder_combout $end
+$var wire 1 R rt[2]~reg0_regout $end
+$var wire 1 S rt[3]~reg0_regout $end
+$var wire 1 T const[0]~reg0feeder_combout $end
+$var wire 1 U const[0]~reg0_regout $end
+$var wire 1 V const[1]~reg0_regout $end
+$var wire 1 W const[2]~reg0_regout $end
+$var wire 1 X const[3]~reg0_regout $end
+$var wire 1 Y const[4]~reg0feeder_combout $end
+$var wire 1 Z const[4]~reg0_regout $end
+$var wire 1 [ const[5]~reg0_regout $end
+$var wire 1 \ const[6]~reg0_regout $end
+$var wire 1 ] const[7]~reg0feeder_combout $end
+$var wire 1 ^ const[7]~reg0_regout $end
+$var wire 1 _ const[8]~reg0feeder_combout $end
+$var wire 1 ` const[8]~reg0_regout $end
+$var wire 1 a const[9]~reg0feeder_combout $end
+$var wire 1 b const[9]~reg0_regout $end
+$var wire 1 c const[10]~reg0feeder_combout $end
+$var wire 1 d const[10]~reg0_regout $end
+$var wire 1 e const[11]~reg0_regout $end
+$var wire 1 f const[12]~reg0feeder_combout $end
+$var wire 1 g const[12]~reg0_regout $end
+$var wire 1 h const[13]~reg0_regout $end
+$var wire 1 i opcode[0]~reg0feeder_combout $end
+$var wire 1 j opcode[0]~reg0_regout $end
+$var wire 1 k opcode[1]~reg0_regout $end
+$var wire 1 l opcode[2]~reg0feeder_combout $end
+$var wire 1 m opcode[2]~reg0_regout $end
+$var wire 1 n opcode[3]~reg0feeder_combout $end
+$var wire 1 o opcode[3]~reg0_regout $end
+$var wire 1 p instruccion~combout [25] $end
+$var wire 1 q instruccion~combout [24] $end
+$var wire 1 r instruccion~combout [23] $end
+$var wire 1 s instruccion~combout [22] $end
+$var wire 1 t instruccion~combout [21] $end
+$var wire 1 u instruccion~combout [20] $end
+$var wire 1 v instruccion~combout [19] $end
+$var wire 1 w instruccion~combout [18] $end
+$var wire 1 x instruccion~combout [17] $end
+$var wire 1 y instruccion~combout [16] $end
+$var wire 1 z instruccion~combout [15] $end
+$var wire 1 { instruccion~combout [14] $end
+$var wire 1 | instruccion~combout [13] $end
+$var wire 1 } instruccion~combout [12] $end
+$var wire 1 ~ instruccion~combout [11] $end
+$var wire 1 !! instruccion~combout [10] $end
+$var wire 1 "! instruccion~combout [9] $end
+$var wire 1 #! instruccion~combout [8] $end
+$var wire 1 $! instruccion~combout [7] $end
+$var wire 1 %! instruccion~combout [6] $end
+$var wire 1 &! instruccion~combout [5] $end
+$var wire 1 '! instruccion~combout [4] $end
+$var wire 1 (! instruccion~combout [3] $end
+$var wire 1 )! instruccion~combout [2] $end
+$var wire 1 *! instruccion~combout [1] $end
+$var wire 1 +! instruccion~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b100000000000000 "
+1#
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+05
+04
+03
+02
+09
+08
+07
+06
+0=
+0<
+0;
+0:
+x>
+0?
+1@
+xA
+1B
+1C
+1D
+0E
+0F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+1N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+1{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+$end
+#10000
+1!
+1E
+1F
+0>
+1O
+1=
+#20000
+0!
+0E
+0F
+1>
+#30000
+1!
+1E
+1F
+0>
+#40000
+0!
+0E
+0F
+1>
+#50000
+1!
+1E
+1F
+0>
+#60000
+0!
+0E
+0F
+1>
+#70000
+1!
+1E
+1F
+0>
+#80000
+0!
+0E
+0F
+1>
+#90000
+1!
+1E
+1F
+0>
+#100000
+0!
+0E
+0F
+1>
+#110000
+1!
+1E
+1F
+0>
+#120000
+0!
+0E
+0F
+1>
+#130000
+1!
+1E
+1F
+0>
+#140000
+0!
+0E
+0F
+1>
+#150000
+1!
+1E
+1F
+0>
+#160000
+0!
+0E
+0F
+1>
+#170000
+1!
+1E
+1F
+0>
+#180000
+0!
+0E
+0F
+1>
+#190000
+1!
+1E
+1F
+0>
+#200000
+0!
+0E
+0F
+1>
+#210000
+1!
+1E
+1F
+0>
+#220000
+0!
+0E
+0F
+1>
+#230000
+1!
+1E
+1F
+0>
+#240000
+0!
+0E
+0F
+1>
+#250000
+1!
+1E
+1F
+0>
+#260000
+0!
+0E
+0F
+1>
+#270000
+1!
+1E
+1F
+0>
+#280000
+0!
+0E
+0F
+1>
+#290000
+1!
+1E
+1F
+0>
+#300000
+0!
+0E
+0F
+1>
+#310000
+1!
+1E
+1F
+0>
+#320000
+0!
+0E
+0F
+1>
+#330000
+1!
+1E
+1F
+0>
+#340000
+0!
+0E
+0F
+1>
+#350000
+1!
+1E
+1F
+0>
+#360000
+0!
+0E
+0F
+1>
+#370000
+1!
+1E
+1F
+0>
+#380000
+0!
+0E
+0F
+1>
+#390000
+1!
+1E
+1F
+0>
+#400000
+0!
+0E
+0F
+1>
+#410000
+1!
+1E
+1F
+0>
+#420000
+0!
+0E
+0F
+1>
+#430000
+1!
+1E
+1F
+0>
+#440000
+0!
+0E
+0F
+1>
+#450000
+1!
+1E
+1F
+0>
+#460000
+0!
+0E
+0F
+1>
+#470000
+1!
+1E
+1F
+0>
+#480000
+0!
+0E
+0F
+1>
+#490000
+1!
+1E
+1F
+0>
+#500000
+0!
+0E
+0F
+1>
+#510000
+1!
+1E
+1F
+0>
+#520000
+0!
+0E
+0F
+1>
+#530000
+1!
+1E
+1F
+0>
+#540000
+0!
+0E
+0F
+1>
+#550000
+1!
+1E
+1F
+0>
+#560000
+0!
+0E
+0F
+1>
+#570000
+1!
+1E
+1F
+0>
+#580000
+0!
+0E
+0F
+1>
+#590000
+1!
+1E
+1F
+0>
+#600000
+0!
+0E
+0F
+1>
+#610000
+1!
+1E
+1F
+0>
+#620000
+0!
+0E
+0F
+1>
+#630000
+1!
+1E
+1F
+0>
+#640000
+0!
+0E
+0F
+1>
+#650000
+1!
+1E
+1F
+0>
+#660000
+0!
+0E
+0F
+1>
+#670000
+1!
+1E
+1F
+0>
+#680000
+0!
+0E
+0F
+1>
+#690000
+1!
+1E
+1F
+0>
+#700000
+0!
+0E
+0F
+1>
+#710000
+1!
+1E
+1F
+0>
+#720000
+0!
+0E
+0F
+1>
+#730000
+1!
+1E
+1F
+0>
+#740000
+0!
+0E
+0F
+1>
+#750000
+1!
+1E
+1F
+0>
+#760000
+0!
+0E
+0F
+1>
+#770000
+1!
+1E
+1F
+0>
+#780000
+0!
+0E
+0F
+1>
+#790000
+1!
+1E
+1F
+0>
+#800000
+0!
+0E
+0F
+1>
+#810000
+1!
+1E
+1F
+0>
+#820000
+0!
+0E
+0F
+1>
+#830000
+1!
+1E
+1F
+0>
+#840000
+0!
+0E
+0F
+1>
+#850000
+1!
+1E
+1F
+0>
+#860000
+0!
+0E
+0F
+1>
+#870000
+1!
+1E
+1F
+0>
+#880000
+0!
+0E
+0F
+1>
+#890000
+1!
+1E
+1F
+0>
+#900000
+0!
+0E
+0F
+1>
+#910000
+1!
+1E
+1F
+0>
+#920000
+0!
+0E
+0F
+1>
+#930000
+1!
+1E
+1F
+0>
+#940000
+0!
+0E
+0F
+1>
+#950000
+1!
+1E
+1F
+0>
+#960000
+0!
+0E
+0F
+1>
+#970000
+1!
+1E
+1F
+0>
+#980000
+0!
+0E
+0F
+1>
+#990000
+1!
+1E
+1F
+0>
+#1000000
