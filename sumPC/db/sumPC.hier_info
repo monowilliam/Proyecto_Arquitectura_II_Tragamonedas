@@ -1,0 +1,19 @@
+|sumPC
+PCant[0] => Add0.IN16
+PCant[1] => Add0.IN15
+PCant[2] => Add0.IN14
+PCant[3] => Add0.IN13
+PCant[4] => Add0.IN12
+PCant[5] => Add0.IN11
+PCant[6] => Add0.IN10
+PCant[7] => Add0.IN9
+PCsig[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+PCsig[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

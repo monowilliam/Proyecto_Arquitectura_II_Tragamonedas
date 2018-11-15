@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\VHDL\PCounter\simulation\qsim
+vPCounter
+Z1 !s100 loheC72o7D5V8bdzTC_4i1
+Z2 IK0j<>H?aWfX[OQW^jNKcg0
+Z3 V?QXfH8oC0i[IfY^18K3bz0
+Z4 dC:\VHDL\PCounter\simulation\qsim
+Z5 w1542267906
+Z6 8PCounter.vo
+Z7 FPCounter.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|PCounter.vo|
+Z10 o-work work -O0
+Z11 n@p@counter
+!i10b 1
+!s85 0
+Z12 !s108 1542267907.684000
+Z13 !s107 PCounter.vo|
+!s101 -O0
+vPCounter_vlg_check_tst
+!i10b 1
+Z14 !s100 94lMLKX6<zg_FMGHFoRc=1
+Z15 IJlT`NF<N]69:E1a0D`P2T3
+Z16 VN9U5[?zLC60HnTAiUJ5J02
+R4
+Z17 w1542267905
+Z18 8PCounter.vt
+Z19 FPCounter.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1542267907.825000
+Z21 !s107 PCounter.vt|
+Z22 !s90 -work|work|PCounter.vt|
+!s101 -O0
+R10
+Z23 n@p@counter_vlg_check_tst
+vPCounter_vlg_sample_tst
+!i10b 1
+Z24 !s100 C^9A=?FoX0i0Sb5]oBJcF2
+Z25 IloiMQ5hCeS7R=`idTEijo2
+Z26 VZDI`I9@fQ8SF85:4;6Noz0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@p@counter_vlg_sample_tst
+vPCounter_vlg_vec_tst
+!i10b 1
+!s100 Z8dUIfd]9@e5Hgh^QDl<z2
+Ib>LU<h87>o[WBgWo?Az:D1
+Z28 VZzV95==zQ[HRmO_;?9Lm^0
+R4
+R17
+R18
+R19
+Z29 L0 281
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@p@counter_vlg_vec_tst

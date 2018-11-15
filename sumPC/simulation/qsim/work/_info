@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\VHDL\sumPC\simulation\qsim
+vsumPC
+Z1 !s100 fRe[EXcZ93<NhY31;a6n?0
+Z2 IKJ_TPBcCb_OMfZ7k:WlL51
+Z3 VWBJ3gS;f:3`AH18<HEzci2
+Z4 dC:\VHDL\sumPC\simulation\qsim
+Z5 w1542267340
+Z6 8sumPC.vo
+Z7 FsumPC.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|sumPC.vo|
+Z10 o-work work -O0
+Z11 nsum@p@c
+!i10b 1
+!s85 0
+Z12 !s108 1542267341.308000
+Z13 !s107 sumPC.vo|
+!s101 -O0
+vsumPC_vlg_check_tst
+!i10b 1
+Z14 !s100 D9zS[IJRPi@Z?J?J:^57@2
+Z15 I4W<=@<C0=>YJ9bTUW`l9O2
+Z16 V1FQ@A@=;8A`Jd6oaO6ZYm3
+R4
+Z17 w1542267339
+Z18 8sumPC.vt
+Z19 FsumPC.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z20 !s108 1542267341.418000
+Z21 !s107 sumPC.vt|
+Z22 !s90 -work|work|sumPC.vt|
+!s101 -O0
+R10
+Z23 nsum@p@c_vlg_check_tst
+vsumPC_vlg_sample_tst
+!i10b 1
+Z24 !s100 S=zNA_Xh72jCD87:MgG;22
+Z25 IVUT@1;N1U^K?lOYT@mhCG0
+Z26 V7dmcW=z7a1Oo?U>DJig;]1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 nsum@p@c_vlg_sample_tst
+vsumPC_vlg_vec_tst
+!i10b 1
+!s100 m]Q9KDEl6h4go2?LI7BHQ3
+INYPYY>E3^hAT[9R_o_lbB3
+Z28 VEH4WTF32ii^hCY51`S5j51
+R4
+R17
+R18
+R19
+Z29 L0 277
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 nsum@p@c_vlg_vec_tst

@@ -1,0 +1,35 @@
+|PCounter
+clk => PCact[0]~reg0.CLK
+clk => PCact[1]~reg0.CLK
+clk => PCact[2]~reg0.CLK
+clk => PCact[3]~reg0.CLK
+clk => PCact[4]~reg0.CLK
+clk => PCact[5]~reg0.CLK
+clk => PCact[6]~reg0.CLK
+clk => PCact[7]~reg0.CLK
+WE => PCact[0]~reg0.ENA
+WE => PCact[1]~reg0.ENA
+WE => PCact[2]~reg0.ENA
+WE => PCact[3]~reg0.ENA
+WE => PCact[4]~reg0.ENA
+WE => PCact[5]~reg0.ENA
+WE => PCact[6]~reg0.ENA
+WE => PCact[7]~reg0.ENA
+PCin[0] => PCact[0]~reg0.DATAIN
+PCin[1] => PCact[1]~reg0.DATAIN
+PCin[2] => PCact[2]~reg0.DATAIN
+PCin[3] => PCact[3]~reg0.DATAIN
+PCin[4] => PCact[4]~reg0.DATAIN
+PCin[5] => PCact[5]~reg0.DATAIN
+PCin[6] => PCact[6]~reg0.DATAIN
+PCin[7] => PCact[7]~reg0.DATAIN
+PCact[0] <= PCact[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[1] <= PCact[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[2] <= PCact[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[3] <= PCact[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[4] <= PCact[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[5] <= PCact[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[6] <= PCact[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PCact[7] <= PCact[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
