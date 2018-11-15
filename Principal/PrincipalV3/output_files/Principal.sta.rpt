@@ -1,0 +1,1054 @@
+TimeQuest Timing Analyzer report for Principal
+Thu Nov 15 07:18:51 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'switches[0]'
+ 12. Slow Model Hold: 'switches[0]'
+ 13. Slow Model Minimum Pulse Width: 'switches[0]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'switches[0]'
+ 22. Fast Model Hold: 'switches[0]'
+ 23. Fast Model Minimum Pulse Width: 'switches[0]'
+ 24. Setup Times
+ 25. Hold Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Setup Times
+ 28. Hold Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Principal                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; switches[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { switches[0] } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++-----------+-----------------+-------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name  ; Note ;
++-----------+-----------------+-------------+------+
+; 20.37 MHz ; 20.37 MHz       ; switches[0] ;      ;
++-----------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------+
+; Slow Model Setup Summary              ;
++-------------+---------+---------------+
+; Clock       ; Slack   ; End Point TNS ;
++-------------+---------+---------------+
+; switches[0] ; -28.574 ; -784.614      ;
++-------------+---------+---------------+
+
+
++-------------------------------------+
+; Slow Model Hold Summary             ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; switches[0] ; 1.991 ; 0.000         ;
++-------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; switches[0] ; -1.631 ; -1.631          ;
++-------------+--------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'switches[0]'                                                                           ;
++---------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; -28.574 ; apuesta[3]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.182      ; 28.571     ;
+; -28.526 ; apuesta[3]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.181      ; 28.566     ;
+; -28.388 ; apuesta[3]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.137      ; 28.384     ;
+; -28.310 ; apuesta[3]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.136      ; 28.305     ;
+; -28.234 ; apuesta[7]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.039      ; 28.088     ;
+; -28.231 ; apuesta[3]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 0.129      ; 28.212     ;
+; -28.231 ; apuesta[3]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.013     ; 28.210     ;
+; -28.197 ; apuesta[3]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; 0.127      ; 28.136     ;
+; -28.186 ; apuesta[7]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.038      ; 28.083     ;
+; -28.152 ; apuesta[6]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.165      ; 28.132     ;
+; -28.137 ; apuesta[3]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.183      ; 28.179     ;
+; -28.104 ; apuesta[6]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.164      ; 28.127     ;
+; -28.048 ; apuesta[7]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.006     ; 27.901     ;
+; -27.983 ; apuesta[4]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.024      ; 27.822     ;
+; -27.970 ; apuesta[7]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.007     ; 27.822     ;
+; -27.966 ; apuesta[6]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.120      ; 27.945     ;
+; -27.935 ; apuesta[4]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.023      ; 27.817     ;
+; -27.906 ; apuesta[10] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.023      ; 27.744     ;
+; -27.896 ; apuesta[3]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; 0.010      ; 27.898     ;
+; -27.891 ; apuesta[7]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.014     ; 27.729     ;
+; -27.891 ; apuesta[7]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.156     ; 27.727     ;
+; -27.888 ; apuesta[6]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.119      ; 27.866     ;
+; -27.884 ; apuesta[9]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.168      ; 27.867     ;
+; -27.872 ; apuesta[3]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.015     ; 27.849     ;
+; -27.857 ; apuesta[7]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.016     ; 27.653     ;
+; -27.836 ; apuesta[9]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.167      ; 27.862     ;
+; -27.829 ; apuesta[10] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.022      ; 27.710     ;
+; -27.809 ; apuesta[6]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 0.112      ; 27.773     ;
+; -27.809 ; apuesta[6]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.030     ; 27.771     ;
+; -27.797 ; apuesta[4]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.021     ; 27.635     ;
+; -27.797 ; apuesta[7]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.040      ; 27.696     ;
+; -27.780 ; apuesta[5]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.047      ; 27.642     ;
+; -27.775 ; apuesta[6]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; 0.110      ; 27.697     ;
+; -27.732 ; apuesta[5]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.046      ; 27.637     ;
+; -27.719 ; apuesta[4]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.022     ; 27.556     ;
+; -27.715 ; apuesta[6]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.166      ; 27.740     ;
+; -27.698 ; apuesta[9]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.123      ; 27.680     ;
+; -27.691 ; apuesta[10] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.022     ; 27.528     ;
+; -27.640 ; apuesta[4]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.029     ; 27.463     ;
+; -27.640 ; apuesta[4]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.171     ; 27.461     ;
+; -27.620 ; apuesta[9]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.122      ; 27.601     ;
+; -27.613 ; apuesta[10] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.023     ; 27.449     ;
+; -27.606 ; apuesta[4]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.031     ; 27.387     ;
+; -27.594 ; apuesta[5]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.002      ; 27.455     ;
+; -27.556 ; apuesta[7]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.133     ; 27.415     ;
+; -27.546 ; apuesta[4]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.025      ; 27.430     ;
+; -27.541 ; apuesta[9]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 0.115      ; 27.508     ;
+; -27.541 ; apuesta[9]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.027     ; 27.506     ;
+; -27.534 ; apuesta[10] ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.030     ; 27.356     ;
+; -27.534 ; apuesta[10] ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.172     ; 27.354     ;
+; -27.532 ; apuesta[7]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.158     ; 27.366     ;
+; -27.516 ; apuesta[5]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.001      ; 27.376     ;
+; -27.507 ; apuesta[9]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; 0.113      ; 27.432     ;
+; -27.505 ; apuesta[13] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.198      ; 27.518     ;
+; -27.502 ; apuesta[8]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.027      ; 27.344     ;
+; -27.500 ; apuesta[10] ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.032     ; 27.280     ;
+; -27.487 ; apuesta[14] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.022      ; 27.324     ;
+; -27.474 ; apuesta[6]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.007     ; 27.459     ;
+; -27.454 ; apuesta[8]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.026      ; 27.339     ;
+; -27.450 ; apuesta[6]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.032     ; 27.410     ;
+; -27.447 ; apuesta[15] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.019      ; 27.281     ;
+; -27.447 ; apuesta[9]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.169      ; 27.475     ;
+; -27.446 ; apuesta[11] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.037      ; 27.298     ;
+; -27.440 ; apuesta[10] ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.024      ; 27.323     ;
+; -27.437 ; apuesta[5]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.006     ; 27.283     ;
+; -27.437 ; apuesta[5]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.148     ; 27.281     ;
+; -27.403 ; apuesta[5]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.008     ; 27.207     ;
+; -27.400 ; apuesta[3]  ; apuesta[21] ; switches[0]  ; switches[0] ; 1.000        ; 0.129      ; 27.367     ;
+; -27.382 ; apuesta[2]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 1.448      ; 28.645     ;
+; -27.356 ; apuesta[12] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.035      ; 27.206     ;
+; -27.343 ; apuesta[5]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.048      ; 27.250     ;
+; -27.334 ; apuesta[2]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 1.447      ; 28.640     ;
+; -27.316 ; apuesta[8]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.018     ; 27.157     ;
+; -27.305 ; apuesta[4]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.148     ; 27.149     ;
+; -27.281 ; apuesta[4]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.173     ; 27.100     ;
+; -27.265 ; apuesta[13] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.197      ; 27.321     ;
+; -27.247 ; apuesta[14] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.021      ; 27.127     ;
+; -27.238 ; apuesta[8]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.019     ; 27.078     ;
+; -27.207 ; apuesta[15] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.018      ; 27.084     ;
+; -27.206 ; apuesta[11] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.036      ; 27.101     ;
+; -27.206 ; apuesta[9]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.004     ; 27.194     ;
+; -27.199 ; apuesta[10] ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.149     ; 27.042     ;
+; -27.196 ; apuesta[2]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 1.403      ; 28.458     ;
+; -27.182 ; apuesta[9]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.029     ; 27.145     ;
+; -27.175 ; apuesta[10] ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.174     ; 26.993     ;
+; -27.159 ; apuesta[8]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.026     ; 26.985     ;
+; -27.159 ; apuesta[8]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.168     ; 26.983     ;
+; -27.127 ; apuesta[13] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.153      ; 27.139     ;
+; -27.125 ; apuesta[8]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.028     ; 26.909     ;
+; -27.118 ; apuesta[2]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 1.402      ; 28.379     ;
+; -27.116 ; apuesta[12] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.034      ; 27.009     ;
+; -27.109 ; apuesta[14] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.023     ; 26.945     ;
+; -27.102 ; apuesta[5]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.125     ; 26.969     ;
+; -27.078 ; apuesta[5]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.150     ; 26.920     ;
+; -27.069 ; apuesta[15] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.026     ; 26.902     ;
+; -27.068 ; apuesta[11] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.008     ; 26.919     ;
+; -27.065 ; apuesta[8]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.028      ; 26.952     ;
+; -27.060 ; apuesta[7]  ; apuesta[21] ; switches[0]  ; switches[0] ; 1.000        ; -0.014     ; 26.884     ;
+; -27.049 ; apuesta[13] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.152      ; 27.060     ;
+; -27.039 ; apuesta[2]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 1.395      ; 28.286     ;
++---------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'switches[0]'                                                                          ;
++-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; 1.991 ; switches[0] ; apuesta[0]  ; switches[0]  ; switches[0] ; 0.000        ; 2.152      ; 4.143      ;
+; 2.491 ; switches[0] ; apuesta[0]  ; switches[0]  ; switches[0] ; -0.500       ; 2.152      ; 4.143      ;
+; 2.697 ; switches[0] ; apuesta[1]  ; switches[0]  ; switches[0] ; 0.000        ; 2.175      ; 4.872      ;
+; 3.197 ; switches[0] ; apuesta[1]  ; switches[0]  ; switches[0] ; -0.500       ; 2.175      ; 4.872      ;
+; 3.350 ; apuesta[0]  ; apuesta[0]  ; switches[0]  ; switches[0] ; 0.000        ; 0.000      ; 3.350      ;
+; 3.488 ; switches[0] ; apuesta[17] ; switches[0]  ; switches[0] ; 0.000        ; 4.834      ; 8.322      ;
+; 3.560 ; switches[0] ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 4.949      ; 8.509      ;
+; 3.607 ; switches[0] ; apuesta[6]  ; switches[0]  ; switches[0] ; 0.000        ; 4.839      ; 8.446      ;
+; 3.675 ; switches[0] ; apuesta[24] ; switches[0]  ; switches[0] ; 0.000        ; 4.832      ; 8.507      ;
+; 3.718 ; switches[0] ; apuesta[29] ; switches[0]  ; switches[0] ; 0.000        ; 5.003      ; 8.721      ;
+; 3.731 ; switches[0] ; apuesta[30] ; switches[0]  ; switches[0] ; 0.000        ; 4.958      ; 8.689      ;
+; 3.743 ; switches[0] ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 4.951      ; 8.694      ;
+; 3.800 ; switches[0] ; apuesta[11] ; switches[0]  ; switches[0] ; 0.000        ; 4.967      ; 8.767      ;
+; 3.815 ; switches[0] ; apuesta[20] ; switches[0]  ; switches[0] ; 0.000        ; 4.810      ; 8.625      ;
+; 3.837 ; switches[0] ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 4.980      ; 8.817      ;
+; 3.839 ; switches[0] ; apuesta[8]  ; switches[0]  ; switches[0] ; 0.000        ; 4.977      ; 8.816      ;
+; 3.923 ; switches[0] ; apuesta[25] ; switches[0]  ; switches[0] ; 0.000        ; 4.951      ; 8.874      ;
+; 3.988 ; switches[0] ; apuesta[17] ; switches[0]  ; switches[0] ; -0.500       ; 4.834      ; 8.322      ;
+; 3.999 ; switches[0] ; apuesta[31] ; switches[0]  ; switches[0] ; 0.000        ; 5.004      ; 9.003      ;
+; 4.034 ; apuesta[1]  ; apuesta[1]  ; switches[0]  ; switches[0] ; 0.000        ; 0.000      ; 4.034      ;
+; 4.039 ; switches[0] ; apuesta[15] ; switches[0]  ; switches[0] ; 0.000        ; 4.985      ; 9.024      ;
+; 4.045 ; switches[0] ; apuesta[7]  ; switches[0]  ; switches[0] ; 0.000        ; 4.965      ; 9.010      ;
+; 4.056 ; switches[0] ; apuesta[10] ; switches[0]  ; switches[0] ; 0.000        ; 4.981      ; 9.037      ;
+; 4.060 ; switches[0] ; apuesta[22] ; switches[0]  ; switches[0] ; -0.500       ; 4.949      ; 8.509      ;
+; 4.061 ; switches[0] ; apuesta[2]  ; switches[0]  ; switches[0] ; 0.000        ; 3.556      ; 7.617      ;
+; 4.107 ; switches[0] ; apuesta[6]  ; switches[0]  ; switches[0] ; -0.500       ; 4.839      ; 8.446      ;
+; 4.131 ; switches[0] ; apuesta[12] ; switches[0]  ; switches[0] ; 0.000        ; 4.969      ; 9.100      ;
+; 4.175 ; switches[0] ; apuesta[24] ; switches[0]  ; switches[0] ; -0.500       ; 4.832      ; 8.507      ;
+; 4.194 ; switches[0] ; apuesta[19] ; switches[0]  ; switches[0] ; 0.000        ; 4.835      ; 9.029      ;
+; 4.218 ; switches[0] ; apuesta[29] ; switches[0]  ; switches[0] ; -0.500       ; 5.003      ; 8.721      ;
+; 4.228 ; switches[0] ; apuesta[9]  ; switches[0]  ; switches[0] ; 0.000        ; 4.836      ; 9.064      ;
+; 4.231 ; switches[0] ; apuesta[30] ; switches[0]  ; switches[0] ; -0.500       ; 4.958      ; 8.689      ;
+; 4.237 ; switches[0] ; apuesta[18] ; switches[0]  ; switches[0] ; 0.000        ; 4.822      ; 9.059      ;
+; 4.239 ; switches[0] ; apuesta[16] ; switches[0]  ; switches[0] ; 0.000        ; 4.808      ; 9.047      ;
+; 4.243 ; switches[0] ; apuesta[21] ; switches[0]  ; switches[0] ; -0.500       ; 4.951      ; 8.694      ;
+; 4.251 ; switches[0] ; apuesta[28] ; switches[0]  ; switches[0] ; 0.000        ; 5.005      ; 9.256      ;
+; 4.262 ; switches[0] ; apuesta[23] ; switches[0]  ; switches[0] ; 0.000        ; 4.807      ; 9.069      ;
+; 4.300 ; switches[0] ; apuesta[11] ; switches[0]  ; switches[0] ; -0.500       ; 4.967      ; 8.767      ;
+; 4.315 ; switches[0] ; apuesta[20] ; switches[0]  ; switches[0] ; -0.500       ; 4.810      ; 8.625      ;
+; 4.337 ; switches[0] ; apuesta[4]  ; switches[0]  ; switches[0] ; -0.500       ; 4.980      ; 8.817      ;
+; 4.339 ; switches[0] ; apuesta[8]  ; switches[0]  ; switches[0] ; -0.500       ; 4.977      ; 8.816      ;
+; 4.401 ; switches[0] ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 4.957      ; 9.358      ;
+; 4.423 ; switches[0] ; apuesta[25] ; switches[0]  ; switches[0] ; -0.500       ; 4.951      ; 8.874      ;
+; 4.436 ; apuesta[0]  ; apuesta[1]  ; switches[0]  ; switches[0] ; 0.000        ; 0.023      ; 4.459      ;
+; 4.453 ; switches[0] ; apuesta[14] ; switches[0]  ; switches[0] ; 0.000        ; 4.982      ; 9.435      ;
+; 4.461 ; switches[0] ; apuesta[27] ; switches[0]  ; switches[0] ; 0.000        ; 4.959      ; 9.420      ;
+; 4.477 ; switches[0] ; apuesta[26] ; switches[0]  ; switches[0] ; 0.000        ; 4.809      ; 9.286      ;
+; 4.499 ; switches[0] ; apuesta[31] ; switches[0]  ; switches[0] ; -0.500       ; 5.004      ; 9.003      ;
+; 4.502 ; switches[0] ; apuesta[3]  ; switches[0]  ; switches[0] ; 0.000        ; 4.822      ; 9.324      ;
+; 4.539 ; switches[0] ; apuesta[15] ; switches[0]  ; switches[0] ; -0.500       ; 4.985      ; 9.024      ;
+; 4.545 ; switches[0] ; apuesta[7]  ; switches[0]  ; switches[0] ; -0.500       ; 4.965      ; 9.010      ;
+; 4.556 ; switches[0] ; apuesta[10] ; switches[0]  ; switches[0] ; -0.500       ; 4.981      ; 9.037      ;
+; 4.561 ; switches[0] ; apuesta[2]  ; switches[0]  ; switches[0] ; -0.500       ; 3.556      ; 7.617      ;
+; 4.631 ; switches[0] ; apuesta[12] ; switches[0]  ; switches[0] ; -0.500       ; 4.969      ; 9.100      ;
+; 4.694 ; switches[0] ; apuesta[19] ; switches[0]  ; switches[0] ; -0.500       ; 4.835      ; 9.029      ;
+; 4.723 ; switches[0] ; apuesta[13] ; switches[0]  ; switches[0] ; 0.000        ; 4.806      ; 9.529      ;
+; 4.728 ; switches[0] ; apuesta[9]  ; switches[0]  ; switches[0] ; -0.500       ; 4.836      ; 9.064      ;
+; 4.737 ; switches[0] ; apuesta[18] ; switches[0]  ; switches[0] ; -0.500       ; 4.822      ; 9.059      ;
+; 4.739 ; switches[0] ; apuesta[16] ; switches[0]  ; switches[0] ; -0.500       ; 4.808      ; 9.047      ;
+; 4.751 ; switches[0] ; apuesta[28] ; switches[0]  ; switches[0] ; -0.500       ; 5.005      ; 9.256      ;
+; 4.762 ; switches[0] ; apuesta[23] ; switches[0]  ; switches[0] ; -0.500       ; 4.807      ; 9.069      ;
+; 4.810 ; apuesta[1]  ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 2.782      ; 7.592      ;
+; 4.857 ; apuesta[1]  ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 2.805      ; 7.662      ;
+; 4.901 ; switches[0] ; apuesta[5]  ; switches[0]  ; switches[0] ; -0.500       ; 4.957      ; 9.358      ;
+; 4.902 ; apuesta[0]  ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 2.805      ; 7.707      ;
+; 4.949 ; apuesta[0]  ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 2.828      ; 7.777      ;
+; 4.953 ; switches[0] ; apuesta[14] ; switches[0]  ; switches[0] ; -0.500       ; 4.982      ; 9.435      ;
+; 4.961 ; switches[0] ; apuesta[27] ; switches[0]  ; switches[0] ; -0.500       ; 4.959      ; 9.420      ;
+; 4.964 ; apuesta[1]  ; apuesta[2]  ; switches[0]  ; switches[0] ; 0.000        ; 1.381      ; 6.345      ;
+; 4.977 ; switches[0] ; apuesta[26] ; switches[0]  ; switches[0] ; -0.500       ; 4.809      ; 9.286      ;
+; 5.002 ; switches[0] ; apuesta[3]  ; switches[0]  ; switches[0] ; -0.500       ; 4.822      ; 9.324      ;
+; 5.056 ; apuesta[0]  ; apuesta[2]  ; switches[0]  ; switches[0] ; 0.000        ; 1.404      ; 6.460      ;
+; 5.151 ; apuesta[1]  ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 2.774      ; 7.925      ;
+; 5.223 ; switches[0] ; apuesta[13] ; switches[0]  ; switches[0] ; -0.500       ; 4.806      ; 9.529      ;
+; 5.243 ; apuesta[0]  ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 2.797      ; 8.040      ;
+; 5.335 ; apuesta[1]  ; apuesta[9]  ; switches[0]  ; switches[0] ; 0.000        ; 2.661      ; 7.996      ;
+; 5.356 ; apuesta[1]  ; apuesta[6]  ; switches[0]  ; switches[0] ; 0.000        ; 2.664      ; 8.020      ;
+; 5.396 ; apuesta[1]  ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 2.776      ; 8.172      ;
+; 5.406 ; apuesta[0]  ; apuesta[6]  ; switches[0]  ; switches[0] ; 0.000        ; 2.687      ; 8.093      ;
+; 5.424 ; apuesta[1]  ; apuesta[12] ; switches[0]  ; switches[0] ; 0.000        ; 2.794      ; 8.218      ;
+; 5.427 ; apuesta[0]  ; apuesta[9]  ; switches[0]  ; switches[0] ; 0.000        ; 2.684      ; 8.111      ;
+; 5.461 ; apuesta[1]  ; apuesta[8]  ; switches[0]  ; switches[0] ; 0.000        ; 2.802      ; 8.263      ;
+; 5.482 ; apuesta[1]  ; apuesta[10] ; switches[0]  ; switches[0] ; 0.000        ; 2.806      ; 8.288      ;
+; 5.488 ; apuesta[0]  ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 2.799      ; 8.287      ;
+; 5.511 ; apuesta[0]  ; apuesta[8]  ; switches[0]  ; switches[0] ; 0.000        ; 2.825      ; 8.336      ;
+; 5.516 ; apuesta[0]  ; apuesta[12] ; switches[0]  ; switches[0] ; 0.000        ; 2.817      ; 8.333      ;
+; 5.528 ; apuesta[1]  ; apuesta[7]  ; switches[0]  ; switches[0] ; 0.000        ; 2.790      ; 8.318      ;
+; 5.532 ; apuesta[0]  ; apuesta[10] ; switches[0]  ; switches[0] ; 0.000        ; 2.829      ; 8.361      ;
+; 5.613 ; apuesta[0]  ; apuesta[7]  ; switches[0]  ; switches[0] ; 0.000        ; 2.813      ; 8.426      ;
+; 5.684 ; apuesta[21] ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 0.000      ; 5.684      ;
+; 5.707 ; apuesta[22] ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 0.000      ; 5.707      ;
+; 5.708 ; apuesta[1]  ; apuesta[15] ; switches[0]  ; switches[0] ; 0.000        ; 2.810      ; 8.518      ;
+; 5.731 ; apuesta[1]  ; apuesta[20] ; switches[0]  ; switches[0] ; 0.000        ; 2.635      ; 8.366      ;
+; 5.773 ; apuesta[1]  ; apuesta[14] ; switches[0]  ; switches[0] ; 0.000        ; 2.807      ; 8.580      ;
+; 5.791 ; apuesta[21] ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; -0.002     ; 5.789      ;
+; 5.800 ; apuesta[0]  ; apuesta[15] ; switches[0]  ; switches[0] ; 0.000        ; 2.833      ; 8.633      ;
+; 5.823 ; apuesta[0]  ; apuesta[20] ; switches[0]  ; switches[0] ; 0.000        ; 2.658      ; 8.481      ;
+; 5.865 ; apuesta[0]  ; apuesta[14] ; switches[0]  ; switches[0] ; 0.000        ; 2.830      ; 8.695      ;
+; 5.869 ; apuesta[1]  ; apuesta[23] ; switches[0]  ; switches[0] ; 0.000        ; 2.632      ; 8.501      ;
+; 5.878 ; apuesta[18] ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 0.127      ; 6.005      ;
++-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'switches[0]'                                                                 ;
++--------+--------------+----------------+------------------+-------------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------------+------------+------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; switches[0] ; Rise       ; switches[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[0]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[0]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[10]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[10]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[10]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[10]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[11]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[11]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[11]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[11]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[12]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[12]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[12]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[12]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[13]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[13]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[13]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[13]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[14]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[14]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[14]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[14]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[15]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[15]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[15]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[15]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[16]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[16]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[16]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[16]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[17]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[17]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[17]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[17]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[18]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[18]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[18]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[18]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[19]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[19]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[19]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[19]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[1]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[1]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~220|combout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~220|combout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~220|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~220|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~276|combout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~276|combout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~276|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~276|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[20]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[20]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[20]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[20]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[21]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[21]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[21]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[21]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[22]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[22]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[22]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[22]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[23]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[23]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[23]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[23]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[24]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[24]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[24]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[24]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[25]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[25]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[25]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[25]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[26]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[26]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[26]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[26]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[27]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[27]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[27]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[27]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[28]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[28]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[28]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[28]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[29]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[29]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[29]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[29]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[2]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[2]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[2]|datad       ;
++--------+--------------+----------------+------------------+-------------+------------+------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++--------------+-------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+-------------+--------+--------+------------+-----------------+
+; switches[*]  ; switches[0] ; 24.545 ; 24.545 ; Fall       ; switches[0]     ;
+;  switches[0] ; switches[0] ; 24.545 ; 24.545 ; Fall       ; switches[0]     ;
+;  switches[1] ; switches[0] ; 22.558 ; 22.558 ; Fall       ; switches[0]     ;
+;  switches[2] ; switches[0] ; 20.268 ; 20.268 ; Fall       ; switches[0]     ;
+;  switches[3] ; switches[0] ; 16.560 ; 16.560 ; Fall       ; switches[0]     ;
+;  switches[4] ; switches[0] ; 13.236 ; 13.236 ; Fall       ; switches[0]     ;
+;  switches[5] ; switches[0] ; 9.656  ; 9.656  ; Fall       ; switches[0]     ;
+;  switches[6] ; switches[0] ; 7.164  ; 7.164  ; Fall       ; switches[0]     ;
+;  switches[7] ; switches[0] ; 1.513  ; 1.513  ; Fall       ; switches[0]     ;
++--------------+-------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++--------------+-------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+-------------+--------+--------+------------+-----------------+
+; switches[*]  ; switches[0] ; 0.719  ; 0.719  ; Fall       ; switches[0]     ;
+;  switches[0] ; switches[0] ; -1.991 ; -1.991 ; Fall       ; switches[0]     ;
+;  switches[1] ; switches[0] ; -1.523 ; -1.523 ; Fall       ; switches[0]     ;
+;  switches[2] ; switches[0] ; -2.067 ; -2.067 ; Fall       ; switches[0]     ;
+;  switches[3] ; switches[0] ; -1.536 ; -1.536 ; Fall       ; switches[0]     ;
+;  switches[4] ; switches[0] ; -0.918 ; -0.918 ; Fall       ; switches[0]     ;
+;  switches[5] ; switches[0] ; -1.009 ; -1.009 ; Fall       ; switches[0]     ;
+;  switches[6] ; switches[0] ; -2.024 ; -2.024 ; Fall       ; switches[0]     ;
+;  switches[7] ; switches[0] ; 0.719  ; 0.719  ; Fall       ; switches[0]     ;
++--------------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------+
+; Fast Model Setup Summary             ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; switches[0] ; -9.778 ; -262.991      ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Fast Model Hold Summary             ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; switches[0] ; 0.682 ; 0.000         ;
++-------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; switches[0] ; -1.380 ; -1.380          ;
++-------------+--------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'switches[0]'                                                                          ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; -9.778 ; apuesta[3]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.070      ; 10.446     ;
+; -9.757 ; apuesta[3]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.068      ; 10.436     ;
+; -9.710 ; apuesta[3]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.041      ; 10.362     ;
+; -9.708 ; apuesta[3]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.042      ; 10.361     ;
+; -9.652 ; apuesta[3]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.010     ; 10.296     ;
+; -9.635 ; apuesta[3]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 0.037      ; 10.279     ;
+; -9.631 ; apuesta[7]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.020      ; 10.249     ;
+; -9.617 ; apuesta[6]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.060      ; 10.275     ;
+; -9.610 ; apuesta[7]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.018      ; 10.239     ;
+; -9.605 ; apuesta[3]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.070      ; 10.286     ;
+; -9.596 ; apuesta[6]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.058      ; 10.265     ;
+; -9.580 ; apuesta[3]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; 0.036      ; 10.212     ;
+; -9.575 ; apuesta[4]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.012      ; 10.185     ;
+; -9.563 ; apuesta[7]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.009     ; 10.165     ;
+; -9.561 ; apuesta[7]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.008     ; 10.164     ;
+; -9.554 ; apuesta[4]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.010      ; 10.175     ;
+; -9.549 ; apuesta[6]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.031      ; 10.191     ;
+; -9.547 ; apuesta[6]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.032      ; 10.190     ;
+; -9.507 ; apuesta[5]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.025      ; 10.130     ;
+; -9.507 ; apuesta[4]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.017     ; 10.101     ;
+; -9.505 ; apuesta[4]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.016     ; 10.100     ;
+; -9.505 ; apuesta[7]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.060     ; 10.099     ;
+; -9.497 ; apuesta[3]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; 0.006      ; 10.157     ;
+; -9.491 ; apuesta[6]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.020     ; 10.125     ;
+; -9.488 ; apuesta[7]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.013     ; 10.082     ;
+; -9.486 ; apuesta[5]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.023      ; 10.120     ;
+; -9.485 ; apuesta[10] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.012      ; 10.095     ;
+; -9.475 ; apuesta[3]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.009     ; 10.121     ;
+; -9.474 ; apuesta[6]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 0.027      ; 10.108     ;
+; -9.469 ; apuesta[9]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.062      ; 10.129     ;
+; -9.464 ; apuesta[10] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.010      ; 10.085     ;
+; -9.458 ; apuesta[7]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.020      ; 10.089     ;
+; -9.449 ; apuesta[4]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.068     ; 10.035     ;
+; -9.448 ; apuesta[9]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.060      ; 10.119     ;
+; -9.444 ; apuesta[6]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.060      ; 10.115     ;
+; -9.439 ; apuesta[5]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.004     ; 10.046     ;
+; -9.437 ; apuesta[5]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.003     ; 10.045     ;
+; -9.433 ; apuesta[7]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.014     ; 10.015     ;
+; -9.432 ; apuesta[4]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.021     ; 10.018     ;
+; -9.419 ; apuesta[6]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; 0.026      ; 10.041     ;
+; -9.417 ; apuesta[10] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.017     ; 10.011     ;
+; -9.415 ; apuesta[10] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.016     ; 10.010     ;
+; -9.402 ; apuesta[4]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.012      ; 10.025     ;
+; -9.401 ; apuesta[9]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.033      ; 10.045     ;
+; -9.399 ; apuesta[9]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.034      ; 10.044     ;
+; -9.381 ; apuesta[5]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.055     ; 9.980      ;
+; -9.377 ; apuesta[4]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.022     ; 9.951      ;
+; -9.364 ; apuesta[5]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.008     ; 9.963      ;
+; -9.359 ; apuesta[10] ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.068     ; 9.945      ;
+; -9.350 ; apuesta[7]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.044     ; 9.960      ;
+; -9.343 ; apuesta[9]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.018     ; 9.979      ;
+; -9.342 ; apuesta[10] ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.021     ; 9.928      ;
+; -9.341 ; apuesta[8]  ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.014      ; 9.953      ;
+; -9.336 ; apuesta[6]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.004     ; 9.986      ;
+; -9.334 ; apuesta[5]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.025      ; 9.970      ;
+; -9.328 ; apuesta[7]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.059     ; 9.924      ;
+; -9.326 ; apuesta[9]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; 0.029      ; 9.962      ;
+; -9.320 ; apuesta[8]  ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.012      ; 9.943      ;
+; -9.314 ; apuesta[6]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.019     ; 9.950      ;
+; -9.312 ; apuesta[10] ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.012      ; 9.935      ;
+; -9.309 ; apuesta[5]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.009     ; 9.896      ;
+; -9.302 ; apuesta[3]  ; apuesta[21] ; switches[0]  ; switches[0] ; 1.000        ; 0.041      ; 9.944      ;
+; -9.296 ; apuesta[9]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.062      ; 9.969      ;
+; -9.294 ; apuesta[4]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.052     ; 9.896      ;
+; -9.287 ; apuesta[10] ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.022     ; 9.861      ;
+; -9.273 ; apuesta[8]  ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.015     ; 9.869      ;
+; -9.272 ; apuesta[4]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.067     ; 9.860      ;
+; -9.271 ; apuesta[8]  ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.014     ; 9.868      ;
+; -9.271 ; apuesta[9]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; 0.028      ; 9.895      ;
+; -9.251 ; apuesta[14] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.009      ; 9.858      ;
+; -9.245 ; apuesta[13] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.082      ; 9.925      ;
+; -9.236 ; apuesta[11] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.019      ; 9.853      ;
+; -9.226 ; apuesta[5]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.039     ; 9.841      ;
+; -9.215 ; apuesta[8]  ; apuesta[26] ; switches[0]  ; switches[0] ; 1.000        ; -0.066     ; 9.803      ;
+; -9.213 ; apuesta[15] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.010      ; 9.821      ;
+; -9.204 ; apuesta[5]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.054     ; 9.805      ;
+; -9.204 ; apuesta[10] ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.052     ; 9.806      ;
+; -9.198 ; apuesta[8]  ; apuesta[25] ; switches[0]  ; switches[0] ; 1.000        ; -0.019     ; 9.786      ;
+; -9.198 ; apuesta[14] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.007      ; 9.816      ;
+; -9.192 ; apuesta[12] ; apuesta[31] ; switches[0]  ; switches[0] ; 1.000        ; 0.017      ; 9.807      ;
+; -9.192 ; apuesta[13] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.080      ; 9.883      ;
+; -9.188 ; apuesta[9]  ; apuesta[24] ; switches[0]  ; switches[0] ; 1.000        ; -0.002     ; 9.840      ;
+; -9.186 ; apuesta[11] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.017      ; 9.814      ;
+; -9.182 ; apuesta[10] ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.067     ; 9.770      ;
+; -9.168 ; apuesta[8]  ; apuesta[28] ; switches[0]  ; switches[0] ; 1.000        ; 0.014      ; 9.793      ;
+; -9.166 ; apuesta[9]  ; apuesta[23] ; switches[0]  ; switches[0] ; 1.000        ; -0.017     ; 9.804      ;
+; -9.160 ; apuesta[15] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.008      ; 9.779      ;
+; -9.155 ; apuesta[7]  ; apuesta[21] ; switches[0]  ; switches[0] ; 1.000        ; -0.009     ; 9.747      ;
+; -9.151 ; apuesta[14] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.020     ; 9.742      ;
+; -9.149 ; apuesta[14] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.019     ; 9.741      ;
+; -9.145 ; apuesta[13] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; 0.053      ; 9.809      ;
+; -9.143 ; apuesta[8]  ; apuesta[22] ; switches[0]  ; switches[0] ; 1.000        ; -0.020     ; 9.719      ;
+; -9.143 ; apuesta[13] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; 0.054      ; 9.808      ;
+; -9.141 ; apuesta[6]  ; apuesta[21] ; switches[0]  ; switches[0] ; 1.000        ; 0.031      ; 9.773      ;
+; -9.139 ; apuesta[12] ; apuesta[29] ; switches[0]  ; switches[0] ; 1.000        ; 0.015      ; 9.765      ;
+; -9.139 ; apuesta[11] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.010     ; 9.740      ;
+; -9.137 ; apuesta[11] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.009     ; 9.739      ;
+; -9.113 ; apuesta[15] ; apuesta[30] ; switches[0]  ; switches[0] ; 1.000        ; -0.019     ; 9.705      ;
+; -9.111 ; apuesta[15] ; apuesta[27] ; switches[0]  ; switches[0] ; 1.000        ; -0.018     ; 9.704      ;
+; -9.099 ; apuesta[4]  ; apuesta[21] ; switches[0]  ; switches[0] ; 1.000        ; -0.017     ; 9.683      ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'switches[0]'                                                                          ;
++-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.682 ; switches[0] ; apuesta[17] ; switches[0]  ; switches[0] ; 0.000        ; 2.478      ; 3.160      ;
+; 0.709 ; switches[0] ; apuesta[0]  ; switches[0]  ; switches[0] ; 0.000        ; 0.971      ; 1.680      ;
+; 0.739 ; switches[0] ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 2.506      ; 3.245      ;
+; 0.762 ; switches[0] ; apuesta[6]  ; switches[0]  ; switches[0] ; 0.000        ; 2.480      ; 3.242      ;
+; 0.784 ; switches[0] ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 2.528      ; 3.312      ;
+; 0.790 ; switches[0] ; apuesta[24] ; switches[0]  ; switches[0] ; 0.000        ; 2.476      ; 3.266      ;
+; 0.805 ; switches[0] ; apuesta[29] ; switches[0]  ; switches[0] ; 0.000        ; 2.538      ; 3.343      ;
+; 0.805 ; switches[0] ; apuesta[30] ; switches[0]  ; switches[0] ; 0.000        ; 2.511      ; 3.316      ;
+; 0.820 ; switches[0] ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 2.511      ; 3.331      ;
+; 0.827 ; switches[0] ; apuesta[11] ; switches[0]  ; switches[0] ; 0.000        ; 2.521      ; 3.348      ;
+; 0.829 ; switches[0] ; apuesta[20] ; switches[0]  ; switches[0] ; 0.000        ; 2.463      ; 3.292      ;
+; 0.836 ; switches[0] ; apuesta[8]  ; switches[0]  ; switches[0] ; 0.000        ; 2.526      ; 3.362      ;
+; 0.866 ; switches[0] ; apuesta[25] ; switches[0]  ; switches[0] ; 0.000        ; 2.507      ; 3.373      ;
+; 0.885 ; switches[0] ; apuesta[15] ; switches[0]  ; switches[0] ; 0.000        ; 2.530      ; 3.415      ;
+; 0.903 ; switches[0] ; apuesta[7]  ; switches[0]  ; switches[0] ; 0.000        ; 2.520      ; 3.423      ;
+; 0.921 ; switches[0] ; apuesta[12] ; switches[0]  ; switches[0] ; 0.000        ; 2.523      ; 3.444      ;
+; 0.926 ; switches[0] ; apuesta[10] ; switches[0]  ; switches[0] ; 0.000        ; 2.528      ; 3.454      ;
+; 0.927 ; switches[0] ; apuesta[31] ; switches[0]  ; switches[0] ; 0.000        ; 2.540      ; 3.467      ;
+; 0.935 ; switches[0] ; apuesta[19] ; switches[0]  ; switches[0] ; 0.000        ; 2.479      ; 3.414      ;
+; 0.937 ; switches[0] ; apuesta[1]  ; switches[0]  ; switches[0] ; 0.000        ; 0.986      ; 1.923      ;
+; 0.961 ; switches[0] ; apuesta[9]  ; switches[0]  ; switches[0] ; 0.000        ; 2.478      ; 3.439      ;
+; 0.965 ; switches[0] ; apuesta[18] ; switches[0]  ; switches[0] ; 0.000        ; 2.469      ; 3.434      ;
+; 1.002 ; switches[0] ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 2.515      ; 3.517      ;
+; 1.003 ; switches[0] ; apuesta[23] ; switches[0]  ; switches[0] ; 0.000        ; 2.461      ; 3.464      ;
+; 1.014 ; switches[0] ; apuesta[16] ; switches[0]  ; switches[0] ; 0.000        ; 2.463      ; 3.477      ;
+; 1.016 ; switches[0] ; apuesta[28] ; switches[0]  ; switches[0] ; 0.000        ; 2.540      ; 3.556      ;
+; 1.059 ; switches[0] ; apuesta[14] ; switches[0]  ; switches[0] ; 0.000        ; 2.531      ; 3.590      ;
+; 1.064 ; switches[0] ; apuesta[26] ; switches[0]  ; switches[0] ; 0.000        ; 2.460      ; 3.524      ;
+; 1.079 ; switches[0] ; apuesta[27] ; switches[0]  ; switches[0] ; 0.000        ; 2.512      ; 3.591      ;
+; 1.098 ; switches[0] ; apuesta[3]  ; switches[0]  ; switches[0] ; 0.000        ; 2.470      ; 3.568      ;
+; 1.123 ; switches[0] ; apuesta[13] ; switches[0]  ; switches[0] ; 0.000        ; 2.458      ; 3.581      ;
+; 1.158 ; apuesta[1]  ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 1.529      ; 2.687      ;
+; 1.177 ; apuesta[0]  ; apuesta[0]  ; switches[0]  ; switches[0] ; 0.000        ; 0.000      ; 1.177      ;
+; 1.182 ; switches[0] ; apuesta[17] ; switches[0]  ; switches[0] ; -0.500       ; 2.478      ; 3.160      ;
+; 1.187 ; apuesta[0]  ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 1.544      ; 2.731      ;
+; 1.197 ; apuesta[1]  ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 1.542      ; 2.739      ;
+; 1.209 ; switches[0] ; apuesta[0]  ; switches[0]  ; switches[0] ; -0.500       ; 0.971      ; 1.680      ;
+; 1.226 ; apuesta[0]  ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 1.557      ; 2.783      ;
+; 1.239 ; switches[0] ; apuesta[22] ; switches[0]  ; switches[0] ; -0.500       ; 2.506      ; 3.245      ;
+; 1.262 ; switches[0] ; apuesta[6]  ; switches[0]  ; switches[0] ; -0.500       ; 2.480      ; 3.242      ;
+; 1.284 ; switches[0] ; apuesta[4]  ; switches[0]  ; switches[0] ; -0.500       ; 2.528      ; 3.312      ;
+; 1.290 ; switches[0] ; apuesta[24] ; switches[0]  ; switches[0] ; -0.500       ; 2.476      ; 3.266      ;
+; 1.305 ; switches[0] ; apuesta[29] ; switches[0]  ; switches[0] ; -0.500       ; 2.538      ; 3.343      ;
+; 1.305 ; switches[0] ; apuesta[30] ; switches[0]  ; switches[0] ; -0.500       ; 2.511      ; 3.316      ;
+; 1.320 ; switches[0] ; apuesta[21] ; switches[0]  ; switches[0] ; -0.500       ; 2.511      ; 3.331      ;
+; 1.327 ; switches[0] ; apuesta[11] ; switches[0]  ; switches[0] ; -0.500       ; 2.521      ; 3.348      ;
+; 1.329 ; switches[0] ; apuesta[20] ; switches[0]  ; switches[0] ; -0.500       ; 2.463      ; 3.292      ;
+; 1.336 ; switches[0] ; apuesta[8]  ; switches[0]  ; switches[0] ; -0.500       ; 2.526      ; 3.362      ;
+; 1.366 ; switches[0] ; apuesta[25] ; switches[0]  ; switches[0] ; -0.500       ; 2.507      ; 3.373      ;
+; 1.385 ; switches[0] ; apuesta[15] ; switches[0]  ; switches[0] ; -0.500       ; 2.530      ; 3.415      ;
+; 1.385 ; apuesta[1]  ; apuesta[6]  ; switches[0]  ; switches[0] ; 0.000        ; 1.494      ; 2.879      ;
+; 1.397 ; switches[0] ; apuesta[2]  ; switches[0]  ; switches[0] ; 0.000        ; 1.506      ; 2.903      ;
+; 1.403 ; switches[0] ; apuesta[7]  ; switches[0]  ; switches[0] ; -0.500       ; 2.520      ; 3.423      ;
+; 1.409 ; apuesta[1]  ; apuesta[1]  ; switches[0]  ; switches[0] ; 0.000        ; 0.000      ; 1.409      ;
+; 1.410 ; apuesta[0]  ; apuesta[6]  ; switches[0]  ; switches[0] ; 0.000        ; 1.509      ; 2.919      ;
+; 1.421 ; switches[0] ; apuesta[12] ; switches[0]  ; switches[0] ; -0.500       ; 2.523      ; 3.444      ;
+; 1.426 ; switches[0] ; apuesta[10] ; switches[0]  ; switches[0] ; -0.500       ; 2.528      ; 3.454      ;
+; 1.427 ; switches[0] ; apuesta[31] ; switches[0]  ; switches[0] ; -0.500       ; 2.540      ; 3.467      ;
+; 1.435 ; switches[0] ; apuesta[19] ; switches[0]  ; switches[0] ; -0.500       ; 2.479      ; 3.414      ;
+; 1.436 ; apuesta[1]  ; apuesta[9]  ; switches[0]  ; switches[0] ; 0.000        ; 1.492      ; 2.928      ;
+; 1.437 ; switches[0] ; apuesta[1]  ; switches[0]  ; switches[0] ; -0.500       ; 0.986      ; 1.923      ;
+; 1.455 ; apuesta[1]  ; apuesta[7]  ; switches[0]  ; switches[0] ; 0.000        ; 1.534      ; 2.989      ;
+; 1.458 ; apuesta[1]  ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 1.520      ; 2.978      ;
+; 1.458 ; apuesta[1]  ; apuesta[12] ; switches[0]  ; switches[0] ; 0.000        ; 1.537      ; 2.995      ;
+; 1.461 ; switches[0] ; apuesta[9]  ; switches[0]  ; switches[0] ; -0.500       ; 2.478      ; 3.439      ;
+; 1.465 ; switches[0] ; apuesta[18] ; switches[0]  ; switches[0] ; -0.500       ; 2.469      ; 3.434      ;
+; 1.465 ; apuesta[0]  ; apuesta[9]  ; switches[0]  ; switches[0] ; 0.000        ; 1.507      ; 2.972      ;
+; 1.468 ; apuesta[1]  ; apuesta[10] ; switches[0]  ; switches[0] ; 0.000        ; 1.542      ; 3.010      ;
+; 1.475 ; apuesta[1]  ; apuesta[8]  ; switches[0]  ; switches[0] ; 0.000        ; 1.540      ; 3.015      ;
+; 1.484 ; apuesta[0]  ; apuesta[7]  ; switches[0]  ; switches[0] ; 0.000        ; 1.549      ; 3.033      ;
+; 1.487 ; apuesta[0]  ; apuesta[22] ; switches[0]  ; switches[0] ; 0.000        ; 1.535      ; 3.022      ;
+; 1.487 ; apuesta[0]  ; apuesta[12] ; switches[0]  ; switches[0] ; 0.000        ; 1.552      ; 3.039      ;
+; 1.493 ; apuesta[0]  ; apuesta[10] ; switches[0]  ; switches[0] ; 0.000        ; 1.557      ; 3.050      ;
+; 1.500 ; apuesta[0]  ; apuesta[8]  ; switches[0]  ; switches[0] ; 0.000        ; 1.555      ; 3.055      ;
+; 1.502 ; switches[0] ; apuesta[5]  ; switches[0]  ; switches[0] ; -0.500       ; 2.515      ; 3.517      ;
+; 1.503 ; switches[0] ; apuesta[23] ; switches[0]  ; switches[0] ; -0.500       ; 2.461      ; 3.464      ;
+; 1.514 ; switches[0] ; apuesta[16] ; switches[0]  ; switches[0] ; -0.500       ; 2.463      ; 3.477      ;
+; 1.516 ; switches[0] ; apuesta[28] ; switches[0]  ; switches[0] ; -0.500       ; 2.540      ; 3.556      ;
+; 1.519 ; apuesta[1]  ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 1.525      ; 3.044      ;
+; 1.537 ; apuesta[0]  ; apuesta[1]  ; switches[0]  ; switches[0] ; 0.000        ; 0.015      ; 1.552      ;
+; 1.548 ; apuesta[0]  ; apuesta[21] ; switches[0]  ; switches[0] ; 0.000        ; 1.540      ; 3.088      ;
+; 1.559 ; switches[0] ; apuesta[14] ; switches[0]  ; switches[0] ; -0.500       ; 2.531      ; 3.590      ;
+; 1.564 ; switches[0] ; apuesta[26] ; switches[0]  ; switches[0] ; -0.500       ; 2.460      ; 3.524      ;
+; 1.579 ; switches[0] ; apuesta[27] ; switches[0]  ; switches[0] ; -0.500       ; 2.512      ; 3.591      ;
+; 1.582 ; apuesta[1]  ; apuesta[15] ; switches[0]  ; switches[0] ; 0.000        ; 1.544      ; 3.126      ;
+; 1.598 ; switches[0] ; apuesta[3]  ; switches[0]  ; switches[0] ; -0.500       ; 2.470      ; 3.568      ;
+; 1.603 ; apuesta[1]  ; apuesta[14] ; switches[0]  ; switches[0] ; 0.000        ; 1.545      ; 3.148      ;
+; 1.611 ; apuesta[0]  ; apuesta[15] ; switches[0]  ; switches[0] ; 0.000        ; 1.559      ; 3.170      ;
+; 1.623 ; switches[0] ; apuesta[13] ; switches[0]  ; switches[0] ; -0.500       ; 2.458      ; 3.581      ;
+; 1.629 ; apuesta[2]  ; apuesta[5]  ; switches[0]  ; switches[0] ; 0.000        ; 1.009      ; 2.638      ;
+; 1.632 ; apuesta[0]  ; apuesta[14] ; switches[0]  ; switches[0] ; 0.000        ; 1.560      ; 3.192      ;
+; 1.668 ; apuesta[2]  ; apuesta[4]  ; switches[0]  ; switches[0] ; 0.000        ; 1.022      ; 2.690      ;
+; 1.684 ; apuesta[1]  ; apuesta[20] ; switches[0]  ; switches[0] ; 0.000        ; 1.477      ; 3.161      ;
+; 1.710 ; apuesta[1]  ; apuesta[17] ; switches[0]  ; switches[0] ; 0.000        ; 1.492      ; 3.202      ;
+; 1.713 ; apuesta[0]  ; apuesta[20] ; switches[0]  ; switches[0] ; 0.000        ; 1.492      ; 3.205      ;
+; 1.727 ; apuesta[1]  ; apuesta[2]  ; switches[0]  ; switches[0] ; 0.000        ; 0.520      ; 2.247      ;
+; 1.734 ; apuesta[1]  ; apuesta[23] ; switches[0]  ; switches[0] ; 0.000        ; 1.475      ; 3.209      ;
+; 1.739 ; apuesta[0]  ; apuesta[17] ; switches[0]  ; switches[0] ; 0.000        ; 1.507      ; 3.246      ;
+; 1.756 ; apuesta[0]  ; apuesta[2]  ; switches[0]  ; switches[0] ; 0.000        ; 0.535      ; 2.291      ;
+; 1.763 ; apuesta[0]  ; apuesta[23] ; switches[0]  ; switches[0] ; 0.000        ; 1.490      ; 3.253      ;
++-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'switches[0]'                                                                 ;
++--------+--------------+----------------+------------------+-------------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------------+------------+------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; switches[0] ; Rise       ; switches[0]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[0]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[0]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[10]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[10]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[10]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[10]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[11]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[11]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[11]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[11]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[12]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[12]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[12]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[12]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[13]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[13]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[13]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[13]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[14]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[14]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[14]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[14]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[15]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[15]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[15]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[15]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[16]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[16]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[16]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[16]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[17]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[17]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[17]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[17]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[18]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[18]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[18]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[18]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[19]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[19]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[19]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[19]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[1]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[1]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~220|combout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~220|combout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~220|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~220|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~276|combout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~276|combout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[1]~276|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[1]~276|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[20]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[20]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[20]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[20]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[21]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[21]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[21]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[21]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[22]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[22]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[22]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[22]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[23]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[23]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[23]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[23]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[24]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[24]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[24]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[24]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[25]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[25]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[25]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[25]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[26]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[26]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[26]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[26]|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[27]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[27]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[27]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[27]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[28]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[28]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[28]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[28]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[29]            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[29]            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[29]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Rise       ; apuesta[29]|datac      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Fall       ; apuesta[2]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; switches[0] ; Fall       ; apuesta[2]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; switches[0] ; Rise       ; apuesta[2]|datad       ;
++--------+--------------+----------------+------------------+-------------+------------+------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++--------------+-------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+-------------+-------+-------+------------+-----------------+
+; switches[*]  ; switches[0] ; 8.499 ; 8.499 ; Fall       ; switches[0]     ;
+;  switches[0] ; switches[0] ; 8.499 ; 8.499 ; Fall       ; switches[0]     ;
+;  switches[1] ; switches[0] ; 7.862 ; 7.862 ; Fall       ; switches[0]     ;
+;  switches[2] ; switches[0] ; 7.131 ; 7.131 ; Fall       ; switches[0]     ;
+;  switches[3] ; switches[0] ; 5.736 ; 5.736 ; Fall       ; switches[0]     ;
+;  switches[4] ; switches[0] ; 4.463 ; 4.463 ; Fall       ; switches[0]     ;
+;  switches[5] ; switches[0] ; 3.218 ; 3.218 ; Fall       ; switches[0]     ;
+;  switches[6] ; switches[0] ; 2.376 ; 2.376 ; Fall       ; switches[0]     ;
+;  switches[7] ; switches[0] ; 0.132 ; 0.132 ; Fall       ; switches[0]     ;
++--------------+-------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++--------------+-------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+-------------+--------+--------+------------+-----------------+
+; switches[*]  ; switches[0] ; 0.661  ; 0.661  ; Fall       ; switches[0]     ;
+;  switches[0] ; switches[0] ; -0.682 ; -0.682 ; Fall       ; switches[0]     ;
+;  switches[1] ; switches[0] ; -0.665 ; -0.665 ; Fall       ; switches[0]     ;
+;  switches[2] ; switches[0] ; -0.612 ; -0.612 ; Fall       ; switches[0]     ;
+;  switches[3] ; switches[0] ; -0.142 ; -0.142 ; Fall       ; switches[0]     ;
+;  switches[4] ; switches[0] ; 0.117  ; 0.117  ; Fall       ; switches[0]     ;
+;  switches[5] ; switches[0] ; 0.077  ; 0.077  ; Fall       ; switches[0]     ;
+;  switches[6] ; switches[0] ; -0.329 ; -0.329 ; Fall       ; switches[0]     ;
+;  switches[7] ; switches[0] ; 0.661  ; 0.661  ; Fall       ; switches[0]     ;
++--------------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -28.574  ; 0.682 ; N/A      ; N/A     ; -1.631              ;
+;  switches[0]     ; -28.574  ; 0.682 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -784.614 ; 0.0   ; 0.0      ; 0.0     ; -1.631              ;
+;  switches[0]     ; -784.614 ; 0.000 ; N/A      ; N/A     ; -1.631              ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++--------------+-------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+-------------+--------+--------+------------+-----------------+
+; switches[*]  ; switches[0] ; 24.545 ; 24.545 ; Fall       ; switches[0]     ;
+;  switches[0] ; switches[0] ; 24.545 ; 24.545 ; Fall       ; switches[0]     ;
+;  switches[1] ; switches[0] ; 22.558 ; 22.558 ; Fall       ; switches[0]     ;
+;  switches[2] ; switches[0] ; 20.268 ; 20.268 ; Fall       ; switches[0]     ;
+;  switches[3] ; switches[0] ; 16.560 ; 16.560 ; Fall       ; switches[0]     ;
+;  switches[4] ; switches[0] ; 13.236 ; 13.236 ; Fall       ; switches[0]     ;
+;  switches[5] ; switches[0] ; 9.656  ; 9.656  ; Fall       ; switches[0]     ;
+;  switches[6] ; switches[0] ; 7.164  ; 7.164  ; Fall       ; switches[0]     ;
+;  switches[7] ; switches[0] ; 1.513  ; 1.513  ; Fall       ; switches[0]     ;
++--------------+-------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++--------------+-------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+-------------+--------+--------+------------+-----------------+
+; switches[*]  ; switches[0] ; 0.719  ; 0.719  ; Fall       ; switches[0]     ;
+;  switches[0] ; switches[0] ; -0.682 ; -0.682 ; Fall       ; switches[0]     ;
+;  switches[1] ; switches[0] ; -0.665 ; -0.665 ; Fall       ; switches[0]     ;
+;  switches[2] ; switches[0] ; -0.612 ; -0.612 ; Fall       ; switches[0]     ;
+;  switches[3] ; switches[0] ; -0.142 ; -0.142 ; Fall       ; switches[0]     ;
+;  switches[4] ; switches[0] ; 0.117  ; 0.117  ; Fall       ; switches[0]     ;
+;  switches[5] ; switches[0] ; 0.077  ; 0.077  ; Fall       ; switches[0]     ;
+;  switches[6] ; switches[0] ; -0.329 ; -0.329 ; Fall       ; switches[0]     ;
+;  switches[7] ; switches[0] ; 0.719  ; 0.719  ; Fall       ; switches[0]     ;
++--------------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Transfers                                                          ;
++-------------+-------------+----------+----------+-----------+------------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths  ; FF Paths   ;
++-------------+-------------+----------+----------+-----------+------------+
+; switches[0] ; switches[0] ; 0        ; 0        ; 201928428 ; 1456148028 ;
++-------------+-------------+----------+----------+-----------+------------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------------+
+; Hold Transfers                                                           ;
++-------------+-------------+----------+----------+-----------+------------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths  ; FF Paths   ;
++-------------+-------------+----------+----------+-----------+------------+
+; switches[0] ; switches[0] ; 0        ; 0        ; 201928428 ; 1456148028 ;
++-------------+-------------+----------+----------+-----------+------------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 212   ; 212  ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 7     ; 7    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 15 07:18:49 2018
+Info: Command: quartus_sta Principal -c Principal
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 39 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Principal.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name switches[0] switches[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -28.574
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -28.574      -784.614 switches[0] 
+Info (332146): Worst-case hold slack is 1.991
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.991         0.000 switches[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -1.631 switches[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -9.778
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -9.778      -262.991 switches[0] 
+Info (332146): Worst-case hold slack is 0.682
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.682         0.000 switches[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 switches[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 508 megabytes
+    Info: Processing ended: Thu Nov 15 07:18:51 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
