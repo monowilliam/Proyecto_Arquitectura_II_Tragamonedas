@@ -1,0 +1,69 @@
+library ieee;
+    use ieee.std_logic_1164.all;
+	 USE ieee.numeric_std.ALL;
+	 
+entity sieteS is
+  port (
+	clk: in std_logic;
+	--entrada : in std_logic_vector(BusValores-1 downto 0);
+	switches : in std_logic_vector(3 downto 0);
+	SS0 : out std_logic_vector(6 downto 0)
+);
+end entity;
+
+architecture sieteS_arq of sieteS is
+begin
+
+	process (clk)
+		variable apuesta : integer := 0;
+	begin
+		case switches is
+			when "0000" => apuesta := 0;
+			when "0001" => apuesta := 1;
+			when "0010" => apuesta := 2;
+			when "0011" => apuesta := 3;
+			when "0100" => apuesta := 4;
+			when "0101" => apuesta := 5;
+			when "0110" => apuesta := 6;
+			when "0111" => apuesta := 7;
+			when "1000" => apuesta := 8;
+			when "1001" => apuesta := 9;
+			when others => apuesta := 0; -- Nada
+		end case;
+		
+		--SS0
+		if apuesta = 0 then
+		  SS0 <= "1000000";
+		end if;
+		if apuesta = 1 then
+		  SS0 <= "1111001";
+		end if;
+		if apuesta = 2 then
+		  SS0 <= "0100100";
+		end if;
+		if apuesta = 3 then
+		  SS0 <= "0000110";
+		end if;
+		if apuesta = 4 then
+		  SS0 <= "0011001";
+		end if;
+		if apuesta = 5 then
+		  SS0 <= "0010010";
+		end if;
+		if apuesta = 6 then
+		  SS0 <= "0000010";
+		end if;
+		if apuesta = 7 then
+		  SS0 <= "0111000";
+		end if;
+		if apuesta = 8 then
+		  SS0 <= "0000000";
+		end if;
+		if apuesta = 9 then
+		  SS0 <= "0010000";
+		end if;
+	end process;
+	
+	
+	
+end architecture;
