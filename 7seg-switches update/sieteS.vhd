@@ -5,7 +5,7 @@ library ieee;
 	 
 entity sieteS is
   generic(
-   BusValores : natural
+   BusValores : natural :=14
   );
   port (
 	clk: in std_logic;

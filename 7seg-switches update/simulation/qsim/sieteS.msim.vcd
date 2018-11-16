@@ -1,0 +1,488 @@
+$comment
+	File created using the following command:
+		vcd file sieteS.msim.vcd -direction
+$end
+$date
+	Fri Nov 16 13:05:03 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module sieteS_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 4 " switches [3:0] $end
+$var reg 4 # switches1 [3:0] $end
+$var reg 2 $ switches2 [1:0] $end
+$var wire 1 % Output [13] $end
+$var wire 1 & Output [12] $end
+$var wire 1 ' Output [11] $end
+$var wire 1 ( Output [10] $end
+$var wire 1 ) Output [9] $end
+$var wire 1 * Output [8] $end
+$var wire 1 + Output [7] $end
+$var wire 1 , Output [6] $end
+$var wire 1 - Output [5] $end
+$var wire 1 . Output [4] $end
+$var wire 1 / Output [3] $end
+$var wire 1 0 Output [2] $end
+$var wire 1 1 Output [1] $end
+$var wire 1 2 Output [0] $end
+$var wire 1 3 SS0 [6] $end
+$var wire 1 4 SS0 [5] $end
+$var wire 1 5 SS0 [4] $end
+$var wire 1 6 SS0 [3] $end
+$var wire 1 7 SS0 [2] $end
+$var wire 1 8 SS0 [1] $end
+$var wire 1 9 SS0 [0] $end
+$var wire 1 : SS1 [6] $end
+$var wire 1 ; SS1 [5] $end
+$var wire 1 < SS1 [4] $end
+$var wire 1 = SS1 [3] $end
+$var wire 1 > SS1 [2] $end
+$var wire 1 ? SS1 [1] $end
+$var wire 1 @ SS1 [0] $end
+$var wire 1 A SS2 [6] $end
+$var wire 1 B SS2 [5] $end
+$var wire 1 C SS2 [4] $end
+$var wire 1 D SS2 [3] $end
+$var wire 1 E SS2 [2] $end
+$var wire 1 F SS2 [1] $end
+$var wire 1 G SS2 [0] $end
+$var wire 1 H SS3 [6] $end
+$var wire 1 I SS3 [5] $end
+$var wire 1 J SS3 [4] $end
+$var wire 1 K SS3 [3] $end
+$var wire 1 L SS3 [2] $end
+$var wire 1 M SS3 [1] $end
+$var wire 1 N SS3 [0] $end
+$var wire 1 O sampler $end
+$scope module i1 $end
+$var wire 1 P gnd $end
+$var wire 1 Q vcc $end
+$var wire 1 R unknown $end
+$var tri1 1 S devclrn $end
+$var tri1 1 T devpor $end
+$var tri1 1 U devoe $end
+$var wire 1 V Mux1~0_combout $end
+$var wire 1 W Mux0~0_combout $end
+$var wire 1 X Add0~2_combout $end
+$var wire 1 Y SS0[0]~21_combout $end
+$var wire 1 Z SS0[1]~22_combout $end
+$var wire 1 [ SS0[2]~24_combout $end
+$var wire 1 \ SS0[3]~23_combout $end
+$var wire 1 ] SS0[4]~25_combout $end
+$var wire 1 ^ SS0[5]~20_combout $end
+$var wire 1 _ SS0[6]~26_combout $end
+$var wire 1 ` SS1[0]~34_combout $end
+$var wire 1 a SS1[1]~35_combout $end
+$var wire 1 b Equal10~0_combout $end
+$var wire 1 c SS1[3]~36_combout $end
+$var wire 1 d SS1[4]~33_combout $end
+$var wire 1 e SS1[5]~37_combout $end
+$var wire 1 f SS1[6]~32_combout $end
+$var wire 1 g Equal22~0_combout $end
+$var wire 1 h Equal22~1_combout $end
+$var wire 1 i comb~0_combout $end
+$var wire 1 j Mux3~0_combout $end
+$var wire 1 k Mux7~0_combout $end
+$var wire 1 l Mux2~0_combout $end
+$var wire 1 m Add1~0_combout $end
+$var wire 1 n Mux6~0_combout $end
+$var wire 1 o Add1~1 $end
+$var wire 1 p Add1~2_combout $end
+$var wire 1 q Add2~0_combout $end
+$var wire 1 r Add0~0_combout $end
+$var wire 1 s Add1~3 $end
+$var wire 1 t Add1~4_combout $end
+$var wire 1 u Add2~1 $end
+$var wire 1 v Add2~2_combout $end
+$var wire 1 w Add0~1_combout $end
+$var wire 1 x Add1~5 $end
+$var wire 1 y Add1~6_combout $end
+$var wire 1 z Add2~3 $end
+$var wire 1 { Add2~4_combout $end
+$var wire 1 | Mux5~0_combout $end
+$var wire 1 } Add1~7 $end
+$var wire 1 ~ Add1~8_combout $end
+$var wire 1 !! Add2~5 $end
+$var wire 1 "! Add2~6_combout $end
+$var wire 1 #! Mux4~0_combout $end
+$var wire 1 $! Add1~9 $end
+$var wire 1 %! Add1~10_combout $end
+$var wire 1 &! Mult0|mult_core|romout[0][6]~0_combout $end
+$var wire 1 '! Add2~7 $end
+$var wire 1 (! Add2~8_combout $end
+$var wire 1 )! Add1~11 $end
+$var wire 1 *! Add1~12_combout $end
+$var wire 1 +! Add2~9 $end
+$var wire 1 ,! Add2~10_combout $end
+$var wire 1 -! Mult0|mult_core|_~0_combout $end
+$var wire 1 .! Add2~11 $end
+$var wire 1 /! Add2~12_combout $end
+$var wire 1 0! Add2~13 $end
+$var wire 1 1! Add2~14_combout $end
+$var wire 1 2! switches2~combout [1] $end
+$var wire 1 3! switches2~combout [0] $end
+$var wire 1 4! switches1~combout [3] $end
+$var wire 1 5! switches1~combout [2] $end
+$var wire 1 6! switches1~combout [1] $end
+$var wire 1 7! switches1~combout [0] $end
+$var wire 1 8! switches~combout [3] $end
+$var wire 1 9! switches~combout [2] $end
+$var wire 1 :! switches~combout [1] $end
+$var wire 1 ;! switches~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+b0 #
+b0 $
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+09
+08
+07
+06
+05
+04
+13
+0@
+0?
+0>
+0=
+0<
+0;
+1:
+0G
+0F
+0E
+0D
+0C
+0B
+1A
+1N
+1M
+1L
+1K
+1J
+1I
+1H
+xO
+0P
+1Q
+xR
+1S
+1T
+1U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+1_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+1s
+0t
+0u
+0v
+0w
+0x
+0y
+1z
+0{
+0|
+1}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+1'!
+0(!
+1)!
+0*!
+0+!
+0,!
+0-!
+1.!
+0/!
+00!
+01!
+03!
+02!
+07!
+06!
+05!
+04!
+0;!
+0:!
+09!
+08!
+$end
+#20000
+1!
+0O
+#40000
+0!
+1O
+#60000
+1!
+0O
+#80000
+0!
+1O
+#100000
+1!
+0O
+#120000
+0!
+1O
+#140000
+1!
+0O
+#160000
+b1000 #
+b10 $
+b11 $
+0!
+13!
+12!
+14!
+1O
+1-!
+1"!
+1q
+1i
+1v
+1#!
+1w
+1f
+1C
+0A
+1/!
+1%!
+1y
+1-
+10
+1B
+1/
+0:
+1(!
+1{
+1*
+1,
+1.
+#180000
+1!
+0O
+#200000
+0!
+1O
+#220000
+1!
+0O
+#240000
+0!
+1O
+#260000
+1!
+0O
+#280000
+0!
+1O
+#300000
+1!
+0O
+#320000
+0!
+1O
+#340000
+1!
+0O
+#360000
+0!
+1O
+#380000
+1!
+0O
+#400000
+0!
+1O
+#420000
+1!
+0O
+#440000
+0!
+1O
+#460000
+1!
+0O
+#480000
+0!
+1O
+#500000
+1!
+0O
+#520000
+0!
+1O
+#540000
+1!
+0O
+#560000
+0!
+1O
+#580000
+1!
+0O
+#600000
+0!
+1O
+#620000
+1!
+0O
+#640000
+b0 #
+b1 $
+b0 $
+0!
+03!
+02!
+04!
+1O
+0-!
+0"!
+0q
+0i
+0v
+0#!
+0w
+0f
+0C
+1A
+0/!
+0%!
+0y
+0-
+00
+0B
+0/
+1:
+0(!
+0{
+0*
+0,
+0.
+#660000
+1!
+0O
+#680000
+0!
+1O
+#700000
+1!
+0O
+#720000
+0!
+1O
+#740000
+1!
+0O
+#760000
+0!
+1O
+#770000
+b10 $
+b11 $
+13!
+12!
+0O
+1-!
+1"!
+1q
+1i
+1v
+1C
+0A
+1/!
+1-
+10
+1B
+1/
+1*
+#780000
+1!
+1O
+#800000
+0!
+0O
+#820000
+1!
+1O
+#840000
+0!
+0O
+#860000
+1!
+1O
+#880000
+0!
+0O
+#900000
+1!
+1O
+#920000
+0!
+0O
+#940000
+1!
+1O
+#960000
+0!
+0O
+#980000
+1!
+1O
+#1000000

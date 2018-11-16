@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\l\Proyecto_Arquitectura_II_Tragamonedas\7seg-switches update\simulation\qsim
+vsieteS
+Z1 IaKNBc8TgdkmaUY_RAo4hQ1
+Z2 V_]OBDj95TGU<EeKeNmMA?2
+Z3 dD:\Escritorio\l\Proyecto_Arquitectura_II_Tragamonedas\7seg-switches update\simulation\qsim
+Z4 w1542391502
+Z5 8sieteS.vo
+Z6 FsieteS.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|sieteS.vo|
+Z9 o-work work -O0
+Z10 nsiete@s
+!i10b 1
+Z11 !s100 ?loDhLMg5oK]U4OLmb7O53
+!s85 0
+Z12 !s108 1542391503.234000
+Z13 !s107 sieteS.vo|
+!s101 -O0
+vsieteS_vlg_check_tst
+!i10b 1
+!s100 >=46fW@E<O4FCH^4mgBhW0
+IU5cGDGJ??j`<CXXI6Z3QS3
+Vi?TJSVTlDm1F_;l7zJ;kG2
+R3
+Z14 w1542391501
+Z15 8sieteS.vt
+Z16 FsieteS.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z17 !s108 1542391503.381000
+Z18 !s107 sieteS.vt|
+Z19 !s90 -work|work|sieteS.vt|
+!s101 -O0
+R9
+Z20 nsiete@s_vlg_check_tst
+vsieteS_vlg_sample_tst
+!i10b 1
+Z21 !s100 jm9Xe;6[g4zVQ;ScBB0ao1
+Z22 I67[79>>2oKUlP8LfaMWmb3
+Z23 V_5T<LH:SJmZ_^l2o?CINd0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z24 nsiete@s_vlg_sample_tst
+vsieteS_vlg_vec_tst
+!i10b 1
+!s100 TRF2`7VLdKS7^_BGXSDR23
+Ilh4AffG`mQaP78_KC5dEd0
+Z25 V4Z<F[z8CYEKZAo`k>4jac2
+R3
+R14
+R15
+R16
+L0 927
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z26 nsiete@s_vlg_vec_tst
