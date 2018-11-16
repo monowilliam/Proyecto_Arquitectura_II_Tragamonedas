@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\random7segmentos\simulation\qsim
+vrandomSegmento
+Z1 IAW68JBGQ8NLV^R5eMA[S:3
+Z2 V81Slk;V7gcWlP3>75B=oQ1
+Z3 dD:\Escritorio\random7segmentos\simulation\qsim
+Z4 w1542400704
+Z5 8randomSegmento.vo
+Z6 FrandomSegmento.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|randomSegmento.vo|
+Z9 o-work work -O0
+Z10 nrandom@segmento
+!i10b 1
+Z11 !s100 6QcSBh>^BY4<LhVIe4XoW1
+!s85 0
+Z12 !s108 1542400705.985000
+Z13 !s107 randomSegmento.vo|
+!s101 -O0
+vrandomSegmento_vlg_check_tst
+!i10b 1
+!s100 IHfagIB3n]?KHeB7Y]h9i3
+Io9UKkj[iM1TnZHiHJ8gdB3
+VDAa9UDGb_eSW97L2nVJKT2
+R3
+Z14 w1542400703
+Z15 8randomSegmento.vt
+Z16 FrandomSegmento.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z17 !s108 1542400706.144000
+Z18 !s107 randomSegmento.vt|
+Z19 !s90 -work|work|randomSegmento.vt|
+!s101 -O0
+R9
+Z20 nrandom@segmento_vlg_check_tst
+vrandomSegmento_vlg_sample_tst
+!i10b 1
+Z21 !s100 SKWPKoR9J^j=KSebaGJz_0
+Z22 IBgb`GGO1IAQebfz>@A_m<1
+Z23 VLe^KCMP^h]LT7Be5[3;QD1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z24 nrandom@segmento_vlg_sample_tst
+vrandomSegmento_vlg_vec_tst
+!i10b 1
+!s100 ^a<O3F>k=^:AFARG[KX0N0
+I^Q[eBnI6hVm`5n5NmbEd80
+Z25 V]9:mZCLT0Dz=5l:`;`XKj1
+R3
+R14
+R15
+R16
+L0 661
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R9
+Z26 nrandom@segmento_vlg_vec_tst
