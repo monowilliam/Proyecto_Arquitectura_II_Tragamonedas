@@ -1,0 +1,97 @@
+library ieee;
+use ieee.std_logic_1164.all,ieee.std_logic_unsigned.all;
+
+entity UC is port
+(
+	Opcode : in std_logic_vector(3 downto 0);
+	Clk,PCWrite,Beq,Bne,Bgt,Jump,RMI,WIR,Dg,WRF,AluSrcA,WAluOut,DatSel,RMD,WMD,IO : out std_logic;
+	AluOP : out std_logic_vector(1 downto 0)
+	);
+end entity;
+
+architecture UC_arc of UC is
+type Estado is (Fetch,Decode,Dir,RM,OutSS,INS,CalDir,GuarDir,LeerMem,GuarMem,ExecuteADDI,ExecuteADD,ExecuteMUL,ExecuteSUB,WRegister);
+shared variable est_actual : Estado := Fetch;
+shared variable est_sig : Estado;
+begin
+	process(Clk) begin
+		est_actual:=est_sig;
+	end process;
+	process (Clk) begin
+	case est_actual is
+		when Fetch =>  --ADDI
+			PCWrite <= '0';
+			Beq <= '0';
+			Jump <= '0';
+			Bne <= '0';
+			Bgt <= '0';
+			RMI <= '0';
+			WIR <= '0';
+			DatSel <= '0';
+			RMD <= '0';
+			WMD <= '0';
+			IO <= '0';
+			AluSrcA <= '1';
+			AluOP <= "00"
+			WAluOut <= '1';
+			Dg <= '0';
+		   wait for rising_edge(Clk);
+			WRF <= '1';
+		when "0010" => --ADD
+			PCWrite <= '0';
+			Beq <= '0';
+			Jump <= '0';
+			Bne <= '0';
+			Bgt <= '0';
+			RMI <= '0';
+			WIR <= '0';
+			DatSel <= '0';
+			RMD <= '0';
+			WMD <= '0';
+			IO <= '0';
+			AluSrcA <= '0';
+			AluOP <= "00"
+			WAluOut <= '1';
+			Dg <= '0';
+		   wait for rising_edge(Clk);
+			WRF <= '1';
+		when "0011" => --MUL
+			PCWrite <= '0';
+			Beq <= '0';
+			Jump <= '0';
+			Bne <= '0';
+			Bgt <= '0';
+			RMI <= '0';
+			WIR <= '0';
+			DatSel <= '0';
+			RMD <= '0';
+			WMD <= '0';
+			IO <= '0';
+			AluSrcA <= '0';
+			AluOP <= "10"
+			WAluOut <= '1';
+			Dg <= '0';
+		   wait for rising_edge(Clk);
+			WRF <= '1';
+		when "1001" => --SUB
+			PCWrite <= '0';
+			Beq <= '0';
+			Jump <= '0';
+			Bne <= '0';
+			Bgt <= '0';
+			RMI <= '0';
+			WIR <= '0';
+			DatSel <= '0';
+			RMD <= '0';
+			WMD <= '0';
+			IO <= '0';
+			AluSrcA <= '0';
+			AluOP <= "01"
+			WAluOut <= '1';
+			Dg <= '0';
+		   wait for rising_edge(Clk);
+			WRF <= '1';
+		end case;
+	end process;
+
+end architecture;

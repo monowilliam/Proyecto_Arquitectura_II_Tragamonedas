@@ -1,0 +1,846 @@
+TimeQuest Timing Analyzer report for UC
+Fri Nov 16 17:01:31 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Opcode[0]'
+ 12. Slow Model Hold: 'Opcode[0]'
+ 13. Slow Model Minimum Pulse Width: 'Opcode[0]'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'Opcode[0]'
+ 22. Fast Model Hold: 'Opcode[0]'
+ 23. Fast Model Minimum Pulse Width: 'Opcode[0]'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; UC                                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Opcode[0]  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Opcode[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 166.78 MHz ; 166.78 MHz      ; Opcode[0]  ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; Opcode[0] ; -2.498 ; -6.851        ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow Model Hold Summary           ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; Opcode[0] ; 0.725 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-----------+--------+-------------------+
+; Clock     ; Slack  ; End Point TNS     ;
++-----------+--------+-------------------+
+; Opcode[0] ; -1.469 ; -1.469            ;
++-----------+--------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Opcode[0]'                                                                                            ;
++--------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; -2.498 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.025     ; 1.808      ;
+; -2.471 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.027     ; 1.779      ;
+; -2.300 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.173      ; 1.808      ;
+; -2.273 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.171      ; 1.779      ;
+; -2.229 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.024     ; 1.540      ;
+; -2.111 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.026     ; 1.420      ;
+; -2.031 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.174      ; 1.540      ;
+; -1.913 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.172      ; 1.420      ;
+; -1.899 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.074      ; 1.808      ;
+; -1.899 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.074      ; 1.808      ;
+; -1.872 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.072      ; 1.779      ;
+; -1.872 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.072      ; 1.779      ;
+; -1.769 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.026     ; 1.078      ;
+; -1.630 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.075      ; 1.540      ;
+; -1.630 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.075      ; 1.540      ;
+; -1.617 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.012     ; 1.057      ;
+; -1.571 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.172      ; 1.078      ;
+; -1.512 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.073      ; 1.420      ;
+; -1.512 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.073      ; 1.420      ;
+; -1.419 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.186      ; 1.057      ;
+; -1.397 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.013     ; 1.057      ;
+; -1.339 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.173     ; 0.651      ;
+; -1.199 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.185      ; 1.057      ;
+; -1.170 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.073      ; 1.078      ;
+; -1.170 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.073      ; 1.078      ;
+; -1.141 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.025      ; 0.651      ;
+; -1.018 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.087      ; 1.057      ;
+; -1.018 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.087      ; 1.057      ;
+; -0.798 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.086      ; 1.057      ;
+; -0.798 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.086      ; 1.057      ;
+; -0.740 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 1.000        ; -0.074     ; 0.651      ;
+; -0.740 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 1.000        ; -0.074     ; 0.651      ;
++--------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Opcode[0]'                                                                                            ;
++-------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.725 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.000        ; -0.074     ; 0.651      ;
+; 0.725 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.000        ; -0.074     ; 0.651      ;
+; 0.970 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.087      ; 1.057      ;
+; 0.970 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.087      ; 1.057      ;
+; 0.971 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.086      ; 1.057      ;
+; 0.971 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.086      ; 1.057      ;
+; 1.005 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.073      ; 1.078      ;
+; 1.005 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.073      ; 1.078      ;
+; 1.126 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.025      ; 0.651      ;
+; 1.324 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.173     ; 0.651      ;
+; 1.347 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.073      ; 1.420      ;
+; 1.347 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.073      ; 1.420      ;
+; 1.371 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.186      ; 1.057      ;
+; 1.372 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.185      ; 1.057      ;
+; 1.406 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.172      ; 1.078      ;
+; 1.465 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.075      ; 1.540      ;
+; 1.465 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.075      ; 1.540      ;
+; 1.569 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.012     ; 1.057      ;
+; 1.570 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.013     ; 1.057      ;
+; 1.604 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.026     ; 1.078      ;
+; 1.707 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.072      ; 1.779      ;
+; 1.707 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.072      ; 1.779      ;
+; 1.734 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.074      ; 1.808      ;
+; 1.734 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.074      ; 1.808      ;
+; 1.748 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.172      ; 1.420      ;
+; 1.866 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.174      ; 1.540      ;
+; 1.946 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.026     ; 1.420      ;
+; 2.064 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.024     ; 1.540      ;
+; 2.108 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.171      ; 1.779      ;
+; 2.135 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.173      ; 1.808      ;
+; 2.306 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.027     ; 1.779      ;
+; 2.333 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.025     ; 1.808      ;
++-------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Opcode[0]'                                                                       ;
++--------+--------------+----------------+------------------+-----------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+-----------+------------+------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; Opcode[0] ; Rise       ; Opcode[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Equal0~0|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Equal0~0|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Equal0~0|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Equal0~0|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Opcode[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Opcode[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_sig.WM~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_sig.WM~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_sig.WM~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_sig.WM~0|datad           ;
++--------+--------------+----------------+------------------+-----------+------------+------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Dg        ; Opcode[0]  ; 9.113  ; 9.113  ; Rise       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 9.199  ; 9.199  ; Rise       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 9.199  ; 9.199  ; Rise       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 9.179  ; 9.179  ; Rise       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 9.269  ; 9.269  ; Rise       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 9.620  ; 9.620  ; Rise       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 9.269  ; 9.269  ; Rise       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 9.279  ; 9.279  ; Rise       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 9.950  ; 9.950  ; Rise       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 10.100 ; 10.100 ; Rise       ; Opcode[0]       ;
+; Dg        ; Opcode[0]  ; 9.014  ; 9.014  ; Fall       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 9.100  ; 9.100  ; Fall       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 9.100  ; 9.100  ; Fall       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 9.080  ; 9.080  ; Fall       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 9.170  ; 9.170  ; Fall       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 9.521  ; 9.521  ; Fall       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 9.170  ; 9.170  ; Fall       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 9.180  ; 9.180  ; Fall       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 9.851  ; 9.851  ; Fall       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 10.001 ; 10.001 ; Fall       ; Opcode[0]       ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Dg        ; Opcode[0]  ; 9.113  ; 9.113  ; Rise       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 9.179  ; 9.179  ; Rise       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 9.199  ; 9.199  ; Rise       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 9.179  ; 9.179  ; Rise       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 9.269  ; 9.269  ; Rise       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 9.507  ; 9.507  ; Rise       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 9.269  ; 9.269  ; Rise       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 9.279  ; 9.279  ; Rise       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 9.817  ; 9.817  ; Rise       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 10.004 ; 10.004 ; Rise       ; Opcode[0]       ;
+; Dg        ; Opcode[0]  ; 9.014  ; 9.014  ; Fall       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 9.080  ; 9.080  ; Fall       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 9.100  ; 9.100  ; Fall       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 9.080  ; 9.080  ; Fall       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 9.170  ; 9.170  ; Fall       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 9.408  ; 9.408  ; Fall       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 9.170  ; 9.170  ; Fall       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 9.180  ; 9.180  ; Fall       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 9.718  ; 9.718  ; Fall       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 9.905  ; 9.905  ; Fall       ; Opcode[0]       ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------+
+; Fast Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; Opcode[0] ; -0.566 ; -1.087        ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast Model Hold Summary           ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; Opcode[0] ; 0.243 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-----------+--------+-------------------+
+; Clock     ; Slack  ; End Point TNS     ;
++-----------+--------+-------------------+
+; Opcode[0] ; -1.222 ; -1.222            ;
++-----------+--------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Opcode[0]'                                                                                            ;
++--------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; -0.566 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.038     ; 0.625      ;
+; -0.562 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.039     ; 0.620      ;
+; -0.497 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.037     ; 0.557      ;
+; -0.474 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.054      ; 0.625      ;
+; -0.470 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.053      ; 0.620      ;
+; -0.438 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.038     ; 0.497      ;
+; -0.405 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.055      ; 0.557      ;
+; -0.346 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.054      ; 0.497      ;
+; -0.336 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.038     ; 0.395      ;
+; -0.244 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.054      ; 0.395      ;
+; -0.230 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.004      ; 0.372      ;
+; -0.153 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.004      ; 0.371      ;
+; -0.138 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.096      ; 0.372      ;
+; -0.138 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.500        ; -0.054     ; 0.235      ;
+; -0.061 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.096      ; 0.371      ;
+; -0.046 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.500        ; 0.038      ; 0.235      ;
+; -0.020 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.008      ; 0.625      ;
+; -0.020 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.008      ; 0.625      ;
+; -0.016 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.007      ; 0.620      ;
+; -0.016 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.007      ; 0.620      ;
+; 0.049  ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.009      ; 0.557      ;
+; 0.049  ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.009      ; 0.557      ;
+; 0.108  ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.008      ; 0.497      ;
+; 0.108  ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.008      ; 0.497      ;
+; 0.210  ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.008      ; 0.395      ;
+; 0.210  ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.008      ; 0.395      ;
+; 0.316  ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.050      ; 0.372      ;
+; 0.316  ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.050      ; 0.372      ;
+; 0.393  ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.050      ; 0.371      ;
+; 0.393  ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 1.000        ; 0.050      ; 0.371      ;
+; 0.408  ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 1.000        ; -0.008     ; 0.235      ;
+; 0.408  ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 1.000        ; -0.008     ; 0.235      ;
++--------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Opcode[0]'                                                                                            ;
++-------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.243 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.000        ; -0.008     ; 0.235      ;
+; 0.243 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; 0.000        ; -0.008     ; 0.235      ;
+; 0.321 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.050      ; 0.371      ;
+; 0.321 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.050      ; 0.371      ;
+; 0.322 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.050      ; 0.372      ;
+; 0.322 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.050      ; 0.372      ;
+; 0.387 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.008      ; 0.395      ;
+; 0.387 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.008      ; 0.395      ;
+; 0.489 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.008      ; 0.497      ;
+; 0.489 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.008      ; 0.497      ;
+; 0.548 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.009      ; 0.557      ;
+; 0.548 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.009      ; 0.557      ;
+; 0.613 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.007      ; 0.620      ;
+; 0.613 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.007      ; 0.620      ;
+; 0.617 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.008      ; 0.625      ;
+; 0.617 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; 0.000        ; 0.008      ; 0.625      ;
+; 0.697 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.038      ; 0.235      ;
+; 0.775 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.096      ; 0.371      ;
+; 0.776 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.096      ; 0.372      ;
+; 0.789 ; est_actual.Fetch     ; est_actual.Decode  ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.054     ; 0.235      ;
+; 0.841 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.054      ; 0.395      ;
+; 0.867 ; est_actual.RM        ; est_actual.OutSS   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.004      ; 0.371      ;
+; 0.868 ; est_actual.LeerMem   ; est_actual.GuarMem ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.004      ; 0.372      ;
+; 0.933 ; est_actual.OutSS     ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.038     ; 0.395      ;
+; 0.943 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.054      ; 0.497      ;
+; 1.002 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.055      ; 0.557      ;
+; 1.035 ; est_actual.GuarDir   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.038     ; 0.497      ;
+; 1.067 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.053      ; 0.620      ;
+; 1.071 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; 0.054      ; 0.625      ;
+; 1.094 ; est_actual.WRegister ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.037     ; 0.557      ;
+; 1.159 ; est_actual.GuarMem   ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.039     ; 0.620      ;
+; 1.163 ; est_actual.WM        ; est_actual.Fetch   ; Opcode[0]    ; Opcode[0]   ; -0.500       ; -0.038     ; 0.625      ;
++-------+----------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Opcode[0]'                                                                       ;
++--------+--------------+----------------+------------------+-----------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+-----------+------------+------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Opcode[0] ; Rise       ; Opcode[0]                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Equal0~0|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Equal0~0|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Equal0~0|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Equal0~0|datad               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Opcode[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Opcode[0]|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; Selector17~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; Selector17~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; Selector17~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; Selector17~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Decode            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Decode|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Fetch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.Fetch|datac       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarDir           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarDir|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.GuarMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.LeerMem           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.LeerMem|datad     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.OutSS             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.OutSS|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.RM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.RM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WM                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WM|datad          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WRegister         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_actual.WRegister|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Fall       ; est_sig.WM~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Fall       ; est_sig.WM~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Opcode[0] ; Rise       ; est_sig.WM~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Opcode[0] ; Rise       ; est_sig.WM~0|datad           ;
++--------+--------------+----------------+------------------+-----------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Dg        ; Opcode[0]  ; 4.526 ; 4.526 ; Rise       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 4.571 ; 4.571 ; Rise       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 4.571 ; 4.571 ; Rise       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 4.551 ; 4.551 ; Rise       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 4.576 ; 4.576 ; Rise       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 4.702 ; 4.702 ; Rise       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 4.576 ; 4.576 ; Rise       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 4.586 ; 4.586 ; Rise       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 4.806 ; 4.806 ; Rise       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 4.897 ; 4.897 ; Rise       ; Opcode[0]       ;
+; Dg        ; Opcode[0]  ; 4.480 ; 4.480 ; Fall       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 4.525 ; 4.525 ; Fall       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 4.525 ; 4.525 ; Fall       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 4.505 ; 4.505 ; Fall       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 4.530 ; 4.530 ; Fall       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 4.656 ; 4.656 ; Fall       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 4.530 ; 4.530 ; Fall       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 4.540 ; 4.540 ; Fall       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 4.760 ; 4.760 ; Fall       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 4.851 ; 4.851 ; Fall       ; Opcode[0]       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Dg        ; Opcode[0]  ; 4.526 ; 4.526 ; Rise       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 4.551 ; 4.551 ; Rise       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 4.571 ; 4.571 ; Rise       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 4.551 ; 4.551 ; Rise       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 4.576 ; 4.576 ; Rise       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 4.647 ; 4.647 ; Rise       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 4.576 ; 4.576 ; Rise       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 4.586 ; 4.586 ; Rise       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 4.763 ; 4.763 ; Rise       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 4.887 ; 4.887 ; Rise       ; Opcode[0]       ;
+; Dg        ; Opcode[0]  ; 4.480 ; 4.480 ; Fall       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 4.505 ; 4.505 ; Fall       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 4.525 ; 4.525 ; Fall       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 4.505 ; 4.505 ; Fall       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 4.530 ; 4.530 ; Fall       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 4.601 ; 4.601 ; Fall       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 4.530 ; 4.530 ; Fall       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 4.540 ; 4.540 ; Fall       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 4.717 ; 4.717 ; Fall       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 4.841 ; 4.841 ; Fall       ; Opcode[0]       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.498 ; 0.243 ; N/A      ; N/A     ; -1.469              ;
+;  Opcode[0]       ; -2.498 ; 0.243 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -6.851 ; 0.0   ; 0.0      ; 0.0     ; -1.469              ;
+;  Opcode[0]       ; -6.851 ; 0.000 ; N/A      ; N/A     ; -1.469              ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Dg        ; Opcode[0]  ; 9.113  ; 9.113  ; Rise       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 9.199  ; 9.199  ; Rise       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 9.199  ; 9.199  ; Rise       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 9.179  ; 9.179  ; Rise       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 9.269  ; 9.269  ; Rise       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 9.620  ; 9.620  ; Rise       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 9.269  ; 9.269  ; Rise       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 9.279  ; 9.279  ; Rise       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 9.950  ; 9.950  ; Rise       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 10.100 ; 10.100 ; Rise       ; Opcode[0]       ;
+; Dg        ; Opcode[0]  ; 9.014  ; 9.014  ; Fall       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 9.100  ; 9.100  ; Fall       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 9.100  ; 9.100  ; Fall       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 9.080  ; 9.080  ; Fall       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 9.170  ; 9.170  ; Fall       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 9.521  ; 9.521  ; Fall       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 9.170  ; 9.170  ; Fall       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 9.180  ; 9.180  ; Fall       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 9.851  ; 9.851  ; Fall       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 10.001 ; 10.001 ; Fall       ; Opcode[0]       ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Dg        ; Opcode[0]  ; 4.526 ; 4.526 ; Rise       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 4.551 ; 4.551 ; Rise       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 4.571 ; 4.571 ; Rise       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 4.551 ; 4.551 ; Rise       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 4.576 ; 4.576 ; Rise       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 4.647 ; 4.647 ; Rise       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 4.576 ; 4.576 ; Rise       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 4.586 ; 4.586 ; Rise       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 4.763 ; 4.763 ; Rise       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 4.887 ; 4.887 ; Rise       ; Opcode[0]       ;
+; Dg        ; Opcode[0]  ; 4.480 ; 4.480 ; Fall       ; Opcode[0]       ;
+; IO[*]     ; Opcode[0]  ; 4.505 ; 4.505 ; Fall       ; Opcode[0]       ;
+;  IO[0]    ; Opcode[0]  ; 4.525 ; 4.525 ; Fall       ; Opcode[0]       ;
+;  IO[1]    ; Opcode[0]  ; 4.505 ; 4.505 ; Fall       ; Opcode[0]       ;
+; PCWrite   ; Opcode[0]  ; 4.530 ; 4.530 ; Fall       ; Opcode[0]       ;
+; RMD       ; Opcode[0]  ; 4.601 ; 4.601 ; Fall       ; Opcode[0]       ;
+; RMI       ; Opcode[0]  ; 4.530 ; 4.530 ; Fall       ; Opcode[0]       ;
+; WIR       ; Opcode[0]  ; 4.540 ; 4.540 ; Fall       ; Opcode[0]       ;
+; WMD       ; Opcode[0]  ; 4.717 ; 4.717 ; Fall       ; Opcode[0]       ;
+; WRF       ; Opcode[0]  ; 4.841 ; 4.841 ; Fall       ; Opcode[0]       ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; Opcode[0]  ; Opcode[0] ; 16       ; 16       ; 16       ; 16       ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; Opcode[0]  ; Opcode[0] ; 16       ; 16       ; 16       ; 16       ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 36    ; 36   ;
+; Unconstrained Output Ports      ; 18    ; 18   ;
+; Unconstrained Output Port Paths ; 36    ; 36   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 16 17:01:29 2018
+Info: Command: quartus_sta UC -c UC
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 21 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'UC.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Opcode[0] Opcode[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.498
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.498        -6.851 Opcode[0] 
+Info (332146): Worst-case hold slack is 0.725
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.725         0.000 Opcode[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469        -1.469 Opcode[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.566
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.566        -1.087 Opcode[0] 
+Info (332146): Worst-case hold slack is 0.243
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.243         0.000 Opcode[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 Opcode[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 388 megabytes
+    Info: Processing ended: Fri Nov 16 17:01:31 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
