@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Principal
-Fri Nov 16 15:44:58 2018
+Fri Nov 16 19:06:15 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -31,14 +31,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  23. Parameter Settings for User Entity Instance: Mux12:MuxPC
  24. Parameter Settings for User Entity Instance: PCounter:PC
  25. Parameter Settings for User Entity Instance: sumPC:PCsum
- 26. Port Connectivity Checks: "PCounter:PC"
- 27. Port Connectivity Checks: "Mux12:MuxPC"
+ 26. Parameter Settings for User Entity Instance: UC:UnidadControl
+ 27. Port Connectivity Checks: "UC:UnidadControl"
  28. Port Connectivity Checks: "Mux14:MuxRF"
- 29. Port Connectivity Checks: "ALU:ALU1"
- 30. Port Connectivity Checks: "IR:irP"
- 31. Port Connectivity Checks: "memoria:memoriaIns"
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+ 29. Port Connectivity Checks: "memoria:memoriaIns"
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -64,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 16 15:44:58 2018           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 16 19:06:15 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Principal                                       ;
 ; Top-level Entity Name              ; Principal                                       ;
@@ -177,24 +175,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; sieteS.vhd                       ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sieteS.vhd      ;         ;
-; registefile.vhd                  ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/registefile.vhd ;         ;
-; Registro.vhd                     ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Registro.vhd    ;         ;
-; Mux14.vhd                        ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux14.vhd       ;         ;
-; Mux12.vhd                        ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux12.vhd       ;         ;
-; memoriaram.vhd                   ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoriaram.vhd  ;         ;
-; memoria.vhd                      ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoria.vhd     ;         ;
-; IR.vhd                           ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/IR.vhd          ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/ALU.vhd         ;         ;
-; Principal.vhd                    ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Principal.vhd   ;         ;
-; PCounter.vhd                     ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/PCounter.vhd    ;         ;
-; sumPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/juanlink/Desktop/PrincipalProyecto/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sumPC.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+; UC.vhd                           ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/UC.vhd          ;         ;
+; sieteS.vhd                       ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sieteS.vhd      ;         ;
+; registefile.vhd                  ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/registefile.vhd ;         ;
+; Registro.vhd                     ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Registro.vhd    ;         ;
+; Mux14.vhd                        ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux14.vhd       ;         ;
+; Mux12.vhd                        ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux12.vhd       ;         ;
+; memoriaram.vhd                   ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoriaram.vhd  ;         ;
+; memoria.vhd                      ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoria.vhd     ;         ;
+; IR.vhd                           ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/IR.vhd          ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/ALU.vhd         ;         ;
+; Principal.vhd                    ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Principal.vhd   ;         ;
+; PCounter.vhd                     ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/PCounter.vhd    ;         ;
+; sumPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sumPC.vhd       ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -435,22 +434,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------+
-; Port Connectivity Checks: "PCounter:PC" ;
-+------+-------+----------+---------------+
-; Port ; Type  ; Severity ; Details       ;
-+------+-------+----------+---------------+
-; we   ; Input ; Info     ; Stuck at VCC  ;
-+------+-------+----------+---------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UC:UnidadControl ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; top            ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------+
-; Port Connectivity Checks: "Mux12:MuxPC" ;
-+------+-------+----------+---------------+
-; Port ; Type  ; Severity ; Details       ;
-+------+-------+----------+---------------+
-; sel  ; Input ; Info     ; Stuck at VCC  ;
-+------+-------+----------+---------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UC:UnidadControl"                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; jump ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; io   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -459,25 +460,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:ALU1"                                                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; n    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "IR:irP"                                                                               ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; opcode ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -495,7 +477,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -505,9 +487,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 16 15:44:48 2018
+    Info: Processing started: Fri Nov 16 19:06:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Principal -c Principal
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
+    Info (12022): Found design unit 1: UC-UC_arc
+    Info (12023): Found entity 1: UC
 Info (12021): Found 2 design units, including 1 entities, in source file sietes.vhd
     Info (12022): Found design unit 1: sieteS-sieteS_arq
     Info (12023): Found entity 1: sieteS
@@ -546,22 +531,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file sumpc.v
     Info (12022): Found design unit 1: sumPC-sumPC_arc
     Info (12023): Found entity 1: sumPC
 Info (12127): Elaborating entity "Principal" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(136): used implicit default value for signal "WIR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(137): used implicit default value for signal "WRF" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(138): used implicit default value for signal "AluSrcA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(138): used implicit default value for signal "DatSel" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(139): used implicit default value for signal "AluOp" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(140): used implicit default value for signal "WMD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(141): used implicit default value for signal "RMD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(142): used implicit default value for signal "DG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(143): used implicit default value for signal "Beq" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(145): used implicit default value for signal "Bne" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(146): used implicit default value for signal "Bgt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(147): used implicit default value for signal "PCWrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(150): used implicit default value for signal "addressIns" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(154): object "opcode" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(155): used implicit default value for signal "muldatos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(161): object "DatosRF" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(156): object "Jump" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at Principal.vhd(162): used implicit default value for signal "addressIns" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Principal.vhd(167): used implicit default value for signal "muldatos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(173): object "DatosRF" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(176): object "IO" assigned a value but never read
 Info (12128): Elaborating entity "sieteS" for hierarchy "sieteS:apuestaOIngreso"
 Warning (10492): VHDL Process Statement warning at sieteS.vhd(29): signal "switches" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at sieteS.vhd(42): signal "switches1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -639,6 +613,41 @@ Info (10041): Inferred latch for "Output[6]" at Mux12.vhd(32)
 Info (10041): Inferred latch for "Output[7]" at Mux12.vhd(32)
 Info (12128): Elaborating entity "PCounter" for hierarchy "PCounter:PC"
 Info (12128): Elaborating entity "sumPC" for hierarchy "sumPC:PCsum"
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UnidadControl"
+Warning (10492): VHDL Process Statement warning at UC.vhd(58): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(61): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(64): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(67): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(70): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(73): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(76): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(79): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(82): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(85): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(88): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(91): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at UC.vhd(25): inferring latch(es) for signal or variable "est_sig", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "est_sig.WRegister" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteSUB" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteMUL" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteADD" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteADDI" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.GuarMem" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.LeerMem" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.CalDirLM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.GuarDir" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.CalDirSM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExBgt" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExBne" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExBeq" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExJ" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.WM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Inp" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.OutSS" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.RM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Dir" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Decode" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Fetch" at UC.vhd(25)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SS2[1]" is stuck at GND
     Warning (13410): Pin "SS3[0]" is stuck at VCC
@@ -656,10 +665,10 @@ Info (21057): Implemented 56 device resources after synthesis - the final resour
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 28 output pins
     Info (21061): Implemented 17 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 38 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
     Info: Peak virtual memory: 479 megabytes
-    Info: Processing ended: Fri Nov 16 15:44:58 2018
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Fri Nov 16 19:06:15 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 

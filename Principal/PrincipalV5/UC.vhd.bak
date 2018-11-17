@@ -1,16 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all,ieee.std_logic_unsigned.all;
 
-entity UC is
-generic(
-	top : natural
-);
-port (
-	Opcode : in std_logic_vector(top-1 downto 0);
+entity UC is port
+(
+	Opcode : in std_logic_vector(3 downto 0);
 	Clk : in std_logic;
-	PCWrite,Beq,Bne,Bgt,Jump,WIR,Dg,WRF,AluSrcA,DatSel,RMD,WMD : out std_logic;
+	PCWrite,Beq,Bne,Bgt,Jump,RMI,WIR,Dg,WRF,AluSrcA,AluOut,DatSel,RMD,WMD : out std_logic;
 	AluOP : out std_logic_vector(1 downto 0);
-	IO : out std_logic_vector(1 downto 0)
+	IO : out std_logic_vector(2 downto 0)
 	);
 end entity;
 
@@ -30,15 +27,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '1';
 			WIR <= '1';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Decode;
 		when Decode => 
 			PCwrite <= '0';
@@ -46,15 +45,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			if Opcode = "0000" then
 				est_sig := Inp;
 			end if;
@@ -97,15 +98,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '1';
+			AluOut <= '1';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := WRegister;
 		when ExecuteADD =>
 			PCwrite <= '0';
@@ -113,15 +116,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '1';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := WRegister;
 		when ExecuteMUL =>
 			PCwrite <= '0';
@@ -129,15 +134,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "10";
 			AluSrcA <= '0';
+			AluOut <= '1';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := WRegister;
 		when ExecuteSUB =>
 			PCwrite <= '0';
@@ -145,15 +152,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "01";
 			AluSrcA <= '0';
+			AluOut <= '1';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := WRegister;
 		when WRegister =>
 			PCwrite <= '0';
@@ -161,15 +170,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '1';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when ExJ =>
 			PCwrite <= '0';
@@ -177,15 +188,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='1';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when ExBeq =>
 			PCwrite <= '0';
@@ -193,15 +206,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "01";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when ExBne =>
 			PCwrite <= '0';
@@ -209,15 +224,17 @@ process (Clk) begin
 			Bne <= '1';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "01";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when ExBgt =>
 			PCwrite <= '0';
@@ -225,15 +242,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '1';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "01";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when Dir =>
 			PCwrite <= '0';
@@ -241,15 +260,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "11";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := RM;
 		when RM =>
 			PCwrite <= '0';
@@ -257,15 +278,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '1';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := OutSS;
 		when OutSS =>
 			PCwrite <= '0';
@@ -273,15 +296,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "11";
+			IO <= "011";
 			est_sig := Fetch;
 		when Inp =>
 			PCwrite <= '0';
@@ -289,15 +314,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "11";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '1';
 			RMD <= '0';
 			WMD <= '1';
-			IO <= "00";
+			IO <= "000";
 			est_sig := WM;
 		when WM =>
 			PCwrite <= '0';
@@ -305,15 +332,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '1';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when CalDirSM =>
 			PCwrite <= '0';
@@ -321,15 +350,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '1';
+			AluOut <= '1';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := GuarDir;
 		when GuarDir =>
 			PCwrite <= '0';
@@ -337,15 +368,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '1';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 		when CalDirLM =>
 			PCwrite <= '0';
@@ -353,15 +386,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '1';
+			AluOut <= '1';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := LeerMem;
 		when LeerMem =>
 			PCwrite <= '0';
@@ -369,15 +404,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '0';
 			WRF <= '0';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '1';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := GuarMem;
 		when GuarMem =>
 			PCwrite <= '0';
@@ -385,15 +422,17 @@ process (Clk) begin
 			Bne <= '0';
 			Bgt <= '0';
 			Jump <='0';
+			RMI <= '0';
 			WIR <= '0';
 			Dg <= '1';
 			WRF <= '1';
 			AluOP <= "00";
 			AluSrcA <= '0';
+			AluOut <= '0';
 			DatSel <= '0';
 			RMD <= '0';
 			WMD <= '0';
-			IO <= "00";
+			IO <= "000";
 			est_sig := Fetch;
 	end case;
 end process;

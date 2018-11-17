@@ -91,7 +91,6 @@ set_location_assignment PIN_F2 -to SSU[4]
 set_location_assignment PIN_H1 -to SSU[3]
 set_location_assignment PIN_H2 -to SSU[2]
 set_location_assignment PIN_J1 -to SSU[1]
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE UC.vhd
 set_global_assignment -name VHDL_FILE sieteS.vhd
 set_global_assignment -name VHDL_FILE registefile.vhd
@@ -105,3 +104,4 @@ set_global_assignment -name VHDL_FILE ALU.vhd
 set_global_assignment -name VHDL_FILE Principal.vhd
 set_global_assignment -name VHDL_FILE PCounter.vhd
 set_global_assignment -name VHDL_FILE sumPC.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

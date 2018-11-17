@@ -1,0 +1,48 @@
+
+State Machine - |Principal|UC:UnidadControl|est_sig
+Name est_sig.WRegister est_sig.ExecuteSUB est_sig.ExecuteMUL est_sig.ExecuteADD est_sig.ExecuteADDI est_sig.GuarMem est_sig.LeerMem est_sig.CalDirLM est_sig.GuarDir est_sig.CalDirSM est_sig.ExBgt est_sig.ExBne est_sig.ExBeq est_sig.ExJ est_sig.WM est_sig.Inp est_sig.OutSS est_sig.RM est_sig.Dir est_sig.Decode est_sig.Fetch 
+est_sig.Fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+est_sig.Decode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+est_sig.Dir 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+est_sig.RM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+est_sig.OutSS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+est_sig.Inp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+est_sig.WM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+est_sig.ExJ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+est_sig.ExBeq 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+est_sig.ExBne 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+est_sig.ExBgt 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+est_sig.CalDirSM 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.GuarDir 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.CalDirLM 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.LeerMem 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.GuarMem 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.ExecuteADDI 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.ExecuteADD 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.ExecuteMUL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.ExecuteSUB 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_sig.WRegister 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Principal|UC:UnidadControl|est_actual
+Name est_actual.WRegister est_actual.ExecuteSUB est_actual.ExecuteMUL est_actual.ExecuteADD est_actual.ExecuteADDI est_actual.GuarMem est_actual.LeerMem est_actual.CalDirLM est_actual.GuarDir est_actual.CalDirSM est_actual.ExBgt est_actual.ExBne est_actual.ExBeq est_actual.ExJ est_actual.WM est_actual.Inp est_actual.OutSS est_actual.RM est_actual.Dir est_actual.Decode est_actual.Fetch 
+est_actual.Fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+est_actual.Decode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+est_actual.Dir 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+est_actual.RM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+est_actual.OutSS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+est_actual.Inp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+est_actual.WM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+est_actual.ExJ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+est_actual.ExBeq 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+est_actual.ExBne 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+est_actual.ExBgt 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+est_actual.CalDirSM 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.GuarDir 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.CalDirLM 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.LeerMem 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.GuarMem 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteADDI 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteADD 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteMUL 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteSUB 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.WRegister 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

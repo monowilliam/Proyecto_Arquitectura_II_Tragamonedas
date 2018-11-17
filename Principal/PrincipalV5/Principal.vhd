@@ -131,6 +131,18 @@ generic(
 	Output : out std_logic_vector(BusValores-1 downto 0)
 );
 end component;
+component UC is
+generic(
+	top : natural
+);
+port (
+	Opcode : in std_logic_vector(top-1 downto 0);
+	Clk : in std_logic;
+	PCWrite,Beq,Bne,Bgt,Jump,WIR,Dg,WRF,AluSrcA,DatSel,RMD,WMD : out std_logic;
+	AluOP : out std_logic_vector(1 downto 0);
+	IO : out std_logic_vector(1 downto 0)
+	);
+end component;
 
 ----- Señales de control
 signal WIR : std_logic;
@@ -161,6 +173,7 @@ signal MemOut : std_logic_vector(BusValores-1 downto 0); -- Salida memoria de da
 signal DatosRF : std_logic_vector(BusValores-1 downto 0); -- Salida del mux que va al RF para escribir 
 signal contPC,PCout,PCnew : std_logic_vector(BusAdressIns-1 downto 0); -- Entrada y salidas del pc y el sumador del pc
 signal entrada : std_logic_vector(BusValores-1 downto 0);
+signal IO : std_logic_vector(1 downto 0);
 begin
 --Mapeo puertos------------------------
 	apuestaOIngreso : sieteS generic map (BusValores => BusValores) 
@@ -193,6 +206,7 @@ begin
 	port map(PCant=>PCout,PCsig=>PCnew);
 	SelMuxPC <= NOT((Beq AND Z)OR(Bne AND NOT(Z))OR((NOT Z) AND (Bgt AND (NOT N))));
 	PCyes <= ((Beq AND Z)OR(Bne AND NOT(Z))OR((NOT Z) AND (Bgt AND (NOT N)))) OR PCwrite;
+	UnidadControl : UC generic map(top=>top)
+	port map(Clk=>clk,Opcode=>opcode,IO=>IO,AluOp=>AluOp,PCWrite=>PCWrite,Beq=>Beq,Bne=>Bne,Bgt=>Bgt,Jump=>Jump,WIR=>WIR,Dg=>DG,WRF=>WRF,AluSrcA=>AluSrcA,DatSel=>DatSel,RMD=>RMD,WMD=>WMD);
 -----------------------------------------------------------
 end architecture;
-
