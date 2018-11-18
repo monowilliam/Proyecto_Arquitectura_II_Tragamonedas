@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\entero_to_7segment\simulation\qsim
+vmostrar
+Z1 IT9NCi8@RXdmFA<?VfgdfJ0
+Z2 VJYT7UNTHoUYUn:Om^Pk`i2
+Z3 dD:\Escritorio\entero_to_7segment\simulation\qsim
+Z4 w1542418138
+Z5 8mostrar.vo
+Z6 Fmostrar.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|mostrar.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 2D^52GG7P7S@36cRMB:0D0
+!s85 0
+Z11 !s108 1542418139.681000
+Z12 !s107 mostrar.vo|
+!s101 -O0
+vmostrar_vlg_check_tst
+!i10b 1
+!s100 1Zh=26BEhkVd^D7JSab@c2
+IP[G?N?K09`QA]3N^f9>m80
+V;S^dC84AGX<5Ui?@PX@P91
+R3
+Z13 w1542418135
+Z14 8mostrar.vt
+Z15 Fmostrar.vt
+L0 67
+R7
+r1
+!s85 0
+31
+Z16 !s108 1542418140.742000
+Z17 !s107 mostrar.vt|
+Z18 !s90 -work|work|mostrar.vt|
+!s101 -O0
+R9
+vmostrar_vlg_sample_tst
+!i10b 1
+Z19 !s100 V0AS8O7X0V[B6;LJaK;`z3
+Z20 IEd2mIL83>MOjFFK1EJL9a2
+Z21 VKPhG:`meQDfON;Z:U^[mb0
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vmostrar_vlg_vec_tst
+!i10b 1
+!s100 <l2^V@1m:G_KmQoDf]5D]3
+I42lU5aMDCD4AhgC<POoUM3
+Z22 VnHBD7Hcf>8554g3k<EAGL1
+R3
+R13
+R14
+R15
+Z23 L0 2367
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
