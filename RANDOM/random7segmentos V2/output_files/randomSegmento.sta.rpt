@@ -1,0 +1,809 @@
+TimeQuest Timing Analyzer report for randomSegmento
+Tue Nov 20 12:03:21 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Setup: 'boton'
+ 13. Slow Model Hold: 'boton'
+ 14. Slow Model Hold: 'clk'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Slow Model Minimum Pulse Width: 'boton'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'boton'
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Hold: 'boton'
+ 28. Fast Model Minimum Pulse Width: 'clk'
+ 29. Fast Model Minimum Pulse Width: 'boton'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; randomSegmento                                                    ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; boton      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { boton } ;
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 789.27 MHz ; 380.08 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.267 ; -0.534        ;
+; boton ; 0.345  ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; boton ; 0.176 ; 0.000         ;
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -6.519                ;
+; boton ; -1.469 ; -6.357                ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                             ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; -0.267 ; count[1]  ; count[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.305      ;
+; -0.267 ; count[1]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.305      ;
+; -0.219 ; count[2]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.257      ;
+; 0.110  ; count[0]  ; count[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.928      ;
+; 0.111  ; count[0]  ; count[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.927      ;
+; 0.113  ; count[0]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.925      ;
+; 0.307  ; count[0]  ; count[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; count[2]  ; count[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; count[3]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; count[1]  ; count[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.731      ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'boton'                                                                             ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.345 ; count[1]  ; count_i1[2] ; clk          ; boton       ; 1.000        ; 0.599      ; 1.292      ;
+; 0.349 ; count[3]  ; count_i1[4] ; clk          ; boton       ; 1.000        ; 0.599      ; 1.288      ;
+; 0.356 ; count[0]  ; count_i1[1] ; clk          ; boton       ; 1.000        ; 0.599      ; 1.281      ;
+; 0.576 ; count[2]  ; count_i1[3] ; clk          ; boton       ; 1.000        ; 0.599      ; 1.061      ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'boton'                                                                              ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.176 ; count[2]  ; count_i1[3] ; clk          ; boton       ; 0.000        ; 0.599      ; 1.061      ;
+; 0.396 ; count[0]  ; count_i1[1] ; clk          ; boton       ; 0.000        ; 0.599      ; 1.281      ;
+; 0.403 ; count[3]  ; count_i1[4] ; clk          ; boton       ; 0.000        ; 0.599      ; 1.288      ;
+; 0.407 ; count[1]  ; count_i1[2] ; clk          ; boton       ; 0.000        ; 0.599      ; 1.292      ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                             ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; count[0]  ; count[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; count[1]  ; count[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; count[2]  ; count[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; count[3]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.639 ; count[0]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.641 ; count[0]  ; count[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.642 ; count[0]  ; count[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.971 ; count[2]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.257      ;
+; 1.019 ; count[1]  ; count[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; count[1]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.305      ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; count[0]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; count[0]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; count[1]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; count[1]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; count[2]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; count[2]             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; count[3]             ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; count[3]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[3]|clk         ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'boton'                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; boton ; Rise       ; boton           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; boton ; Rise       ; count_i1[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; boton ; Rise       ; count_i1[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; boton ; Rise       ; count_i1[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; boton ; Rise       ; count_i1[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; boton ; Rise       ; count_i1[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; boton ; Rise       ; count_i1[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; boton ; Rise       ; count_i1[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; boton ; Rise       ; count_i1[4]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; boton|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; boton|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[1]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[1]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[2]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[2]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[3]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[3]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[4]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[4]|clk ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; Segmento3[*]   ; boton      ; 20.268 ; 20.268 ; Rise       ; boton           ;
+;  Segmento3[0]  ; boton      ; 20.268 ; 20.268 ; Rise       ; boton           ;
+;  Segmento3[3]  ; boton      ; 20.042 ; 20.042 ; Rise       ; boton           ;
+;  Segmento3[6]  ; boton      ; 19.865 ; 19.865 ; Rise       ; boton           ;
+; ganador        ; boton      ; 24.937 ; 24.937 ; Rise       ; boton           ;
+; ledsRojos[*]   ; boton      ; 25.160 ; 25.160 ; Rise       ; boton           ;
+;  ledsRojos[0]  ; boton      ; 25.151 ; 25.151 ; Rise       ; boton           ;
+;  ledsRojos[1]  ; boton      ; 25.160 ; 25.160 ; Rise       ; boton           ;
+;  ledsRojos[2]  ; boton      ; 24.794 ; 24.794 ; Rise       ; boton           ;
+;  ledsRojos[3]  ; boton      ; 24.774 ; 24.774 ; Rise       ; boton           ;
+;  ledsRojos[4]  ; boton      ; 24.554 ; 24.554 ; Rise       ; boton           ;
+;  ledsRojos[5]  ; boton      ; 24.764 ; 24.764 ; Rise       ; boton           ;
+;  ledsRojos[6]  ; boton      ; 24.764 ; 24.764 ; Rise       ; boton           ;
+;  ledsRojos[7]  ; boton      ; 24.554 ; 24.554 ; Rise       ; boton           ;
+;  ledsRojos[8]  ; boton      ; 25.150 ; 25.150 ; Rise       ; boton           ;
+;  ledsRojos[9]  ; boton      ; 24.781 ; 24.781 ; Rise       ; boton           ;
+; ledsVerdes[*]  ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[0] ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[1] ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[2] ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[3] ; boton      ; 24.792 ; 24.792 ; Rise       ; boton           ;
+;  ledsVerdes[4] ; boton      ; 24.831 ; 24.831 ; Rise       ; boton           ;
+;  ledsVerdes[5] ; boton      ; 24.814 ; 24.814 ; Rise       ; boton           ;
+;  ledsVerdes[6] ; boton      ; 24.812 ; 24.812 ; Rise       ; boton           ;
+;  ledsVerdes[7] ; boton      ; 24.812 ; 24.812 ; Rise       ; boton           ;
+; segmento1[*]   ; boton      ; 20.589 ; 20.589 ; Rise       ; boton           ;
+;  segmento1[0]  ; boton      ; 20.201 ; 20.201 ; Rise       ; boton           ;
+;  segmento1[3]  ; boton      ; 20.589 ; 20.589 ; Rise       ; boton           ;
+;  segmento1[6]  ; boton      ; 19.878 ; 19.878 ; Rise       ; boton           ;
+; segmento2[*]   ; boton      ; 20.467 ; 20.467 ; Rise       ; boton           ;
+;  segmento2[0]  ; boton      ; 20.169 ; 20.169 ; Rise       ; boton           ;
+;  segmento2[3]  ; boton      ; 20.467 ; 20.467 ; Rise       ; boton           ;
+;  segmento2[6]  ; boton      ; 19.788 ; 19.788 ; Rise       ; boton           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; Segmento3[*]   ; boton      ; 10.676 ; 10.676 ; Rise       ; boton           ;
+;  Segmento3[0]  ; boton      ; 11.683 ; 11.683 ; Rise       ; boton           ;
+;  Segmento3[3]  ; boton      ; 10.676 ; 10.676 ; Rise       ; boton           ;
+;  Segmento3[6]  ; boton      ; 11.749 ; 11.749 ; Rise       ; boton           ;
+; ganador        ; boton      ; 13.125 ; 13.125 ; Rise       ; boton           ;
+; ledsRojos[*]   ; boton      ; 12.742 ; 12.742 ; Rise       ; boton           ;
+;  ledsRojos[0]  ; boton      ; 13.339 ; 13.339 ; Rise       ; boton           ;
+;  ledsRojos[1]  ; boton      ; 13.348 ; 13.348 ; Rise       ; boton           ;
+;  ledsRojos[2]  ; boton      ; 12.982 ; 12.982 ; Rise       ; boton           ;
+;  ledsRojos[3]  ; boton      ; 12.962 ; 12.962 ; Rise       ; boton           ;
+;  ledsRojos[4]  ; boton      ; 12.742 ; 12.742 ; Rise       ; boton           ;
+;  ledsRojos[5]  ; boton      ; 12.952 ; 12.952 ; Rise       ; boton           ;
+;  ledsRojos[6]  ; boton      ; 12.952 ; 12.952 ; Rise       ; boton           ;
+;  ledsRojos[7]  ; boton      ; 12.742 ; 12.742 ; Rise       ; boton           ;
+;  ledsRojos[8]  ; boton      ; 13.338 ; 13.338 ; Rise       ; boton           ;
+;  ledsRojos[9]  ; boton      ; 12.969 ; 12.969 ; Rise       ; boton           ;
+; ledsVerdes[*]  ; boton      ; 12.980 ; 12.980 ; Rise       ; boton           ;
+;  ledsVerdes[0] ; boton      ; 13.029 ; 13.029 ; Rise       ; boton           ;
+;  ledsVerdes[1] ; boton      ; 13.029 ; 13.029 ; Rise       ; boton           ;
+;  ledsVerdes[2] ; boton      ; 13.029 ; 13.029 ; Rise       ; boton           ;
+;  ledsVerdes[3] ; boton      ; 12.980 ; 12.980 ; Rise       ; boton           ;
+;  ledsVerdes[4] ; boton      ; 13.019 ; 13.019 ; Rise       ; boton           ;
+;  ledsVerdes[5] ; boton      ; 13.002 ; 13.002 ; Rise       ; boton           ;
+;  ledsVerdes[6] ; boton      ; 13.000 ; 13.000 ; Rise       ; boton           ;
+;  ledsVerdes[7] ; boton      ; 13.000 ; 13.000 ; Rise       ; boton           ;
+; segmento1[*]   ; boton      ; 10.302 ; 10.302 ; Rise       ; boton           ;
+;  segmento1[0]  ; boton      ; 10.302 ; 10.302 ; Rise       ; boton           ;
+;  segmento1[3]  ; boton      ; 10.668 ; 10.668 ; Rise       ; boton           ;
+;  segmento1[6]  ; boton      ; 11.856 ; 11.856 ; Rise       ; boton           ;
+; segmento2[*]   ; boton      ; 9.892  ; 9.892  ; Rise       ; boton           ;
+;  segmento2[0]  ; boton      ; 9.892  ; 9.892  ; Rise       ; boton           ;
+;  segmento2[3]  ; boton      ; 10.189 ; 10.189 ; Rise       ; boton           ;
+;  segmento2[6]  ; boton      ; 12.096 ; 12.096 ; Rise       ; boton           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; boton ; 0.335 ; 0.000         ;
+; clk   ; 0.508 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
+; boton ; 0.465 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -5.380                ;
+; boton ; -1.222 ; -5.222                ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'boton'                                                                             ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.335 ; count[3]  ; count_i1[4] ; clk          ; boton       ; 1.000        ; -0.131     ; 0.566      ;
+; 0.337 ; count[1]  ; count_i1[2] ; clk          ; boton       ; 1.000        ; -0.131     ; 0.564      ;
+; 0.343 ; count[0]  ; count_i1[1] ; clk          ; boton       ; 1.000        ; -0.131     ; 0.558      ;
+; 0.415 ; count[2]  ; count_i1[3] ; clk          ; boton       ; 1.000        ; -0.131     ; 0.486      ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                            ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; 0.508 ; count[1]  ; count[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.524      ;
+; 0.508 ; count[1]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.524      ;
+; 0.520 ; count[2]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.512      ;
+; 0.629 ; count[0]  ; count[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.403      ;
+; 0.630 ; count[0]  ; count[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.402      ;
+; 0.632 ; count[0]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.400      ;
+; 0.665 ; count[0]  ; count[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; count[2]  ; count[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; count[3]  ; count[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; count[1]  ; count[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                             ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; count[0]  ; count[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; count[1]  ; count[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; count[2]  ; count[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; count[3]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.248 ; count[0]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.400      ;
+; 0.250 ; count[0]  ; count[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.251 ; count[0]  ; count[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.403      ;
+; 0.360 ; count[2]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.372 ; count[1]  ; count[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; count[1]  ; count[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
++-------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'boton'                                                                              ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.465 ; count[2]  ; count_i1[3] ; clk          ; boton       ; 0.000        ; -0.131     ; 0.486      ;
+; 0.537 ; count[0]  ; count_i1[1] ; clk          ; boton       ; 0.000        ; -0.131     ; 0.558      ;
+; 0.543 ; count[1]  ; count_i1[2] ; clk          ; boton       ; 0.000        ; -0.131     ; 0.564      ;
+; 0.545 ; count[3]  ; count_i1[4] ; clk          ; boton       ; 0.000        ; -0.131     ; 0.566      ;
++-------+-----------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; count[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; count[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; count[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; count[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; count[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; count[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; count[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; count[3]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; count[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; count[3]|clk         ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'boton'                                                          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target          ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; boton ; Rise       ; boton           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; boton ; Rise       ; count_i1[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; boton ; Rise       ; count_i1[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; boton ; Rise       ; count_i1[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; boton ; Rise       ; count_i1[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[4]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; boton|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; boton|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[1]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[1]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[2]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[2]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[3]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[3]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; boton ; Rise       ; count_i1[4]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; boton ; Rise       ; count_i1[4]|clk ;
++--------+--------------+----------------+------------------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; Segmento3[*]   ; boton      ; 8.577  ; 8.577  ; Rise       ; boton           ;
+;  Segmento3[0]  ; boton      ; 8.577  ; 8.577  ; Rise       ; boton           ;
+;  Segmento3[3]  ; boton      ; 8.527  ; 8.527  ; Rise       ; boton           ;
+;  Segmento3[6]  ; boton      ; 8.483  ; 8.483  ; Rise       ; boton           ;
+; ganador        ; boton      ; 10.394 ; 10.394 ; Rise       ; boton           ;
+; ledsRojos[*]   ; boton      ; 10.444 ; 10.444 ; Rise       ; boton           ;
+;  ledsRojos[0]  ; boton      ; 10.444 ; 10.444 ; Rise       ; boton           ;
+;  ledsRojos[1]  ; boton      ; 10.439 ; 10.439 ; Rise       ; boton           ;
+;  ledsRojos[2]  ; boton      ; 10.289 ; 10.289 ; Rise       ; boton           ;
+;  ledsRojos[3]  ; boton      ; 10.283 ; 10.283 ; Rise       ; boton           ;
+;  ledsRojos[4]  ; boton      ; 10.238 ; 10.238 ; Rise       ; boton           ;
+;  ledsRojos[5]  ; boton      ; 10.273 ; 10.273 ; Rise       ; boton           ;
+;  ledsRojos[6]  ; boton      ; 10.273 ; 10.273 ; Rise       ; boton           ;
+;  ledsRojos[7]  ; boton      ; 10.238 ; 10.238 ; Rise       ; boton           ;
+;  ledsRojos[8]  ; boton      ; 10.429 ; 10.429 ; Rise       ; boton           ;
+;  ledsRojos[9]  ; boton      ; 10.275 ; 10.275 ; Rise       ; boton           ;
+; ledsVerdes[*]  ; boton      ; 10.333 ; 10.333 ; Rise       ; boton           ;
+;  ledsVerdes[0] ; boton      ; 10.333 ; 10.333 ; Rise       ; boton           ;
+;  ledsVerdes[1] ; boton      ; 10.333 ; 10.333 ; Rise       ; boton           ;
+;  ledsVerdes[2] ; boton      ; 10.333 ; 10.333 ; Rise       ; boton           ;
+;  ledsVerdes[3] ; boton      ; 10.300 ; 10.300 ; Rise       ; boton           ;
+;  ledsVerdes[4] ; boton      ; 10.325 ; 10.325 ; Rise       ; boton           ;
+;  ledsVerdes[5] ; boton      ; 10.309 ; 10.309 ; Rise       ; boton           ;
+;  ledsVerdes[6] ; boton      ; 10.320 ; 10.320 ; Rise       ; boton           ;
+;  ledsVerdes[7] ; boton      ; 10.320 ; 10.320 ; Rise       ; boton           ;
+; segmento1[*]   ; boton      ; 8.663  ; 8.663  ; Rise       ; boton           ;
+;  segmento1[0]  ; boton      ; 8.533  ; 8.533  ; Rise       ; boton           ;
+;  segmento1[3]  ; boton      ; 8.663  ; 8.663  ; Rise       ; boton           ;
+;  segmento1[6]  ; boton      ; 8.442  ; 8.442  ; Rise       ; boton           ;
+; segmento2[*]   ; boton      ; 8.701  ; 8.701  ; Rise       ; boton           ;
+;  segmento2[0]  ; boton      ; 8.602  ; 8.602  ; Rise       ; boton           ;
+;  segmento2[3]  ; boton      ; 8.701  ; 8.701  ; Rise       ; boton           ;
+;  segmento2[6]  ; boton      ; 8.471  ; 8.471  ; Rise       ; boton           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; Segmento3[*]   ; boton      ; 4.845 ; 4.845 ; Rise       ; boton           ;
+;  Segmento3[0]  ; boton      ; 5.184 ; 5.184 ; Rise       ; boton           ;
+;  Segmento3[3]  ; boton      ; 4.845 ; 4.845 ; Rise       ; boton           ;
+;  Segmento3[6]  ; boton      ; 5.250 ; 5.250 ; Rise       ; boton           ;
+; ganador        ; boton      ; 5.817 ; 5.817 ; Rise       ; boton           ;
+; ledsRojos[*]   ; boton      ; 5.661 ; 5.661 ; Rise       ; boton           ;
+;  ledsRojos[0]  ; boton      ; 5.867 ; 5.867 ; Rise       ; boton           ;
+;  ledsRojos[1]  ; boton      ; 5.862 ; 5.862 ; Rise       ; boton           ;
+;  ledsRojos[2]  ; boton      ; 5.712 ; 5.712 ; Rise       ; boton           ;
+;  ledsRojos[3]  ; boton      ; 5.706 ; 5.706 ; Rise       ; boton           ;
+;  ledsRojos[4]  ; boton      ; 5.661 ; 5.661 ; Rise       ; boton           ;
+;  ledsRojos[5]  ; boton      ; 5.696 ; 5.696 ; Rise       ; boton           ;
+;  ledsRojos[6]  ; boton      ; 5.696 ; 5.696 ; Rise       ; boton           ;
+;  ledsRojos[7]  ; boton      ; 5.661 ; 5.661 ; Rise       ; boton           ;
+;  ledsRojos[8]  ; boton      ; 5.852 ; 5.852 ; Rise       ; boton           ;
+;  ledsRojos[9]  ; boton      ; 5.698 ; 5.698 ; Rise       ; boton           ;
+; ledsVerdes[*]  ; boton      ; 5.723 ; 5.723 ; Rise       ; boton           ;
+;  ledsVerdes[0] ; boton      ; 5.756 ; 5.756 ; Rise       ; boton           ;
+;  ledsVerdes[1] ; boton      ; 5.756 ; 5.756 ; Rise       ; boton           ;
+;  ledsVerdes[2] ; boton      ; 5.756 ; 5.756 ; Rise       ; boton           ;
+;  ledsVerdes[3] ; boton      ; 5.723 ; 5.723 ; Rise       ; boton           ;
+;  ledsVerdes[4] ; boton      ; 5.748 ; 5.748 ; Rise       ; boton           ;
+;  ledsVerdes[5] ; boton      ; 5.732 ; 5.732 ; Rise       ; boton           ;
+;  ledsVerdes[6] ; boton      ; 5.743 ; 5.743 ; Rise       ; boton           ;
+;  ledsVerdes[7] ; boton      ; 5.743 ; 5.743 ; Rise       ; boton           ;
+; segmento1[*]   ; boton      ; 4.649 ; 4.649 ; Rise       ; boton           ;
+;  segmento1[0]  ; boton      ; 4.649 ; 4.649 ; Rise       ; boton           ;
+;  segmento1[3]  ; boton      ; 4.770 ; 4.770 ; Rise       ; boton           ;
+;  segmento1[6]  ; boton      ; 5.214 ; 5.214 ; Rise       ; boton           ;
+; segmento2[*]   ; boton      ; 4.569 ; 4.569 ; Rise       ; boton           ;
+;  segmento2[0]  ; boton      ; 4.569 ; 4.569 ; Rise       ; boton           ;
+;  segmento2[3]  ; boton      ; 4.667 ; 4.667 ; Rise       ; boton           ;
+;  segmento2[6]  ; boton      ; 5.353 ; 5.353 ; Rise       ; boton           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.267 ; 0.176 ; N/A      ; N/A     ; -1.631              ;
+;  boton           ; 0.335  ; 0.176 ; N/A      ; N/A     ; -1.469              ;
+;  clk             ; -0.267 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -0.534 ; 0.0   ; 0.0      ; 0.0     ; -12.876             ;
+;  boton           ; 0.000  ; 0.000 ; N/A      ; N/A     ; -6.357              ;
+;  clk             ; -0.534 ; 0.000 ; N/A      ; N/A     ; -6.519              ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; Segmento3[*]   ; boton      ; 20.268 ; 20.268 ; Rise       ; boton           ;
+;  Segmento3[0]  ; boton      ; 20.268 ; 20.268 ; Rise       ; boton           ;
+;  Segmento3[3]  ; boton      ; 20.042 ; 20.042 ; Rise       ; boton           ;
+;  Segmento3[6]  ; boton      ; 19.865 ; 19.865 ; Rise       ; boton           ;
+; ganador        ; boton      ; 24.937 ; 24.937 ; Rise       ; boton           ;
+; ledsRojos[*]   ; boton      ; 25.160 ; 25.160 ; Rise       ; boton           ;
+;  ledsRojos[0]  ; boton      ; 25.151 ; 25.151 ; Rise       ; boton           ;
+;  ledsRojos[1]  ; boton      ; 25.160 ; 25.160 ; Rise       ; boton           ;
+;  ledsRojos[2]  ; boton      ; 24.794 ; 24.794 ; Rise       ; boton           ;
+;  ledsRojos[3]  ; boton      ; 24.774 ; 24.774 ; Rise       ; boton           ;
+;  ledsRojos[4]  ; boton      ; 24.554 ; 24.554 ; Rise       ; boton           ;
+;  ledsRojos[5]  ; boton      ; 24.764 ; 24.764 ; Rise       ; boton           ;
+;  ledsRojos[6]  ; boton      ; 24.764 ; 24.764 ; Rise       ; boton           ;
+;  ledsRojos[7]  ; boton      ; 24.554 ; 24.554 ; Rise       ; boton           ;
+;  ledsRojos[8]  ; boton      ; 25.150 ; 25.150 ; Rise       ; boton           ;
+;  ledsRojos[9]  ; boton      ; 24.781 ; 24.781 ; Rise       ; boton           ;
+; ledsVerdes[*]  ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[0] ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[1] ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[2] ; boton      ; 24.841 ; 24.841 ; Rise       ; boton           ;
+;  ledsVerdes[3] ; boton      ; 24.792 ; 24.792 ; Rise       ; boton           ;
+;  ledsVerdes[4] ; boton      ; 24.831 ; 24.831 ; Rise       ; boton           ;
+;  ledsVerdes[5] ; boton      ; 24.814 ; 24.814 ; Rise       ; boton           ;
+;  ledsVerdes[6] ; boton      ; 24.812 ; 24.812 ; Rise       ; boton           ;
+;  ledsVerdes[7] ; boton      ; 24.812 ; 24.812 ; Rise       ; boton           ;
+; segmento1[*]   ; boton      ; 20.589 ; 20.589 ; Rise       ; boton           ;
+;  segmento1[0]  ; boton      ; 20.201 ; 20.201 ; Rise       ; boton           ;
+;  segmento1[3]  ; boton      ; 20.589 ; 20.589 ; Rise       ; boton           ;
+;  segmento1[6]  ; boton      ; 19.878 ; 19.878 ; Rise       ; boton           ;
+; segmento2[*]   ; boton      ; 20.467 ; 20.467 ; Rise       ; boton           ;
+;  segmento2[0]  ; boton      ; 20.169 ; 20.169 ; Rise       ; boton           ;
+;  segmento2[3]  ; boton      ; 20.467 ; 20.467 ; Rise       ; boton           ;
+;  segmento2[6]  ; boton      ; 19.788 ; 19.788 ; Rise       ; boton           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; Segmento3[*]   ; boton      ; 4.845 ; 4.845 ; Rise       ; boton           ;
+;  Segmento3[0]  ; boton      ; 5.184 ; 5.184 ; Rise       ; boton           ;
+;  Segmento3[3]  ; boton      ; 4.845 ; 4.845 ; Rise       ; boton           ;
+;  Segmento3[6]  ; boton      ; 5.250 ; 5.250 ; Rise       ; boton           ;
+; ganador        ; boton      ; 5.817 ; 5.817 ; Rise       ; boton           ;
+; ledsRojos[*]   ; boton      ; 5.661 ; 5.661 ; Rise       ; boton           ;
+;  ledsRojos[0]  ; boton      ; 5.867 ; 5.867 ; Rise       ; boton           ;
+;  ledsRojos[1]  ; boton      ; 5.862 ; 5.862 ; Rise       ; boton           ;
+;  ledsRojos[2]  ; boton      ; 5.712 ; 5.712 ; Rise       ; boton           ;
+;  ledsRojos[3]  ; boton      ; 5.706 ; 5.706 ; Rise       ; boton           ;
+;  ledsRojos[4]  ; boton      ; 5.661 ; 5.661 ; Rise       ; boton           ;
+;  ledsRojos[5]  ; boton      ; 5.696 ; 5.696 ; Rise       ; boton           ;
+;  ledsRojos[6]  ; boton      ; 5.696 ; 5.696 ; Rise       ; boton           ;
+;  ledsRojos[7]  ; boton      ; 5.661 ; 5.661 ; Rise       ; boton           ;
+;  ledsRojos[8]  ; boton      ; 5.852 ; 5.852 ; Rise       ; boton           ;
+;  ledsRojos[9]  ; boton      ; 5.698 ; 5.698 ; Rise       ; boton           ;
+; ledsVerdes[*]  ; boton      ; 5.723 ; 5.723 ; Rise       ; boton           ;
+;  ledsVerdes[0] ; boton      ; 5.756 ; 5.756 ; Rise       ; boton           ;
+;  ledsVerdes[1] ; boton      ; 5.756 ; 5.756 ; Rise       ; boton           ;
+;  ledsVerdes[2] ; boton      ; 5.756 ; 5.756 ; Rise       ; boton           ;
+;  ledsVerdes[3] ; boton      ; 5.723 ; 5.723 ; Rise       ; boton           ;
+;  ledsVerdes[4] ; boton      ; 5.748 ; 5.748 ; Rise       ; boton           ;
+;  ledsVerdes[5] ; boton      ; 5.732 ; 5.732 ; Rise       ; boton           ;
+;  ledsVerdes[6] ; boton      ; 5.743 ; 5.743 ; Rise       ; boton           ;
+;  ledsVerdes[7] ; boton      ; 5.743 ; 5.743 ; Rise       ; boton           ;
+; segmento1[*]   ; boton      ; 4.649 ; 4.649 ; Rise       ; boton           ;
+;  segmento1[0]  ; boton      ; 4.649 ; 4.649 ; Rise       ; boton           ;
+;  segmento1[3]  ; boton      ; 4.770 ; 4.770 ; Rise       ; boton           ;
+;  segmento1[6]  ; boton      ; 5.214 ; 5.214 ; Rise       ; boton           ;
+; segmento2[*]   ; boton      ; 4.569 ; 4.569 ; Rise       ; boton           ;
+;  segmento2[0]  ; boton      ; 4.569 ; 4.569 ; Rise       ; boton           ;
+;  segmento2[3]  ; boton      ; 4.667 ; 4.667 ; Rise       ; boton           ;
+;  segmento2[6]  ; boton      ; 5.353 ; 5.353 ; Rise       ; boton           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; boton    ; 4        ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 10       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; boton    ; 4        ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 10       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 112   ; 112  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 20 12:03:19 2018
+Info: Command: quartus_sta randomSegmento -c randomSegmento
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'randomSegmento.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name boton boton
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.267
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.267        -0.534 clk 
+    Info (332119):     0.345         0.000 boton 
+Info (332146): Worst-case hold slack is 0.176
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.176         0.000 boton 
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -6.519 clk 
+    Info (332119):    -1.469        -6.357 boton 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.335
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.335         0.000 boton 
+    Info (332119):     0.508         0.000 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+    Info (332119):     0.465         0.000 boton 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -5.380 clk 
+    Info (332119):    -1.222        -5.222 boton 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 388 megabytes
+    Info: Processing ended: Tue Nov 20 12:03:21 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

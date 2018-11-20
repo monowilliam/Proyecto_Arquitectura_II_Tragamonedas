@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\random7segmentos\simulation\qsim
+vrandomSegmento
+Z1 !s100 `?@X^NZGJ2XP<<Fn[PS^^2
+Z2 I2?MGPnQU^KF:]ongg?BDc0
+Z3 V3YgCH0h3KlzW2=4aFW2QW2
+Z4 dC:\Users\juanlink\Desktop\Proyecto\Proyecto_Arquitectura_II_Tragamonedas\random7segmentos\simulation\qsim
+Z5 w1542730607
+Z6 8randomSegmento.vo
+Z7 FrandomSegmento.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|randomSegmento.vo|
+Z10 o-work work -O0
+Z11 nrandom@segmento
+!i10b 1
+!s85 0
+Z12 !s108 1542730608.264000
+Z13 !s107 randomSegmento.vo|
+!s101 -O0
+vrandomSegmento_vlg_check_tst
+!i10b 1
+Z14 !s100 a4FQ86dKKU;^22W2T;`2c2
+Z15 Ic=X42@0Z0C2b<_<JofYG]1
+Z16 VnDPETYNW;8J9>Bc[X7i3L1
+R4
+Z17 w1542730605
+Z18 8randomSegmento.vt
+Z19 FrandomSegmento.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z20 !s108 1542730608.734000
+Z21 !s107 randomSegmento.vt|
+Z22 !s90 -work|work|randomSegmento.vt|
+!s101 -O0
+R10
+Z23 nrandom@segmento_vlg_check_tst
+vrandomSegmento_vlg_sample_tst
+!i10b 1
+Z24 !s100 h2JIAMcldkILgm9LmmWFe1
+Z25 Ibb:c:5Wje<Q8FMDJ]SX8T3
+Z26 Vkd?i<0Pk54E]KCMg71g^62
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 nrandom@segmento_vlg_sample_tst
+vrandomSegmento_vlg_vec_tst
+!i10b 1
+!s100 eU;d]?DT945ah1IkT@TPd3
+I;lj8VMEk?FT8kH5Q2V8Lf1
+Z28 V]9:mZCLT0Dz=5l:`;`XKj1
+R4
+R17
+R18
+R19
+Z29 L0 871
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 nrandom@segmento_vlg_vec_tst
