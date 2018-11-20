@@ -1,0 +1,1242 @@
+Analysis & Synthesis report for Principal
+Tue Nov 20 13:59:33 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |Principal
+ 17. Parameter Settings for User Entity Instance: memoria:memoriaIns
+ 18. Parameter Settings for User Entity Instance: IR:irP
+ 19. Parameter Settings for User Entity Instance: registefile:RegisterF
+ 20. Parameter Settings for User Entity Instance: Registro:RegistroA
+ 21. Parameter Settings for User Entity Instance: Registro:RegistroB
+ 22. Parameter Settings for User Entity Instance: Mux14:MuxA
+ 23. Parameter Settings for User Entity Instance: ALU:ALU1
+ 24. Parameter Settings for User Entity Instance: Registro:ALUOut
+ 25. Parameter Settings for User Entity Instance: Mux14:MuxB
+ 26. Parameter Settings for User Entity Instance: memoriaram:MemDatos
+ 27. Parameter Settings for User Entity Instance: Mux14:MuxRF
+ 28. Parameter Settings for User Entity Instance: Mux12:MuxPC
+ 29. Parameter Settings for User Entity Instance: PCounter:PC
+ 30. Parameter Settings for User Entity Instance: sumPC:PCsum
+ 31. Parameter Settings for User Entity Instance: UC:UnidadControl
+ 32. Parameter Settings for User Entity Instance: mostrar:mostrarNum
+ 33. Parameter Settings for User Entity Instance: sieteS:apuestaOIngreso
+ 34. Parameter Settings for Inferred Entity Instance: memoria:memoriaIns|altsyncram:my_rom_rtl_0
+ 35. Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_divide:Mod0
+ 36. Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_mult:Mult0
+ 37. altsyncram Parameter Settings by Entity Instance
+ 38. lpm_mult Parameter Settings by Entity Instance
+ 39. Port Connectivity Checks: "UC:UnidadControl"
+ 40. Port Connectivity Checks: "Mux14:MuxRF"
+ 41. Port Connectivity Checks: "memoria:memoriaIns"
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 20 13:59:33 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Principal                                       ;
+; Top-level Entity Name              ; Principal                                       ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 677                                             ;
+;     Total combinational functions  ; 657                                             ;
+;     Dedicated logic registers      ; 21                                              ;
+; Total registers                    ; 21                                              ;
+; Total pins                         ; 58                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 8                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; Principal          ; Principal          ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                                ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; randomSegmento.vhd               ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/randomSegmento.vhd         ;         ;
+; mostrar.vhd                      ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/mostrar.vhd                ;         ;
+; UC.vhd                           ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/UC.vhd                     ;         ;
+; sieteS.vhd                       ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sieteS.vhd                 ;         ;
+; registefile.vhd                  ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/registefile.vhd            ;         ;
+; Registro.vhd                     ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Registro.vhd               ;         ;
+; Mux14.vhd                        ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux14.vhd                  ;         ;
+; Mux12.vhd                        ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux12.vhd                  ;         ;
+; memoriaram.vhd                   ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoriaram.vhd             ;         ;
+; memoria.vhd                      ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoria.vhd                ;         ;
+; IR.vhd                           ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/IR.vhd                     ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/ALU.vhd                    ;         ;
+; Principal.vhd                    ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Principal.vhd              ;         ;
+; PCounter.vhd                     ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/PCounter.vhd               ;         ;
+; sumPC.vhd                        ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sumPC.vhd                  ;         ;
+; MuxSS.vhd                        ; yes             ; User VHDL File                         ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/MuxSS.vhd                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                                ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                              ;         ;
+; db/altsyncram_ro41.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/db/altsyncram_ro41.tdf     ;         ;
+; mem.mif                          ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/mem.mif                    ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                                            ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                                           ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                       ;         ;
+; db/lpm_divide_s7m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/db/lpm_divide_s7m.tdf      ;         ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/db/sign_div_unsign_3nh.tdf ;         ;
+; db/alt_u_div_85f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/db/alt_u_div_85f.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/db/add_sub_mkc.tdf         ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf                                                              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                           ;         ;
+; multcore.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                                                              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                              ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                              ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.tdf                                                              ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/csa_add.inc                                                               ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.inc                                                              ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muleabz.inc                                                               ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_lfrg.inc                                                              ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_boothc.inc                                                            ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                          ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                        ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                                                               ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.tdf                                                              ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.tdf                                                              ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                                 ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                         ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 677                                                                                                                           ;
+;                                             ;                                                                                                                               ;
+; Total combinational functions               ; 657                                                                                                                           ;
+; Logic element usage by number of LUT inputs ;                                                                                                                               ;
+;     -- 4 input functions                    ; 194                                                                                                                           ;
+;     -- 3 input functions                    ; 208                                                                                                                           ;
+;     -- <=2 input functions                  ; 255                                                                                                                           ;
+;                                             ;                                                                                                                               ;
+; Logic elements by mode                      ;                                                                                                                               ;
+;     -- normal mode                          ; 453                                                                                                                           ;
+;     -- arithmetic mode                      ; 204                                                                                                                           ;
+;                                             ;                                                                                                                               ;
+; Total registers                             ; 21                                                                                                                            ;
+;     -- Dedicated logic registers            ; 21                                                                                                                            ;
+;     -- I/O registers                        ; 0                                                                                                                             ;
+;                                             ;                                                                                                                               ;
+; I/O pins                                    ; 58                                                                                                                            ;
+; Total memory bits                           ; 8                                                                                                                             ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                                                             ;
+; Maximum fan-out node                        ; randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_85f:divider|op_8~36 ;
+; Maximum fan-out                             ; 54                                                                                                                            ;
+; Total fan-out                               ; 1960                                                                                                                          ;
+; Average fan-out                             ; 2.65                                                                                                                          ;
++---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Principal                                ; 657 (1)           ; 21 (0)       ; 8           ; 0            ; 0       ; 0         ; 58   ; 0            ; |Principal                                                                                                                       ; work         ;
+;    |MuxSS:MuxSevenSeg|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|MuxSS:MuxSevenSeg                                                                                                     ; work         ;
+;    |UC:UnidadControl|                     ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|UC:UnidadControl                                                                                                      ; work         ;
+;    |memoria:memoriaIns|                   ; 0 (0)             ; 0 (0)        ; 8           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns                                                                                                    ; work         ;
+;       |altsyncram:my_rom_rtl_0|           ; 0 (0)             ; 0 (0)        ; 8           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns|altsyncram:my_rom_rtl_0                                                                            ; work         ;
+;          |altsyncram_ro41:auto_generated| ; 0 (0)             ; 0 (0)        ; 8           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated                                             ; work         ;
+;    |mostrar:mostrarNum|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|mostrar:mostrarNum                                                                                                    ; work         ;
+;    |randomSegmento:ranSeg|                ; 591 (2)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg                                                                                                 ; work         ;
+;       |lpm_divide:Mod0|                   ; 589 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_s7m:auto_generated|  ; 589 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_3nh:divider| ; 589 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated|sign_div_unsign_3nh:divider                       ; work         ;
+;                |alt_u_div_85f:divider|    ; 589 (589)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_85f:divider ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                ;
++--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------+
+; Name                                                                                 ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
++--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------+
+; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 26           ; --           ; --           ; 6656 ; mem.mif ;
++--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal         ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------+------------------------+
+; UC:UnidadControl|est_actual.OutSS                   ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.RM                      ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.Decode                  ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.Dir                     ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.Fetch                   ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.ExBgt                   ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.ExBne                   ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.ExBeq                   ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.ExJ                     ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.GuarDir                 ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.GuarMem                 ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.WRegister               ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.WM                      ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.CalDirSM                ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.LeerMem                 ; UC:UnidadControl|Selector11 ; yes                    ;
+; UC:UnidadControl|est_actual.ExecuteMUL              ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.ExecuteADD              ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.ExecuteADDI             ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.ExecuteSUB              ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.Inp                     ; GND                         ; yes                    ;
+; UC:UnidadControl|est_actual.CalDirLM                ; GND                         ; yes                    ;
+; Number of user-specified and inferred latches = 21  ;                             ;                        ;
++-----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++-----------------------------------------------+------------------------------------------------------+
+; Register name                                 ; Reason for Removal                                   ;
++-----------------------------------------------+------------------------------------------------------+
+; mostrar:mostrarNum|\segment:miles[14..30]     ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:centenas[14..30]  ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:decenas[14..30]   ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:unidades[14..30]  ; Stuck at GND due to stuck port data_in               ;
+; memoria:memoriaIns|reg_address[0..7]          ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:unidades[31]      ; Merged with mostrar:mostrarNum|\segment:decenas[31]  ;
+; mostrar:mostrarNum|\segment:decenas[31]       ; Merged with mostrar:mostrarNum|\segment:centenas[31] ;
+; mostrar:mostrarNum|\segment:centenas[31]      ; Merged with mostrar:mostrarNum|\segment:miles[31]    ;
+; randomSegmento:ranSeg|count_i2[19]            ; Merged with randomSegmento:ranSeg|count_i1[19]       ;
+; randomSegmento:ranSeg|count_i3[19]            ; Merged with randomSegmento:ranSeg|count_i1[19]       ;
+; randomSegmento:ranSeg|count_i2[18]            ; Merged with randomSegmento:ranSeg|count_i1[18]       ;
+; randomSegmento:ranSeg|count_i3[18]            ; Merged with randomSegmento:ranSeg|count_i1[18]       ;
+; randomSegmento:ranSeg|count_i2[17]            ; Merged with randomSegmento:ranSeg|count_i1[17]       ;
+; randomSegmento:ranSeg|count_i3[17]            ; Merged with randomSegmento:ranSeg|count_i1[17]       ;
+; randomSegmento:ranSeg|count_i2[16]            ; Merged with randomSegmento:ranSeg|count_i1[16]       ;
+; randomSegmento:ranSeg|count_i3[16]            ; Merged with randomSegmento:ranSeg|count_i1[16]       ;
+; randomSegmento:ranSeg|count_i2[15]            ; Merged with randomSegmento:ranSeg|count_i1[15]       ;
+; randomSegmento:ranSeg|count_i3[15]            ; Merged with randomSegmento:ranSeg|count_i1[15]       ;
+; randomSegmento:ranSeg|count_i2[14]            ; Merged with randomSegmento:ranSeg|count_i1[14]       ;
+; randomSegmento:ranSeg|count_i3[14]            ; Merged with randomSegmento:ranSeg|count_i1[14]       ;
+; randomSegmento:ranSeg|count_i2[13]            ; Merged with randomSegmento:ranSeg|count_i1[13]       ;
+; randomSegmento:ranSeg|count_i3[13]            ; Merged with randomSegmento:ranSeg|count_i1[13]       ;
+; randomSegmento:ranSeg|count_i2[12]            ; Merged with randomSegmento:ranSeg|count_i1[12]       ;
+; randomSegmento:ranSeg|count_i3[12]            ; Merged with randomSegmento:ranSeg|count_i1[12]       ;
+; randomSegmento:ranSeg|count_i2[11]            ; Merged with randomSegmento:ranSeg|count_i1[11]       ;
+; randomSegmento:ranSeg|count_i3[11]            ; Merged with randomSegmento:ranSeg|count_i1[11]       ;
+; randomSegmento:ranSeg|count_i2[10]            ; Merged with randomSegmento:ranSeg|count_i1[10]       ;
+; randomSegmento:ranSeg|count_i3[10]            ; Merged with randomSegmento:ranSeg|count_i1[10]       ;
+; randomSegmento:ranSeg|count_i2[9]             ; Merged with randomSegmento:ranSeg|count_i1[9]        ;
+; randomSegmento:ranSeg|count_i3[9]             ; Merged with randomSegmento:ranSeg|count_i1[9]        ;
+; randomSegmento:ranSeg|count_i2[8]             ; Merged with randomSegmento:ranSeg|count_i1[8]        ;
+; randomSegmento:ranSeg|count_i3[8]             ; Merged with randomSegmento:ranSeg|count_i1[8]        ;
+; randomSegmento:ranSeg|count_i2[7]             ; Merged with randomSegmento:ranSeg|count_i1[7]        ;
+; randomSegmento:ranSeg|count_i3[7]             ; Merged with randomSegmento:ranSeg|count_i1[7]        ;
+; randomSegmento:ranSeg|count_i2[6]             ; Merged with randomSegmento:ranSeg|count_i1[6]        ;
+; randomSegmento:ranSeg|count_i3[6]             ; Merged with randomSegmento:ranSeg|count_i1[6]        ;
+; randomSegmento:ranSeg|count_i2[5]             ; Merged with randomSegmento:ranSeg|count_i1[5]        ;
+; randomSegmento:ranSeg|count_i3[5]             ; Merged with randomSegmento:ranSeg|count_i1[5]        ;
+; randomSegmento:ranSeg|count_i2[4]             ; Merged with randomSegmento:ranSeg|count_i1[4]        ;
+; randomSegmento:ranSeg|count_i3[4]             ; Merged with randomSegmento:ranSeg|count_i1[4]        ;
+; randomSegmento:ranSeg|count_i2[3]             ; Merged with randomSegmento:ranSeg|count_i1[3]        ;
+; randomSegmento:ranSeg|count_i3[3]             ; Merged with randomSegmento:ranSeg|count_i1[3]        ;
+; randomSegmento:ranSeg|count_i2[2]             ; Merged with randomSegmento:ranSeg|count_i1[2]        ;
+; randomSegmento:ranSeg|count_i3[2]             ; Merged with randomSegmento:ranSeg|count_i1[2]        ;
+; randomSegmento:ranSeg|count_i2[1]             ; Merged with randomSegmento:ranSeg|count_i1[1]        ;
+; randomSegmento:ranSeg|count_i3[1]             ; Merged with randomSegmento:ranSeg|count_i1[1]        ;
+; randomSegmento:ranSeg|count_i2[0]             ; Merged with randomSegmento:ranSeg|count_i1[0]        ;
+; randomSegmento:ranSeg|count_i3[0]             ; Merged with randomSegmento:ranSeg|count_i1[0]        ;
+; mostrar:mostrarNum|\segment:miles[3..13]      ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:centenas[1,3..13] ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:decenas[1..13]    ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:decenas[0]        ; Stuck at VCC due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:unidades[3..13]   ; Stuck at GND due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:unidades[0]       ; Stuck at VCC due to stuck port data_in               ;
+; mostrar:mostrarNum|\segment:centenas[0]       ; Merged with mostrar:mostrarNum|\segment:miles[0]     ;
+; mostrar:mostrarNum|\segment:miles[0]          ; Merged with mostrar:mostrarNum|\segment:miles[31]    ;
+; mostrar:mostrarNum|\segment:unidades[1]       ; Merged with mostrar:mostrarNum|\segment:unidades[2]  ;
+; mostrar:mostrarNum|\segment:unidades[2]       ; Merged with mostrar:mostrarNum|\segment:centenas[2]  ;
+; mostrar:mostrarNum|\segment:centenas[2]       ; Merged with mostrar:mostrarNum|\segment:miles[1]     ;
+; mostrar:mostrarNum|\segment:miles[1]          ; Merged with mostrar:mostrarNum|\segment:miles[2]     ;
+; mostrar:mostrarNum|\segment:miles[2]          ; Merged with mostrar:mostrarNum|\segment:miles[31]    ;
+; Total Number of Removed Registers = 175       ;                                                      ;
++-----------------------------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; mostrar:mostrarNum|\segment:miles[31]  ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                 ;
++---------------------+---------------------------------+------+
+; Register Name       ; Megafunction                    ; Type ;
++---------------------+---------------------------------+------+
+; IR:irP|opcode[0..3] ; memoria:memoriaIns|my_rom_rtl_0 ; RAM  ;
++---------------------+---------------------------------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 9:1                ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; No         ; |Principal|UC:UnidadControl|est_sig.ExecuteADDI ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Source assignments for memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------+
+; Assignment                      ; Value              ; From ; To                                 ;
++---------------------------------+--------------------+------+------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                  ;
++---------------------------------+--------------------+------+------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Principal ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; BusValores     ; 14    ; Signed Integer                                   ;
+; BusInstruc     ; 26    ; Signed Integer                                   ;
+; BusAdressIns   ; 8     ; Signed Integer                                   ;
+; tr             ; 4     ; Signed Integer                                   ;
+; tc             ; 14    ; Signed Integer                                   ;
+; top            ; 4     ; Signed Integer                                   ;
+; BusAdressVal   ; 5     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoria:memoriaIns ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; businstruc     ; 26    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: IR:irP ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; businstruc     ; 26    ; Signed Integer             ;
+; tr             ; 4     ; Signed Integer             ;
+; tc             ; 14    ; Signed Integer             ;
+; top            ; 4     ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registefile:RegisterF ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; busvalores     ; 14    ; Signed Integer                            ;
+; tr             ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registro:RegistroA ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; busvalores     ; 14    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registro:RegistroB ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; busvalores     ; 14    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux14:MuxA ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; busvalores     ; 14    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU1 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; busvalores     ; 14    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registro:ALUOut ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; busvalores     ; 14    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux14:MuxB ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; busvalores     ; 14    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaram:MemDatos ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; busvalores     ; 14    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux14:MuxRF ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; busvalores     ; 14    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux12:MuxPC ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; busadressins   ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PCounter:PC ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; tambus         ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sumPC:PCsum ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; wide           ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UC:UnidadControl ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; top            ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mostrar:mostrarNum ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; busvalores     ; 14    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sieteS:apuestaOIngreso ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; busvalores     ; 14    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: memoria:memoriaIns|altsyncram:my_rom_rtl_0 ;
++------------------------------------+----------------------+---------------------------------+
+; Parameter Name                     ; Value                ; Type                            ;
++------------------------------------+----------------------+---------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                         ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                  ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                         ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                         ;
+; WIDTH_A                            ; 26                   ; Untyped                         ;
+; WIDTHAD_A                          ; 8                    ; Untyped                         ;
+; NUMWORDS_A                         ; 256                  ; Untyped                         ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                         ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                         ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WIDTH_B                            ; 1                    ; Untyped                         ;
+; WIDTHAD_B                          ; 1                    ; Untyped                         ;
+; NUMWORDS_B                         ; 1                    ; Untyped                         ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                         ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                         ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                         ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                         ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                         ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                         ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                         ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                         ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                         ;
+; BYTE_SIZE                          ; 8                    ; Untyped                         ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; INIT_FILE                          ; mem.mif              ; Untyped                         ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                         ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                         ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                         ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                         ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                         ;
+; CBXI_PARAMETER                     ; altsyncram_ro41      ; Untyped                         ;
++------------------------------------+----------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                      ;
+; LPM_WIDTHD             ; 20             ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_s7m ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_mult:Mult0 ;
++------------------------------------------------+------------+-------------------------+
+; Parameter Name                                 ; Value      ; Type                    ;
++------------------------------------------------+------------+-------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE          ;
+; LPM_WIDTHA                                     ; 3          ; Untyped                 ;
+; LPM_WIDTHB                                     ; 3          ; Untyped                 ;
+; LPM_WIDTHP                                     ; 6          ; Untyped                 ;
+; LPM_WIDTHR                                     ; 6          ; Untyped                 ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                 ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped                 ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                 ;
+; LATENCY                                        ; 0          ; Untyped                 ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                 ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                 ;
+; USE_EAB                                        ; OFF        ; Untyped                 ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                 ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                 ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                 ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K     ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                 ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                 ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                 ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                 ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                 ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                 ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                 ;
++------------------------------------------------+------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                       ;
++-------------------------------------------+--------------------------------------------+
+; Name                                      ; Value                                      ;
++-------------------------------------------+--------------------------------------------+
+; Number of entity instances                ; 1                                          ;
+; Entity Instance                           ; memoria:memoriaIns|altsyncram:my_rom_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                        ;
+;     -- WIDTH_A                            ; 26                                         ;
+;     -- NUMWORDS_A                         ; 256                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
+;     -- WIDTH_B                            ; 1                                          ;
+;     -- NUMWORDS_B                         ; 1                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
++-------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                               ;
++---------------------------------------+--------------------------------------+
+; Name                                  ; Value                                ;
++---------------------------------------+--------------------------------------+
+; Number of entity instances            ; 1                                    ;
+; Entity Instance                       ; randomSegmento:ranSeg|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 3                                    ;
+;     -- LPM_WIDTHB                     ; 3                                    ;
+;     -- LPM_WIDTHP                     ; 6                                    ;
+;     -- LPM_REPRESENTATION             ; SIGNED                               ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
++---------------------------------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UC:UnidadControl"                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; jump ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mux14:MuxRF"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "memoria:memoriaIns" ;
++---------+-------+----------+-------------------+
+; Port    ; Type  ; Severity ; Details           ;
++---------+-------+----------+-------------------+
+; address ; Input ; Info     ; Stuck at GND      ;
++---------+-------+----------+-------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 20 13:59:25 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Principal -c Principal
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file randomsegmento.vhd
+    Info (12022): Found design unit 1: randomSegmento-random_arq
+    Info (12023): Found entity 1: randomSegmento
+Info (12021): Found 2 design units, including 1 entities, in source file mostrar.vhd
+    Info (12022): Found design unit 1: mostrar-Behavioral
+    Info (12023): Found entity 1: mostrar
+Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
+    Info (12022): Found design unit 1: UC-UC_arc
+    Info (12023): Found entity 1: UC
+Info (12021): Found 2 design units, including 1 entities, in source file sietes.vhd
+    Info (12022): Found design unit 1: sieteS-sieteS_arq
+    Info (12023): Found entity 1: sieteS
+Info (12021): Found 2 design units, including 1 entities, in source file registefile.vhd
+    Info (12022): Found design unit 1: registefile-registefile_arc
+    Info (12023): Found entity 1: registefile
+Info (12021): Found 2 design units, including 1 entities, in source file registro.vhd
+    Info (12022): Found design unit 1: Registro-Registro_arc
+    Info (12023): Found entity 1: Registro
+Info (12021): Found 2 design units, including 1 entities, in source file mux14.vhd
+    Info (12022): Found design unit 1: Mux14-Mux14_arc
+    Info (12023): Found entity 1: Mux14
+Info (12021): Found 2 design units, including 1 entities, in source file mux12.vhd
+    Info (12022): Found design unit 1: Mux12-Mux12_arc
+    Info (12023): Found entity 1: Mux12
+Warning (10335): Unrecognized synthesis attribute "ram_style" at memoriaram.vhd(21)
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
+    Info (12022): Found design unit 1: memoriaram-mem_arc
+    Info (12023): Found entity 1: memoriaram
+Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
+    Info (12022): Found design unit 1: memoria-mem_arc
+    Info (12023): Found entity 1: memoria
+Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
+    Info (12022): Found design unit 1: IR-IR_arc
+    Info (12023): Found entity 1: IR
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-ALU_arq
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 2 design units, including 1 entities, in source file principal.vhd
+    Info (12022): Found design unit 1: principal-Principal_arch
+    Info (12023): Found entity 1: Principal
+Info (12021): Found 2 design units, including 1 entities, in source file pcounter.vhd
+    Info (12022): Found design unit 1: PCounter-PCounter_arc
+    Info (12023): Found entity 1: PCounter
+Info (12021): Found 2 design units, including 1 entities, in source file sumpc.vhd
+    Info (12022): Found design unit 1: sumPC-sumPC_arc
+    Info (12023): Found entity 1: sumPC
+Info (12021): Found 2 design units, including 1 entities, in source file sevenseg.vhd
+    Info (12022): Found design unit 1: sevenseg-sevenseg_arch
+    Info (12023): Found entity 1: sevenseg
+Info (12021): Found 2 design units, including 1 entities, in source file muxss.vhd
+    Info (12022): Found design unit 1: MuxSS-MuxSS_arc
+    Info (12023): Found entity 1: MuxSS
+Info (12127): Elaborating entity "Principal" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(184): object "Jump" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at Principal.vhd(190): used implicit default value for signal "addressIns" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Principal.vhd(195): used implicit default value for signal "muldatos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(201): object "DatosRF" assigned a value but never read
+Info (12128): Elaborating entity "memoria" for hierarchy "memoria:memoriaIns"
+Warning (10541): VHDL Signal Declaration warning at memoria.vhd(17): used implicit default value for signal "my_rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "IR" for hierarchy "IR:irP"
+Info (12128): Elaborating entity "registefile" for hierarchy "registefile:RegisterF"
+Warning (10492): VHDL Process Statement warning at registefile.vhd(44): signal "addrR1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at registefile.vhd(45): signal "addrR2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Registro" for hierarchy "Registro:RegistroA"
+Info (12128): Elaborating entity "Mux14" for hierarchy "Mux14:MuxA"
+Info (10041): Inferred latch for "Output[0]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[1]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[2]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[3]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[4]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[5]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[6]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[7]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[8]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[9]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[10]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[11]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[12]" at Mux14.vhd(32)
+Info (10041): Inferred latch for "Output[13]" at Mux14.vhd(32)
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1"
+Info (10041): Inferred latch for "OUTPUT[0]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[1]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[2]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[3]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[4]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[5]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[6]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[7]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[8]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[9]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[10]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[11]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[12]" at ALU.vhd(38)
+Info (10041): Inferred latch for "OUTPUT[13]" at ALU.vhd(38)
+Info (12128): Elaborating entity "memoriaram" for hierarchy "memoriaram:MemDatos"
+Info (12128): Elaborating entity "Mux12" for hierarchy "Mux12:MuxPC"
+Info (10041): Inferred latch for "Output[0]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[1]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[2]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[3]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[4]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[5]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[6]" at Mux12.vhd(32)
+Info (10041): Inferred latch for "Output[7]" at Mux12.vhd(32)
+Info (12128): Elaborating entity "PCounter" for hierarchy "PCounter:PC"
+Info (12128): Elaborating entity "sumPC" for hierarchy "sumPC:PCsum"
+Info (12128): Elaborating entity "UC" for hierarchy "UC:UnidadControl"
+Warning (10492): VHDL Process Statement warning at UC.vhd(58): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(61): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(64): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(67): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(70): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(73): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(76): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(79): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(82): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(85): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(88): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(91): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at UC.vhd(25): inferring latch(es) for signal or variable "est_sig", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "est_sig.WRegister" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteSUB" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteMUL" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteADD" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExecuteADDI" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.GuarMem" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.LeerMem" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.CalDirLM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.GuarDir" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.CalDirSM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExBgt" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExBne" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExBeq" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.ExJ" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.WM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Inp" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.OutSS" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.RM" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Dir" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Decode" at UC.vhd(25)
+Info (10041): Inferred latch for "est_sig.Fetch" at UC.vhd(25)
+Info (12128): Elaborating entity "mostrar" for hierarchy "mostrar:mostrarNum"
+Info (12128): Elaborating entity "randomSegmento" for hierarchy "randomSegmento:ranSeg"
+Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(39): signal "count_i1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(43): signal "count_i2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(48): signal "count_i3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(53): signal "seg1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(72): signal "seg2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(91): signal "seg3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10620): VHDL warning at randomSegmento.vhd(110): comparison between unequal length operands always returns FALSE
+Info (12128): Elaborating entity "sieteS" for hierarchy "sieteS:apuestaOIngreso"
+Warning (10492): VHDL Process Statement warning at sieteS.vhd(29): signal "switches" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at sieteS.vhd(42): signal "switches1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at sieteS.vhd(55): signal "switches2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at sieteS.vhd(23): inferring latch(es) for signal or variable "iSS0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at sieteS.vhd(23): inferring latch(es) for signal or variable "iSS1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at sieteS.vhd(23): inferring latch(es) for signal or variable "iSS2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "iSS2[0]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS2[1]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS2[2]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS2[3]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS2[4]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS2[5]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS2[6]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[0]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[1]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[2]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[3]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[4]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[5]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS1[6]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[0]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[1]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[2]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[3]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[4]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[5]" at sieteS.vhd(23)
+Info (10041): Inferred latch for "iSS0[6]" at sieteS.vhd(23)
+Info (12128): Elaborating entity "MuxSS" for hierarchy "MuxSS:MuxSevenSeg"
+Info (10041): Inferred latch for "S3[0]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S3[1]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S3[2]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S3[3]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S3[4]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S3[5]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S3[6]" at MuxSS.vhd(30)
+Info (10041): Inferred latch for "S2[0]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S2[1]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S2[2]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S2[3]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S2[4]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S2[5]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S2[6]" at MuxSS.vhd(26)
+Info (10041): Inferred latch for "S1[0]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S1[1]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S1[2]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S1[3]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S1[4]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S1[5]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S1[6]" at MuxSS.vhd(22)
+Info (10041): Inferred latch for "S0[0]" at MuxSS.vhd(18)
+Info (10041): Inferred latch for "S0[1]" at MuxSS.vhd(18)
+Info (10041): Inferred latch for "S0[2]" at MuxSS.vhd(18)
+Info (10041): Inferred latch for "S0[3]" at MuxSS.vhd(18)
+Info (10041): Inferred latch for "S0[4]" at MuxSS.vhd(18)
+Info (10041): Inferred latch for "S0[5]" at MuxSS.vhd(18)
+Info (10041): Inferred latch for "S0[6]" at MuxSS.vhd(18)
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S2[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S1[6]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[0]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[1]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[2]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[3]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[4]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[5]" is permanently enabled
+Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S0[6]" is permanently enabled
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "memoria:memoriaIns|my_rom_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 26
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to mem.mif
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "randomSegmento:ranSeg|Mod0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "randomSegmento:ranSeg|Mult0"
+Info (12130): Elaborated megafunction instantiation "memoria:memoriaIns|altsyncram:my_rom_rtl_0"
+Info (12133): Instantiated megafunction "memoria:memoriaIns|altsyncram:my_rom_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "26"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "mem.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ro41.tdf
+    Info (12023): Found entity 1: altsyncram_ro41
+Info (12130): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "randomSegmento:ranSeg|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "20"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_s7m.tdf
+    Info (12023): Found entity 1: lpm_divide_s7m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_3nh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_85f.tdf
+    Info (12023): Found entity 1: alt_u_div_85f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "randomSegmento:ranSeg|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "3"
+    Info (12134): Parameter "LPM_WIDTHB" = "3"
+    Info (12134): Parameter "LPM_WIDTHP" = "6"
+    Info (12134): Parameter "LPM_WIDTHR" = "6"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a0"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a1"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a2"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a3"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a4"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a5"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a6"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a7"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a13"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a14"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a15"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a16"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a17"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a18"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a19"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a20"
+        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a21"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SS0[3]" is stuck at VCC
+    Warning (13410): Pin "SS0[4]" is stuck at VCC
+    Warning (13410): Pin "SS0[5]" is stuck at VCC
+    Warning (13410): Pin "SS0[6]" is stuck at VCC
+    Warning (13410): Pin "SS1[0]" is stuck at VCC
+    Warning (13410): Pin "SS1[3]" is stuck at VCC
+    Warning (13410): Pin "SS1[4]" is stuck at VCC
+    Warning (13410): Pin "SS1[5]" is stuck at VCC
+    Warning (13410): Pin "SS1[6]" is stuck at VCC
+    Warning (13410): Pin "SS2[0]" is stuck at VCC
+    Warning (13410): Pin "SS2[3]" is stuck at VCC
+    Warning (13410): Pin "SS2[4]" is stuck at VCC
+    Warning (13410): Pin "SS3[1]" is stuck at VCC
+Info (17036): Removed 7 MSB VCC or GND address nodes from RAM block "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ALTSYNCRAM"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switches[0]"
+    Warning (15610): No output dependent on input pin "switches[1]"
+    Warning (15610): No output dependent on input pin "switches[2]"
+    Warning (15610): No output dependent on input pin "switches[3]"
+    Warning (15610): No output dependent on input pin "switches1[0]"
+    Warning (15610): No output dependent on input pin "switches1[1]"
+    Warning (15610): No output dependent on input pin "switches1[2]"
+    Warning (15610): No output dependent on input pin "switches1[3]"
+    Warning (15610): No output dependent on input pin "switches2[0]"
+    Warning (15610): No output dependent on input pin "switches2[1]"
+Info (21057): Implemented 739 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 677 logic cells
+    Info (21064): Implemented 4 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 140 warnings
+    Info: Peak virtual memory: 511 megabytes
+    Info: Processing ended: Tue Nov 20 13:59:33 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
+
+

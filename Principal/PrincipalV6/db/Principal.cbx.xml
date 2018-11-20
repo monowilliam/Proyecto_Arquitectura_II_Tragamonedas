@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Principal">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|memoria:memoriaIns|altsyncram:my_rom_rtl_0" CBX_FILE_NAME="altsyncram_ro41.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

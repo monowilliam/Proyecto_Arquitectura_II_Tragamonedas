@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'UC:UnidadControl|est_actual.Decode'
+Slack : -1.953
+TNS   : -3.985
+
+Type  : Slow Model Setup 'clk'
+Slack : -1.277
+TNS   : -1.277
+
+Type  : Slow Model Setup 'EnterButton'
+Slack : -0.634
+TNS   : -4.122
+
+Type  : Slow Model Hold 'EnterButton'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'UC:UnidadControl|est_actual.Decode'
+Slack : 0.827
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : 1.987
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.814
+TNS   : -5.097
+
+Type  : Slow Model Minimum Pulse Width 'EnterButton'
+Slack : -1.631
+TNS   : -27.293
+
+Type  : Slow Model Minimum Pulse Width 'UC:UnidadControl|est_actual.Decode'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -0.087
+TNS   : -0.087
+
+Type  : Fast Model Setup 'UC:UnidadControl|est_actual.Decode'
+Slack : -0.017
+TNS   : -0.017
+
+Type  : Fast Model Setup 'EnterButton'
+Slack : 0.302
+TNS   : 0.000
+
+Type  : Fast Model Hold 'EnterButton'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'UC:UnidadControl|est_actual.Decode'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : 0.948
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.423
+TNS   : -4.068
+
+Type  : Fast Model Minimum Pulse Width 'EnterButton'
+Slack : -1.380
+TNS   : -22.380
+
+Type  : Fast Model Minimum Pulse Width 'UC:UnidadControl|est_actual.Decode'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

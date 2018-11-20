@@ -1,0 +1,1295 @@
+TimeQuest Timing Analyzer report for Principal
+Tue Nov 20 13:59:51 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'UC:UnidadControl|est_actual.Decode'
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Setup: 'EnterButton'
+ 14. Slow Model Hold: 'EnterButton'
+ 15. Slow Model Hold: 'UC:UnidadControl|est_actual.Decode'
+ 16. Slow Model Hold: 'clk'
+ 17. Slow Model Minimum Pulse Width: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'EnterButton'
+ 19. Slow Model Minimum Pulse Width: 'UC:UnidadControl|est_actual.Decode'
+ 20. Clock to Output Times
+ 21. Minimum Clock to Output Times
+ 22. Fast Model Setup Summary
+ 23. Fast Model Hold Summary
+ 24. Fast Model Recovery Summary
+ 25. Fast Model Removal Summary
+ 26. Fast Model Minimum Pulse Width Summary
+ 27. Fast Model Setup: 'clk'
+ 28. Fast Model Setup: 'UC:UnidadControl|est_actual.Decode'
+ 29. Fast Model Setup: 'EnterButton'
+ 30. Fast Model Hold: 'EnterButton'
+ 31. Fast Model Hold: 'UC:UnidadControl|est_actual.Decode'
+ 32. Fast Model Hold: 'clk'
+ 33. Fast Model Minimum Pulse Width: 'clk'
+ 34. Fast Model Minimum Pulse Width: 'EnterButton'
+ 35. Fast Model Minimum Pulse Width: 'UC:UnidadControl|est_actual.Decode'
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Multicorner Timing Analysis Summary
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Principal                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                 ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+; Clock Name                         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+; clk                                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                ;
+; EnterButton                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { EnterButton }                        ;
+; UC:UnidadControl|est_actual.Decode ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { UC:UnidadControl|est_actual.Decode } ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                           ;
++------------+-----------------+------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                         ; Note                                                          ;
++------------+-----------------+------------------------------------+---------------------------------------------------------------+
+; 338.64 MHz ; 338.64 MHz      ; UC:UnidadControl|est_actual.Decode ;                                                               ;
+; 612.0 MHz  ; 380.08 MHz      ; EnterButton                        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------+
+; Slow Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; UC:UnidadControl|est_actual.Decode ; -1.953 ; -3.985        ;
+; clk                                ; -1.277 ; -1.277        ;
+; EnterButton                        ; -0.634 ; -4.122        ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Slow Model Hold Summary                                    ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; EnterButton                        ; 0.445 ; 0.000         ;
+; UC:UnidadControl|est_actual.Decode ; 0.827 ; 0.000         ;
+; clk                                ; 1.987 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.814 ; -5.097        ;
+; EnterButton                        ; -1.631 ; -27.293       ;
+; UC:UnidadControl|est_actual.Decode ; 0.500  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'UC:UnidadControl|est_actual.Decode'                                                                                                                                                  ;
++--------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -1.953 ; UC:UnidadControl|est_actual.WM        ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; -0.002     ; 1.775      ;
+; -1.867 ; UC:UnidadControl|est_actual.GuarDir   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.128      ; 1.819      ;
+; -1.579 ; UC:UnidadControl|est_actual.WRegister ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.127      ; 1.530      ;
+; -1.469 ; UC:UnidadControl|est_actual.GuarMem   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.127      ; 1.420      ;
+; -1.164 ; UC:UnidadControl|est_actual.RM        ; UC:UnidadControl|est_actual.OutSS   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.057      ; 1.406      ;
+; -1.124 ; UC:UnidadControl|est_actual.OutSS     ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.127      ; 1.075      ;
+; -0.868 ; UC:UnidadControl|est_actual.LeerMem   ; UC:UnidadControl|est_actual.GuarMem ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.002      ; 0.829      ;
++--------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                                                                             ;
++--------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                                                                                                    ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; -1.277 ; UC:UnidadControl|est_actual.Fetch ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ; UC:UnidadControl|est_actual.Decode ; clk         ; 1.000        ; -0.892     ; 1.345      ;
++--------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'EnterButton'                                                                                                                        ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.634 ; randomSegmento:ranSeg|count_i1[5]  ; randomSegmento:ranSeg|count_i1[6]  ; EnterButton  ; EnterButton ; 1.000        ; -0.017     ; 1.655      ;
+; -0.592 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[1]  ; EnterButton  ; EnterButton ; 1.000        ; 0.018      ; 1.648      ;
+; -0.548 ; randomSegmento:ranSeg|count_i1[2]  ; randomSegmento:ranSeg|count_i1[3]  ; EnterButton  ; EnterButton ; 1.000        ; 0.001      ; 1.587      ;
+; -0.543 ; randomSegmento:ranSeg|count_i1[7]  ; randomSegmento:ranSeg|count_i1[8]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.581      ;
+; -0.534 ; randomSegmento:ranSeg|count_i1[8]  ; randomSegmento:ranSeg|count_i1[9]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.572      ;
+; -0.266 ; randomSegmento:ranSeg|count_i1[10] ; randomSegmento:ranSeg|count_i1[11] ; EnterButton  ; EnterButton ; 1.000        ; -0.001     ; 1.303      ;
+; -0.262 ; randomSegmento:ranSeg|count_i1[1]  ; randomSegmento:ranSeg|count_i1[2]  ; EnterButton  ; EnterButton ; 1.000        ; 0.001      ; 1.301      ;
+; -0.256 ; randomSegmento:ranSeg|count_i1[11] ; randomSegmento:ranSeg|count_i1[12] ; EnterButton  ; EnterButton ; 1.000        ; -0.001     ; 1.293      ;
+; -0.244 ; randomSegmento:ranSeg|count_i1[13] ; randomSegmento:ranSeg|count_i1[14] ; EnterButton  ; EnterButton ; 1.000        ; -0.001     ; 1.281      ;
+; -0.043 ; randomSegmento:ranSeg|count_i1[17] ; randomSegmento:ranSeg|count_i1[18] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.081      ;
+; -0.041 ; randomSegmento:ranSeg|count_i1[16] ; randomSegmento:ranSeg|count_i1[17] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.079      ;
+; -0.041 ; randomSegmento:ranSeg|count_i1[14] ; randomSegmento:ranSeg|count_i1[15] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.079      ;
+; -0.028 ; randomSegmento:ranSeg|count_i1[15] ; randomSegmento:ranSeg|count_i1[16] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.066      ;
+; -0.023 ; randomSegmento:ranSeg|count_i1[9]  ; randomSegmento:ranSeg|count_i1[10] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.061      ;
+; -0.018 ; randomSegmento:ranSeg|count_i1[4]  ; randomSegmento:ranSeg|count_i1[5]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.056      ;
+; -0.017 ; randomSegmento:ranSeg|count_i1[3]  ; randomSegmento:ranSeg|count_i1[4]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.055      ;
+; -0.016 ; randomSegmento:ranSeg|count_i1[6]  ; randomSegmento:ranSeg|count_i1[7]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.054      ;
+; -0.016 ; randomSegmento:ranSeg|count_i1[12] ; randomSegmento:ranSeg|count_i1[13] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 1.054      ;
+; 0.089  ; randomSegmento:ranSeg|count_i1[18] ; randomSegmento:ranSeg|count_i1[19] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.949      ;
+; 0.115  ; randomSegmento:ranSeg|count_i1[19] ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.923      ;
+; 0.307  ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.731      ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'EnterButton'                                                                                                                        ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.731      ;
+; 0.637 ; randomSegmento:ranSeg|count_i1[19] ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.923      ;
+; 0.663 ; randomSegmento:ranSeg|count_i1[18] ; randomSegmento:ranSeg|count_i1[19] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.949      ;
+; 0.768 ; randomSegmento:ranSeg|count_i1[6]  ; randomSegmento:ranSeg|count_i1[7]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.054      ;
+; 0.768 ; randomSegmento:ranSeg|count_i1[12] ; randomSegmento:ranSeg|count_i1[13] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.054      ;
+; 0.769 ; randomSegmento:ranSeg|count_i1[3]  ; randomSegmento:ranSeg|count_i1[4]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.055      ;
+; 0.770 ; randomSegmento:ranSeg|count_i1[4]  ; randomSegmento:ranSeg|count_i1[5]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.056      ;
+; 0.775 ; randomSegmento:ranSeg|count_i1[9]  ; randomSegmento:ranSeg|count_i1[10] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.061      ;
+; 0.780 ; randomSegmento:ranSeg|count_i1[15] ; randomSegmento:ranSeg|count_i1[16] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.066      ;
+; 0.793 ; randomSegmento:ranSeg|count_i1[16] ; randomSegmento:ranSeg|count_i1[17] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.079      ;
+; 0.793 ; randomSegmento:ranSeg|count_i1[14] ; randomSegmento:ranSeg|count_i1[15] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.079      ;
+; 0.795 ; randomSegmento:ranSeg|count_i1[17] ; randomSegmento:ranSeg|count_i1[18] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.081      ;
+; 0.996 ; randomSegmento:ranSeg|count_i1[13] ; randomSegmento:ranSeg|count_i1[14] ; EnterButton  ; EnterButton ; 0.000        ; -0.001     ; 1.281      ;
+; 1.008 ; randomSegmento:ranSeg|count_i1[11] ; randomSegmento:ranSeg|count_i1[12] ; EnterButton  ; EnterButton ; 0.000        ; -0.001     ; 1.293      ;
+; 1.014 ; randomSegmento:ranSeg|count_i1[1]  ; randomSegmento:ranSeg|count_i1[2]  ; EnterButton  ; EnterButton ; 0.000        ; 0.001      ; 1.301      ;
+; 1.018 ; randomSegmento:ranSeg|count_i1[10] ; randomSegmento:ranSeg|count_i1[11] ; EnterButton  ; EnterButton ; 0.000        ; -0.001     ; 1.303      ;
+; 1.286 ; randomSegmento:ranSeg|count_i1[8]  ; randomSegmento:ranSeg|count_i1[9]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.572      ;
+; 1.295 ; randomSegmento:ranSeg|count_i1[7]  ; randomSegmento:ranSeg|count_i1[8]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 1.581      ;
+; 1.300 ; randomSegmento:ranSeg|count_i1[2]  ; randomSegmento:ranSeg|count_i1[3]  ; EnterButton  ; EnterButton ; 0.000        ; 0.001      ; 1.587      ;
+; 1.344 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[1]  ; EnterButton  ; EnterButton ; 0.000        ; 0.018      ; 1.648      ;
+; 1.386 ; randomSegmento:ranSeg|count_i1[5]  ; randomSegmento:ranSeg|count_i1[6]  ; EnterButton  ; EnterButton ; 0.000        ; -0.017     ; 1.655      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'UC:UnidadControl|est_actual.Decode'                                                                                                                                                  ;
++-------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.827 ; UC:UnidadControl|est_actual.LeerMem   ; UC:UnidadControl|est_actual.GuarMem ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.002      ; 0.829      ;
+; 0.948 ; UC:UnidadControl|est_actual.OutSS     ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.127      ; 1.075      ;
+; 1.293 ; UC:UnidadControl|est_actual.GuarMem   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.127      ; 1.420      ;
+; 1.349 ; UC:UnidadControl|est_actual.RM        ; UC:UnidadControl|est_actual.OutSS   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.057      ; 1.406      ;
+; 1.403 ; UC:UnidadControl|est_actual.WRegister ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.127      ; 1.530      ;
+; 1.691 ; UC:UnidadControl|est_actual.GuarDir   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.128      ; 1.819      ;
+; 1.777 ; UC:UnidadControl|est_actual.WM        ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; -0.002     ; 1.775      ;
++-------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                                                             ;
++-------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                                                                                                    ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; 1.987 ; UC:UnidadControl|est_actual.Fetch ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ; UC:UnidadControl|est_actual.Decode ; clk         ; 0.000        ; -0.892     ; 1.345      ;
++-------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clk   ; Rise       ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clk   ; Rise       ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ;
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; clk   ; Rise       ; clk                                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; memoriaIns|my_rom_rtl_0|auto_generated|ram_block1a22|clk0                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; memoriaIns|my_rom_rtl_0|auto_generated|ram_block1a22|clk0                                                  ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'EnterButton'                                                                                ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; EnterButton ; Rise       ; EnterButton                           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; mostrar:mostrarNum|\segment:miles[31] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; mostrar:mostrarNum|\segment:miles[31] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[10]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[10]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[11]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[11]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[12]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[12]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[13]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[13]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[14]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[14]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[15]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[15]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[16]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[16]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[17]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[17]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[18]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[18]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[19]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[19]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[9]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[9]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; EnterButton|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; EnterButton|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; EnterButton~clkctrl|inclk[0]          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; EnterButton~clkctrl|inclk[0]          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; EnterButton~clkctrl|outclk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; EnterButton~clkctrl|outclk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; mostrarNum|\segment:miles[31]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; mostrarNum|\segment:miles[31]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[10]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[10]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[11]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[11]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[12]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[12]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[13]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[13]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[14]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[14]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[15]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[15]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[16]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[16]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[17]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[17]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[18]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[18]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[19]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[19]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[2]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[2]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[3]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[3]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[4]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[4]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[5]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[5]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[6]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[6]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[7]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[7]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[8]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[8]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[9]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[9]|clk                ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'UC:UnidadControl|est_actual.Decode'                                                                                    ;
++-------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target                                     ;
++-------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.Fetch          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.Fetch          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarDir        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarDir        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarMem        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarMem        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.LeerMem        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.LeerMem        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.OutSS          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.OutSS          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.RM             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.RM             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WM             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WM             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WRegister      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WRegister      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|Selector11~0|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|Selector11~0|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|est_actual.Decode|combout    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|est_actual.Decode|combout    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Decode|datad      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Decode|datad      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Fetch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Fetch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarDir|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarDir|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.LeerMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.LeerMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.OutSS|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.OutSS|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.RM|datad          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.RM|datad          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WM|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WM|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WRegister|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WRegister|datad   ;
++-------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                              ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; SS0[*]    ; EnterButton                        ; 9.579  ; 9.579  ; Rise       ; EnterButton                        ;
+;  SS0[0]   ; EnterButton                        ; 9.218  ; 9.218  ; Rise       ; EnterButton                        ;
+;  SS0[1]   ; EnterButton                        ; 9.579  ; 9.579  ; Rise       ; EnterButton                        ;
+;  SS0[2]   ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+; SS1[*]    ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS1[1]   ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS1[2]   ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+; SS2[*]    ; EnterButton                        ; 9.569  ; 9.569  ; Rise       ; EnterButton                        ;
+;  SS2[1]   ; EnterButton                        ; 7.742  ; 7.742  ; Rise       ; EnterButton                        ;
+;  SS2[2]   ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS2[5]   ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS2[6]   ; EnterButton                        ; 9.569  ; 9.569  ; Rise       ; EnterButton                        ;
+; SS3[*]    ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS3[0]   ; EnterButton                        ; 9.407  ; 9.407  ; Rise       ; EnterButton                        ;
+;  SS3[2]   ; EnterButton                        ; 9.387  ; 9.387  ; Rise       ; EnterButton                        ;
+;  SS3[3]   ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS3[4]   ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS3[5]   ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+;  SS3[6]   ; EnterButton                        ; 9.387  ; 9.387  ; Rise       ; EnterButton                        ;
+; ledsR[*]  ; EnterButton                        ; 83.253 ; 83.253 ; Rise       ; EnterButton                        ;
+;  ledsR[0] ; EnterButton                        ; 82.583 ; 82.583 ; Rise       ; EnterButton                        ;
+;  ledsR[1] ; EnterButton                        ; 80.847 ; 80.847 ; Rise       ; EnterButton                        ;
+;  ledsR[2] ; EnterButton                        ; 82.573 ; 82.573 ; Rise       ; EnterButton                        ;
+;  ledsR[3] ; EnterButton                        ; 83.253 ; 83.253 ; Rise       ; EnterButton                        ;
+;  ledsR[4] ; EnterButton                        ; 81.563 ; 81.563 ; Rise       ; EnterButton                        ;
+;  ledsR[5] ; EnterButton                        ; 81.237 ; 81.237 ; Rise       ; EnterButton                        ;
+;  ledsR[6] ; EnterButton                        ; 80.223 ; 80.223 ; Rise       ; EnterButton                        ;
+;  ledsR[7] ; EnterButton                        ; 81.227 ; 81.227 ; Rise       ; EnterButton                        ;
+;  ledsR[8] ; EnterButton                        ; 81.562 ; 81.562 ; Rise       ; EnterButton                        ;
+;  ledsR[9] ; EnterButton                        ; 81.562 ; 81.562 ; Rise       ; EnterButton                        ;
+; ledsV[*]  ; EnterButton                        ; 83.179 ; 83.179 ; Rise       ; EnterButton                        ;
+;  ledsV[0] ; EnterButton                        ; 80.857 ; 80.857 ; Rise       ; EnterButton                        ;
+;  ledsV[1] ; EnterButton                        ; 80.497 ; 80.497 ; Rise       ; EnterButton                        ;
+;  ledsV[2] ; EnterButton                        ; 81.573 ; 81.573 ; Rise       ; EnterButton                        ;
+;  ledsV[3] ; EnterButton                        ; 80.487 ; 80.487 ; Rise       ; EnterButton                        ;
+;  ledsV[4] ; EnterButton                        ; 83.179 ; 83.179 ; Rise       ; EnterButton                        ;
+;  ledsV[5] ; EnterButton                        ; 81.563 ; 81.563 ; Rise       ; EnterButton                        ;
+;  ledsV[6] ; EnterButton                        ; 83.179 ; 83.179 ; Rise       ; EnterButton                        ;
+;  ledsV[7] ; EnterButton                        ; 81.237 ; 81.237 ; Rise       ; EnterButton                        ;
+; SS0[*]    ; UC:UnidadControl|est_actual.Decode ; 10.949 ; 10.949 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[0]   ; UC:UnidadControl|est_actual.Decode ; 10.588 ; 10.588 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[1]   ; UC:UnidadControl|est_actual.Decode ; 10.949 ; 10.949 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[2]   ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS1[*]    ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[1]   ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[2]   ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS2[*]    ; UC:UnidadControl|est_actual.Decode ; 10.939 ; 10.939 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[1]   ; UC:UnidadControl|est_actual.Decode ; 9.112  ; 9.112  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[2]   ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[5]   ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[6]   ; UC:UnidadControl|est_actual.Decode ; 10.939 ; 10.939 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS3[*]    ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[0]   ; UC:UnidadControl|est_actual.Decode ; 10.777 ; 10.777 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[2]   ; UC:UnidadControl|est_actual.Decode ; 10.757 ; 10.757 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[3]   ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[4]   ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[5]   ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[6]   ; UC:UnidadControl|est_actual.Decode ; 10.757 ; 10.757 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                      ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; SS0[*]    ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+;  SS0[0]   ; EnterButton                        ; 9.218  ; 9.218  ; Rise       ; EnterButton                        ;
+;  SS0[1]   ; EnterButton                        ; 9.579  ; 9.579  ; Rise       ; EnterButton                        ;
+;  SS0[2]   ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+; SS1[*]    ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS1[1]   ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS1[2]   ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+; SS2[*]    ; EnterButton                        ; 7.742  ; 7.742  ; Rise       ; EnterButton                        ;
+;  SS2[1]   ; EnterButton                        ; 7.742  ; 7.742  ; Rise       ; EnterButton                        ;
+;  SS2[2]   ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS2[5]   ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS2[6]   ; EnterButton                        ; 9.569  ; 9.569  ; Rise       ; EnterButton                        ;
+; SS3[*]    ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS3[0]   ; EnterButton                        ; 9.407  ; 9.407  ; Rise       ; EnterButton                        ;
+;  SS3[2]   ; EnterButton                        ; 9.387  ; 9.387  ; Rise       ; EnterButton                        ;
+;  SS3[3]   ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS3[4]   ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS3[5]   ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+;  SS3[6]   ; EnterButton                        ; 9.387  ; 9.387  ; Rise       ; EnterButton                        ;
+; ledsR[*]  ; EnterButton                        ; 8.161  ; 8.161  ; Rise       ; EnterButton                        ;
+;  ledsR[0] ; EnterButton                        ; 10.521 ; 10.521 ; Rise       ; EnterButton                        ;
+;  ledsR[1] ; EnterButton                        ; 8.785  ; 8.785  ; Rise       ; EnterButton                        ;
+;  ledsR[2] ; EnterButton                        ; 10.511 ; 10.511 ; Rise       ; EnterButton                        ;
+;  ledsR[3] ; EnterButton                        ; 11.191 ; 11.191 ; Rise       ; EnterButton                        ;
+;  ledsR[4] ; EnterButton                        ; 9.501  ; 9.501  ; Rise       ; EnterButton                        ;
+;  ledsR[5] ; EnterButton                        ; 9.175  ; 9.175  ; Rise       ; EnterButton                        ;
+;  ledsR[6] ; EnterButton                        ; 8.161  ; 8.161  ; Rise       ; EnterButton                        ;
+;  ledsR[7] ; EnterButton                        ; 9.165  ; 9.165  ; Rise       ; EnterButton                        ;
+;  ledsR[8] ; EnterButton                        ; 9.500  ; 9.500  ; Rise       ; EnterButton                        ;
+;  ledsR[9] ; EnterButton                        ; 9.500  ; 9.500  ; Rise       ; EnterButton                        ;
+; ledsV[*]  ; EnterButton                        ; 8.425  ; 8.425  ; Rise       ; EnterButton                        ;
+;  ledsV[0] ; EnterButton                        ; 8.795  ; 8.795  ; Rise       ; EnterButton                        ;
+;  ledsV[1] ; EnterButton                        ; 8.435  ; 8.435  ; Rise       ; EnterButton                        ;
+;  ledsV[2] ; EnterButton                        ; 9.511  ; 9.511  ; Rise       ; EnterButton                        ;
+;  ledsV[3] ; EnterButton                        ; 8.425  ; 8.425  ; Rise       ; EnterButton                        ;
+;  ledsV[4] ; EnterButton                        ; 11.117 ; 11.117 ; Rise       ; EnterButton                        ;
+;  ledsV[5] ; EnterButton                        ; 9.501  ; 9.501  ; Rise       ; EnterButton                        ;
+;  ledsV[6] ; EnterButton                        ; 11.117 ; 11.117 ; Rise       ; EnterButton                        ;
+;  ledsV[7] ; EnterButton                        ; 9.175  ; 9.175  ; Rise       ; EnterButton                        ;
+; SS0[*]    ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[0]   ; UC:UnidadControl|est_actual.Decode ; 10.588 ; 10.588 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[1]   ; UC:UnidadControl|est_actual.Decode ; 10.949 ; 10.949 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[2]   ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS1[*]    ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[1]   ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[2]   ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS2[*]    ; UC:UnidadControl|est_actual.Decode ; 9.112  ; 9.112  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[1]   ; UC:UnidadControl|est_actual.Decode ; 9.112  ; 9.112  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[2]   ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[5]   ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[6]   ; UC:UnidadControl|est_actual.Decode ; 10.939 ; 10.939 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS3[*]    ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[0]   ; UC:UnidadControl|est_actual.Decode ; 10.777 ; 10.777 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[2]   ; UC:UnidadControl|est_actual.Decode ; 10.757 ; 10.757 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[3]   ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[4]   ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[5]   ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[6]   ; UC:UnidadControl|est_actual.Decode ; 10.757 ; 10.757 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -0.087 ; -0.087        ;
+; UC:UnidadControl|est_actual.Decode ; -0.017 ; -0.017        ;
+; EnterButton                        ; 0.302  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Fast Model Hold Summary                                    ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; EnterButton                        ; 0.215 ; 0.000         ;
+; UC:UnidadControl|est_actual.Decode ; 0.293 ; 0.000         ;
+; clk                                ; 0.948 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.423 ; -4.068        ;
+; EnterButton                        ; -1.380 ; -22.380       ;
+; UC:UnidadControl|est_actual.Decode ; 0.500  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                                                                             ;
++--------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                                                                                                    ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; -0.087 ; UC:UnidadControl|est_actual.Fetch ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ; UC:UnidadControl|est_actual.Decode ; clk         ; 1.000        ; -0.491     ; 0.595      ;
++--------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'UC:UnidadControl|est_actual.Decode'                                                                                                                                                  ;
++--------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -0.017 ; UC:UnidadControl|est_actual.WM        ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.001      ; 0.620      ;
+; 0.007  ; UC:UnidadControl|est_actual.GuarDir   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.041      ; 0.636      ;
+; 0.090  ; UC:UnidadControl|est_actual.WRegister ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.040      ; 0.552      ;
+; 0.145  ; UC:UnidadControl|est_actual.GuarMem   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.040      ; 0.497      ;
+; 0.237  ; UC:UnidadControl|est_actual.RM        ; UC:UnidadControl|est_actual.OutSS   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.031      ; 0.514      ;
+; 0.250  ; UC:UnidadControl|est_actual.OutSS     ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.041      ; 0.393      ;
+; 0.347  ; UC:UnidadControl|est_actual.LeerMem   ; UC:UnidadControl|est_actual.GuarMem ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 1.000        ; 0.002      ; 0.295      ;
++--------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'EnterButton'                                                                                                                       ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.302 ; randomSegmento:ranSeg|count_i1[5]  ; randomSegmento:ranSeg|count_i1[6]  ; EnterButton  ; EnterButton ; 1.000        ; -0.014     ; 0.716      ;
+; 0.337 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[1]  ; EnterButton  ; EnterButton ; 1.000        ; 0.016      ; 0.711      ;
+; 0.351 ; randomSegmento:ranSeg|count_i1[2]  ; randomSegmento:ranSeg|count_i1[3]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.681      ;
+; 0.357 ; randomSegmento:ranSeg|count_i1[7]  ; randomSegmento:ranSeg|count_i1[8]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.675      ;
+; 0.357 ; randomSegmento:ranSeg|count_i1[8]  ; randomSegmento:ranSeg|count_i1[9]  ; EnterButton  ; EnterButton ; 1.000        ; -0.001     ; 0.674      ;
+; 0.462 ; randomSegmento:ranSeg|count_i1[10] ; randomSegmento:ranSeg|count_i1[11] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.570      ;
+; 0.464 ; randomSegmento:ranSeg|count_i1[1]  ; randomSegmento:ranSeg|count_i1[2]  ; EnterButton  ; EnterButton ; 1.000        ; 0.001      ; 0.569      ;
+; 0.467 ; randomSegmento:ranSeg|count_i1[11] ; randomSegmento:ranSeg|count_i1[12] ; EnterButton  ; EnterButton ; 1.000        ; -0.001     ; 0.564      ;
+; 0.471 ; randomSegmento:ranSeg|count_i1[13] ; randomSegmento:ranSeg|count_i1[14] ; EnterButton  ; EnterButton ; 1.000        ; -0.001     ; 0.560      ;
+; 0.540 ; randomSegmento:ranSeg|count_i1[17] ; randomSegmento:ranSeg|count_i1[18] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.492      ;
+; 0.540 ; randomSegmento:ranSeg|count_i1[14] ; randomSegmento:ranSeg|count_i1[15] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.492      ;
+; 0.541 ; randomSegmento:ranSeg|count_i1[16] ; randomSegmento:ranSeg|count_i1[17] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.491      ;
+; 0.546 ; randomSegmento:ranSeg|count_i1[15] ; randomSegmento:ranSeg|count_i1[16] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.486      ;
+; 0.551 ; randomSegmento:ranSeg|count_i1[9]  ; randomSegmento:ranSeg|count_i1[10] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.481      ;
+; 0.554 ; randomSegmento:ranSeg|count_i1[3]  ; randomSegmento:ranSeg|count_i1[4]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.478      ;
+; 0.554 ; randomSegmento:ranSeg|count_i1[4]  ; randomSegmento:ranSeg|count_i1[5]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.478      ;
+; 0.555 ; randomSegmento:ranSeg|count_i1[6]  ; randomSegmento:ranSeg|count_i1[7]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.477      ;
+; 0.555 ; randomSegmento:ranSeg|count_i1[12] ; randomSegmento:ranSeg|count_i1[13] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.477      ;
+; 0.617 ; randomSegmento:ranSeg|count_i1[18] ; randomSegmento:ranSeg|count_i1[19] ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.415      ;
+; 0.629 ; randomSegmento:ranSeg|count_i1[19] ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.403      ;
+; 0.665 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 1.000        ; 0.000      ; 0.367      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'EnterButton'                                                                                                                        ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.367      ;
+; 0.251 ; randomSegmento:ranSeg|count_i1[19] ; randomSegmento:ranSeg|count_i1[0]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.403      ;
+; 0.263 ; randomSegmento:ranSeg|count_i1[18] ; randomSegmento:ranSeg|count_i1[19] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.415      ;
+; 0.325 ; randomSegmento:ranSeg|count_i1[6]  ; randomSegmento:ranSeg|count_i1[7]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325 ; randomSegmento:ranSeg|count_i1[12] ; randomSegmento:ranSeg|count_i1[13] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.477      ;
+; 0.326 ; randomSegmento:ranSeg|count_i1[3]  ; randomSegmento:ranSeg|count_i1[4]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.478      ;
+; 0.326 ; randomSegmento:ranSeg|count_i1[4]  ; randomSegmento:ranSeg|count_i1[5]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.478      ;
+; 0.329 ; randomSegmento:ranSeg|count_i1[9]  ; randomSegmento:ranSeg|count_i1[10] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.481      ;
+; 0.334 ; randomSegmento:ranSeg|count_i1[15] ; randomSegmento:ranSeg|count_i1[16] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.486      ;
+; 0.339 ; randomSegmento:ranSeg|count_i1[16] ; randomSegmento:ranSeg|count_i1[17] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.491      ;
+; 0.340 ; randomSegmento:ranSeg|count_i1[17] ; randomSegmento:ranSeg|count_i1[18] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.492      ;
+; 0.340 ; randomSegmento:ranSeg|count_i1[14] ; randomSegmento:ranSeg|count_i1[15] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.492      ;
+; 0.409 ; randomSegmento:ranSeg|count_i1[13] ; randomSegmento:ranSeg|count_i1[14] ; EnterButton  ; EnterButton ; 0.000        ; -0.001     ; 0.560      ;
+; 0.413 ; randomSegmento:ranSeg|count_i1[11] ; randomSegmento:ranSeg|count_i1[12] ; EnterButton  ; EnterButton ; 0.000        ; -0.001     ; 0.564      ;
+; 0.416 ; randomSegmento:ranSeg|count_i1[1]  ; randomSegmento:ranSeg|count_i1[2]  ; EnterButton  ; EnterButton ; 0.000        ; 0.001      ; 0.569      ;
+; 0.418 ; randomSegmento:ranSeg|count_i1[10] ; randomSegmento:ranSeg|count_i1[11] ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.570      ;
+; 0.523 ; randomSegmento:ranSeg|count_i1[7]  ; randomSegmento:ranSeg|count_i1[8]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.675      ;
+; 0.523 ; randomSegmento:ranSeg|count_i1[8]  ; randomSegmento:ranSeg|count_i1[9]  ; EnterButton  ; EnterButton ; 0.000        ; -0.001     ; 0.674      ;
+; 0.529 ; randomSegmento:ranSeg|count_i1[2]  ; randomSegmento:ranSeg|count_i1[3]  ; EnterButton  ; EnterButton ; 0.000        ; 0.000      ; 0.681      ;
+; 0.543 ; randomSegmento:ranSeg|count_i1[0]  ; randomSegmento:ranSeg|count_i1[1]  ; EnterButton  ; EnterButton ; 0.000        ; 0.016      ; 0.711      ;
+; 0.578 ; randomSegmento:ranSeg|count_i1[5]  ; randomSegmento:ranSeg|count_i1[6]  ; EnterButton  ; EnterButton ; 0.000        ; -0.014     ; 0.716      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'UC:UnidadControl|est_actual.Decode'                                                                                                                                                  ;
++-------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.293 ; UC:UnidadControl|est_actual.LeerMem   ; UC:UnidadControl|est_actual.GuarMem ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.002      ; 0.295      ;
+; 0.352 ; UC:UnidadControl|est_actual.OutSS     ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.041      ; 0.393      ;
+; 0.457 ; UC:UnidadControl|est_actual.GuarMem   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.040      ; 0.497      ;
+; 0.483 ; UC:UnidadControl|est_actual.RM        ; UC:UnidadControl|est_actual.OutSS   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.031      ; 0.514      ;
+; 0.512 ; UC:UnidadControl|est_actual.WRegister ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.040      ; 0.552      ;
+; 0.595 ; UC:UnidadControl|est_actual.GuarDir   ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.041      ; 0.636      ;
+; 0.619 ; UC:UnidadControl|est_actual.WM        ; UC:UnidadControl|est_actual.Fetch   ; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 0.000        ; 0.001      ; 0.620      ;
++-------+---------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                                                             ;
++-------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                                                                                                    ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; 0.948 ; UC:UnidadControl|est_actual.Fetch ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ; UC:UnidadControl|est_actual.Decode ; clk         ; 0.000        ; -0.491     ; 0.595      ;
++-------+-----------------------------------+------------------------------------------------------------------------------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                     ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk   ; Rise       ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ro41:auto_generated|ram_block1a22~porta_address_reg0 ;
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk   ; Rise       ; clk                                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                                                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; memoriaIns|my_rom_rtl_0|auto_generated|ram_block1a22|clk0                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; memoriaIns|my_rom_rtl_0|auto_generated|ram_block1a22|clk0                                                  ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'EnterButton'                                                                                ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; EnterButton ; Rise       ; EnterButton                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; mostrar:mostrarNum|\segment:miles[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; mostrar:mostrarNum|\segment:miles[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[10]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[11]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[12]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[12]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[13]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[13]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[14]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[14]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[15]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[15]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[16]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[16]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[17]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[17]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[18]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[18]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[19]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[19]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; EnterButton ; Rise       ; randomSegmento:ranSeg|count_i1[9]     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; EnterButton|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; EnterButton|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; EnterButton~clkctrl|inclk[0]          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; EnterButton~clkctrl|inclk[0]          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; EnterButton~clkctrl|outclk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; EnterButton~clkctrl|outclk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; mostrarNum|\segment:miles[31]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; mostrarNum|\segment:miles[31]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[10]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[10]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[11]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[11]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[12]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[12]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[13]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[13]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[14]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[14]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[15]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[15]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[16]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[16]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[17]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[17]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[18]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[18]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[19]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[19]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[2]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[2]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[3]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[3]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[4]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[4]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[5]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[5]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[6]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[6]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[7]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[7]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[8]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[8]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; EnterButton ; Rise       ; ranSeg|count_i1[9]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; EnterButton ; Rise       ; ranSeg|count_i1[9]|clk                ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'UC:UnidadControl|est_actual.Decode'                                                                                    ;
++-------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target                                     ;
++-------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.Fetch          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.Fetch          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarDir        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarDir        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarMem        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.GuarMem        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.LeerMem        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.LeerMem        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.OutSS          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.OutSS          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.RM             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.RM             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WM             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WM             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WRegister      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UC:UnidadControl|est_actual.WRegister      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|Selector11~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|Selector11~0|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|Selector11~0|datac           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|est_actual.Decode|combout    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Rise       ; UnidadControl|est_actual.Decode|combout    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Decode|datad      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Decode|datad      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Fetch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.Fetch|datac       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarDir|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarDir|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.GuarMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.LeerMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.LeerMem|datad     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.OutSS|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.OutSS|datad       ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.RM|datad          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.RM|datad          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WM|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WM|datac          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WRegister|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; UC:UnidadControl|est_actual.Decode ; Fall       ; UnidadControl|est_actual.WRegister|datad   ;
++-------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                              ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; SS0[*]    ; EnterButton                        ; 4.927  ; 4.927  ; Rise       ; EnterButton                        ;
+;  SS0[0]   ; EnterButton                        ; 4.788  ; 4.788  ; Rise       ; EnterButton                        ;
+;  SS0[1]   ; EnterButton                        ; 4.927  ; 4.927  ; Rise       ; EnterButton                        ;
+;  SS0[2]   ; EnterButton                        ; 4.211  ; 4.211  ; Rise       ; EnterButton                        ;
+; SS1[*]    ; EnterButton                        ; 5.014  ; 5.014  ; Rise       ; EnterButton                        ;
+;  SS1[1]   ; EnterButton                        ; 4.201  ; 4.201  ; Rise       ; EnterButton                        ;
+;  SS1[2]   ; EnterButton                        ; 5.014  ; 5.014  ; Rise       ; EnterButton                        ;
+; SS2[*]    ; EnterButton                        ; 4.917  ; 4.917  ; Rise       ; EnterButton                        ;
+;  SS2[1]   ; EnterButton                        ; 4.067  ; 4.067  ; Rise       ; EnterButton                        ;
+;  SS2[2]   ; EnterButton                        ; 4.187  ; 4.187  ; Rise       ; EnterButton                        ;
+;  SS2[5]   ; EnterButton                        ; 4.201  ; 4.201  ; Rise       ; EnterButton                        ;
+;  SS2[6]   ; EnterButton                        ; 4.917  ; 4.917  ; Rise       ; EnterButton                        ;
+; SS3[*]    ; EnterButton                        ; 5.014  ; 5.014  ; Rise       ; EnterButton                        ;
+;  SS3[0]   ; EnterButton                        ; 4.807  ; 4.807  ; Rise       ; EnterButton                        ;
+;  SS3[2]   ; EnterButton                        ; 4.787  ; 4.787  ; Rise       ; EnterButton                        ;
+;  SS3[3]   ; EnterButton                        ; 4.187  ; 4.187  ; Rise       ; EnterButton                        ;
+;  SS3[4]   ; EnterButton                        ; 5.014  ; 5.014  ; Rise       ; EnterButton                        ;
+;  SS3[5]   ; EnterButton                        ; 4.211  ; 4.211  ; Rise       ; EnterButton                        ;
+;  SS3[6]   ; EnterButton                        ; 4.787  ; 4.787  ; Rise       ; EnterButton                        ;
+; ledsR[*]  ; EnterButton                        ; 32.609 ; 32.609 ; Rise       ; EnterButton                        ;
+;  ledsR[0] ; EnterButton                        ; 32.435 ; 32.435 ; Rise       ; EnterButton                        ;
+;  ledsR[1] ; EnterButton                        ; 31.719 ; 31.719 ; Rise       ; EnterButton                        ;
+;  ledsR[2] ; EnterButton                        ; 32.425 ; 32.425 ; Rise       ; EnterButton                        ;
+;  ledsR[3] ; EnterButton                        ; 32.609 ; 32.609 ; Rise       ; EnterButton                        ;
+;  ledsR[4] ; EnterButton                        ; 31.924 ; 31.924 ; Rise       ; EnterButton                        ;
+;  ledsR[5] ; EnterButton                        ; 31.798 ; 31.798 ; Rise       ; EnterButton                        ;
+;  ledsR[6] ; EnterButton                        ; 31.474 ; 31.474 ; Rise       ; EnterButton                        ;
+;  ledsR[7] ; EnterButton                        ; 31.788 ; 31.788 ; Rise       ; EnterButton                        ;
+;  ledsR[8] ; EnterButton                        ; 31.907 ; 31.907 ; Rise       ; EnterButton                        ;
+;  ledsR[9] ; EnterButton                        ; 31.907 ; 31.907 ; Rise       ; EnterButton                        ;
+; ledsV[*]  ; EnterButton                        ; 32.665 ; 32.665 ; Rise       ; EnterButton                        ;
+;  ledsV[0] ; EnterButton                        ; 31.729 ; 31.729 ; Rise       ; EnterButton                        ;
+;  ledsV[1] ; EnterButton                        ; 31.568 ; 31.568 ; Rise       ; EnterButton                        ;
+;  ledsV[2] ; EnterButton                        ; 31.934 ; 31.934 ; Rise       ; EnterButton                        ;
+;  ledsV[3] ; EnterButton                        ; 31.558 ; 31.558 ; Rise       ; EnterButton                        ;
+;  ledsV[4] ; EnterButton                        ; 32.665 ; 32.665 ; Rise       ; EnterButton                        ;
+;  ledsV[5] ; EnterButton                        ; 31.924 ; 31.924 ; Rise       ; EnterButton                        ;
+;  ledsV[6] ; EnterButton                        ; 32.665 ; 32.665 ; Rise       ; EnterButton                        ;
+;  ledsV[7] ; EnterButton                        ; 31.798 ; 31.798 ; Rise       ; EnterButton                        ;
+; SS0[*]    ; UC:UnidadControl|est_actual.Decode ; 5.114  ; 5.114  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[0]   ; UC:UnidadControl|est_actual.Decode ; 4.975  ; 4.975  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[1]   ; UC:UnidadControl|est_actual.Decode ; 5.114  ; 5.114  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[2]   ; UC:UnidadControl|est_actual.Decode ; 4.398  ; 4.398  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS1[*]    ; UC:UnidadControl|est_actual.Decode ; 5.201  ; 5.201  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[1]   ; UC:UnidadControl|est_actual.Decode ; 4.388  ; 4.388  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[2]   ; UC:UnidadControl|est_actual.Decode ; 5.201  ; 5.201  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS2[*]    ; UC:UnidadControl|est_actual.Decode ; 5.104  ; 5.104  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[1]   ; UC:UnidadControl|est_actual.Decode ; 4.254  ; 4.254  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[2]   ; UC:UnidadControl|est_actual.Decode ; 4.374  ; 4.374  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[5]   ; UC:UnidadControl|est_actual.Decode ; 4.388  ; 4.388  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[6]   ; UC:UnidadControl|est_actual.Decode ; 5.104  ; 5.104  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS3[*]    ; UC:UnidadControl|est_actual.Decode ; 5.201  ; 5.201  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[0]   ; UC:UnidadControl|est_actual.Decode ; 4.994  ; 4.994  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[2]   ; UC:UnidadControl|est_actual.Decode ; 4.974  ; 4.974  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[3]   ; UC:UnidadControl|est_actual.Decode ; 4.374  ; 4.374  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[4]   ; UC:UnidadControl|est_actual.Decode ; 5.201  ; 5.201  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[5]   ; UC:UnidadControl|est_actual.Decode ; 4.398  ; 4.398  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[6]   ; UC:UnidadControl|est_actual.Decode ; 4.974  ; 4.974  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SS0[*]    ; EnterButton                        ; 4.211 ; 4.211 ; Rise       ; EnterButton                        ;
+;  SS0[0]   ; EnterButton                        ; 4.788 ; 4.788 ; Rise       ; EnterButton                        ;
+;  SS0[1]   ; EnterButton                        ; 4.927 ; 4.927 ; Rise       ; EnterButton                        ;
+;  SS0[2]   ; EnterButton                        ; 4.211 ; 4.211 ; Rise       ; EnterButton                        ;
+; SS1[*]    ; EnterButton                        ; 4.201 ; 4.201 ; Rise       ; EnterButton                        ;
+;  SS1[1]   ; EnterButton                        ; 4.201 ; 4.201 ; Rise       ; EnterButton                        ;
+;  SS1[2]   ; EnterButton                        ; 5.014 ; 5.014 ; Rise       ; EnterButton                        ;
+; SS2[*]    ; EnterButton                        ; 4.067 ; 4.067 ; Rise       ; EnterButton                        ;
+;  SS2[1]   ; EnterButton                        ; 4.067 ; 4.067 ; Rise       ; EnterButton                        ;
+;  SS2[2]   ; EnterButton                        ; 4.187 ; 4.187 ; Rise       ; EnterButton                        ;
+;  SS2[5]   ; EnterButton                        ; 4.201 ; 4.201 ; Rise       ; EnterButton                        ;
+;  SS2[6]   ; EnterButton                        ; 4.917 ; 4.917 ; Rise       ; EnterButton                        ;
+; SS3[*]    ; EnterButton                        ; 4.187 ; 4.187 ; Rise       ; EnterButton                        ;
+;  SS3[0]   ; EnterButton                        ; 4.807 ; 4.807 ; Rise       ; EnterButton                        ;
+;  SS3[2]   ; EnterButton                        ; 4.787 ; 4.787 ; Rise       ; EnterButton                        ;
+;  SS3[3]   ; EnterButton                        ; 4.187 ; 4.187 ; Rise       ; EnterButton                        ;
+;  SS3[4]   ; EnterButton                        ; 5.014 ; 5.014 ; Rise       ; EnterButton                        ;
+;  SS3[5]   ; EnterButton                        ; 4.211 ; 4.211 ; Rise       ; EnterButton                        ;
+;  SS3[6]   ; EnterButton                        ; 4.787 ; 4.787 ; Rise       ; EnterButton                        ;
+; ledsR[*]  ; EnterButton                        ; 4.248 ; 4.248 ; Rise       ; EnterButton                        ;
+;  ledsR[0] ; EnterButton                        ; 5.209 ; 5.209 ; Rise       ; EnterButton                        ;
+;  ledsR[1] ; EnterButton                        ; 4.493 ; 4.493 ; Rise       ; EnterButton                        ;
+;  ledsR[2] ; EnterButton                        ; 5.199 ; 5.199 ; Rise       ; EnterButton                        ;
+;  ledsR[3] ; EnterButton                        ; 5.383 ; 5.383 ; Rise       ; EnterButton                        ;
+;  ledsR[4] ; EnterButton                        ; 4.698 ; 4.698 ; Rise       ; EnterButton                        ;
+;  ledsR[5] ; EnterButton                        ; 4.572 ; 4.572 ; Rise       ; EnterButton                        ;
+;  ledsR[6] ; EnterButton                        ; 4.248 ; 4.248 ; Rise       ; EnterButton                        ;
+;  ledsR[7] ; EnterButton                        ; 4.562 ; 4.562 ; Rise       ; EnterButton                        ;
+;  ledsR[8] ; EnterButton                        ; 4.681 ; 4.681 ; Rise       ; EnterButton                        ;
+;  ledsR[9] ; EnterButton                        ; 4.681 ; 4.681 ; Rise       ; EnterButton                        ;
+; ledsV[*]  ; EnterButton                        ; 4.332 ; 4.332 ; Rise       ; EnterButton                        ;
+;  ledsV[0] ; EnterButton                        ; 4.503 ; 4.503 ; Rise       ; EnterButton                        ;
+;  ledsV[1] ; EnterButton                        ; 4.342 ; 4.342 ; Rise       ; EnterButton                        ;
+;  ledsV[2] ; EnterButton                        ; 4.708 ; 4.708 ; Rise       ; EnterButton                        ;
+;  ledsV[3] ; EnterButton                        ; 4.332 ; 4.332 ; Rise       ; EnterButton                        ;
+;  ledsV[4] ; EnterButton                        ; 5.439 ; 5.439 ; Rise       ; EnterButton                        ;
+;  ledsV[5] ; EnterButton                        ; 4.698 ; 4.698 ; Rise       ; EnterButton                        ;
+;  ledsV[6] ; EnterButton                        ; 5.439 ; 5.439 ; Rise       ; EnterButton                        ;
+;  ledsV[7] ; EnterButton                        ; 4.572 ; 4.572 ; Rise       ; EnterButton                        ;
+; SS0[*]    ; UC:UnidadControl|est_actual.Decode ; 4.398 ; 4.398 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[0]   ; UC:UnidadControl|est_actual.Decode ; 4.975 ; 4.975 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[1]   ; UC:UnidadControl|est_actual.Decode ; 5.114 ; 5.114 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[2]   ; UC:UnidadControl|est_actual.Decode ; 4.398 ; 4.398 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS1[*]    ; UC:UnidadControl|est_actual.Decode ; 4.388 ; 4.388 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[1]   ; UC:UnidadControl|est_actual.Decode ; 4.388 ; 4.388 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[2]   ; UC:UnidadControl|est_actual.Decode ; 5.201 ; 5.201 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS2[*]    ; UC:UnidadControl|est_actual.Decode ; 4.254 ; 4.254 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[1]   ; UC:UnidadControl|est_actual.Decode ; 4.254 ; 4.254 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[2]   ; UC:UnidadControl|est_actual.Decode ; 4.374 ; 4.374 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[5]   ; UC:UnidadControl|est_actual.Decode ; 4.388 ; 4.388 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[6]   ; UC:UnidadControl|est_actual.Decode ; 5.104 ; 5.104 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS3[*]    ; UC:UnidadControl|est_actual.Decode ; 4.374 ; 4.374 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[0]   ; UC:UnidadControl|est_actual.Decode ; 4.994 ; 4.994 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[2]   ; UC:UnidadControl|est_actual.Decode ; 4.974 ; 4.974 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[3]   ; UC:UnidadControl|est_actual.Decode ; 4.374 ; 4.374 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[4]   ; UC:UnidadControl|est_actual.Decode ; 5.201 ; 5.201 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[5]   ; UC:UnidadControl|est_actual.Decode ; 4.398 ; 4.398 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[6]   ; UC:UnidadControl|est_actual.Decode ; 4.974 ; 4.974 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                             ;
++-------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                               ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                    ; -1.953 ; 0.215 ; N/A      ; N/A     ; -1.814              ;
+;  EnterButton                        ; -0.634 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  UC:UnidadControl|est_actual.Decode ; -1.953 ; 0.293 ; N/A      ; N/A     ; 0.500               ;
+;  clk                                ; -1.277 ; 0.948 ; N/A      ; N/A     ; -1.814              ;
+; Design-wide TNS                     ; -9.384 ; 0.0   ; 0.0      ; 0.0     ; -32.39              ;
+;  EnterButton                        ; -4.122 ; 0.000 ; N/A      ; N/A     ; -27.293             ;
+;  UC:UnidadControl|est_actual.Decode ; -3.985 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  clk                                ; -1.277 ; 0.000 ; N/A      ; N/A     ; -5.097              ;
++-------------------------------------+--------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                              ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise   ; Fall   ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+; SS0[*]    ; EnterButton                        ; 9.579  ; 9.579  ; Rise       ; EnterButton                        ;
+;  SS0[0]   ; EnterButton                        ; 9.218  ; 9.218  ; Rise       ; EnterButton                        ;
+;  SS0[1]   ; EnterButton                        ; 9.579  ; 9.579  ; Rise       ; EnterButton                        ;
+;  SS0[2]   ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+; SS1[*]    ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS1[1]   ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS1[2]   ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+; SS2[*]    ; EnterButton                        ; 9.569  ; 9.569  ; Rise       ; EnterButton                        ;
+;  SS2[1]   ; EnterButton                        ; 7.742  ; 7.742  ; Rise       ; EnterButton                        ;
+;  SS2[2]   ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS2[5]   ; EnterButton                        ; 8.081  ; 8.081  ; Rise       ; EnterButton                        ;
+;  SS2[6]   ; EnterButton                        ; 9.569  ; 9.569  ; Rise       ; EnterButton                        ;
+; SS3[*]    ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS3[0]   ; EnterButton                        ; 9.407  ; 9.407  ; Rise       ; EnterButton                        ;
+;  SS3[2]   ; EnterButton                        ; 9.387  ; 9.387  ; Rise       ; EnterButton                        ;
+;  SS3[3]   ; EnterButton                        ; 7.907  ; 7.907  ; Rise       ; EnterButton                        ;
+;  SS3[4]   ; EnterButton                        ; 9.840  ; 9.840  ; Rise       ; EnterButton                        ;
+;  SS3[5]   ; EnterButton                        ; 8.091  ; 8.091  ; Rise       ; EnterButton                        ;
+;  SS3[6]   ; EnterButton                        ; 9.387  ; 9.387  ; Rise       ; EnterButton                        ;
+; ledsR[*]  ; EnterButton                        ; 83.253 ; 83.253 ; Rise       ; EnterButton                        ;
+;  ledsR[0] ; EnterButton                        ; 82.583 ; 82.583 ; Rise       ; EnterButton                        ;
+;  ledsR[1] ; EnterButton                        ; 80.847 ; 80.847 ; Rise       ; EnterButton                        ;
+;  ledsR[2] ; EnterButton                        ; 82.573 ; 82.573 ; Rise       ; EnterButton                        ;
+;  ledsR[3] ; EnterButton                        ; 83.253 ; 83.253 ; Rise       ; EnterButton                        ;
+;  ledsR[4] ; EnterButton                        ; 81.563 ; 81.563 ; Rise       ; EnterButton                        ;
+;  ledsR[5] ; EnterButton                        ; 81.237 ; 81.237 ; Rise       ; EnterButton                        ;
+;  ledsR[6] ; EnterButton                        ; 80.223 ; 80.223 ; Rise       ; EnterButton                        ;
+;  ledsR[7] ; EnterButton                        ; 81.227 ; 81.227 ; Rise       ; EnterButton                        ;
+;  ledsR[8] ; EnterButton                        ; 81.562 ; 81.562 ; Rise       ; EnterButton                        ;
+;  ledsR[9] ; EnterButton                        ; 81.562 ; 81.562 ; Rise       ; EnterButton                        ;
+; ledsV[*]  ; EnterButton                        ; 83.179 ; 83.179 ; Rise       ; EnterButton                        ;
+;  ledsV[0] ; EnterButton                        ; 80.857 ; 80.857 ; Rise       ; EnterButton                        ;
+;  ledsV[1] ; EnterButton                        ; 80.497 ; 80.497 ; Rise       ; EnterButton                        ;
+;  ledsV[2] ; EnterButton                        ; 81.573 ; 81.573 ; Rise       ; EnterButton                        ;
+;  ledsV[3] ; EnterButton                        ; 80.487 ; 80.487 ; Rise       ; EnterButton                        ;
+;  ledsV[4] ; EnterButton                        ; 83.179 ; 83.179 ; Rise       ; EnterButton                        ;
+;  ledsV[5] ; EnterButton                        ; 81.563 ; 81.563 ; Rise       ; EnterButton                        ;
+;  ledsV[6] ; EnterButton                        ; 83.179 ; 83.179 ; Rise       ; EnterButton                        ;
+;  ledsV[7] ; EnterButton                        ; 81.237 ; 81.237 ; Rise       ; EnterButton                        ;
+; SS0[*]    ; UC:UnidadControl|est_actual.Decode ; 10.949 ; 10.949 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[0]   ; UC:UnidadControl|est_actual.Decode ; 10.588 ; 10.588 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[1]   ; UC:UnidadControl|est_actual.Decode ; 10.949 ; 10.949 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[2]   ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS1[*]    ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[1]   ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[2]   ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS2[*]    ; UC:UnidadControl|est_actual.Decode ; 10.939 ; 10.939 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[1]   ; UC:UnidadControl|est_actual.Decode ; 9.112  ; 9.112  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[2]   ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[5]   ; UC:UnidadControl|est_actual.Decode ; 9.451  ; 9.451  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[6]   ; UC:UnidadControl|est_actual.Decode ; 10.939 ; 10.939 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS3[*]    ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[0]   ; UC:UnidadControl|est_actual.Decode ; 10.777 ; 10.777 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[2]   ; UC:UnidadControl|est_actual.Decode ; 10.757 ; 10.757 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[3]   ; UC:UnidadControl|est_actual.Decode ; 9.277  ; 9.277  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[4]   ; UC:UnidadControl|est_actual.Decode ; 11.210 ; 11.210 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[5]   ; UC:UnidadControl|est_actual.Decode ; 9.461  ; 9.461  ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[6]   ; UC:UnidadControl|est_actual.Decode ; 10.757 ; 10.757 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
++-----------+------------------------------------+--------+--------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SS0[*]    ; EnterButton                        ; 4.211 ; 4.211 ; Rise       ; EnterButton                        ;
+;  SS0[0]   ; EnterButton                        ; 4.788 ; 4.788 ; Rise       ; EnterButton                        ;
+;  SS0[1]   ; EnterButton                        ; 4.927 ; 4.927 ; Rise       ; EnterButton                        ;
+;  SS0[2]   ; EnterButton                        ; 4.211 ; 4.211 ; Rise       ; EnterButton                        ;
+; SS1[*]    ; EnterButton                        ; 4.201 ; 4.201 ; Rise       ; EnterButton                        ;
+;  SS1[1]   ; EnterButton                        ; 4.201 ; 4.201 ; Rise       ; EnterButton                        ;
+;  SS1[2]   ; EnterButton                        ; 5.014 ; 5.014 ; Rise       ; EnterButton                        ;
+; SS2[*]    ; EnterButton                        ; 4.067 ; 4.067 ; Rise       ; EnterButton                        ;
+;  SS2[1]   ; EnterButton                        ; 4.067 ; 4.067 ; Rise       ; EnterButton                        ;
+;  SS2[2]   ; EnterButton                        ; 4.187 ; 4.187 ; Rise       ; EnterButton                        ;
+;  SS2[5]   ; EnterButton                        ; 4.201 ; 4.201 ; Rise       ; EnterButton                        ;
+;  SS2[6]   ; EnterButton                        ; 4.917 ; 4.917 ; Rise       ; EnterButton                        ;
+; SS3[*]    ; EnterButton                        ; 4.187 ; 4.187 ; Rise       ; EnterButton                        ;
+;  SS3[0]   ; EnterButton                        ; 4.807 ; 4.807 ; Rise       ; EnterButton                        ;
+;  SS3[2]   ; EnterButton                        ; 4.787 ; 4.787 ; Rise       ; EnterButton                        ;
+;  SS3[3]   ; EnterButton                        ; 4.187 ; 4.187 ; Rise       ; EnterButton                        ;
+;  SS3[4]   ; EnterButton                        ; 5.014 ; 5.014 ; Rise       ; EnterButton                        ;
+;  SS3[5]   ; EnterButton                        ; 4.211 ; 4.211 ; Rise       ; EnterButton                        ;
+;  SS3[6]   ; EnterButton                        ; 4.787 ; 4.787 ; Rise       ; EnterButton                        ;
+; ledsR[*]  ; EnterButton                        ; 4.248 ; 4.248 ; Rise       ; EnterButton                        ;
+;  ledsR[0] ; EnterButton                        ; 5.209 ; 5.209 ; Rise       ; EnterButton                        ;
+;  ledsR[1] ; EnterButton                        ; 4.493 ; 4.493 ; Rise       ; EnterButton                        ;
+;  ledsR[2] ; EnterButton                        ; 5.199 ; 5.199 ; Rise       ; EnterButton                        ;
+;  ledsR[3] ; EnterButton                        ; 5.383 ; 5.383 ; Rise       ; EnterButton                        ;
+;  ledsR[4] ; EnterButton                        ; 4.698 ; 4.698 ; Rise       ; EnterButton                        ;
+;  ledsR[5] ; EnterButton                        ; 4.572 ; 4.572 ; Rise       ; EnterButton                        ;
+;  ledsR[6] ; EnterButton                        ; 4.248 ; 4.248 ; Rise       ; EnterButton                        ;
+;  ledsR[7] ; EnterButton                        ; 4.562 ; 4.562 ; Rise       ; EnterButton                        ;
+;  ledsR[8] ; EnterButton                        ; 4.681 ; 4.681 ; Rise       ; EnterButton                        ;
+;  ledsR[9] ; EnterButton                        ; 4.681 ; 4.681 ; Rise       ; EnterButton                        ;
+; ledsV[*]  ; EnterButton                        ; 4.332 ; 4.332 ; Rise       ; EnterButton                        ;
+;  ledsV[0] ; EnterButton                        ; 4.503 ; 4.503 ; Rise       ; EnterButton                        ;
+;  ledsV[1] ; EnterButton                        ; 4.342 ; 4.342 ; Rise       ; EnterButton                        ;
+;  ledsV[2] ; EnterButton                        ; 4.708 ; 4.708 ; Rise       ; EnterButton                        ;
+;  ledsV[3] ; EnterButton                        ; 4.332 ; 4.332 ; Rise       ; EnterButton                        ;
+;  ledsV[4] ; EnterButton                        ; 5.439 ; 5.439 ; Rise       ; EnterButton                        ;
+;  ledsV[5] ; EnterButton                        ; 4.698 ; 4.698 ; Rise       ; EnterButton                        ;
+;  ledsV[6] ; EnterButton                        ; 5.439 ; 5.439 ; Rise       ; EnterButton                        ;
+;  ledsV[7] ; EnterButton                        ; 4.572 ; 4.572 ; Rise       ; EnterButton                        ;
+; SS0[*]    ; UC:UnidadControl|est_actual.Decode ; 4.398 ; 4.398 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[0]   ; UC:UnidadControl|est_actual.Decode ; 4.975 ; 4.975 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[1]   ; UC:UnidadControl|est_actual.Decode ; 5.114 ; 5.114 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS0[2]   ; UC:UnidadControl|est_actual.Decode ; 4.398 ; 4.398 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS1[*]    ; UC:UnidadControl|est_actual.Decode ; 4.388 ; 4.388 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[1]   ; UC:UnidadControl|est_actual.Decode ; 4.388 ; 4.388 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS1[2]   ; UC:UnidadControl|est_actual.Decode ; 5.201 ; 5.201 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS2[*]    ; UC:UnidadControl|est_actual.Decode ; 4.254 ; 4.254 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[1]   ; UC:UnidadControl|est_actual.Decode ; 4.254 ; 4.254 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[2]   ; UC:UnidadControl|est_actual.Decode ; 4.374 ; 4.374 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[5]   ; UC:UnidadControl|est_actual.Decode ; 4.388 ; 4.388 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS2[6]   ; UC:UnidadControl|est_actual.Decode ; 5.104 ; 5.104 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+; SS3[*]    ; UC:UnidadControl|est_actual.Decode ; 4.374 ; 4.374 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[0]   ; UC:UnidadControl|est_actual.Decode ; 4.994 ; 4.994 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[2]   ; UC:UnidadControl|est_actual.Decode ; 4.974 ; 4.974 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[3]   ; UC:UnidadControl|est_actual.Decode ; 4.374 ; 4.374 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[4]   ; UC:UnidadControl|est_actual.Decode ; 5.201 ; 5.201 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[5]   ; UC:UnidadControl|est_actual.Decode ; 4.398 ; 4.398 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
+;  SS3[6]   ; UC:UnidadControl|est_actual.Decode ; 4.974 ; 4.974 ; Rise       ; UC:UnidadControl|est_actual.Decode ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                     ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; UC:UnidadControl|est_actual.Decode ; clk                                ; 1        ; 0        ; 0        ; 0        ;
+; EnterButton                        ; EnterButton                        ; 21       ; 0        ; 0        ; 0        ;
+; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 7        ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                      ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; UC:UnidadControl|est_actual.Decode ; clk                                ; 1        ; 0        ; 0        ; 0        ;
+; EnterButton                        ; EnterButton                        ; 21       ; 0        ; 0        ; 0        ;
+; UC:UnidadControl|est_actual.Decode ; UC:UnidadControl|est_actual.Decode ; 7        ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 33    ; 33   ;
+; Unconstrained Output Port Paths ; 390   ; 390  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 20 13:59:50 2018
+Info: Command: quartus_sta Principal -c Principal
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 21 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Principal.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name EnterButton EnterButton
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name UC:UnidadControl|est_actual.Decode UC:UnidadControl|est_actual.Decode
+Warning (332191): Clock target UC:UnidadControl|est_actual.Decode of clock UC:UnidadControl|est_actual.Decode is fed by another target of the same clock.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.953
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.953        -3.985 UC:UnidadControl|est_actual.Decode 
+    Info (332119):    -1.277        -1.277 clk 
+    Info (332119):    -0.634        -4.122 EnterButton 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 EnterButton 
+    Info (332119):     0.827         0.000 UC:UnidadControl|est_actual.Decode 
+    Info (332119):     1.987         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.814
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.814        -5.097 clk 
+    Info (332119):    -1.631       -27.293 EnterButton 
+    Info (332119):     0.500         0.000 UC:UnidadControl|est_actual.Decode 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Warning (332191): Clock target UC:UnidadControl|est_actual.Decode of clock UC:UnidadControl|est_actual.Decode is fed by another target of the same clock.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.087
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.087        -0.087 clk 
+    Info (332119):    -0.017        -0.017 UC:UnidadControl|est_actual.Decode 
+    Info (332119):     0.302         0.000 EnterButton 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 EnterButton 
+    Info (332119):     0.293         0.000 UC:UnidadControl|est_actual.Decode 
+    Info (332119):     0.948         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423        -4.068 clk 
+    Info (332119):    -1.380       -22.380 EnterButton 
+    Info (332119):     0.500         0.000 UC:UnidadControl|est_actual.Decode 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 410 megabytes
+    Info: Processing ended: Tue Nov 20 13:59:51 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+
