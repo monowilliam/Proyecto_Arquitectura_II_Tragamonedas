@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\a\Proyecto_Arquitectura_II_Tragamonedas\Principal\PrincipalV6\simulation\qsim
+vPrincipal
+Z1 Inazg0PYRZkc:Bia:5aL_d3
+Z2 V2RWJQl2:Q:f_Z=oLl70<k2
+Z3 dD:\Escritorio\a\Proyecto_Arquitectura_II_Tragamonedas\Principal\PrincipalV6\simulation\qsim
+Z4 w1542754619
+Z5 8Principal.vo
+Z6 FPrincipal.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Principal.vo|
+Z9 o-work work -O0
+Z10 n@principal
+!i10b 1
+Z11 !s100 gdTj5jobd9]Zh^b[l2]YA3
+!s85 0
+Z12 !s108 1542754620.757000
+Z13 !s107 Principal.vo|
+!s101 -O0
+vPrincipal_vlg_check_tst
+!i10b 1
+!s100 ^4N`:LP[7@?K^KeOg5eWJ1
+I0j_E8=A?TLRD?N4oB4jz<2
+Z14 VDEPa8DjTEm:=5V3LcR8AG3
+R3
+Z15 w1542754618
+Z16 8Principal.vt
+Z17 FPrincipal.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z18 !s108 1542754621.051000
+Z19 !s107 Principal.vt|
+Z20 !s90 -work|work|Principal.vt|
+!s101 -O0
+R9
+Z21 n@principal_vlg_check_tst
+vPrincipal_vlg_sample_tst
+!i10b 1
+Z22 !s100 Q:_eH7=?ooHNb<OMk5Nck3
+Z23 I=XQ<c6PE[W@aj>5<`YQ8G1
+Z24 VX`I2KL?B<RoYN<a;LBh6?3
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z25 n@principal_vlg_sample_tst
+vPrincipal_vlg_vec_tst
+!i10b 1
+!s100 Jk=cYC10=3QG;>BZdQZLn0
+IJ[k3NMdMZW6az89?40X^;0
+Z26 V4U`?ZR0I[V=?Q]6j@[e0K0
+R3
+R15
+R16
+R17
+L0 1009
+R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R9
+Z27 n@principal_vlg_vec_tst
