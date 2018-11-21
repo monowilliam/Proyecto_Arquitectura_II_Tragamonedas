@@ -1,0 +1,53 @@
+library ieee.
+
+entity selss is
+port8(
+	IO : in std_logic_vector(1 downto 0);
+)
+
+component sieteS is --Añadir valores en 7Seg
+generic(
+   BusValores : natural
+  );
+  port (
+	clk: in std_logic;
+	--entrada : in std_logic_vector(BusValores-1 downto 0);
+	switches, switches1 : in std_logic_vector(3 downto 0);
+	switches2 : in std_logic_vector(1 downto 0);
+	SS0, SS1, SS2, SS3 : out std_logic_vector(6 downto 0);
+	Output : out std_logic_vector(BusValores-1 downto 0)
+);
+end component;
+component mostrar is
+generic(
+	BusValores : natural
+);
+port (
+	boton : in  std_logic;
+	numeroVector : in std_logic_vector(BusValores-1 downto 0);
+	segmento0, segmento1, segmento2, segmento3 : out std_logic_vector(6 downto 0)
+);
+end component;
+component randomSegmento is 
+port(
+   boton : in  std_logic;    	 
+	segmento1, segmento2, Segmento3, Segmento4 : out std_logic_vector (6 downto 0);
+	ledsRojos : out std_logic_vector (9 downto 0);
+	ledsVerdes : out std_logic_vector (7 downto 0)
+);
+end component;
+component sevenseg is
+port(
+	seg0, seg1, seg2, seg3 : in std_logic_vector(6 downto 0);
+	seg0out, seg1out, seg2out, seg3out : out std_logic_vector(6 downto 0)
+);
+end component;
+
+apuestaOIngreso : sieteS generic map (BusValores => BusValores) 
+port map (clk => clk, switches=>switches, switches1 => switches1, switches2=>switches2,SS0=>vs0,SS1=>vs1,SS2=>vs2,SS3=>vs3,Output=>entrada);
+MostrarSS : mostrar generic map(BusValores=>BusValores)
+port map(numeroVector=>MemOut,boton=>EnterButton,segmento0=>vs0,segmento1=>vs1,segmento2=>vs2,segmento3=>vs3);
+Rand : randomSegmento
+port map(boton=>EnterButton,segmento1=>vs0,segmento2=>vs1,segmento3=>vs2,segmento4=>vs3,ledsRojos=>ledsR,ledsVerdes=>ledsV);
+SevenS : sevenseg
+port map(seg0=>vs0,seg1=>vs1,seg2=>vs2,seg3=>vs3,seg0out=>SS0,seg1out=>SS1,seg2out=>SS2,seg3out=>SS3);
