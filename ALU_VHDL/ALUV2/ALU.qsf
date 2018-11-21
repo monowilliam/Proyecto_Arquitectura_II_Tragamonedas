@@ -59,5 +59,6 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/juanlink/Desktop/Proyecto_Arquitectura_II_Tragamonedas/ALU_VHDL/ALU 2.0/Waveform1.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE pruebaALU.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Escritorio/c/Proyecto_Arquitectura_II_Tragamonedas/ALU_VHDL/ALUV2/pruebaALU.vwf"

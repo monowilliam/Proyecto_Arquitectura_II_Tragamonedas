@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\c\Proyecto_Arquitectura_II_Tragamonedas\UC\simulation\qsim
+vUC
+Z1 IBE=ZA2AXJ8<flQG[0nL]n2
+Z2 Vb7EM[A12G>CY6QK2CE=O[2
+Z3 dD:\Escritorio\c\Proyecto_Arquitectura_II_Tragamonedas\UC\simulation\qsim
+Z4 w1542807275
+Z5 8UC.vo
+Z6 FUC.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+n@u@c
+!i10b 1
+Z9 !s100 ZcBCBI:m]^HJ:W=b?CB1R1
+!s85 0
+Z10 !s108 1542807277.148000
+Z11 !s107 UC.vo|
+Z12 !s90 -work|work|UC.vo|
+!s101 -O0
+vUC_vlg_check_tst
+!i10b 1
+!s100 nOj`_<UFLJ2FmVVKoaW6d3
+Iz10B@e3RKT0jODT0n>JaL0
+V2[S]FcAfEedFZL=RL0jAc2
+R3
+Z13 w1542807274
+Z14 8UC.vt
+Z15 FUC.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1542807277.243000
+Z17 !s107 UC.vt|
+Z18 !s90 -work|work|UC.vt|
+!s101 -O0
+R8
+n@u@c_vlg_check_tst
+vUC_vlg_sample_tst
+!i10b 1
+!s100 jPFVHGANFPC^703V:Y8=;1
+IoDLXPl=lKmUDK^=_nXW`a3
+VNFgk5DXO5ZECfAM`dBQW:1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@u@c_vlg_sample_tst
+vUC_vlg_vec_tst
+!i10b 1
+!s100 5?NM2Mz2@i2i:hH67H8zd1
+IhBC5Og6=OONo262MVeDgf1
+VdJzj>JO<z77CL9_e6kNnP2
+R3
+R13
+R14
+R15
+L0 611
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@u@c_vlg_vec_tst

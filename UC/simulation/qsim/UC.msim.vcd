@@ -1,0 +1,461 @@
+$comment
+	File created using the following command:
+		vcd file UC.msim.vcd -direction
+$end
+$date
+	Wed Nov 21 08:34:37 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module UC_vlg_vec_tst $end
+$var reg 1 ! Clk $end
+$var reg 4 " Opcode [3:0] $end
+$var wire 1 # AluOP [1] $end
+$var wire 1 $ AluOP [0] $end
+$var wire 1 % AluOut $end
+$var wire 1 & AluSrcA $end
+$var wire 1 ' Beq $end
+$var wire 1 ( Bgt $end
+$var wire 1 ) Bne $end
+$var wire 1 * DatSel $end
+$var wire 1 + Dg $end
+$var wire 1 , IO [2] $end
+$var wire 1 - IO [1] $end
+$var wire 1 . IO [0] $end
+$var wire 1 / Jump $end
+$var wire 1 0 PCWrite $end
+$var wire 1 1 RMD $end
+$var wire 1 2 RMI $end
+$var wire 1 3 WIR $end
+$var wire 1 4 WMD $end
+$var wire 1 5 WRF $end
+$var wire 1 6 sampler $end
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = comb~2_combout $end
+$var wire 1 > est_sig.CalDirLM~0_combout $end
+$var wire 1 ? Equal0~8_combout $end
+$var wire 1 @ est_sig.ExecuteMUL~0_combout $end
+$var wire 1 A est_actual.Decode~combout $end
+$var wire 1 B est_sig.WM~0_combout $end
+$var wire 1 C Equal0~0_combout $end
+$var wire 1 D Selector17~0_combout $end
+$var wire 1 E Selector17~0clkctrl_outclk $end
+$var wire 1 F Equal0~2_combout $end
+$var wire 1 G comb~1_combout $end
+$var wire 1 H est_sig.ExBne~0_combout $end
+$var wire 1 I est_actual.ExBne~combout $end
+$var wire 1 J Equal0~1_combout $end
+$var wire 1 K comb~0_combout $end
+$var wire 1 L est_sig.ExBeq~0_combout $end
+$var wire 1 M est_actual.ExBeq~combout $end
+$var wire 1 N Equal0~3_combout $end
+$var wire 1 O est_sig.ExBgt~0_combout $end
+$var wire 1 P est_actual.ExBgt~combout $end
+$var wire 1 Q WideOr1~0_combout $end
+$var wire 1 R comb~15_combout $end
+$var wire 1 S est_sig.Dir~0_combout $end
+$var wire 1 T est_actual.Dir~combout $end
+$var wire 1 U est_actual.RM~combout $end
+$var wire 1 V est_actual.OutSS~combout $end
+$var wire 1 W Equal0~6_combout $end
+$var wire 1 X comb~5_combout $end
+$var wire 1 Y est_actual.CalDirLM~combout $end
+$var wire 1 Z est_actual.LeerMem~combout $end
+$var wire 1 [ est_actual.GuarMem~combout $end
+$var wire 1 \ est_sig.ExecuteADDI~0_combout $end
+$var wire 1 ] Equal0~5_combout $end
+$var wire 1 ^ est_sig.ExecuteADDI~1_combout $end
+$var wire 1 _ comb~4_combout $end
+$var wire 1 ` est_actual.ExecuteADDI~combout $end
+$var wire 1 a comb~7_combout $end
+$var wire 1 b comb~8_combout $end
+$var wire 1 c comb~9_combout $end
+$var wire 1 d est_actual.ExecuteADD~combout $end
+$var wire 1 e Equal0~9_combout $end
+$var wire 1 f est_sig.ExecuteSUB~0_combout $end
+$var wire 1 g comb~11_combout $end
+$var wire 1 h est_actual.ExecuteSUB~combout $end
+$var wire 1 i WideOr3~0_combout $end
+$var wire 1 j est_actual.WRegister~combout $end
+$var wire 1 k est_actual.GuarDir~combout $end
+$var wire 1 l WideOr6~0_combout $end
+$var wire 1 m WideOr6~1_combout $end
+$var wire 1 n est_actual.Fetch~combout $end
+$var wire 1 o Equal0~4_combout $end
+$var wire 1 p est_sig.ExJ~0_combout $end
+$var wire 1 q comb~3_combout $end
+$var wire 1 r est_actual.ExJ~combout $end
+$var wire 1 s WRF~0_combout $end
+$var wire 1 t Equal0~7_combout $end
+$var wire 1 u est_sig.CalDirSM~0_combout $end
+$var wire 1 v comb~6_combout $end
+$var wire 1 w est_actual.CalDirSM~combout $end
+$var wire 1 x WideOr2~combout $end
+$var wire 1 y WideOr3~combout $end
+$var wire 1 z comb~12_combout $end
+$var wire 1 { comb~13_combout $end
+$var wire 1 | comb~14_combout $end
+$var wire 1 } est_actual.Inp~combout $end
+$var wire 1 ~ RMD~0_combout $end
+$var wire 1 !! est_actual.WM~combout $end
+$var wire 1 "! WideOr4~combout $end
+$var wire 1 #! WideOr1~combout $end
+$var wire 1 $! comb~10_combout $end
+$var wire 1 %! est_actual.ExecuteMUL~combout $end
+$var wire 1 &! WideOr0~combout $end
+$var wire 1 '! Opcode~combout [3] $end
+$var wire 1 (! Opcode~combout [2] $end
+$var wire 1 )! Opcode~combout [1] $end
+$var wire 1 *! Opcode~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+x$
+x#
+0%
+0&
+0'
+0(
+0)
+x*
+0+
+0.
+0-
+0,
+0/
+x0
+01
+x2
+x3
+x4
+05
+x6
+07
+18
+x9
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+xA
+1B
+0C
+1D
+1E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+1Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+x\
+0]
+0^
+1_
+0`
+0a
+0b
+1c
+0d
+0e
+0f
+0g
+0h
+1i
+0j
+0k
+xl
+xm
+xn
+0o
+0p
+0q
+0r
+1s
+0t
+0u
+0v
+0w
+0x
+0y
+xz
+x{
+x|
+x}
+0~
+x!!
+x"!
+x#!
+0$!
+0%!
+x&!
+0*!
+0)!
+0(!
+0'!
+$end
+#20000
+1!
+b1000 "
+b1100 "
+1(!
+1'!
+06
+0B
+x$!
+xv
+xq
+xg
+xb
+x_
+xX
+xR
+xK
+xG
+xD
+x=
+xE
+#40000
+0!
+16
+#60000
+1!
+06
+#70000
+b100 "
+b0 "
+0(!
+0'!
+16
+1B
+0$!
+0v
+0q
+0g
+0b
+1_
+0X
+0R
+0K
+0G
+1D
+0=
+1E
+#80000
+0!
+06
+#100000
+1!
+16
+#120000
+0!
+06
+#140000
+b10 "
+b11 "
+b1011 "
+b1111 "
+1!
+1*!
+1)!
+1(!
+1'!
+16
+0B
+x$!
+xv
+xq
+xg
+xb
+x_
+xX
+xR
+xK
+xG
+xD
+x=
+xE
+#160000
+0!
+06
+#180000
+1!
+16
+#200000
+0!
+06
+#210000
+b1101 "
+b1100 "
+b100 "
+b0 "
+0*!
+0)!
+0(!
+0'!
+16
+1B
+0$!
+0v
+0q
+0g
+0b
+1_
+0X
+0R
+0K
+0G
+1D
+0=
+1E
+#220000
+1!
+06
+#240000
+0!
+16
+#260000
+1!
+06
+#280000
+0!
+16
+#300000
+1!
+06
+#320000
+0!
+16
+#340000
+1!
+06
+#360000
+0!
+16
+#380000
+1!
+06
+#400000
+0!
+16
+#420000
+1!
+06
+#440000
+0!
+16
+#460000
+1!
+06
+#480000
+0!
+16
+#500000
+1!
+06
+#520000
+0!
+16
+#540000
+1!
+06
+#560000
+0!
+16
+#580000
+1!
+06
+#600000
+0!
+16
+#620000
+1!
+06
+#640000
+0!
+16
+#660000
+1!
+06
+#680000
+0!
+16
+#700000
+1!
+06
+#720000
+0!
+16
+#740000
+1!
+06
+#760000
+0!
+16
+#780000
+1!
+06
+#800000
+0!
+16
+#820000
+1!
+06
+#840000
+0!
+16
+#860000
+1!
+06
+#880000
+0!
+16
+#900000
+1!
+06
+#920000
+0!
+16
+#940000
+1!
+06
+#960000
+0!
+16
+#980000
+1!
+06
+#1000000
