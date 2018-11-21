@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Principal
-Tue Nov 20 18:32:05 2018
+Wed Nov 21 00:42:07 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,15 +13,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. State Machine - |Principal|UC:UnidadControl|est_actual
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated
+  8. State Machine - |Principal|UC:UnidadControl|est_actual
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated
+ 16. Source assignments for registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated
  17. Parameter Settings for User Entity Instance: Top-level Entity: |Principal
  18. Parameter Settings for User Entity Instance: memoria:memoriaIns
  19. Parameter Settings for User Entity Instance: IR:irP
@@ -40,14 +40,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  32. Parameter Settings for User Entity Instance: UC:UnidadControl
  33. Parameter Settings for User Entity Instance: mostrar:mostrarNum
  34. Parameter Settings for User Entity Instance: sieteS:apuestaOIngreso
- 35. Parameter Settings for Inferred Entity Instance: memoria:memoriaIns|altsyncram:my_rom_rtl_0
- 36. Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_divide:Mod0
- 37. Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_mult:Mult0
- 38. altsyncram Parameter Settings by Entity Instance
- 39. lpm_mult Parameter Settings by Entity Instance
- 40. Port Connectivity Checks: "UC:UnidadControl"
- 41. Port Connectivity Checks: "Mux14:MuxRF"
- 42. Port Connectivity Checks: "memoria:memoriaIns"
+ 35. Parameter Settings for Inferred Entity Instance: registefile:RegisterF|altsyncram:registef_rtl_0
+ 36. Parameter Settings for Inferred Entity Instance: registefile:RegisterF|altsyncram:registef_rtl_1
+ 37. Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_divide:Mod0
+ 38. Parameter Settings for Inferred Entity Instance: randomSegmento:ranSeg|lpm_mult:Mult0
+ 39. altsyncram Parameter Settings by Entity Instance
+ 40. lpm_mult Parameter Settings by Entity Instance
+ 41. Port Connectivity Checks: "UC:UnidadControl"
+ 42. Port Connectivity Checks: "Mux14:MuxRF"
  43. Elapsed Time Per Partition
  44. Analysis & Synthesis Messages
 
@@ -75,18 +75,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 20 18:32:05 2018           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 21 00:42:07 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Principal                                       ;
 ; Top-level Entity Name              ; Principal                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 725                                             ;
-;     Total combinational functions  ; 705                                             ;
-;     Dedicated logic registers      ; 43                                              ;
-; Total registers                    ; 43                                              ;
-; Total pins                         ; 58                                              ;
+; Total logic elements               ; 689                                             ;
+;     Total combinational functions  ; 669                                             ;
+;     Dedicated logic registers      ; 65                                              ;
+; Total registers                    ; 65                                              ;
+; Total pins                         ; 99                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 8                                               ;
+; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -188,63 +188,64 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
-+-------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                          ; Library ;
-+-------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; randomSegmento.vhd                        ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/randomSegmento.vhd                        ;         ;
-; mostrar.vhd                               ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/mostrar.vhd                               ;         ;
-; UC.vhd                                    ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/UC.vhd                                    ;         ;
-; sieteS.vhd                                ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/sieteS.vhd                                ;         ;
-; registefile.vhd                           ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/registefile.vhd                           ;         ;
-; Registro.vhd                              ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/Registro.vhd                              ;         ;
-; Mux14.vhd                                 ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/Mux14.vhd                                 ;         ;
-; Mux12.vhd                                 ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/Mux12.vhd                                 ;         ;
-; memoriaram.vhd                            ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/memoriaram.vhd                            ;         ;
-; memoria.vhd                               ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/memoria.vhd                               ;         ;
-; IR.vhd                                    ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/IR.vhd                                    ;         ;
-; ALU.vhd                                   ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/ALU.vhd                                   ;         ;
-; Principal.vhd                             ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/Principal.vhd                             ;         ;
-; PCounter.vhd                              ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/PCounter.vhd                              ;         ;
-; sumPC.vhd                                 ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/sumPC.vhd                                 ;         ;
-; MuxSS.vhd                                 ; yes             ; User VHDL File                                        ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/MuxSS.vhd                                 ;         ;
-; altsyncram.tdf                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;         ;
-; stratix_ram_block.inc                     ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;         ;
-; lpm_mux.inc                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;         ;
-; lpm_decode.inc                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                      ;         ;
-; aglobal130.inc                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                      ;         ;
-; a_rdenreg.inc                             ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                       ;         ;
-; altrom.inc                                ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                          ;         ;
-; altram.inc                                ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                          ;         ;
-; altdpram.inc                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                        ;         ;
-; db/altsyncram_ks71.tdf                    ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/altsyncram_ks71.tdf                    ;         ;
-; db/Principal.ram0_memoria_21abfed.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/Principal.ram0_memoria_21abfed.hdl.mif ;         ;
-; lpm_divide.tdf                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                                      ;         ;
-; abs_divider.inc                           ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                                     ;         ;
-; sign_div_unsign.inc                       ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                 ;         ;
-; db/lpm_divide_s7m.tdf                     ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/lpm_divide_s7m.tdf                     ;         ;
-; db/sign_div_unsign_3nh.tdf                ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/sign_div_unsign_3nh.tdf                ;         ;
-; db/alt_u_div_85f.tdf                      ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/alt_u_div_85f.tdf                      ;         ;
-; db/add_sub_lkc.tdf                        ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/add_sub_lkc.tdf                        ;         ;
-; db/add_sub_mkc.tdf                        ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/db/add_sub_mkc.tdf                        ;         ;
-; lpm_mult.tdf                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf                                                        ;         ;
-; lpm_add_sub.inc                           ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                     ;         ;
-; multcore.inc                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                                                        ;         ;
-; bypassff.inc                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                        ;         ;
-; altshift.inc                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                        ;         ;
-; multcore.tdf                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.tdf                                                        ;         ;
-; csa_add.inc                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/csa_add.inc                                                         ;         ;
-; mpar_add.inc                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.inc                                                        ;         ;
-; muleabz.inc                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muleabz.inc                                                         ;         ;
-; mul_lfrg.inc                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_lfrg.inc                                                        ;         ;
-; mul_boothc.inc                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_boothc.inc                                                      ;         ;
-; alt_ded_mult.inc                          ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                    ;         ;
-; alt_ded_mult_y.inc                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                  ;         ;
-; dffpipe.inc                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                                                         ;         ;
-; mpar_add.tdf                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.tdf                                                        ;         ;
-; altshift.tdf                              ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.tdf                                                        ;         ;
-+-------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                          ;
++------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                               ; Library ;
++------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; randomSegmento.vhd                             ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/randomSegmento.vhd                             ;         ;
+; mostrar.vhd                                    ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/mostrar.vhd                                    ;         ;
+; UC.vhd                                         ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/UC.vhd                                         ;         ;
+; sieteS.vhd                                     ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/sieteS.vhd                                     ;         ;
+; registefile.vhd                                ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/registefile.vhd                                ;         ;
+; Registro.vhd                                   ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/Registro.vhd                                   ;         ;
+; Mux14.vhd                                      ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/Mux14.vhd                                      ;         ;
+; Mux12.vhd                                      ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/Mux12.vhd                                      ;         ;
+; memoriaram.vhd                                 ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/memoriaram.vhd                                 ;         ;
+; memoria.vhd                                    ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/memoria.vhd                                    ;         ;
+; IR.vhd                                         ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/IR.vhd                                         ;         ;
+; ALU.vhd                                        ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/ALU.vhd                                        ;         ;
+; Principal.vhd                                  ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/Principal.vhd                                  ;         ;
+; PCounter.vhd                                   ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/PCounter.vhd                                   ;         ;
+; sumPC.vhd                                      ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/sumPC.vhd                                      ;         ;
+; MuxSS.vhd                                      ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/MuxSS.vhd                                      ;         ;
+; divFrec.vhd                                    ; yes             ; User VHDL File                                        ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/divFrec.vhd                                    ;         ;
+; altsyncram.tdf                                 ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                           ;         ;
+; stratix_ram_block.inc                          ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                    ;         ;
+; lpm_mux.inc                                    ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                              ;         ;
+; lpm_decode.inc                                 ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                           ;         ;
+; aglobal130.inc                                 ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                           ;         ;
+; a_rdenreg.inc                                  ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                            ;         ;
+; altrom.inc                                     ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                               ;         ;
+; altram.inc                                     ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                               ;         ;
+; altdpram.inc                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                             ;         ;
+; db/altsyncram_itk1.tdf                         ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/altsyncram_itk1.tdf                         ;         ;
+; db/principal.ram0_registefile_c7691833.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/principal.ram0_registefile_c7691833.hdl.mif ;         ;
+; lpm_divide.tdf                                 ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                                           ;         ;
+; abs_divider.inc                                ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                                          ;         ;
+; sign_div_unsign.inc                            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                      ;         ;
+; db/lpm_divide_s7m.tdf                          ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/lpm_divide_s7m.tdf                          ;         ;
+; db/sign_div_unsign_3nh.tdf                     ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/sign_div_unsign_3nh.tdf                     ;         ;
+; db/alt_u_div_85f.tdf                           ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/alt_u_div_85f.tdf                           ;         ;
+; db/add_sub_lkc.tdf                             ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/add_sub_lkc.tdf                             ;         ;
+; db/add_sub_mkc.tdf                             ; yes             ; Auto-Generated Megafunction                           ; D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/db/add_sub_mkc.tdf                             ;         ;
+; lpm_mult.tdf                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf                                                             ;         ;
+; lpm_add_sub.inc                                ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                          ;         ;
+; multcore.inc                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                                                             ;         ;
+; bypassff.inc                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                             ;         ;
+; altshift.inc                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                             ;         ;
+; multcore.tdf                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.tdf                                                             ;         ;
+; csa_add.inc                                    ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/csa_add.inc                                                              ;         ;
+; mpar_add.inc                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.inc                                                             ;         ;
+; muleabz.inc                                    ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muleabz.inc                                                              ;         ;
+; mul_lfrg.inc                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_lfrg.inc                                                             ;         ;
+; mul_boothc.inc                                 ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mul_boothc.inc                                                           ;         ;
+; alt_ded_mult.inc                               ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                         ;         ;
+; alt_ded_mult_y.inc                             ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                       ;         ;
+; dffpipe.inc                                    ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffpipe.inc                                                              ;         ;
+; mpar_add.tdf                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/mpar_add.tdf                                                             ;         ;
+; altshift.tdf                                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.tdf                                                             ;         ;
++------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -252,29 +253,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                                         ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 725                                                                                                                           ;
+; Estimated Total logic elements              ; 689                                                                                                                           ;
 ;                                             ;                                                                                                                               ;
-; Total combinational functions               ; 705                                                                                                                           ;
+; Total combinational functions               ; 669                                                                                                                           ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                               ;
-;     -- 4 input functions                    ; 228                                                                                                                           ;
-;     -- 3 input functions                    ; 218                                                                                                                           ;
-;     -- <=2 input functions                  ; 259                                                                                                                           ;
+;     -- 4 input functions                    ; 185                                                                                                                           ;
+;     -- 3 input functions                    ; 189                                                                                                                           ;
+;     -- <=2 input functions                  ; 295                                                                                                                           ;
 ;                                             ;                                                                                                                               ;
 ; Logic elements by mode                      ;                                                                                                                               ;
-;     -- normal mode                          ; 501                                                                                                                           ;
-;     -- arithmetic mode                      ; 204                                                                                                                           ;
+;     -- normal mode                          ; 427                                                                                                                           ;
+;     -- arithmetic mode                      ; 242                                                                                                                           ;
 ;                                             ;                                                                                                                               ;
-; Total registers                             ; 43                                                                                                                            ;
-;     -- Dedicated logic registers            ; 43                                                                                                                            ;
+; Total registers                             ; 65                                                                                                                            ;
+;     -- Dedicated logic registers            ; 65                                                                                                                            ;
 ;     -- I/O registers                        ; 0                                                                                                                             ;
 ;                                             ;                                                                                                                               ;
-; I/O pins                                    ; 58                                                                                                                            ;
-; Total memory bits                           ; 8                                                                                                                             ;
+; I/O pins                                    ; 99                                                                                                                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                                             ;
 ; Maximum fan-out node                        ; randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_85f:divider|op_8~36 ;
 ; Maximum fan-out                             ; 54                                                                                                                            ;
-; Total fan-out                               ; 2189                                                                                                                          ;
-; Average fan-out                             ; 2.70                                                                                                                          ;
+; Total fan-out                               ; 2088                                                                                                                          ;
+; Average fan-out                             ; 2.51                                                                                                                          ;
 +---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -283,30 +283,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Principal                                ; 705 (1)           ; 43 (0)       ; 8           ; 0            ; 0       ; 0         ; 58   ; 0            ; |Principal                                                                                                                       ; work         ;
-;    |MuxSS:MuxSevenSeg|                    ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|MuxSS:MuxSevenSeg                                                                                                     ; work         ;
-;    |UC:UnidadControl|                     ; 57 (57)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|UC:UnidadControl                                                                                                      ; work         ;
-;    |memoria:memoriaIns|                   ; 0 (0)             ; 0 (0)        ; 8           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns                                                                                                    ; work         ;
-;       |altsyncram:my_rom_rtl_0|           ; 0 (0)             ; 0 (0)        ; 8           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns|altsyncram:my_rom_rtl_0                                                                            ; work         ;
-;          |altsyncram_ks71:auto_generated| ; 0 (0)             ; 0 (0)        ; 8           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated                                             ; work         ;
-;    |mostrar:mostrarNum|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|mostrar:mostrarNum                                                                                                    ; work         ;
+; |Principal                                ; 669 (0)           ; 65 (0)       ; 0           ; 0            ; 0       ; 0         ; 99   ; 0            ; |Principal                                                                                                                       ; work         ;
+;    |IR:irP|                               ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|IR:irP                                                                                                                ; work         ;
+;    |MuxSS:MuxSevenSeg|                    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|MuxSS:MuxSevenSeg                                                                                                     ; work         ;
+;    |PCounter:PC|                          ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|PCounter:PC                                                                                                           ; work         ;
+;    |UC:UnidadControl|                     ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|UC:UnidadControl                                                                                                      ; work         ;
+;    |divFrec:newclock|                     ; 44 (44)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|divFrec:newclock                                                                                                      ; work         ;
+;    |memoria:memoriaIns|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|memoria:memoriaIns                                                                                                    ; work         ;
 ;    |randomSegmento:ranSeg|                ; 593 (1)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg                                                                                                 ; work         ;
 ;       |lpm_divide:Mod0|                   ; 592 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0                                                                                 ; work         ;
 ;          |lpm_divide_s7m:auto_generated|  ; 592 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_3nh:divider| ; 592 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated|sign_div_unsign_3nh:divider                       ; work         ;
 ;                |alt_u_div_85f:divider|    ; 592 (592)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|randomSegmento:ranSeg|lpm_divide:Mod0|lpm_divide_s7m:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_85f:divider ; work         ;
-;    |sieteS:apuestaOIngreso|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|sieteS:apuestaOIngreso                                                                                                ; work         ;
+;    |sumPC:PCsum|                          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Principal|sumPC:PCsum                                                                                                           ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
-+--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------+
-; Name                                                                                 ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                       ;
-+--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------+
-; memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 26           ; --           ; --           ; 6656 ; db/Principal.ram0_memoria_21abfed.hdl.mif ;
-+--------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -340,38 +331,6 @@ Encoding Type:  One-Hot
 +------------------------+----------------------+-----------------------+-----------------------+-----------------------+------------------------+--------------------+--------------------+---------------------+--------------------+---------------------+------------------+------------------+------------------+----------------+---------------+----------------+------------------+---------------+----------------+-------------------+------------------+-----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; UC:UnidadControl|est_sig.EstadoRand_619             ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.OutSS_574                  ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.Inp_565                    ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.WM_556                     ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.Decode_601                 ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.RM_583                     ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.Fetch_610                  ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.Dir_592                    ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExJ_547                    ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExBeq_538                  ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExBne_529                  ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExBgt_520                  ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.GuarDir_502                ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.GuarMem_475                ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.WRegister_430              ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.CalDirSM_511               ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.LeerMem_484                ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExecuteADDI_466            ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExecuteADD_457             ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExecuteMUL_448             ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.ExecuteSUB_439             ; UC:UnidadControl|Selector2 ; yes                    ;
-; UC:UnidadControl|est_sig.CalDirLM_493               ; UC:UnidadControl|Selector2 ; yes                    ;
-; Number of user-specified and inferred latches = 22  ;                            ;                        ;
-+-----------------------------------------------------+----------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                   ;
 +-----------------------------------------------+------------------------------------------------------+
@@ -381,7 +340,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mostrar:mostrarNum|\segment:centenas[14..30]  ; Stuck at GND due to stuck port data_in               ;
 ; mostrar:mostrarNum|\segment:decenas[14..30]   ; Stuck at GND due to stuck port data_in               ;
 ; mostrar:mostrarNum|\segment:unidades[14..30]  ; Stuck at GND due to stuck port data_in               ;
-; memoria:memoriaIns|reg_address[0..7]          ; Stuck at GND due to stuck port data_in               ;
 ; mostrar:mostrarNum|\segment:unidades[31]      ; Merged with mostrar:mostrarNum|\segment:decenas[31]  ;
 ; mostrar:mostrarNum|\segment:decenas[31]       ; Merged with mostrar:mostrarNum|\segment:centenas[31] ;
 ; mostrar:mostrarNum|\segment:centenas[31]      ; Merged with mostrar:mostrarNum|\segment:miles[31]    ;
@@ -438,8 +396,56 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mostrar:mostrarNum|\segment:centenas[2]       ; Merged with mostrar:mostrarNum|\segment:miles[1]     ;
 ; mostrar:mostrarNum|\segment:miles[1]          ; Merged with mostrar:mostrarNum|\segment:miles[2]     ;
 ; mostrar:mostrarNum|\segment:miles[2]          ; Merged with mostrar:mostrarNum|\segment:miles[31]    ;
-; Total Number of Removed Registers = 175       ;                                                      ;
+; IR:irP|rs[0..2]                               ; Stuck at VCC due to stuck port data_in               ;
+; IR:irP|const[0..12]                           ; Merged with IR:irP|const[13]                         ;
+; IR:irP|rt[0..3]                               ; Merged with IR:irP|const[13]                         ;
+; IR:irP|rs[3]                                  ; Merged with IR:irP|const[13]                         ;
+; IR:irP|opcode[0..3]                           ; Merged with IR:irP|const[13]                         ;
+; UC:UnidadControl|est_actual.Dir               ; Lost fanout                                          ;
+; UC:UnidadControl|est_actual.CalDirSM          ; Lost fanout                                          ;
+; UC:UnidadControl|est_actual.CalDirLM          ; Lost fanout                                          ;
+; UC:UnidadControl|est_actual.LeerMem           ; Lost fanout                                          ;
+; UC:UnidadControl|est_actual.RM                ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExJ               ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExBeq             ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExBne             ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExBgt             ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.GuarDir           ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.GuarMem           ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExecuteADDI       ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExecuteADD        ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExecuteMUL        ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.ExecuteSUB        ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.Decode            ; Lost fanout                                          ;
+; UC:UnidadControl|est_actual.WRegister         ; Stuck at GND due to stuck port data_in               ;
+; Registro:RegistroA|Output[0..13]              ; Lost fanout                                          ;
+; Registro:RegistroB|Output[0..13]              ; Lost fanout                                          ;
+; UC:UnidadControl|est_actual.OutSS             ; Stuck at GND due to stuck port data_in               ;
+; UC:UnidadControl|est_actual.Inp               ; Stuck at GND due to stuck port data_in               ;
+; Total Number of Removed Registers = 239       ;                                                      ;
 +-----------------------------------------------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++-----------------------------------------+---------------------------+----------------------------------------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                               ;
++-----------------------------------------+---------------------------+----------------------------------------------------------------------+
+; UC:UnidadControl|est_actual.ExecuteADDI ; Stuck at GND              ; UC:UnidadControl|est_actual.WRegister, Registro:RegistroA|Output[8], ;
+;                                         ; due to stuck port data_in ; Registro:RegistroA|Output[7], Registro:RegistroA|Output[6],          ;
+;                                         ;                           ; Registro:RegistroA|Output[5], Registro:RegistroA|Output[4],          ;
+;                                         ;                           ; Registro:RegistroA|Output[3], Registro:RegistroA|Output[2],          ;
+;                                         ;                           ; Registro:RegistroA|Output[1], Registro:RegistroA|Output[0],          ;
+;                                         ;                           ; Registro:RegistroB|Output[12], Registro:RegistroB|Output[11],        ;
+;                                         ;                           ; Registro:RegistroB|Output[10], Registro:RegistroB|Output[9],         ;
+;                                         ;                           ; Registro:RegistroB|Output[8]                                         ;
+; UC:UnidadControl|est_actual.ExBeq       ; Stuck at GND              ; Registro:RegistroA|Output[13], Registro:RegistroA|Output[12],        ;
+;                                         ; due to stuck port data_in ; Registro:RegistroA|Output[11], Registro:RegistroB|Output[13]         ;
+; UC:UnidadControl|est_actual.ExBgt       ; Stuck at GND              ; Registro:RegistroA|Output[10], Registro:RegistroA|Output[9]          ;
+;                                         ; due to stuck port data_in ;                                                                      ;
+; UC:UnidadControl|est_actual.RM          ; Stuck at GND              ; UC:UnidadControl|est_actual.OutSS                                    ;
+;                                         ; due to stuck port data_in ;                                                                      ;
++-----------------------------------------+---------------------------+----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -447,12 +453,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 43    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 65    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -462,18 +468,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; mostrar:mostrarNum|\segment:miles[31]  ; 4       ;
-; Total number of inverted registers = 1 ;         ;
+; PCounter:PC|PCact[0]                   ; 3       ;
+; PCounter:PC|PCact[1]                   ; 3       ;
+; PCounter:PC|PCact[2]                   ; 3       ;
+; PCounter:PC|PCact[3]                   ; 3       ;
+; PCounter:PC|PCact[4]                   ; 3       ;
+; PCounter:PC|PCact[5]                   ; 3       ;
+; PCounter:PC|PCact[6]                   ; 3       ;
+; PCounter:PC|PCact[7]                   ; 3       ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                 ;
-+---------------------+---------------------------------+------+
-; Register Name       ; Megafunction                    ; Type ;
-+---------------------+---------------------------------+------+
-; IR:irP|opcode[0..3] ; memoria:memoriaIns|my_rom_rtl_0 ; RAM  ;
-+---------------------+---------------------------------+------+
++---------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                          ;
++-----------------------------------------+--------------------------------------+------+
+; Register Name                           ; Megafunction                         ; Type ;
++-----------------------------------------+--------------------------------------+------+
+; registefile:RegisterF|data_outR1[0..13] ; registefile:RegisterF|registef_rtl_0 ; RAM  ;
+; registefile:RegisterF|data_outR2[0..13] ; registefile:RegisterF|registef_rtl_1 ; RAM  ;
++-----------------------------------------+--------------------------------------+------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -481,25 +495,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S2[4]        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S2[3]        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|sieteS:apuestaOIngreso|iSS0[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|sieteS:apuestaOIngreso|iSS1[0] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S0[1]        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S1[4]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S2[0]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|sieteS:apuestaOIngreso|iSS0[3] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|sieteS:apuestaOIngreso|iSS1[3] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S2[5]        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Principal|MuxSS:MuxSevenSeg|S2[6]        ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |Principal|sieteS:apuestaOIngreso|iSS0[6] ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |Principal|sieteS:apuestaOIngreso|iSS1[4] ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; No         ; |Principal|UC:UnidadControl|est_sig       ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |Principal|sieteS:apuestaOIngreso|iSS1[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Source assignments for memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------+
-; Assignment                      ; Value              ; From ; To                                 ;
-+---------------------------------+--------------------+------+------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                  ;
-+---------------------------------+--------------------+------+------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -692,64 +714,125 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: memoria:memoriaIns|altsyncram:my_rom_rtl_0     ;
-+------------------------------------+-------------------------------------------+----------------+
-; Parameter Name                     ; Value                                     ; Type           ;
-+------------------------------------+-------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                         ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                        ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                       ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                        ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                       ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                         ; Untyped        ;
-; OPERATION_MODE                     ; ROM                                       ; Untyped        ;
-; WIDTH_A                            ; 26                                        ; Untyped        ;
-; WIDTHAD_A                          ; 8                                         ; Untyped        ;
-; NUMWORDS_A                         ; 256                                       ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                              ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                      ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                      ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                      ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                      ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                      ; Untyped        ;
-; WIDTH_B                            ; 1                                         ; Untyped        ;
-; WIDTHAD_B                          ; 1                                         ; Untyped        ;
-; NUMWORDS_B                         ; 1                                         ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                    ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                    ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                    ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1                                    ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                              ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                    ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                      ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                      ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                      ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                      ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                      ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                      ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                         ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                                         ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                      ; Untyped        ;
-; BYTE_SIZE                          ; 8                                         ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                 ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                      ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                      ; Untyped        ;
-; INIT_FILE                          ; db/Principal.ram0_memoria_21abfed.hdl.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                    ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                         ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                    ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                    ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                    ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                    ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                           ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                           ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                     ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                     ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                         ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone II                                ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_ks71                           ; Untyped        ;
-+------------------------------------+-------------------------------------------+----------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: registefile:RegisterF|altsyncram:registef_rtl_0     ;
++------------------------------------+------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                          ; Type           ;
++------------------------------------+------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                              ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT                                      ; Untyped        ;
+; WIDTH_A                            ; 14                                             ; Untyped        ;
+; WIDTHAD_A                          ; 4                                              ; Untyped        ;
+; NUMWORDS_A                         ; 16                                             ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WIDTH_B                            ; 14                                             ; Untyped        ;
+; WIDTHAD_B                          ; 4                                              ; Untyped        ;
+; NUMWORDS_B                         ; 16                                             ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                         ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK0                                         ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped        ;
+; BYTE_SIZE                          ; 8                                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                       ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; INIT_FILE                          ; db/Principal.ram0_registefile_c7691833.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                          ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone II                                     ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_itk1                                ; Untyped        ;
++------------------------------------+------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: registefile:RegisterF|altsyncram:registef_rtl_1     ;
++------------------------------------+------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                          ; Type           ;
++------------------------------------+------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                              ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT                                      ; Untyped        ;
+; WIDTH_A                            ; 14                                             ; Untyped        ;
+; WIDTHAD_A                          ; 4                                              ; Untyped        ;
+; NUMWORDS_A                         ; 16                                             ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WIDTH_B                            ; 14                                             ; Untyped        ;
+; WIDTHAD_B                          ; 4                                              ; Untyped        ;
+; NUMWORDS_B                         ; 16                                             ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                         ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK0                                         ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped        ;
+; BYTE_SIZE                          ; 8                                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                       ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; INIT_FILE                          ; db/Principal.ram0_registefile_c7691833.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                          ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone II                                     ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_itk1                                ; Untyped        ;
++------------------------------------+------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -811,24 +894,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                       ;
-+-------------------------------------------+--------------------------------------------+
-; Name                                      ; Value                                      ;
-+-------------------------------------------+--------------------------------------------+
-; Number of entity instances                ; 1                                          ;
-; Entity Instance                           ; memoria:memoriaIns|altsyncram:my_rom_rtl_0 ;
-;     -- OPERATION_MODE                     ; ROM                                        ;
-;     -- WIDTH_A                            ; 26                                         ;
-;     -- NUMWORDS_A                         ; 256                                        ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
-;     -- WIDTH_B                            ; 1                                          ;
-;     -- NUMWORDS_B                         ; 1                                          ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
-+-------------------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                            ;
++-------------------------------------------+-------------------------------------------------+
+; Name                                      ; Value                                           ;
++-------------------------------------------+-------------------------------------------------+
+; Number of entity instances                ; 2                                               ;
+; Entity Instance                           ; registefile:RegisterF|altsyncram:registef_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                       ;
+;     -- WIDTH_A                            ; 14                                              ;
+;     -- NUMWORDS_A                         ; 16                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                    ;
+;     -- WIDTH_B                            ; 14                                              ;
+;     -- NUMWORDS_B                         ; 16                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                        ;
+; Entity Instance                           ; registefile:RegisterF|altsyncram:registef_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                       ;
+;     -- WIDTH_A                            ; 14                                              ;
+;     -- NUMWORDS_A                         ; 16                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                    ;
+;     -- WIDTH_B                            ; 14                                              ;
+;     -- NUMWORDS_B                         ; 16                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                        ;
++-------------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -869,15 +963,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "memoria:memoriaIns" ;
-+---------+-------+----------+-------------------+
-; Port    ; Type  ; Severity ; Details           ;
-+---------+-------+----------+-------------------+
-; address ; Input ; Info     ; Stuck at GND      ;
-+---------+-------+----------+-------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -893,7 +978,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 20 18:31:58 2018
+    Info: Processing started: Wed Nov 21 00:42:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Principal -c Principal
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file randomsegmento.vhd
@@ -945,11 +1030,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file sumpc.v
 Info (12021): Found 2 design units, including 1 entities, in source file muxss.vhd
     Info (12022): Found design unit 1: MuxSS-MuxSS_arc
     Info (12023): Found entity 1: MuxSS
+Info (12021): Found 2 design units, including 1 entities, in source file divfrec.vhd
+    Info (12022): Found design unit 1: divFrec-divFrec_arc
+    Info (12023): Found entity 1: divFrec
 Info (12127): Elaborating entity "Principal" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(191): object "Jump" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(197): used implicit default value for signal "addressIns" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Principal.vhd(202): used implicit default value for signal "muldatos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(208): object "DatosRF" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(201): object "Jump" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at Principal.vhd(212): used implicit default value for signal "muldatos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at Principal.vhd(218): object "DatosRF" assigned a value but never read
+Info (12128): Elaborating entity "divFrec" for hierarchy "divFrec:newclock"
+Warning (10542): VHDL Variable Declaration warning at divFrec.vhd(13): used initial value expression for variable "max_count" because variable was never assigned a value
 Info (12128): Elaborating entity "memoria" for hierarchy "memoria:memoriaIns"
 Info (12128): Elaborating entity "IR" for hierarchy "IR:irP"
 Info (12128): Elaborating entity "registefile" for hierarchy "registefile:RegisterF"
@@ -999,43 +1088,19 @@ Info (10041): Inferred latch for "Output[7]" at Mux12.vhd(32)
 Info (12128): Elaborating entity "PCounter" for hierarchy "PCounter:PC"
 Info (12128): Elaborating entity "sumPC" for hierarchy "sumPC:PCsum"
 Info (12128): Elaborating entity "UC" for hierarchy "UC:UnidadControl"
-Warning (10492): VHDL Process Statement warning at UC.vhd(64): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(82): signal "botonEnter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(103): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(106): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(109): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(112): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(115): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(118): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(121): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(124): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(127): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(130): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(133): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at UC.vhd(136): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at UC.vhd(30): inferring latch(es) for signal or variable "est_sig", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "est_sig.WRegister" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExecuteSUB" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExecuteMUL" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExecuteADD" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExecuteADDI" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.GuarMem" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.LeerMem" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.CalDirLM" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.GuarDir" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.CalDirSM" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExBgt" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExBne" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExBeq" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.ExJ" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.WM" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.Inp" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.OutSS" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.RM" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.Dir" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.Decode" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.Fetch" at UC.vhd(30)
-Info (10041): Inferred latch for "est_sig.EstadoRand" at UC.vhd(30)
+Warning (10492): VHDL Process Statement warning at UC.vhd(66): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(69): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(72): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(75): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(78): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(81): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(84): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(87): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(90): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(93): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(96): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(99): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at UC.vhd(102): signal "Opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "mostrar" for hierarchy "mostrar:mostrarNum"
 Info (12128): Elaborating entity "randomSegmento" for hierarchy "randomSegmento:ranSeg"
 Warning (10492): VHDL Process Statement warning at randomSegmento.vhd(39): signal "count_i1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -1145,35 +1210,84 @@ Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[3]" is permanently enable
 Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[4]" is permanently enabled
 Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[5]" is permanently enabled
 Warning (14026): LATCH primitive "MuxSS:MuxSevenSeg|S3[6]" is permanently enabled
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "memoria:memoriaIns|my_rom_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to ROM
-        Info (286033): Parameter WIDTH_A set to 26
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoria:memoriaIns|my_rom" is uninferred due to asynchronous read logic
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "registefile:RegisterF|registef_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 14
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 14
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/Principal.ram0_memoria_21abfed.hdl.mif
+        Info (286033): Parameter INIT_FILE set to db/Principal.ram0_registefile_c7691833.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "registefile:RegisterF|registef_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 14
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 14
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/Principal.ram0_registefile_c7691833.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "randomSegmento:ranSeg|Mod0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "randomSegmento:ranSeg|Mult0"
-Info (12130): Elaborated megafunction instantiation "memoria:memoriaIns|altsyncram:my_rom_rtl_0"
-Info (12133): Instantiated megafunction "memoria:memoriaIns|altsyncram:my_rom_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "ROM"
-    Info (12134): Parameter "WIDTH_A" = "26"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+Info (12130): Elaborated megafunction instantiation "registefile:RegisterF|altsyncram:registef_rtl_0"
+Info (12133): Instantiated megafunction "registefile:RegisterF|altsyncram:registef_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "14"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "14"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/Principal.ram0_memoria_21abfed.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ks71.tdf
-    Info (12023): Found entity 1: altsyncram_ks71
+    Info (12134): Parameter "INIT_FILE" = "db/Principal.ram0_registefile_c7691833.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_itk1.tdf
+    Info (12023): Found entity 1: altsyncram_itk1
+Info (12130): Elaborated megafunction instantiation "registefile:RegisterF|altsyncram:registef_rtl_1"
+Info (12133): Instantiated megafunction "registefile:RegisterF|altsyncram:registef_rtl_1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "14"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "14"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/Principal.ram0_registefile_c7691833.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12130): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_divide:Mod0"
 Info (12133): Instantiated megafunction "randomSegmento:ranSeg|lpm_divide:Mod0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "20"
@@ -1206,69 +1320,85 @@ Info (12131): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_m
 Info (12131): Elaborated megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "randomSegmento:ranSeg|lpm_mult:Mult0"
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a0"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a1"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a2"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a3"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a4"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a5"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a6"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a7"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a8"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a9"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a10"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a11"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a12"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a13"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a14"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a15"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a16"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a17"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a18"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a19"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a20"
-        Warning (14320): Synthesized away node "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a21"
-Warning (13012): Latch UC:UnidadControl|est_sig.EstadoRand_619 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.Inp_565 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal UC:UnidadControl|est_actual.Decode
-Warning (13012): Latch UC:UnidadControl|est_sig.Fetch_610 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.Dir_592 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.ExJ_547 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.ExBeq_538 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.ExBne_529 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.ExBgt_520 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.CalDirSM_511 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.ExecuteADDI_466 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.ExecuteADD_457 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a22
-Warning (13012): Latch UC:UnidadControl|est_sig.ExecuteMUL_448 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a22
-Warning (13012): Latch UC:UnidadControl|est_sig.ExecuteSUB_439 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
-Warning (13012): Latch UC:UnidadControl|est_sig.CalDirLM_493 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ram_block1a25
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a0"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a1"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a2"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a3"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a4"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a5"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a6"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a7"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_1|altsyncram_itk1:auto_generated|ram_block1a13"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a0"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a1"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a2"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a3"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a4"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a5"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a6"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a7"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "registefile:RegisterF|altsyncram:registef_rtl_0|altsyncram_itk1:auto_generated|ram_block1a13"
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "nclk" and its non-tri-state driver.
+Info (13060): One or more bidirs are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "nclk" is moved to its source
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "nclk~synth"
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SS0[1]" is stuck at VCC
+    Warning (13410): Pin "SS0[2]" is stuck at VCC
+    Warning (13410): Pin "SS0[4]" is stuck at VCC
+    Warning (13410): Pin "SS0[5]" is stuck at VCC
+    Warning (13410): Pin "SS1[1]" is stuck at VCC
+    Warning (13410): Pin "SS1[2]" is stuck at VCC
+    Warning (13410): Pin "SS1[4]" is stuck at VCC
+    Warning (13410): Pin "SS1[5]" is stuck at VCC
+    Warning (13410): Pin "SS2[1]" is stuck at VCC
+    Warning (13410): Pin "SS2[2]" is stuck at VCC
+    Warning (13410): Pin "SS2[4]" is stuck at VCC
+    Warning (13410): Pin "SS2[5]" is stuck at VCC
+    Warning (13410): Pin "SS3[0]" is stuck at VCC
     Warning (13410): Pin "SS3[1]" is stuck at VCC
-Info (17036): Removed 7 MSB VCC or GND address nodes from RAM block "memoria:memoriaIns|altsyncram:my_rom_rtl_0|altsyncram_ks71:auto_generated|ALTSYNCRAM"
+    Warning (13410): Pin "SS3[2]" is stuck at VCC
+    Warning (13410): Pin "SS3[3]" is stuck at VCC
+    Warning (13410): Pin "SS3[4]" is stuck at VCC
+    Warning (13410): Pin "SS3[5]" is stuck at VCC
+    Warning (13410): Pin "SS3[6]" is stuck at VCC
+    Warning (13410): Pin "instruccionMomento[18]" is stuck at VCC
+    Warning (13410): Pin "instruccionMomento[19]" is stuck at VCC
+    Warning (13410): Pin "instruccionMomento[20]" is stuck at VCC
+Info (17049): 33 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 808 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switches0[1]"
+    Warning (15610): No output dependent on input pin "switches0[2]"
+    Warning (15610): No output dependent on input pin "switches0[3]"
+    Warning (15610): No output dependent on input pin "switches0[0]"
+    Warning (15610): No output dependent on input pin "switches1[1]"
+    Warning (15610): No output dependent on input pin "switches1[2]"
+    Warning (15610): No output dependent on input pin "switches1[3]"
+    Warning (15610): No output dependent on input pin "switches1[0]"
+    Warning (15610): No output dependent on input pin "switches2[0]"
+    Warning (15610): No output dependent on input pin "switches2[1]"
+Info (21057): Implemented 788 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 746 logic cells
-    Info (21064): Implemented 4 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 119 warnings
-    Info: Peak virtual memory: 4684 megabytes
-    Info: Processing ended: Tue Nov 20 18:32:05 2018
+    Info (21059): Implemented 86 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 689 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 4697 megabytes
+    Info: Processing ended: Wed Nov 21 00:42:07 2018
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 

@@ -1,5 +1,5 @@
 Flow report for Principal
-Tue Nov 20 18:32:23 2018
+Wed Nov 21 00:44:20 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 20 18:32:23 2018           ;
+; Flow Status                        ; Successful - Wed Nov 21 00:44:20 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Principal                                       ;
 ; Top-level Entity Name              ; Principal                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 707 / 18,752 ( 4 % )                            ;
-;     Total combinational functions  ; 706 / 18,752 ( 4 % )                            ;
-;     Dedicated logic registers      ; 43 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 43                                              ;
-; Total pins                         ; 58 / 315 ( 18 % )                               ;
+; Total logic elements               ; 677 / 18,752 ( 4 % )                            ;
+;     Total combinational functions  ; 669 / 18,752 ( 4 % )                            ;
+;     Dedicated logic registers      ; 65 / 18,752 ( < 1 % )                           ;
+; Total registers                    ; 65                                              ;
+; Total pins                         ; 99 / 315 ( 31 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 8 / 239,616 ( < 1 % )                           ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/20/2018 18:31:59 ;
+; Start date & time ; 11/21/2018 00:42:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Principal           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 345052807169.154275671911476          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 345052807169.154277892111632          ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
@@ -95,12 +95,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4684 MB             ; 00:00:07                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 4865 MB             ; 00:00:09                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4572 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4689 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 4865 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:02                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4565 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4527 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:21                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4535 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4535 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:21                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,6 +116,8 @@ applicable agreement for further details.
 ; Assembler                 ; PC-WTECHNOLOGY   ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; PC-WTECHNOLOGY   ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; PC-WTECHNOLOGY   ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; PC-WTECHNOLOGY   ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; PC-WTECHNOLOGY   ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -125,6 +129,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off Principal -c Pr
 quartus_asm --read_settings_files=off --write_settings_files=off Principal -c Principal
 quartus_sta Principal -c Principal
 quartus_eda --read_settings_files=off --write_settings_files=off Principal -c Principal
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Principal -c Principal --vector_source=D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/output_files/Waveform7.vwf --testbench_file=./simulation/qsim/Principal.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Principal -c Principal
 
 
 

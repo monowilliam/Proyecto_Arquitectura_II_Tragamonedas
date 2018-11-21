@@ -27,7 +27,7 @@ process(Clk) begin
 	end if;
 end process;
 
-process (Clk) begin
+process (Clk,botonEnter) begin
 	case est_actual is
 		when Fetch =>
 			PCwrite <= '1';
@@ -64,42 +64,6 @@ process (Clk) begin
 			if Opcode = "0000" then
 				est_sig := Inp;
 			end if;
-		when Inp =>
-			PCwrite <= '0';
-			Beq <= '0';
-			Bne <= '0';
-			Bgt <= '0';
-			Jump <='0';
-			WIR <= '0';
-			Dg <= '0';
-			WRF <= '0';
-			AluOP <= "11";
-			AluSrcA <= '0';
-			DatSel <= '1';
-			RMD <= '0';
-			WMD <= '1';
-			IO <= "10";
-			if(botonEnter = '0') then
-				est_sig := WM;
-			else 
-				est_sig := Inp;
-			end if;
-		when WM =>
-			PCwrite <= '0';
-			Beq <= '0';
-			Bne <= '0';
-			Bgt <= '0';
-			Jump <='0';
-			WIR <= '0';
-			Dg <= '0';
-			WRF <= '0';
-			AluOP <= "00";
-			AluSrcA <= '0';
-			DatSel <= '0';
-			RMD <= '0';
-			WMD <= '1';
-			IO <= "00";
-			est_sig := Fetch;
 			if Opcode = "0001" then
 				est_sig := ExecuteADDI;
 			end if;
@@ -135,7 +99,46 @@ process (Clk) begin
 			end if;
 			if Opcode = "1100" then
 				est_sig := EstadoRand;
+			else
+				est_sig := Decode;
 			end if;
+		when Inp =>
+			PCwrite <= '0';
+			Beq <= '0';
+			Bne <= '0';
+			Bgt <= '0';
+			Jump <='0';
+			WIR <= '0';
+			Dg <= '0';
+			WRF <= '0';
+			AluOP <= "11";
+			AluSrcA <= '0';
+			DatSel <= '1';
+			RMD <= '0';
+			WMD <= '1';
+			IO <= "10";
+			if(botonEnter='0') then
+				est_sig := WM;
+			else 
+				est_sig := Inp;
+			end if;
+		when WM =>
+			PCwrite <= '0';
+			Beq <= '0';
+			Bne <= '0';
+			Bgt <= '0';
+			Jump <='0';
+			WIR <= '0';
+			Dg <= '0';
+			WRF <= '0';
+			AluOP <= "00";
+			AluSrcA <= '0';
+			DatSel <= '0';
+			RMD <= '0';
+			WMD <= '1';
+			IO <= "00";
+			est_sig := Fetch;
+			
 
 		when ExecuteADDI =>
 			PCwrite <= '0';
@@ -328,7 +331,11 @@ process (Clk) begin
 			RMD <= '0';
 			WMD <= '0';
 			IO <= "11";
-			est_sig := Fetch;
+			if(botonEnter='0') then
+				est_sig := Fetch;
+			else
+				est_sig := OutSS;
+			end if;
 		when CalDirSM =>
 			PCwrite <= '0';
 			Beq <= '0';
@@ -424,7 +431,11 @@ process (Clk) begin
 			RMD <= '0';
 			WMD <= '1';
 			IO <= "01";
-			est_sig := WM;
+			if(botonEnter='0') then
+				est_sig := WM;
+			else 
+				est_sig := EstadoRand;
+			end if;
 	end case;
 end process;
 

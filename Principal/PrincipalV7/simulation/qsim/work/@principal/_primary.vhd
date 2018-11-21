@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity Principal is
     port(
         clk             : in     vl_logic;
+        nclk            : inout  vl_logic;
         switches0       : in     vl_logic_vector(3 downto 0);
         switches1       : in     vl_logic_vector(3 downto 0);
         switches2       : in     vl_logic_vector(1 downto 0);
@@ -12,6 +13,11 @@ entity Principal is
         SS3             : out    vl_logic_vector(6 downto 0);
         EnterButton     : in     vl_logic;
         ledsR           : out    vl_logic_vector(9 downto 0);
-        ledsV           : out    vl_logic_vector(7 downto 0)
+        ledsV           : out    vl_logic_vector(7 downto 0);
+        printPC         : out    vl_logic_vector(7 downto 0);
+        printPCYES      : out    vl_logic;
+        salidaBoton     : out    vl_logic;
+        instruccionMomento: out    vl_logic_vector(25 downto 0);
+        Op              : out    vl_logic_vector(3 downto 0)
     );
 end Principal;

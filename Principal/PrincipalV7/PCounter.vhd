@@ -23,7 +23,7 @@ Entity PCounter is generic(
 port(
 	clk, WE : in std_logic;
 	PCin : in std_logic_vector(tambus-1 downto 0);
-	PCact : out std_logic_vector(tambus-1 downto 0)
+	PCact : out std_logic_vector(tambus-1 downto 0) :="11111111"
 );
 end entity;
 

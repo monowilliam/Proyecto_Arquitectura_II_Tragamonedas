@@ -13,16 +13,27 @@ generic (
 );
 port (
 	clk: in std_logic;
+	nclk: inout std_logic;
 	switches0, switches1 : in std_logic_vector(3 downto 0);
 	switches2 : in std_logic_vector(1 downto 0);	
 	SS0,SS1,SS2,SS3 : out std_logic_vector(6 downto 0);
 	EnterButton : in std_logic;
-	ledsR : out std_logic_vector (9 downto 0) :="0000000000";
-	ledsV : out std_logic_vector (7 downto 0) :="00000000"
+	ledsR : out std_logic_vector (9 downto 0);
+	ledsV : out std_logic_vector (7 downto 0);
+	printPC : out std_logic_vector (7 downto 0);
+	printPCYES, salidaBoton: out std_logic;
+	instruccionMomento : out std_logic_vector (BusInstruc-1 downto 0);
+	Op : out std_logic_vector (top-1 downto 0)
 );
 end entity;
 
 architecture Principal_arch of principal is 
+component divFrec is
+port(
+	clk : in std_logic;
+	nclk : inout std_logic
+);
+end component;
 component ALU is generic(BusValores: natural);
 port(
 	S : in std_logic_vector(1 downto 0);
@@ -51,7 +62,6 @@ generic(
 	BusInstruc: natural
 );
 port(
-	clk : in std_logic;
 	address: in integer range 0 to 255;
 	data_out : out std_logic_vector(BusInstruc-1 downto 0)
 );
@@ -215,46 +225,54 @@ signal busLedsR :std_logic_vector(9 downto 0);
 signal busLedsV :std_logic_vector(7 downto 0);
 begin
 --Mapeo puertos------------------------
-	memoriaIns: memoria generic map(BusInstruc=>BusInstruc) port map (clk => clk, address=>addressIns,data_out=>ins);
+	newclock: divFrec port map (clk=>clk,nclk=>nclk);
+	memoriaIns: memoria generic map(BusInstruc=>BusInstruc) port map (address=>to_integer(unsigned(PCOut)),data_out=>ins);
 	irP: IR generic map (BusInstruc=>BusInstruc, tr=>tr, tc => tc, top => top)
-	port map(clk => clk,instruccion=>ins, rs=>rs,rt=>rt,const=>const, opcode=>opcode, WIR => WIR);
+	port map(clk => nclk,instruccion=>ins, rs=>rs,rt=>rt,const=>const, opcode=>opcode, WIR => WIR);
 	RegisterF: registefile generic map (BusValores=>BusValores,tr=>tr)
-	port map(clk => clk, we =>WRF, data_in => muldatos,addrR1=>rs,addrR2=>rt,data_outR1=>toA,data_outR2=>toB);
+	port map(clk => nclk, we =>WRF, data_in => muldatos,addrR1=>rs,addrR2=>rt,data_outR1=>toA,data_outR2=>toB);
 	RegistroA : Registro generic map (BusValores => BusValores)
-	port map(clk=>clk, A=>toA,Output => SA);
+	port map(clk=>nclk, A=>toA,Output => SA);
 	RegistroB: Registro generic map (BusValores => BusValores)
-	port map(clk=>clk,A=>toB,Output=>SB);
+	port map(clk=>nclk,A=>toB,Output=>SB);
 	MuxA: Mux14 generic map (BusValores => BusValores)
 	port map(Sel => AluSrcA, A=>SA, B=>const,Output=>mux2Alu);
 	ALU1: ALU generic map (BusValores => BusValores)
 	port map(S => AluOp,A=>mux2Alu,B=>SB,Z=>Z,N=>N,OUTPUT=>SAlu);
 	ALUOut : Registro generic map (BusValores=>BusValores)
-	port map(clk=>clk,A=>SAlu,Output=>SAluOut);
+	port map(clk=>nclk,A=>SAlu,Output=>SAluOut);
 	MuxB : Mux14 generic map (BusValores=>BusValores)
 	port map(Sel=>DatSel,A=>SA,B=>entrada,Output=>muxmem);
 	MemDatos : memoriaram generic map (BusValores=>BusValores) 
-	port map (clk=>clk,we=>wmd,re=>rmd,data_in=>muxmem,address=>to_integer(unsigned(SAluOut)),data_out=>MemOut);
+	port map (clk=>nclk,we=>wmd,re=>rmd,data_in=>muxmem,address=>to_integer(unsigned(SAluOut)),data_out=>MemOut);
 	MuxRF : Mux14 generic map (BusValores=>BusValores)
 	port map(Sel=>DG,A=>SAluOut,B=>MemOut,Output=>DatosRF);
+	
 	MuxPC : Mux12 generic map(BusAdressIns=>BusAdressIns)
 	port map(Sel=>SelMuxPC,A=>const(BusAdressIns-1 downto 0),B=>PCNew,Output=>contPC);
 	PC : PCounter generic map(tambus => BusAdressIns)
-	port map(clk=>clk,WE=>PCyes,PCin=>contPC,PCact=>PCout);
+	port map(clk=>nclk,WE=>PCyes,PCin=>contPC,PCact=>PCout);
 	PCsum: sumPC generic map(Wide=>BusAdressIns)
 	port map(PCant=>PCout,PCsig=>PCnew);
 	SelMuxPC <= NOT((Beq AND Z)OR(Bne AND NOT(Z))OR((NOT Z) AND (Bgt AND (NOT N))));
 	PCyes <= ((Beq AND Z)OR(Bne AND NOT(Z))OR((NOT Z) AND (Bgt AND (NOT N)))) OR PCwrite;
+	
 	UnidadControl : UC generic map(top=>top)
-	port map(Clk=>clk,Opcode=>opcode,botonEnter=>botonUC ,IO=>IO,AluOp=>AluOp,PCWrite=>PCWrite,Beq=>Beq,Bne=>Bne,Bgt=>Bgt,Jump=>Jump,WIR=>WIR,Dg=>DG,WRF=>WRF,AluSrcA=>AluSrcA,DatSel=>DatSel,RMD=>RMD,WMD=>WMD);
+	port map(Clk=>nclk,Opcode=>opcode,botonEnter=>botonUC ,IO=>IO,AluOp=>AluOp,PCWrite=>PCWrite,Beq=>Beq,Bne=>Bne,Bgt=>Bgt,Jump=>Jump,WIR=>WIR,Dg=>DG,WRF=>WRF,AluSrcA=>AluSrcA,DatSel=>DatSel,RMD=>RMD,WMD=>WMD);
 	mostrarNum : mostrar generic map (BusValores=>BusValores)
 	port map(boton=>EnterButton,numeroVector=>MemOut,segmento0=>dm0,segmento1=>dm1,segmento2=>dm2,segmento3=>dm3);
 	ranSeg : randomSegmento 
 	port map(boton=>EnterButton,segmento1=>dr0,segmento2=>dr1,segmento3=>dr2,segmento4=>dr3,ledsRojos=>BusLedsR,ledsVerdes=>BusLedsV);
 	apuestaOIngreso : sieteS generic map (BusValores => BusValores) 
-	port map (clk => clk,switches0=>switches0, bot=> enterButton, botout=>botonUC, switches1 => switches1, switches2=>switches2,iSS0=>di0,iSS1=>di1,iSS2=>di2,iSS3=>di3,Output=>entrada);
+	port map (clk => nclk,switches0=>switches0, bot=> enterButton, botout=>botonUC, switches1 => switches1, switches2=>switches2,iSS0=>di0,iSS1=>di1,iSS2=>di2,iSS3=>di3,Output=>entrada);
 	MuxSevenSeg : MuxSS
 	port map(Sel=>IO,R0=>dr0,R1=>dr1,R2=>dr2,R3=>dr3,I0=>di0,I1=>di1,I2=>di2,I3=>di3,M0=>dm0,M1=>dm1,M2=>dm2,
 	M3=>dm3,S0=>SS0,S1=>SS1,S2=>SS2,S3=>SS3,ledV=>ledsV,ledR=>ledsR,ledInV=>BusLedsV,ledInR=>BusLedsR);
 -----------------------------------------------------------
+	printPC<=PCOut;
+	printPCYES <= PCyes;
+	instruccionMomento <= ins;
+	salidaBoton <= botonUC; 
+	Op<= Opcode;
 end architecture;
 

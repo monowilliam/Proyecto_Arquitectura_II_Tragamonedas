@@ -55,28 +55,10 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name VHDL_FILE randomSegmento.vhd
-set_global_assignment -name VHDL_FILE mostrar.vhd
-set_global_assignment -name VHDL_FILE UC.vhd
-set_global_assignment -name VHDL_FILE sieteS.vhd
-set_global_assignment -name VHDL_FILE registefile.vhd
-set_global_assignment -name VHDL_FILE Registro.vhd
-set_global_assignment -name VHDL_FILE Mux14.vhd
-set_global_assignment -name VHDL_FILE Mux12.vhd
-set_global_assignment -name VHDL_FILE memoriaram.vhd
-set_global_assignment -name VHDL_FILE memoria.vhd
-set_global_assignment -name VHDL_FILE IR.vhd
-set_global_assignment -name VHDL_FILE ALU.vhd
-set_global_assignment -name VHDL_FILE Principal.vhd
-set_global_assignment -name VHDL_FILE PCounter.vhd
-set_global_assignment -name VHDL_FILE sumPC.vhd
-set_global_assignment -name VHDL_FILE MuxSS.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
 set_location_assignment PIN_L1 -to clk
 set_location_assignment PIN_R22 -to EnterButton
 set_location_assignment PIN_E2 -to SS0[6]
@@ -135,5 +117,32 @@ set_location_assignment PIN_V21 -to ledsV[3]
 set_location_assignment PIN_V22 -to ledsV[2]
 set_location_assignment PIN_U21 -to ledsV[1]
 set_location_assignment PIN_U22 -to ledsV[0]
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV6/output_files/Waveform.vwf"
+set_global_assignment -name VHDL_FILE randomSegmento.vhd
+set_global_assignment -name VHDL_FILE mostrar.vhd
+set_global_assignment -name VHDL_FILE UC.vhd
+set_global_assignment -name VHDL_FILE sieteS.vhd
+set_global_assignment -name VHDL_FILE registefile.vhd
+set_global_assignment -name VHDL_FILE Registro.vhd
+set_global_assignment -name VHDL_FILE Mux14.vhd
+set_global_assignment -name VHDL_FILE Mux12.vhd
+set_global_assignment -name VHDL_FILE memoriaram.vhd
+set_global_assignment -name VHDL_FILE memoria.vhd
+set_global_assignment -name VHDL_FILE IR.vhd
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_global_assignment -name VHDL_FILE Principal.vhd
+set_global_assignment -name VHDL_FILE PCounter.vhd
+set_global_assignment -name VHDL_FILE sumPC.vhd
+set_global_assignment -name VHDL_FILE MuxSS.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform5.vwf
+set_global_assignment -name VHDL_FILE divFrec.vhd
+set_global_assignment -name CDF_FILE Chain5.cdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform6.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform7.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Escritorio/b/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV7/output_files/Waveform7.vwf"
