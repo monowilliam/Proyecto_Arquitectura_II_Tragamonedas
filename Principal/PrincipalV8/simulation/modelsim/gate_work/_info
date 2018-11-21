@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\PrincipalV7\simulation\modelsim
+vPrincipal
+!i10b 1
+!s100 U5R8>j<HmG1QEM`C^@7e33
+IDKWVgK@F[[iAZP29[lR`G2
+VKMElKNaZeVZg9IlZ7`63M0
+Z1 dD:\Escritorio\PrincipalV7\simulation\modelsim
+w1542784865
+8Principal.vo
+FPrincipal.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1542784902.549000
+!s107 Principal.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Principal.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+n@principal
