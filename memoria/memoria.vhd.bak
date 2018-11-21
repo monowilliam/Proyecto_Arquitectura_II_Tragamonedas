@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity memoria is
+port(
+	clk : in std_logic;
+	address: in integer range 0 to 128;
+	data_out : out std_logic_vector(25 downto 0)
+);
+end entity;
+
+architecture mem_arc of memoria is
+signal reg_address integer range 0 to 128;
+type memoria is array(0 to 128) of std_logic_vector(25 downto 0);
+constant my_rom : memoria := (
+	0 => "10100000010000100001000000",
+	1 => "00010110001010000000011100",
+	2 => "11111111111111111111111111",
+	3 => "00000000000000000000000100",
+	4 => "01010000010000100000010000",
+	others => "00000000000000000000000000"
+);
+begin
+	process(clk) is
+	begin
+		if(rising_edge(clk)) then
+			reg_address <= address;
+		end if;
+	end process;
+	data_out <= my_rom(reg_address);
+end architecture;

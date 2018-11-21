@@ -1,0 +1,43 @@
+|memoria
+clk => reg_address[0].CLK
+clk => reg_address[1].CLK
+clk => reg_address[2].CLK
+clk => reg_address[3].CLK
+clk => reg_address[4].CLK
+clk => reg_address[5].CLK
+clk => reg_address[6].CLK
+address[0] => reg_address[0].DATAIN
+address[1] => reg_address[1].DATAIN
+address[2] => reg_address[2].DATAIN
+address[3] => reg_address[3].DATAIN
+address[4] => reg_address[4].DATAIN
+address[5] => reg_address[5].DATAIN
+address[6] => reg_address[6].DATAIN
+data_out[0] <= my_rom.DATAOUT
+data_out[1] <= my_rom.DATAOUT1
+data_out[2] <= my_rom.DATAOUT2
+data_out[3] <= my_rom.DATAOUT3
+data_out[4] <= my_rom.DATAOUT4
+data_out[5] <= my_rom.DATAOUT5
+data_out[6] <= my_rom.DATAOUT6
+data_out[7] <= my_rom.DATAOUT7
+data_out[8] <= my_rom.DATAOUT8
+data_out[9] <= my_rom.DATAOUT9
+data_out[10] <= my_rom.DATAOUT10
+data_out[11] <= my_rom.DATAOUT11
+data_out[12] <= my_rom.DATAOUT12
+data_out[13] <= my_rom.DATAOUT13
+data_out[14] <= my_rom.DATAOUT14
+data_out[15] <= my_rom.DATAOUT15
+data_out[16] <= my_rom.DATAOUT16
+data_out[17] <= my_rom.DATAOUT17
+data_out[18] <= my_rom.DATAOUT18
+data_out[19] <= my_rom.DATAOUT19
+data_out[20] <= my_rom.DATAOUT20
+data_out[21] <= my_rom.DATAOUT21
+data_out[22] <= my_rom.DATAOUT22
+data_out[23] <= my_rom.DATAOUT23
+data_out[24] <= my_rom.DATAOUT24
+data_out[25] <= my_rom.DATAOUT25
+
+

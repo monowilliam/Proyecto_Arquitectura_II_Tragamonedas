@@ -1,35 +1,35 @@
- addi $s0,$cero,0 ingresarD:
- addi $t0,$cero,0
- ins $t0
- lm $t0,$t0,0
- beq $t0,$cero,0																			#Vuelve a pedir el dinero para iniciar
- addi $s0,$t0,0																			
- addi $t0,$cero,1 realizarA:
- ins $t0
- lm $t0,$t0,0
- bgt $t0,$s0,6																				#Vuelve a pedir la apuesta porque el numero ingresado es mayor al dinero
- beq $t0,$cero,6																			#Vuelve a pedir la apuesta porque el numero ingresado es cero.
- sm $t0,$cero,1
- addi $s1,$t0,0 																			#S1= A
- addi $t1,$cero,1
- sub $s0,$s1 																				#Dinero=Dinero-A
- sm $s0,$cero,0
- addi $t0,$cero,3
- rd $t0																						#rd OpCode=1100
- addi $s2,$cero,1																		 	#s2=Bonificacion		
- sm $s2,$cero,2
- lm $t0,$t0,0 
- bne $t0,$cero,26
- addi $t1,$cero,0
- oss $t1 																					#Muestra el dinero final 
- bne $s0,$cero,6
- j 0
- mul $s2,$3
- sm $s2,$cero,2 																			#El valor de la bonificación se guarda en memoria
- mul $s1,$s2  																				#A=A*Bonificacion
- add $s0,$s1 																				#Dinero=Dinero+A
- addi $t1,$cero,0
- oss $t1 																					#Muestra dinero final
- sm $s0,$cero,0 																			#El dinero actualizado se guarda en memoria
- sm $cero,$cero,1 																			#Se guarda en memoria 0 en el espacio donde está la apuesta
- j 6
+addi $s0,$cero,0 ingresarD:
+addi $t0,$cero,0
+ins $t0
+lm $t0,$t0,0
+beq $t0,$cero,0				#Vuelve a pedir el dinero para iniciar
+addi $s0,$t0,0																			
+addi $t0,$cero,1 realizarA:
+ins $t0
+lm $t0,$t0,0
+bgt $t0,$s0,6			    #Vuelve a pedir la apuesta porque el numero ingresado es mayor al dinero
+beq $t0,$cero,6				#Vuelve a pedir la apuesta porque el numero ingresado es cero.
+sm $t0,$cero,1
+addi $s1,$t0,0 				#S1= A
+addi $t1,$cero,1
+sub $s0,$s1 				#Dinero=Dinero-A
+sm $s0,$cero,0
+addi $t0,$cero,3
+rd $t0					    #rd OpCode=1100
+addi $s2,$cero,1			#s2=Bonificacion		
+sm $s2,$cero,2
+lm $t0,$t0,0 
+bne $t0,$cero,26
+addi $t1,$cero,0
+oss $t1 				    #Muestra el dinero final 
+bne $s0,$cero,6
+j 0
+mul $s2,$3
+sm $s2,$cero,2 				#El valor de la bonificación se guarda en memoria
+mul $s1,$s2  				#A=A*Bonificacion
+add $s0,$s1 				#Dinero=Dinero+A
+addi $t1,$cero,0
+oss $t1 					#Muestra dinero final
+sm $s0,$cero,0 				#El dinero actualizado se guarda en memoria
+sm $cero,$cero,1 			#Se guarda en memoria 0 en el espacio donde está la apuesta
+j 6

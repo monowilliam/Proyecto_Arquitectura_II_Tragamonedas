@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\VHDL\memoria\simulation\qsim
+vmemoria
+Z1 I8KaEa_RoGJjBoQI3mgKi52
+Z2 VSXH[eo_`ROZQ6j]a:cB0W0
+Z3 dC:\VHDL\memoria\simulation\qsim
+Z4 w1540574185
+Z5 8memoria.vo
+Z6 Fmemoria.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|memoria.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 6l;V?80NDnMfohe>njdgY0
+!s85 0
+Z11 !s108 1540574186.728000
+Z12 !s107 memoria.vo|
+!s101 -O0
+vmemoria_vlg_check_tst
+!i10b 1
+Z13 !s100 Kh4X[A0=?J4^Cgk9MTiW:1
+Z14 IRPZM@::in_C1gH6=R;ETO3
+Z15 V39Dc6c=^[]c^`<iH]zNW[2
+R3
+Z16 w1540574184
+Z17 8memoria.vt
+Z18 Fmemoria.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z19 !s108 1540574186.907000
+Z20 !s107 memoria.vt|
+Z21 !s90 -work|work|memoria.vt|
+!s101 -O0
+R9
+vmemoria_vlg_sample_tst
+!i10b 1
+!s100 TcC`ai=NUiLWLJ8jGh]AE3
+IUIJRUjg;kKUR1Z4MPWYO50
+VJ5F5kGY_i@NnO6;BZmI:80
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vmemoria_vlg_vec_tst
+!i10b 1
+!s100 D293FzcRVWd[L?Oi93Z`_1
+IPN5mmNal]BVbPjYI;280D0
+Z22 VVH]O]a3BNQ[M@6mU`Kkl11
+R3
+R16
+R17
+R18
+Z23 L0 603
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
