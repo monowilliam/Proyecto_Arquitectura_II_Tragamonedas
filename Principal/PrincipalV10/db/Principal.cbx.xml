@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Principal">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|registefile:RegisterF|altsyncram:registef_rtl_1" CBX_FILE_NAME="altsyncram_48l1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|memoriaram:MemDatos|altsyncram:my_ram_rtl_0" CBX_FILE_NAME="altsyncram_ekj1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|registefile:RegisterF|altsyncram:registef_rtl_0" CBX_FILE_NAME="altsyncram_48l1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

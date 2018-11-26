@@ -1,0 +1,43 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+--DEFINICIÓN DE LA ENTIDAD
+Entity MuxSS is generic(
+	BusValores : natural := 7);  -- Tamaño de los datos 7
+port(
+	Sel : in std_logic_vector(1 downto 0);
+	R0,R1,R2,R3 : in std_logic_vector(BusValores-1 downto 0); -- Random
+	I0,I1,I2,I3 : in std_logic_vector(BusValores-1 downto 0); -- Ingresar valor
+	M0,M1,M2,M3 : in std_logic_vector(BusValores-1 downto 0); -- Mostrar valor
+	S0,S1,S2,S3 : out std_logic_vector(BusValores-1 downto 0)
+);
+end entity;
+
+architecture Mux14_arc of Mux14 is
+begin
+if Sel="00" then
+ SO <= "1111111";
+ S1 <= "1111111";
+ S2 <= "1111111";
+ S3 <= "1111111";
+end if;
+if Sel="01" then
+ SO <= R0;
+ S1 <= R1;
+ S2 <= R2;
+ S3 <= R3;
+end if;
+if Sel="10" then
+ SO <= I0;
+ S1 <= I1;
+ S2 <= I2;
+ S3 <= I3;
+end if;
+if Sel="11" then
+ SO <= M0;
+ S1 <= M1;
+ S2 <= M2;
+ S3 <= M3;
+end if;
+end architecture;

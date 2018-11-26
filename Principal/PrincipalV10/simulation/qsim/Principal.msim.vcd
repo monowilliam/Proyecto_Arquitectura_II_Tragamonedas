@@ -1,0 +1,1673 @@
+$comment
+	File created using the following command:
+		vcd file Principal.msim.vcd -direction
+$end
+$date
+	Fri Nov 23 18:53:49 2018
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Principal_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " EnterButton $end
+$var reg 1 # ResetButton $end
+$var reg 4 $ switches0 [3:0] $end
+$var reg 4 % switches1 [3:0] $end
+$var reg 2 & switches2 [1:0] $end
+$var wire 1 ' ledsR [9] $end
+$var wire 1 ( ledsR [8] $end
+$var wire 1 ) ledsR [7] $end
+$var wire 1 * ledsR [6] $end
+$var wire 1 + ledsR [5] $end
+$var wire 1 , ledsR [4] $end
+$var wire 1 - ledsR [3] $end
+$var wire 1 . ledsR [2] $end
+$var wire 1 / ledsR [1] $end
+$var wire 1 0 ledsR [0] $end
+$var wire 1 1 ledsV [7] $end
+$var wire 1 2 ledsV [6] $end
+$var wire 1 3 ledsV [5] $end
+$var wire 1 4 ledsV [4] $end
+$var wire 1 5 ledsV [3] $end
+$var wire 1 6 ledsV [2] $end
+$var wire 1 7 ledsV [1] $end
+$var wire 1 8 ledsV [0] $end
+$var wire 1 9 nclk $end
+$var wire 1 : printEntradaMem [13] $end
+$var wire 1 ; printEntradaMem [12] $end
+$var wire 1 < printEntradaMem [11] $end
+$var wire 1 = printEntradaMem [10] $end
+$var wire 1 > printEntradaMem [9] $end
+$var wire 1 ? printEntradaMem [8] $end
+$var wire 1 @ printEntradaMem [7] $end
+$var wire 1 A printEntradaMem [6] $end
+$var wire 1 B printEntradaMem [5] $end
+$var wire 1 C printEntradaMem [4] $end
+$var wire 1 D printEntradaMem [3] $end
+$var wire 1 E printEntradaMem [2] $end
+$var wire 1 F printEntradaMem [1] $end
+$var wire 1 G printEntradaMem [0] $end
+$var wire 1 H printIns [25] $end
+$var wire 1 I printIns [24] $end
+$var wire 1 J printIns [23] $end
+$var wire 1 K printIns [22] $end
+$var wire 1 L printIns [21] $end
+$var wire 1 M printIns [20] $end
+$var wire 1 N printIns [19] $end
+$var wire 1 O printIns [18] $end
+$var wire 1 P printIns [17] $end
+$var wire 1 Q printIns [16] $end
+$var wire 1 R printIns [15] $end
+$var wire 1 S printIns [14] $end
+$var wire 1 T printIns [13] $end
+$var wire 1 U printIns [12] $end
+$var wire 1 V printIns [11] $end
+$var wire 1 W printIns [10] $end
+$var wire 1 X printIns [9] $end
+$var wire 1 Y printIns [8] $end
+$var wire 1 Z printIns [7] $end
+$var wire 1 [ printIns [6] $end
+$var wire 1 \ printIns [5] $end
+$var wire 1 ] printIns [4] $end
+$var wire 1 ^ printIns [3] $end
+$var wire 1 _ printIns [2] $end
+$var wire 1 ` printIns [1] $end
+$var wire 1 a printIns [0] $end
+$var wire 1 b printIO [1] $end
+$var wire 1 c printIO [0] $end
+$var wire 1 d SS0 [6] $end
+$var wire 1 e SS0 [5] $end
+$var wire 1 f SS0 [4] $end
+$var wire 1 g SS0 [3] $end
+$var wire 1 h SS0 [2] $end
+$var wire 1 i SS0 [1] $end
+$var wire 1 j SS0 [0] $end
+$var wire 1 k SS1 [6] $end
+$var wire 1 l SS1 [5] $end
+$var wire 1 m SS1 [4] $end
+$var wire 1 n SS1 [3] $end
+$var wire 1 o SS1 [2] $end
+$var wire 1 p SS1 [1] $end
+$var wire 1 q SS1 [0] $end
+$var wire 1 r SS2 [6] $end
+$var wire 1 s SS2 [5] $end
+$var wire 1 t SS2 [4] $end
+$var wire 1 u SS2 [3] $end
+$var wire 1 v SS2 [2] $end
+$var wire 1 w SS2 [1] $end
+$var wire 1 x SS2 [0] $end
+$var wire 1 y SS3 [6] $end
+$var wire 1 z SS3 [5] $end
+$var wire 1 { SS3 [4] $end
+$var wire 1 | SS3 [3] $end
+$var wire 1 } SS3 [2] $end
+$var wire 1 ~ SS3 [1] $end
+$var wire 1 !! SS3 [0] $end
+$var wire 1 "! sampler $end
+$scope module i1 $end
+$var wire 1 #! gnd $end
+$var wire 1 $! vcc $end
+$var wire 1 %! unknown $end
+$var tri1 1 &! devclrn $end
+$var tri1 1 '! devpor $end
+$var tri1 1 (! devoe $end
+$var wire 1 )! ranSeg|Mod0|auto_generated|divider|divider|op_9~0_combout $end
+$var wire 1 *! ranSeg|Mod0|auto_generated|divider|divider|op_9~4_combout $end
+$var wire 1 +! ranSeg|Mod0|auto_generated|divider|divider|op_9~8_combout $end
+$var wire 1 ,! ranSeg|Mod0|auto_generated|divider|divider|op_9~12_combout $end
+$var wire 1 -! ranSeg|Mod0|auto_generated|divider|divider|op_9~14_combout $end
+$var wire 1 .! ranSeg|Mod0|auto_generated|divider|divider|op_9~18_combout $end
+$var wire 1 /! ranSeg|Mod0|auto_generated|divider|divider|op_9~20_combout $end
+$var wire 1 0! ranSeg|Mod0|auto_generated|divider|divider|op_9~22_combout $end
+$var wire 1 1! ranSeg|Mod0|auto_generated|divider|divider|op_9~24_combout $end
+$var wire 1 2! ranSeg|Mod0|auto_generated|divider|divider|op_9~26_combout $end
+$var wire 1 3! ranSeg|Mod0|auto_generated|divider|divider|op_9~28_combout $end
+$var wire 1 4! ranSeg|Mod0|auto_generated|divider|divider|op_9~30_combout $end
+$var wire 1 5! ranSeg|Mod0|auto_generated|divider|divider|op_9~32_combout $end
+$var wire 1 6! ranSeg|Mod0|auto_generated|divider|divider|op_9~34_combout $end
+$var wire 1 7! ranSeg|Mod0|auto_generated|divider|divider|op_9~36_combout $end
+$var wire 1 8! ranSeg|Mod1|auto_generated|divider|divider|op_9~6_combout $end
+$var wire 1 9! ranSeg|Mod1|auto_generated|divider|divider|op_9~8_combout $end
+$var wire 1 :! ranSeg|Mod1|auto_generated|divider|divider|op_9~18_combout $end
+$var wire 1 ;! ranSeg|Mod1|auto_generated|divider|divider|op_9~22_combout $end
+$var wire 1 <! ranSeg|Mod1|auto_generated|divider|divider|op_9~24_combout $end
+$var wire 1 =! ranSeg|Mod1|auto_generated|divider|divider|op_9~26_combout $end
+$var wire 1 >! ranSeg|Mod1|auto_generated|divider|divider|op_9~28_combout $end
+$var wire 1 ?! ranSeg|Mod1|auto_generated|divider|divider|op_9~30_combout $end
+$var wire 1 @! ranSeg|Mod1|auto_generated|divider|divider|op_9~32_combout $end
+$var wire 1 A! ranSeg|Mod1|auto_generated|divider|divider|op_9~34_combout $end
+$var wire 1 B! ranSeg|Mod1|auto_generated|divider|divider|op_9~36_combout $end
+$var wire 1 C! ranSeg|Mod1|auto_generated|divider|divider|op_10~4_combout $end
+$var wire 1 D! ranSeg|Mod2|auto_generated|divider|divider|op_9~4_combout $end
+$var wire 1 E! ranSeg|Mod2|auto_generated|divider|divider|op_9~6_combout $end
+$var wire 1 F! ranSeg|Mod2|auto_generated|divider|divider|op_9~12_combout $end
+$var wire 1 G! PC|PCact[1]~10_combout $end
+$var wire 1 H! PC|PCact[5]~18_combout $end
+$var wire 1 I! ranSeg|Mod0|auto_generated|divider|divider|StageOut[367]~0_combout $end
+$var wire 1 J! ranSeg|Mod0|auto_generated|divider|divider|StageOut[366]~1_combout $end
+$var wire 1 K! ranSeg|Mod0|auto_generated|divider|divider|StageOut[364]~3_combout $end
+$var wire 1 L! ranSeg|Mod0|auto_generated|divider|divider|StageOut[363]~4_combout $end
+$var wire 1 M! ranSeg|Mod0|auto_generated|divider|divider|StageOut[362]~7_combout $end
+$var wire 1 N! ranSeg|Mod0|auto_generated|divider|divider|StageOut[360]~11_combout $end
+$var wire 1 O! ranSeg|Mod1|auto_generated|divider|divider|StageOut[364]~3_combout $end
+$var wire 1 P! ranSeg|Mod1|auto_generated|divider|divider|StageOut[363]~5_combout $end
+$var wire 1 Q! ranSeg|Mod1|auto_generated|divider|divider|StageOut[362]~6_combout $end
+$var wire 1 R! ranSeg|Mod1|auto_generated|divider|divider|StageOut[360]~10_combout $end
+$var wire 1 S! ranSeg|Mod2|auto_generated|divider|divider|StageOut[366]~1_combout $end
+$var wire 1 T! ranSeg|Mod2|auto_generated|divider|divider|StageOut[363]~5_combout $end
+$var wire 1 U! ranSeg|Mod2|auto_generated|divider|divider|StageOut[362]~7_combout $end
+$var wire 1 V! ranSeg|Mux0~0_combout $end
+$var wire 1 W! ranSeg|Mux6~0_combout $end
+$var wire 1 X! ranSeg|ganador[0]~13_combout $end
+$var wire 1 Y! ranSeg|ganador[0]~16_combout $end
+$var wire 1 Z! ranSeg|ganador[0]~17_combout $end
+$var wire 1 [! ranSeg|ganador[0]~18_combout $end
+$var wire 1 \! ranSeg|ganador[0]~20_combout $end
+$var wire 1 ]! ranSeg|ganador[0]~21_combout $end
+$var wire 1 ^! ranSeg|ganador[0]~22_combout $end
+$var wire 1 _! ranSeg|ganador[0]~23_combout $end
+$var wire 1 `! ranSeg|ganador[0]~27_combout $end
+$var wire 1 a! ranSeg|Mux4~14_combout $end
+$var wire 1 b! ranSeg|Mux4~15_combout $end
+$var wire 1 c! ranSeg|Mux5~4_combout $end
+$var wire 1 d! ranSeg|Mux5~5_combout $end
+$var wire 1 e! ranSeg|ganador[0]~31_combout $end
+$var wire 1 f! ranSeg|Mux4~16_combout $end
+$var wire 1 g! ranSeg|Mux4~17_combout $end
+$var wire 1 h! memoriaIns|reg_address[1]~feeder_combout $end
+$var wire 1 i! ranSeg|count[0]~3_combout $end
+$var wire 1 j! ranSeg|count[1]~2_combout $end
+$var wire 1 k! ranSeg|count_i1[2]~feeder_combout $end
+$var wire 1 l! ranSeg|Mod0|auto_generated|divider|divider|op_9~1 $end
+$var wire 1 m! ranSeg|Mod0|auto_generated|divider|divider|op_9~2_combout $end
+$var wire 1 n! ranSeg|count[2]~1_combout $end
+$var wire 1 o! ranSeg|count[3]~0_combout $end
+$var wire 1 p! ranSeg|Mod0|auto_generated|divider|divider|op_9~3 $end
+$var wire 1 q! ranSeg|Mod0|auto_generated|divider|divider|op_9~5 $end
+$var wire 1 r! ranSeg|Mod0|auto_generated|divider|divider|op_9~7 $end
+$var wire 1 s! ranSeg|Mod0|auto_generated|divider|divider|op_9~9 $end
+$var wire 1 t! ranSeg|Mod0|auto_generated|divider|divider|op_9~11 $end
+$var wire 1 u! ranSeg|Mod0|auto_generated|divider|divider|op_9~13 $end
+$var wire 1 v! ranSeg|Mod0|auto_generated|divider|divider|op_9~15 $end
+$var wire 1 w! ranSeg|Mod0|auto_generated|divider|divider|op_9~17 $end
+$var wire 1 x! ranSeg|Mod0|auto_generated|divider|divider|op_9~19 $end
+$var wire 1 y! ranSeg|Mod0|auto_generated|divider|divider|op_9~21 $end
+$var wire 1 z! ranSeg|Mod0|auto_generated|divider|divider|op_9~23 $end
+$var wire 1 {! ranSeg|Mod0|auto_generated|divider|divider|op_9~25 $end
+$var wire 1 |! ranSeg|Mod0|auto_generated|divider|divider|op_9~27 $end
+$var wire 1 }! ranSeg|Mod0|auto_generated|divider|divider|op_9~29 $end
+$var wire 1 ~! ranSeg|Mod0|auto_generated|divider|divider|op_9~31 $end
+$var wire 1 !" ranSeg|Mod0|auto_generated|divider|divider|op_9~33 $end
+$var wire 1 "" ranSeg|Mod0|auto_generated|divider|divider|op_9~35 $end
+$var wire 1 #" ranSeg|Mod0|auto_generated|divider|divider|op_9~37 $end
+$var wire 1 $" ranSeg|Mod0|auto_generated|divider|divider|op_9~38_combout $end
+$var wire 1 %" ranSeg|Mod0|auto_generated|divider|divider|StageOut[361]~9_combout $end
+$var wire 1 &" ranSeg|Mod0|auto_generated|divider|divider|StageOut[360]~10_combout $end
+$var wire 1 '" ranSeg|Mod0|auto_generated|divider|divider|op_10~1_cout $end
+$var wire 1 (" ranSeg|Mod0|auto_generated|divider|divider|op_10~3 $end
+$var wire 1 )" ranSeg|Mod0|auto_generated|divider|divider|op_10~4_combout $end
+$var wire 1 *" ranSeg|Mod0|auto_generated|divider|divider|op_9~16_combout $end
+$var wire 1 +" ranSeg|Mod0|auto_generated|divider|divider|op_9~10_combout $end
+$var wire 1 ," ranSeg|Mod0|auto_generated|divider|divider|StageOut[365]~2_combout $end
+$var wire 1 -" ranSeg|Mod0|auto_generated|divider|divider|op_9~6_combout $end
+$var wire 1 ." ranSeg|Mod0|auto_generated|divider|divider|StageOut[363]~5_combout $end
+$var wire 1 /" ranSeg|Mod0|auto_generated|divider|divider|StageOut[362]~6_combout $end
+$var wire 1 0" ranSeg|Mod0|auto_generated|divider|divider|op_10~5 $end
+$var wire 1 1" ranSeg|Mod0|auto_generated|divider|divider|op_10~7_cout $end
+$var wire 1 2" ranSeg|Mod0|auto_generated|divider|divider|op_10~9_cout $end
+$var wire 1 3" ranSeg|Mod0|auto_generated|divider|divider|op_10~11_cout $end
+$var wire 1 4" ranSeg|Mod0|auto_generated|divider|divider|op_10~13_cout $end
+$var wire 1 5" ranSeg|Mod0|auto_generated|divider|divider|op_10~15_cout $end
+$var wire 1 6" ranSeg|Mod0|auto_generated|divider|divider|op_10~17_cout $end
+$var wire 1 7" ranSeg|Mod0|auto_generated|divider|divider|op_10~19_cout $end
+$var wire 1 8" ranSeg|Mod0|auto_generated|divider|divider|op_10~21_cout $end
+$var wire 1 9" ranSeg|Mod0|auto_generated|divider|divider|op_10~23_cout $end
+$var wire 1 :" ranSeg|Mod0|auto_generated|divider|divider|op_10~25_cout $end
+$var wire 1 ;" ranSeg|Mod0|auto_generated|divider|divider|op_10~27_cout $end
+$var wire 1 <" ranSeg|Mod0|auto_generated|divider|divider|op_10~29_cout $end
+$var wire 1 =" ranSeg|Mod0|auto_generated|divider|divider|op_10~31_cout $end
+$var wire 1 >" ranSeg|Mod0|auto_generated|divider|divider|op_10~33_cout $end
+$var wire 1 ?" ranSeg|Mod0|auto_generated|divider|divider|op_10~35_cout $end
+$var wire 1 @" ranSeg|Mod0|auto_generated|divider|divider|op_10~37_cout $end
+$var wire 1 A" ranSeg|Mod0|auto_generated|divider|divider|op_10~39_cout $end
+$var wire 1 B" ranSeg|Mod0|auto_generated|divider|divider|op_10~40_combout $end
+$var wire 1 C" ranSeg|Mod0|auto_generated|divider|divider|StageOut[382]~13_combout $end
+$var wire 1 D" ranSeg|Mod0|auto_generated|divider|divider|StageOut[380]~12_combout $end
+$var wire 1 E" EnterButton~combout $end
+$var wire 1 F" PC|PCact[0]~9 $end
+$var wire 1 G" PC|PCact[1]~11 $end
+$var wire 1 H" PC|PCact[2]~12_combout $end
+$var wire 1 I" UnidadControl|Selector4~0_combout $end
+$var wire 1 J" UnidadControl|est_actual.WM~regout $end
+$var wire 1 K" UnidadControl|est_actual.Decode~regout $end
+$var wire 1 L" UnidadControl|Selector1~0_combout $end
+$var wire 1 M" UnidadControl|est_actual.Fetch~regout $end
+$var wire 1 N" PC|PCact[2]~13 $end
+$var wire 1 O" PC|PCact[3]~14_combout $end
+$var wire 1 P" memoriaIns|reg_address[3]~feeder_combout $end
+$var wire 1 Q" PC|PCact[0]~8_combout $end
+$var wire 1 R" memoriaIns|reg_address[0]~feeder_combout $end
+$var wire 1 S" memoriaIns|my_rom~0_combout $end
+$var wire 1 T" PC|PCact[3]~15 $end
+$var wire 1 U" PC|PCact[4]~16_combout $end
+$var wire 1 V" PC|PCact[4]~17 $end
+$var wire 1 W" PC|PCact[5]~19 $end
+$var wire 1 X" PC|PCact[6]~20_combout $end
+$var wire 1 Y" PC|PCact[6]~21 $end
+$var wire 1 Z" PC|PCact[7]~22_combout $end
+$var wire 1 [" memoriaIns|reg_address[7]~feeder_combout $end
+$var wire 1 \" memoriaIns|reg_address[4]~feeder_combout $end
+$var wire 1 ]" memoriaIns|my_rom~1_combout $end
+$var wire 1 ^" irP|opcode[0]~0_combout $end
+$var wire 1 _" UnidadControl|Selector0~0_combout $end
+$var wire 1 `" UnidadControl|est_actual.EstadoRand~regout $end
+$var wire 1 a" ranSeg|Mod0|auto_generated|divider|divider|op_10~2_combout $end
+$var wire 1 b" ranSeg|Mod0|auto_generated|divider|divider|StageOut[381]~14_combout $end
+$var wire 1 c" MuxSevenSeg|S0[0]~0_combout $end
+$var wire 1 d" MuxSevenSeg|S0[3]~1_combout $end
+$var wire 1 e" MuxSevenSeg|S0[6]~2_combout $end
+$var wire 1 f" ranSeg|Mod1|auto_generated|divider|divider|op_9~1 $end
+$var wire 1 g" ranSeg|Mod1|auto_generated|divider|divider|op_9~3 $end
+$var wire 1 h" ranSeg|Mod1|auto_generated|divider|divider|op_9~5 $end
+$var wire 1 i" ranSeg|Mod1|auto_generated|divider|divider|op_9~7 $end
+$var wire 1 j" ranSeg|Mod1|auto_generated|divider|divider|op_9~9 $end
+$var wire 1 k" ranSeg|Mod1|auto_generated|divider|divider|op_9~11 $end
+$var wire 1 l" ranSeg|Mod1|auto_generated|divider|divider|op_9~13 $end
+$var wire 1 m" ranSeg|Mod1|auto_generated|divider|divider|op_9~15 $end
+$var wire 1 n" ranSeg|Mod1|auto_generated|divider|divider|op_9~17 $end
+$var wire 1 o" ranSeg|Mod1|auto_generated|divider|divider|op_9~19 $end
+$var wire 1 p" ranSeg|Mod1|auto_generated|divider|divider|op_9~21 $end
+$var wire 1 q" ranSeg|Mod1|auto_generated|divider|divider|op_9~23 $end
+$var wire 1 r" ranSeg|Mod1|auto_generated|divider|divider|op_9~25 $end
+$var wire 1 s" ranSeg|Mod1|auto_generated|divider|divider|op_9~27 $end
+$var wire 1 t" ranSeg|Mod1|auto_generated|divider|divider|op_9~29 $end
+$var wire 1 u" ranSeg|Mod1|auto_generated|divider|divider|op_9~31 $end
+$var wire 1 v" ranSeg|Mod1|auto_generated|divider|divider|op_9~33 $end
+$var wire 1 w" ranSeg|Mod1|auto_generated|divider|divider|op_9~35 $end
+$var wire 1 x" ranSeg|Mod1|auto_generated|divider|divider|op_9~37 $end
+$var wire 1 y" ranSeg|Mod1|auto_generated|divider|divider|op_9~38_combout $end
+$var wire 1 z" ranSeg|Mod1|auto_generated|divider|divider|op_9~20_combout $end
+$var wire 1 {" ranSeg|Mod1|auto_generated|divider|divider|op_9~16_combout $end
+$var wire 1 |" ranSeg|Mod1|auto_generated|divider|divider|op_9~14_combout $end
+$var wire 1 }" ranSeg|Mod1|auto_generated|divider|divider|StageOut[367]~0_combout $end
+$var wire 1 ~" ranSeg|Mod1|auto_generated|divider|divider|op_9~12_combout $end
+$var wire 1 !# ranSeg|Mod1|auto_generated|divider|divider|StageOut[366]~1_combout $end
+$var wire 1 "# ranSeg|Mod1|auto_generated|divider|divider|op_9~10_combout $end
+$var wire 1 ## ranSeg|Mod1|auto_generated|divider|divider|StageOut[365]~2_combout $end
+$var wire 1 $# ranSeg|Mod1|auto_generated|divider|divider|StageOut[363]~4_combout $end
+$var wire 1 %# ranSeg|Mod1|auto_generated|divider|divider|op_9~4_combout $end
+$var wire 1 &# ranSeg|Mod1|auto_generated|divider|divider|StageOut[362]~7_combout $end
+$var wire 1 '# ranSeg|Mod1|auto_generated|divider|divider|StageOut[361]~8_combout $end
+$var wire 1 (# ranSeg|Mod1|auto_generated|divider|divider|op_9~0_combout $end
+$var wire 1 )# ranSeg|Mod1|auto_generated|divider|divider|StageOut[360]~11_combout $end
+$var wire 1 *# ranSeg|Mod1|auto_generated|divider|divider|op_10~1_cout $end
+$var wire 1 +# ranSeg|Mod1|auto_generated|divider|divider|op_10~3 $end
+$var wire 1 ,# ranSeg|Mod1|auto_generated|divider|divider|op_10~5 $end
+$var wire 1 -# ranSeg|Mod1|auto_generated|divider|divider|op_10~7_cout $end
+$var wire 1 .# ranSeg|Mod1|auto_generated|divider|divider|op_10~9_cout $end
+$var wire 1 /# ranSeg|Mod1|auto_generated|divider|divider|op_10~11_cout $end
+$var wire 1 0# ranSeg|Mod1|auto_generated|divider|divider|op_10~13_cout $end
+$var wire 1 1# ranSeg|Mod1|auto_generated|divider|divider|op_10~15_cout $end
+$var wire 1 2# ranSeg|Mod1|auto_generated|divider|divider|op_10~17_cout $end
+$var wire 1 3# ranSeg|Mod1|auto_generated|divider|divider|op_10~19_cout $end
+$var wire 1 4# ranSeg|Mod1|auto_generated|divider|divider|op_10~21_cout $end
+$var wire 1 5# ranSeg|Mod1|auto_generated|divider|divider|op_10~23_cout $end
+$var wire 1 6# ranSeg|Mod1|auto_generated|divider|divider|op_10~25_cout $end
+$var wire 1 7# ranSeg|Mod1|auto_generated|divider|divider|op_10~27_cout $end
+$var wire 1 8# ranSeg|Mod1|auto_generated|divider|divider|op_10~29_cout $end
+$var wire 1 9# ranSeg|Mod1|auto_generated|divider|divider|op_10~31_cout $end
+$var wire 1 :# ranSeg|Mod1|auto_generated|divider|divider|op_10~33_cout $end
+$var wire 1 ;# ranSeg|Mod1|auto_generated|divider|divider|op_10~35_cout $end
+$var wire 1 <# ranSeg|Mod1|auto_generated|divider|divider|op_10~37_cout $end
+$var wire 1 =# ranSeg|Mod1|auto_generated|divider|divider|op_10~39_cout $end
+$var wire 1 ># ranSeg|Mod1|auto_generated|divider|divider|op_10~40_combout $end
+$var wire 1 ?# ranSeg|Mod1|auto_generated|divider|divider|op_9~2_combout $end
+$var wire 1 @# ranSeg|Mod1|auto_generated|divider|divider|StageOut[361]~9_combout $end
+$var wire 1 A# ranSeg|Mod1|auto_generated|divider|divider|StageOut[382]~13_combout $end
+$var wire 1 B# ranSeg|Mod1|auto_generated|divider|divider|op_10~2_combout $end
+$var wire 1 C# ranSeg|Mod1|auto_generated|divider|divider|StageOut[381]~14_combout $end
+$var wire 1 D# ranSeg|Mod1|auto_generated|divider|divider|StageOut[380]~12_combout $end
+$var wire 1 E# MuxSevenSeg|S1[0]~0_combout $end
+$var wire 1 F# MuxSevenSeg|S1[3]~1_combout $end
+$var wire 1 G# MuxSevenSeg|S1[6]~2_combout $end
+$var wire 1 H# ranSeg|Mod2|auto_generated|divider|divider|op_9~1 $end
+$var wire 1 I# ranSeg|Mod2|auto_generated|divider|divider|op_9~3 $end
+$var wire 1 J# ranSeg|Mod2|auto_generated|divider|divider|op_9~5 $end
+$var wire 1 K# ranSeg|Mod2|auto_generated|divider|divider|op_9~7 $end
+$var wire 1 L# ranSeg|Mod2|auto_generated|divider|divider|op_9~9 $end
+$var wire 1 M# ranSeg|Mod2|auto_generated|divider|divider|op_9~11 $end
+$var wire 1 N# ranSeg|Mod2|auto_generated|divider|divider|op_9~13 $end
+$var wire 1 O# ranSeg|Mod2|auto_generated|divider|divider|op_9~15 $end
+$var wire 1 P# ranSeg|Mod2|auto_generated|divider|divider|op_9~17 $end
+$var wire 1 Q# ranSeg|Mod2|auto_generated|divider|divider|op_9~19 $end
+$var wire 1 R# ranSeg|Mod2|auto_generated|divider|divider|op_9~21 $end
+$var wire 1 S# ranSeg|Mod2|auto_generated|divider|divider|op_9~23 $end
+$var wire 1 T# ranSeg|Mod2|auto_generated|divider|divider|op_9~25 $end
+$var wire 1 U# ranSeg|Mod2|auto_generated|divider|divider|op_9~27 $end
+$var wire 1 V# ranSeg|Mod2|auto_generated|divider|divider|op_9~29 $end
+$var wire 1 W# ranSeg|Mod2|auto_generated|divider|divider|op_9~31 $end
+$var wire 1 X# ranSeg|Mod2|auto_generated|divider|divider|op_9~33 $end
+$var wire 1 Y# ranSeg|Mod2|auto_generated|divider|divider|op_9~35 $end
+$var wire 1 Z# ranSeg|Mod2|auto_generated|divider|divider|op_9~36_combout $end
+$var wire 1 [# ranSeg|Mod2|auto_generated|divider|divider|op_9~34_combout $end
+$var wire 1 \# ranSeg|Mod2|auto_generated|divider|divider|op_9~32_combout $end
+$var wire 1 ]# ranSeg|Mod2|auto_generated|divider|divider|op_9~30_combout $end
+$var wire 1 ^# ranSeg|Mod2|auto_generated|divider|divider|op_9~28_combout $end
+$var wire 1 _# ranSeg|Mod2|auto_generated|divider|divider|op_9~26_combout $end
+$var wire 1 `# ranSeg|Mod2|auto_generated|divider|divider|op_9~24_combout $end
+$var wire 1 a# ranSeg|Mod2|auto_generated|divider|divider|op_9~22_combout $end
+$var wire 1 b# ranSeg|Mod2|auto_generated|divider|divider|op_9~20_combout $end
+$var wire 1 c# ranSeg|Mod2|auto_generated|divider|divider|op_9~18_combout $end
+$var wire 1 d# ranSeg|Mod2|auto_generated|divider|divider|op_9~16_combout $end
+$var wire 1 e# ranSeg|Mod2|auto_generated|divider|divider|op_9~37 $end
+$var wire 1 f# ranSeg|Mod2|auto_generated|divider|divider|op_9~38_combout $end
+$var wire 1 g# ranSeg|Mod2|auto_generated|divider|divider|op_9~14_combout $end
+$var wire 1 h# ranSeg|Mod2|auto_generated|divider|divider|StageOut[367]~0_combout $end
+$var wire 1 i# ranSeg|Mod2|auto_generated|divider|divider|op_9~10_combout $end
+$var wire 1 j# ranSeg|Mod2|auto_generated|divider|divider|StageOut[365]~2_combout $end
+$var wire 1 k# ranSeg|Mod2|auto_generated|divider|divider|op_9~8_combout $end
+$var wire 1 l# ranSeg|Mod2|auto_generated|divider|divider|StageOut[364]~3_combout $end
+$var wire 1 m# ranSeg|Mod2|auto_generated|divider|divider|StageOut[363]~4_combout $end
+$var wire 1 n# ranSeg|Mod2|auto_generated|divider|divider|StageOut[362]~6_combout $end
+$var wire 1 o# ranSeg|Mod2|auto_generated|divider|divider|op_9~2_combout $end
+$var wire 1 p# ranSeg|Mod2|auto_generated|divider|divider|StageOut[361]~9_combout $end
+$var wire 1 q# ranSeg|Mod2|auto_generated|divider|divider|StageOut[360]~10_combout $end
+$var wire 1 r# ranSeg|Mod2|auto_generated|divider|divider|op_10~1_cout $end
+$var wire 1 s# ranSeg|Mod2|auto_generated|divider|divider|op_10~3 $end
+$var wire 1 t# ranSeg|Mod2|auto_generated|divider|divider|op_10~5 $end
+$var wire 1 u# ranSeg|Mod2|auto_generated|divider|divider|op_10~7_cout $end
+$var wire 1 v# ranSeg|Mod2|auto_generated|divider|divider|op_10~9_cout $end
+$var wire 1 w# ranSeg|Mod2|auto_generated|divider|divider|op_10~11_cout $end
+$var wire 1 x# ranSeg|Mod2|auto_generated|divider|divider|op_10~13_cout $end
+$var wire 1 y# ranSeg|Mod2|auto_generated|divider|divider|op_10~15_cout $end
+$var wire 1 z# ranSeg|Mod2|auto_generated|divider|divider|op_10~17_cout $end
+$var wire 1 {# ranSeg|Mod2|auto_generated|divider|divider|op_10~19_cout $end
+$var wire 1 |# ranSeg|Mod2|auto_generated|divider|divider|op_10~21_cout $end
+$var wire 1 }# ranSeg|Mod2|auto_generated|divider|divider|op_10~23_cout $end
+$var wire 1 ~# ranSeg|Mod2|auto_generated|divider|divider|op_10~25_cout $end
+$var wire 1 !$ ranSeg|Mod2|auto_generated|divider|divider|op_10~27_cout $end
+$var wire 1 "$ ranSeg|Mod2|auto_generated|divider|divider|op_10~29_cout $end
+$var wire 1 #$ ranSeg|Mod2|auto_generated|divider|divider|op_10~31_cout $end
+$var wire 1 $$ ranSeg|Mod2|auto_generated|divider|divider|op_10~33_cout $end
+$var wire 1 %$ ranSeg|Mod2|auto_generated|divider|divider|op_10~35_cout $end
+$var wire 1 &$ ranSeg|Mod2|auto_generated|divider|divider|op_10~37_cout $end
+$var wire 1 '$ ranSeg|Mod2|auto_generated|divider|divider|op_10~39_cout $end
+$var wire 1 ($ ranSeg|Mod2|auto_generated|divider|divider|op_10~40_combout $end
+$var wire 1 )$ ranSeg|Mod2|auto_generated|divider|divider|op_10~4_combout $end
+$var wire 1 *$ ranSeg|Mod2|auto_generated|divider|divider|StageOut[361]~8_combout $end
+$var wire 1 +$ ranSeg|Mod2|auto_generated|divider|divider|StageOut[382]~14_combout $end
+$var wire 1 ,$ ranSeg|Mod2|auto_generated|divider|divider|StageOut[380]~12_combout $end
+$var wire 1 -$ ranSeg|Mod2|auto_generated|divider|divider|op_10~2_combout $end
+$var wire 1 .$ ranSeg|Mod2|auto_generated|divider|divider|op_9~0_combout $end
+$var wire 1 /$ ranSeg|Mod2|auto_generated|divider|divider|StageOut[360]~11_combout $end
+$var wire 1 0$ ranSeg|Mod2|auto_generated|divider|divider|StageOut[381]~13_combout $end
+$var wire 1 1$ MuxSevenSeg|S2[0]~0_combout $end
+$var wire 1 2$ MuxSevenSeg|S2[3]~1_combout $end
+$var wire 1 3$ MuxSevenSeg|S2[6]~2_combout $end
+$var wire 1 4$ ranSeg|ganador[0]~14_combout $end
+$var wire 1 5$ ranSeg|ganador[0]~15_combout $end
+$var wire 1 6$ ranSeg|Mux6~1_combout $end
+$var wire 1 7$ ranSeg|Mux6~2_combout $end
+$var wire 1 8$ ranSeg|Mux0~1_combout $end
+$var wire 1 9$ ranSeg|Mux0~2_combout $end
+$var wire 1 :$ ranSeg|ganador[0]~19_combout $end
+$var wire 1 ;$ ranSeg|ganador[0]~12_combout $end
+$var wire 1 <$ ranSeg|ganador[0]~35_combout $end
+$var wire 1 =$ ranSeg|Mod0|auto_generated|divider|divider|StageOut[361]~8_combout $end
+$var wire 1 >$ ranSeg|ganador[0]~24_combout $end
+$var wire 1 ?$ ranSeg|ganador[0]~25_combout $end
+$var wire 1 @$ ranSeg|ganador[0]~26_combout $end
+$var wire 1 A$ ranSeg|ganador[0]~28_combout $end
+$var wire 1 B$ ranSeg|ganador[0]~29_combout $end
+$var wire 1 C$ ranSeg|ganador[0]~30_combout $end
+$var wire 1 D$ ranSeg|ganador[0]~34_combout $end
+$var wire 1 E$ ranSeg|ganador[0]~32_combout $end
+$var wire 1 F$ ranSeg|ganador[0]~33_combout $end
+$var wire 1 G$ MuxSevenSeg|ledR[0]~0_combout $end
+$var wire 1 H$ MuxSevenSeg|ledV[0]~0_combout $end
+$var wire 1 I$ memoriaIns|my_rom~2_combout $end
+$var wire 1 J$ clk~combout $end
+$var wire 1 K$ clk~clkctrl_outclk $end
+$var wire 1 L$ ~GND~combout $end
+$var wire 1 M$ MuxB|Output[0]~0_combout $end
+$var wire 1 N$ MuxB|Output[1]~1_combout $end
+$var wire 1 O$ MuxB|Output[2]~2_combout $end
+$var wire 1 P$ MuxB|Output[3]~3_combout $end
+$var wire 1 Q$ MuxB|Output[4]~4_combout $end
+$var wire 1 R$ MuxB|Output[5]~5_combout $end
+$var wire 1 S$ MuxB|Output[6]~6_combout $end
+$var wire 1 T$ MuxB|Output[7]~7_combout $end
+$var wire 1 U$ MuxB|Output[8]~8_combout $end
+$var wire 1 V$ MuxB|Output[9]~9_combout $end
+$var wire 1 W$ MuxB|Output[10]~10_combout $end
+$var wire 1 X$ MuxB|Output[11]~11_combout $end
+$var wire 1 Y$ MuxB|Output[12]~12_combout $end
+$var wire 1 Z$ MuxB|Output[13]~13_combout $end
+$var wire 1 [$ memoriaIns|reg_address [7] $end
+$var wire 1 \$ memoriaIns|reg_address [6] $end
+$var wire 1 ]$ memoriaIns|reg_address [5] $end
+$var wire 1 ^$ memoriaIns|reg_address [4] $end
+$var wire 1 _$ memoriaIns|reg_address [3] $end
+$var wire 1 `$ memoriaIns|reg_address [2] $end
+$var wire 1 a$ memoriaIns|reg_address [1] $end
+$var wire 1 b$ memoriaIns|reg_address [0] $end
+$var wire 1 c$ irP|opcode [3] $end
+$var wire 1 d$ irP|opcode [2] $end
+$var wire 1 e$ irP|opcode [1] $end
+$var wire 1 f$ irP|opcode [0] $end
+$var wire 1 g$ RegistroA|Output [13] $end
+$var wire 1 h$ RegistroA|Output [12] $end
+$var wire 1 i$ RegistroA|Output [11] $end
+$var wire 1 j$ RegistroA|Output [10] $end
+$var wire 1 k$ RegistroA|Output [9] $end
+$var wire 1 l$ RegistroA|Output [8] $end
+$var wire 1 m$ RegistroA|Output [7] $end
+$var wire 1 n$ RegistroA|Output [6] $end
+$var wire 1 o$ RegistroA|Output [5] $end
+$var wire 1 p$ RegistroA|Output [4] $end
+$var wire 1 q$ RegistroA|Output [3] $end
+$var wire 1 r$ RegistroA|Output [2] $end
+$var wire 1 s$ RegistroA|Output [1] $end
+$var wire 1 t$ RegistroA|Output [0] $end
+$var wire 1 u$ PC|PCact [7] $end
+$var wire 1 v$ PC|PCact [6] $end
+$var wire 1 w$ PC|PCact [5] $end
+$var wire 1 x$ PC|PCact [4] $end
+$var wire 1 y$ PC|PCact [3] $end
+$var wire 1 z$ PC|PCact [2] $end
+$var wire 1 {$ PC|PCact [1] $end
+$var wire 1 |$ PC|PCact [0] $end
+$var wire 1 }$ ranSeg|count_i1 [19] $end
+$var wire 1 ~$ ranSeg|count_i1 [18] $end
+$var wire 1 !% ranSeg|count_i1 [17] $end
+$var wire 1 "% ranSeg|count_i1 [16] $end
+$var wire 1 #% ranSeg|count_i1 [15] $end
+$var wire 1 $% ranSeg|count_i1 [14] $end
+$var wire 1 %% ranSeg|count_i1 [13] $end
+$var wire 1 &% ranSeg|count_i1 [12] $end
+$var wire 1 '% ranSeg|count_i1 [11] $end
+$var wire 1 (% ranSeg|count_i1 [10] $end
+$var wire 1 )% ranSeg|count_i1 [9] $end
+$var wire 1 *% ranSeg|count_i1 [8] $end
+$var wire 1 +% ranSeg|count_i1 [7] $end
+$var wire 1 ,% ranSeg|count_i1 [6] $end
+$var wire 1 -% ranSeg|count_i1 [5] $end
+$var wire 1 .% ranSeg|count_i1 [4] $end
+$var wire 1 /% ranSeg|count_i1 [3] $end
+$var wire 1 0% ranSeg|count_i1 [2] $end
+$var wire 1 1% ranSeg|count_i1 [1] $end
+$var wire 1 2% ranSeg|count_i1 [0] $end
+$var wire 1 3% ranSeg|count [3] $end
+$var wire 1 4% ranSeg|count [2] $end
+$var wire 1 5% ranSeg|count [1] $end
+$var wire 1 6% ranSeg|count [0] $end
+$var wire 1 7% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [13] $end
+$var wire 1 8% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [12] $end
+$var wire 1 9% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [11] $end
+$var wire 1 :% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [10] $end
+$var wire 1 ;% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [9] $end
+$var wire 1 <% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [8] $end
+$var wire 1 =% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [7] $end
+$var wire 1 >% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [6] $end
+$var wire 1 ?% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [5] $end
+$var wire 1 @% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [4] $end
+$var wire 1 A% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [3] $end
+$var wire 1 B% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [2] $end
+$var wire 1 C% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [1] $end
+$var wire 1 D% RegisterF|registef_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+b0 $
+b0 %
+b0 &
+10
+1/
+1.
+1-
+1,
+1+
+1*
+1)
+1(
+1'
+08
+07
+06
+05
+04
+03
+02
+01
+09
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+1O
+1N
+1M
+0L
+0K
+0J
+1I
+1H
+0c
+0b
+1j
+1i
+1h
+0g
+1f
+1e
+1d
+1q
+1p
+1o
+1n
+1m
+1l
+0k
+1x
+1w
+1v
+0u
+1t
+1s
+1r
+1!!
+1~
+1}
+1|
+1{
+1z
+1y
+x"!
+0#!
+1$!
+x%!
+1&!
+1'!
+1(!
+1)!
+1*!
+1+!
+1,!
+1-!
+1.!
+1/!
+10!
+11!
+12!
+13!
+14!
+15!
+16!
+17!
+08!
+19!
+1:!
+1;!
+1<!
+1=!
+1>!
+1?!
+1@!
+1A!
+1B!
+0C!
+1D!
+0E!
+1F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+1V!
+1W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+1]!
+0^!
+0_!
+0`!
+1a!
+1b!
+0c!
+1d!
+0e!
+0f!
+1g!
+0h!
+1i!
+0j!
+0k!
+0l!
+1m!
+0n!
+0o!
+1p!
+0q!
+1r!
+0s!
+1t!
+0u!
+1v!
+0w!
+1x!
+0y!
+1z!
+0{!
+1|!
+0}!
+1~!
+0!"
+1""
+0#"
+1$"
+0%"
+0&"
+1'"
+0("
+0)"
+1*"
+1+"
+0,"
+0-"
+0."
+0/"
+10"
+11"
+02"
+13"
+04"
+15"
+06"
+17"
+08"
+19"
+0:"
+1;"
+0<"
+1="
+0>"
+1?"
+0@"
+1A"
+1B"
+0C"
+1D"
+0E"
+0F"
+1G"
+0H"
+1I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+1Q"
+0R"
+1S"
+1T"
+0U"
+0V"
+1W"
+0X"
+0Y"
+0Z"
+0["
+0\"
+1]"
+0^"
+1_"
+0`"
+0a"
+0b"
+1c"
+0d"
+1e"
+0f"
+1g"
+0h"
+1i"
+0j"
+1k"
+0l"
+1m"
+0n"
+1o"
+0p"
+1q"
+0r"
+1s"
+0t"
+1u"
+0v"
+1w"
+0x"
+1y"
+1z"
+1{"
+1|"
+0}"
+1~"
+0!#
+1"#
+0##
+0$#
+1%#
+0&#
+0'#
+1(#
+0)#
+1*#
+0+#
+1,#
+1-#
+0.#
+1/#
+00#
+11#
+02#
+13#
+04#
+15#
+06#
+17#
+08#
+19#
+0:#
+1;#
+0<#
+1=#
+1>#
+1?#
+0@#
+0A#
+0B#
+0C#
+1D#
+1E#
+1F#
+0G#
+0H#
+1I#
+0J#
+1K#
+0L#
+1M#
+0N#
+1O#
+0P#
+1Q#
+0R#
+1S#
+0T#
+1U#
+0V#
+1W#
+0X#
+1Y#
+1Z#
+1[#
+1\#
+1]#
+1^#
+1_#
+1`#
+1a#
+1b#
+1c#
+1d#
+0e#
+1f#
+1g#
+0h#
+1i#
+0j#
+1k#
+0l#
+0m#
+0n#
+1o#
+0p#
+0q#
+1r#
+0s#
+1t#
+1u#
+0v#
+1w#
+0x#
+1y#
+0z#
+1{#
+0|#
+1}#
+0~#
+1!$
+0"$
+1#$
+0$$
+1%$
+0&$
+1'$
+1($
+0)$
+0*$
+0+$
+1,$
+0-$
+1.$
+0/$
+00$
+11$
+02$
+13$
+04$
+15$
+06$
+17$
+08$
+19$
+0:$
+1;$
+0<$
+0=$
+0>$
+0?$
+0@$
+1A$
+0B$
+0C$
+0D$
+0E$
+0F$
+0G$
+0H$
+1I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0b$
+0a$
+0`$
+0_$
+0^$
+0]$
+0\$
+0[$
+0f$
+ze$
+zd$
+zc$
+0t$
+0s$
+0r$
+0q$
+0p$
+0o$
+0n$
+0m$
+0l$
+0k$
+0j$
+0i$
+0h$
+0g$
+0|$
+0{$
+0z$
+0y$
+0x$
+0w$
+0v$
+0u$
+z2%
+01%
+00%
+0/%
+0.%
+z-%
+z,%
+z+%
+z*%
+z)%
+z(%
+z'%
+z&%
+z%%
+z$%
+z#%
+z"%
+z!%
+z~$
+z}$
+06%
+05%
+04%
+03%
+0D%
+0C%
+0B%
+0A%
+0@%
+0?%
+0>%
+0=%
+0<%
+0;%
+0:%
+09%
+08%
+07%
+$end
+#20000
+1!
+1J$
+1K$
+0"!
+1`"
+1J"
+16%
+1G$
+12$
+1G#
+1d"
+0I"
+1L"
+1j!
+0i!
+1c
+1u
+1k
+1g
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+#40000
+0!
+0J$
+0K$
+1"!
+#60000
+1!
+1J$
+1K$
+0"!
+1M"
+0J"
+15%
+06%
+0L"
+1k!
+1i!
+#80000
+0!
+0J$
+0K$
+1"!
+#100000
+1!
+1J$
+1K$
+0"!
+1|$
+0M"
+1K"
+16%
+1R"
+1F"
+0Q"
+0_"
+1n!
+0j!
+0i!
+1G!
+#120000
+0!
+0J$
+0K$
+1"!
+#140000
+1!
+1J$
+1K$
+0"!
+0`"
+1b$
+0K"
+14%
+05%
+06%
+0G$
+02$
+0G#
+0d"
+1_"
+1I"
+0S"
+0k!
+1i!
+0c
+0I$
+0u
+0k
+0g
+10
+1/
+1.
+1-
+1,
+1+
+1*
+1)
+1(
+1'
+1a
+1`
+1_
+1^
+1]
+1\
+1[
+1Z
+1Y
+1X
+1W
+1V
+1U
+1T
+1S
+1R
+1Q
+1P
+1L
+1K
+#160000
+0!
+0J$
+0K$
+1"!
+#180000
+1!
+1J$
+1K$
+0"!
+1`"
+1J"
+16%
+1G$
+12$
+1G#
+1d"
+0I"
+1L"
+1j!
+0i!
+1c
+1u
+1k
+1g
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+#200000
+0!
+0J$
+0K$
+1"!
+#220000
+1!
+1J$
+1K$
+0"!
+1M"
+0J"
+15%
+06%
+1^"
+0L"
+1k!
+1i!
+#240000
+0!
+0J$
+0K$
+1"!
+#260000
+1!
+1J$
+1K$
+0"!
+1f$
+0|$
+0M"
+1K"
+16%
+1{$
+1L"
+0R"
+0F"
+1Q"
+1o!
+0n!
+0j!
+0i!
+1h!
+0G"
+0G!
+1G"
+1G!
+1H"
+0H"
+#280000
+0!
+0J$
+0K$
+1"!
+#300000
+1!
+1J$
+1K$
+0"!
+0b$
+1M"
+0K"
+13%
+04%
+05%
+06%
+1a$
+0L"
+0k!
+1i!
+#320000
+0!
+0J$
+0K$
+1"!
+#340000
+1!
+1J$
+1K$
+0"!
+1|$
+0M"
+1K"
+16%
+1R"
+1F"
+0Q"
+1L"
+1j!
+0i!
+0G"
+0G!
+1H"
+#360000
+0!
+0J$
+0K$
+1"!
+#380000
+1!
+1J$
+1K$
+0"!
+1b$
+1M"
+0K"
+15%
+06%
+0L"
+1k!
+1i!
+#400000
+0!
+0J$
+0K$
+1"!
+#420000
+1!
+1J$
+1K$
+0"!
+0|$
+1z$
+0M"
+1K"
+16%
+0{$
+0R"
+0F"
+1Q"
+1N"
+0H"
+1L"
+1n!
+0j!
+0i!
+0h!
+1G"
+1G!
+0G!
+1O"
+0N"
+1H"
+0O"
+#440000
+0!
+0J$
+0K$
+1"!
+#460000
+1!
+1J$
+1K$
+0"!
+0b$
+1`$
+1M"
+0K"
+14%
+05%
+06%
+0a$
+0L"
+0k!
+1i!
+#480000
+0!
+0J$
+0K$
+1"!
+#500000
+1!
+1J$
+1K$
+0"!
+1|$
+0M"
+1K"
+16%
+1R"
+1F"
+0Q"
+1L"
+1j!
+0i!
+1G!
+#520000
+0!
+0J$
+0K$
+1"!
+#540000
+1!
+1J$
+1K$
+0"!
+1b$
+1M"
+0K"
+15%
+06%
+0L"
+1k!
+1i!
+#560000
+0!
+0J$
+0K$
+1"!
+#580000
+1!
+1J$
+1K$
+0"!
+0|$
+0M"
+1K"
+16%
+1{$
+0R"
+0F"
+1Q"
+1L"
+0o!
+0n!
+0j!
+0i!
+1h!
+0G"
+0G!
+1G"
+1G!
+1N"
+0H"
+0N"
+1H"
+1O"
+0O"
+#600000
+0!
+0J$
+0K$
+1"!
+#620000
+1!
+1J$
+1K$
+0"!
+0b$
+1M"
+0K"
+03%
+04%
+05%
+06%
+1a$
+0L"
+0k!
+1i!
+#640000
+0!
+0J$
+0K$
+1"!
+#660000
+1!
+1J$
+1K$
+0"!
+1|$
+0M"
+1K"
+16%
+1R"
+1F"
+0Q"
+1L"
+1j!
+0i!
+0G"
+0G!
+1N"
+0H"
+1O"
+#680000
+0!
+0J$
+0K$
+1"!
+#700000
+1!
+1J$
+1K$
+0"!
+1b$
+1M"
+0K"
+15%
+06%
+0L"
+1k!
+1i!
+#720000
+0!
+0J$
+0K$
+1"!
+#740000
+1!
+1J$
+1K$
+0"!
+0|$
+1y$
+0z$
+0M"
+1K"
+16%
+0{$
+0R"
+0F"
+1Q"
+1P"
+0T"
+0O"
+0N"
+1H"
+1L"
+1n!
+0j!
+0i!
+0h!
+1G"
+1G!
+0G!
+1U"
+1T"
+1O"
+0H"
+0U"
+#760000
+0!
+0J$
+0K$
+1"!
+#780000
+1!
+1J$
+1K$
+0"!
+0b$
+0`$
+1_$
+1M"
+0K"
+14%
+05%
+06%
+0a$
+0L"
+0k!
+1i!
+#800000
+0!
+0J$
+0K$
+1"!
+#820000
+1!
+1J$
+1K$
+0"!
+1|$
+0M"
+1K"
+16%
+1R"
+1F"
+0Q"
+1L"
+1j!
+0i!
+1G!
+#840000
+0!
+0J$
+0K$
+1"!
+#860000
+1!
+1J$
+1K$
+0"!
+1b$
+1M"
+0K"
+15%
+06%
+0L"
+1k!
+1i!
+#880000
+0!
+0J$
+0K$
+1"!
+#900000
+1!
+1J$
+1K$
+0"!
+0|$
+0M"
+1K"
+16%
+1{$
+0R"
+0F"
+1Q"
+1L"
+1o!
+0n!
+0j!
+0i!
+1h!
+0G"
+0G!
+1G"
+1G!
+1H"
+0H"
+#920000
+0!
+0J$
+0K$
+1"!
+#940000
+1!
+1J$
+1K$
+0"!
+0b$
+1M"
+0K"
+13%
+04%
+05%
+06%
+1a$
+0L"
+0k!
+1i!
+#960000
+0!
+0J$
+0K$
+1"!
+#980000
+1!
+1J$
+1K$
+0"!
+1|$
+0M"
+1K"
+16%
+1R"
+1F"
+0Q"
+1L"
+1j!
+0i!
+0G"
+0G!
+1H"
+#1000000

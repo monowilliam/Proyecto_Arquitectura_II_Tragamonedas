@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Principal
-Fri Nov 16 19:06:15 2018
+Fri Nov 23 18:17:35 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 16 19:06:15 2018           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 23 18:17:35 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Principal                                       ;
 ; Top-level Entity Name              ; Principal                                       ;
@@ -170,30 +170,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
-; UC.vhd                           ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/UC.vhd          ;         ;
-; sieteS.vhd                       ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sieteS.vhd      ;         ;
-; registefile.vhd                  ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/registefile.vhd ;         ;
-; Registro.vhd                     ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Registro.vhd    ;         ;
-; Mux14.vhd                        ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux14.vhd       ;         ;
-; Mux12.vhd                        ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux12.vhd       ;         ;
-; memoriaram.vhd                   ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoriaram.vhd  ;         ;
-; memoria.vhd                      ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoria.vhd     ;         ;
-; IR.vhd                           ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/IR.vhd          ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/ALU.vhd         ;         ;
-; Principal.vhd                    ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Principal.vhd   ;         ;
-; PCounter.vhd                     ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/PCounter.vhd    ;         ;
-; sumPC.vhd                        ; yes             ; User VHDL File  ; C:/Users/josedanilo/Documents/GitHub/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sumPC.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; UC.vhd                           ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/UC.vhd          ;         ;
+; sieteS.vhd                       ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sieteS.vhd      ;         ;
+; registefile.vhd                  ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/registefile.vhd ;         ;
+; Registro.vhd                     ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Registro.vhd    ;         ;
+; Mux14.vhd                        ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux14.vhd       ;         ;
+; Mux12.vhd                        ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Mux12.vhd       ;         ;
+; memoriaram.vhd                   ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoriaram.vhd  ;         ;
+; memoria.vhd                      ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/memoria.vhd     ;         ;
+; IR.vhd                           ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/IR.vhd          ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/ALU.vhd         ;         ;
+; Principal.vhd                    ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/Principal.vhd   ;         ;
+; PCounter.vhd                     ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/PCounter.vhd    ;         ;
+; sumPC.vhd                        ; yes             ; User VHDL File  ; D:/Escritorio/a/Proyecto_Arquitectura_II_Tragamonedas/Principal/PrincipalV5/sumPC.vhd       ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -487,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 16 19:06:10 2018
+    Info: Processing started: Fri Nov 23 18:17:32 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Principal -c Principal
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file uc.vhd
@@ -565,7 +565,6 @@ Info (10041): Inferred latch for "SS0[4]" at sieteS.vhd(23)
 Info (10041): Inferred latch for "SS0[5]" at sieteS.vhd(23)
 Info (10041): Inferred latch for "SS0[6]" at sieteS.vhd(23)
 Info (12128): Elaborating entity "memoria" for hierarchy "memoria:memoriaIns"
-Warning (10541): VHDL Signal Declaration warning at memoria.vhd(17): used implicit default value for signal "my_rom" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "IR" for hierarchy "IR:irP"
 Info (12128): Elaborating entity "registefile" for hierarchy "registefile:RegisterF"
 Warning (10492): VHDL Process Statement warning at registefile.vhd(44): signal "addrR1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -665,10 +664,10 @@ Info (21057): Implemented 56 device resources after synthesis - the final resour
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 28 output pins
     Info (21061): Implemented 17 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 479 megabytes
-    Info: Processing ended: Fri Nov 16 19:06:15 2018
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Fri Nov 23 18:17:35 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
