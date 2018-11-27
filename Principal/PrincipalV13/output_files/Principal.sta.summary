@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -12.541
+TNS   : -1756.856
+
+Type  : Slow Model Setup 'UC:UnidadControl|est_actual.Fetch'
+Slack : -4.750
+TNS   : -57.860
+
+Type  : Slow Model Setup 'divFrec:newclock|BotonOut~reg0'
+Slack : 0.319
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.685
+TNS   : -21.371
+
+Type  : Slow Model Hold 'divFrec:newclock|BotonOut~reg0'
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Slow Model Hold 'UC:UnidadControl|est_actual.Fetch'
+Slack : 1.651
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -2.064
+TNS   : -672.691
+
+Type  : Slow Model Minimum Pulse Width 'divFrec:newclock|BotonOut~reg0'
+Slack : -0.611
+TNS   : -4.888
+
+Type  : Slow Model Minimum Pulse Width 'UC:UnidadControl|est_actual.Fetch'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -4.122
+TNS   : -527.924
+
+Type  : Fast Model Setup 'UC:UnidadControl|est_actual.Fetch'
+Slack : -1.248
+TNS   : -14.027
+
+Type  : Fast Model Setup 'divFrec:newclock|BotonOut~reg0'
+Slack : 0.587
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.715
+TNS   : -19.354
+
+Type  : Fast Model Hold 'divFrec:newclock|BotonOut~reg0'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast Model Hold 'UC:UnidadControl|est_actual.Fetch'
+Slack : 0.809
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.627
+TNS   : -546.818
+
+Type  : Fast Model Minimum Pulse Width 'divFrec:newclock|BotonOut~reg0'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'UC:UnidadControl|est_actual.Fetch'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

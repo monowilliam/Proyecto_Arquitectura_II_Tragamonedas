@@ -1,4 +1,4 @@
-addi $s0,$cero,0 ingresarD:
+﻿addi $s0,$cero,0 ingresarD:
 addi $t0,$cero,0
 ins $t0
 lm $t0,$t0,0
@@ -15,7 +15,7 @@ addi $t1,$cero,1
 sub $s0,$s1 				#Dinero=Dinero-A
 sm $s0,$cero,0
 addi $t0,$cero,3
-rd $t0					    #rd OpCode=1100
+rd $t0					#rd OpCode=1100
 addi $s2,$cero,1			#s2=Bonificacion		
 sm $s2,$cero,2
 lm $t0,$t0,0 

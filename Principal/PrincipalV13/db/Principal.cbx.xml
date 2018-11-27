@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Principal">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|mostrar:mostrarNum|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_eem.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|mostrar:mostrarNum|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_28m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|ALU:ALU1|lpm_mult:Mult0" CBX_FILE_NAME="mult_l8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|memoriaram:MemDatos|altsyncram:my_ram_rtl_0" CBX_FILE_NAME="altsyncram_0vj1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|mostrar:mostrarNum|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_hem.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|mostrar:mostrarNum|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_28m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|mostrar:mostrarNum|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_28m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|mostrar:mostrarNum|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_rfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Principal|randomSegmento:ranSeg|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_s7m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,26 @@
+
+State Machine - |Principal|UC:UnidadControl|est_actual
+Name est_actual.EstadoRand est_actual.WRegister est_actual.ExecuteSUB est_actual.ExecuteMUL est_actual.ExecuteADD est_actual.ExecuteADDI est_actual.GuarMem est_actual.LeerMem est_actual.CalDirLM est_actual.GuarDir est_actual.CalDirSM est_actual.ExBgt est_actual.ExBne est_actual.ExBeq est_actual.ExJ est_actual.WMIOI est_actual.WMIOR est_actual.Inp est_actual.OutSS est_actual.RM est_actual.Dir est_actual.Decode est_actual.Fetch 
+est_actual.Fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+est_actual.Decode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+est_actual.Dir 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+est_actual.RM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+est_actual.OutSS 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+est_actual.Inp 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+est_actual.WMIOR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+est_actual.WMIOI 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+est_actual.ExJ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+est_actual.ExBeq 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+est_actual.ExBne 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExBgt 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.CalDirSM 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.GuarDir 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.CalDirLM 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.LeerMem 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.GuarMem 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteADDI 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteADD 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteMUL 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.ExecuteSUB 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.WRegister 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+est_actual.EstadoRand 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
