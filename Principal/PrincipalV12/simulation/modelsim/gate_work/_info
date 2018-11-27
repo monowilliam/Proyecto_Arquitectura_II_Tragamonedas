@@ -1,0 +1,26 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Escritorio\a\Proyecto_Arquitectura_II_Tragamonedas\Principal\PrincipalV11\simulation\modelsim
+vPrincipal
+!i10b 1
+!s100 YGLSTYz>JRkWRRmkBcVHF2
+I85:DR5mS>fYl1:5[8dXQZ1
+VbcY6<cBU?PfW<cWHgb3=^3
+Z1 dD:\Escritorio\a\Proyecto_Arquitectura_II_Tragamonedas\Principal\PrincipalV11\simulation\modelsim
+w1543263751
+8Principal.vo
+FPrincipal.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1543263777.841000
+!s107 Principal.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Principal.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+n@principal

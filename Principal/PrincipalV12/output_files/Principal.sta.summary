@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'UC:UnidadControl|est_actual.Fetch'
+Slack : -4.636
+TNS   : -4.636
+
+Type  : Slow Model Setup 'clk'
+Slack : -1.271
+TNS   : -15.254
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.358
+TNS   : -27.351
+
+Type  : Slow Model Hold 'UC:UnidadControl|est_actual.Fetch'
+Slack : 3.886
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.631
+TNS   : -43.179
+
+Type  : Slow Model Minimum Pulse Width 'UC:UnidadControl|est_actual.Fetch'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'UC:UnidadControl|est_actual.Fetch'
+Slack : -1.832
+TNS   : -1.832
+
+Type  : Fast Model Setup 'clk'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.646
+TNS   : -28.398
+
+Type  : Fast Model Hold 'UC:UnidadControl|est_actual.Fetch'
+Slack : 2.258
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -35.380
+
+Type  : Fast Model Minimum Pulse Width 'UC:UnidadControl|est_actual.Fetch'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------
